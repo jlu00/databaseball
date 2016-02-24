@@ -1,0 +1,27 @@
+<!DOCTYPE html5>
+<html>
+  <head>
+    <br/>
+    <title>Search</title>
+       {% load staticfiles %}
+      <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
+  </head>
+  <body>
+    <div align="center">
+      <h1 style="color:black">Create a fantasy team with players from any era.</h1>
+      <br/>
+      <br/>
+    </div>
+    <div align="center">
+      <input type="text" name="q" placeholder="Search for a player" size="50">
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div align="center">
+      <form action="/search/" method="get">
+        <input type="submit" value="Search" background-color="white">
+      </form>
+    </div>
+  </body>
+</html>

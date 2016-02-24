@@ -1,0 +1,22 @@
+body {
+  font-family: "Times New Roman", sans-serif;
+  background: url('images/jbt.jpg');
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+img {
+ opacity: 0.5; 
+}
+
+placeholder{
+  text-align: "center";
+}
+
+input {
+  position:relative;
+  padding:6px 15px;
+  left:-8px;
+  border:2px solid #207cca;
+  background-color: "white";
+  color:#207cca;
+  line-height: 2em;

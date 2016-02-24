@@ -1,0 +1,1780 @@
+player_id,teams,years
+0,New York Giants|Brooklyn Superbas|Brooklyn Superbas,1903|1904|1905
+1,Texas Rangers|Texas Rangers|Texas Rangers,1979|1980|1981
+2,New York Yankees|New York Yankees|Philadelphia Athletics,1952|1953|1953
+3,Brooklyn Dodgers|Brooklyn Dodgers|Boston Bees|Philadelphia Athletics|Philadelphia Athletics,1934|1935|1936|1940|1941
+4,New York Giants,1915
+5,Oakland Athletics,1981
+6,Tampa Bay Devil Rays|Tampa Bay Devil Rays|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros,2002|2003|2004|2005|2006|2007|2008|2009
+7,St. Louis Cardinals|St. Louis Cardinals,1909|1910
+8,New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|Minnesota Twins|Pittsburgh Pirates|Philadelphia Phillies|Philadelphia Phillies|Seattle Mariners,1980|1981|1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1993
+9,Philadelphia Athletics,1917
+10,Texas Rangers|Texas Rangers|Texas Rangers|Minnesota Twins|Minnesota Twins,1975|1976|1977|1979|1980
+11,Cleveland Indians|New York Mets|New York Mets|Texas Rangers|Washington Nationals,2001|2002|2003|2004|2007
+12,Chicago Cubs|Cincinnati Reds|Cincinnati Redlegs|Cincinnati Redlegs,1953|1953|1954|1955
+13,Florida Marlins|Florida Marlins|Florida Marlins|Florida Marlins|Tampa Bay Rays|Milwaukee Brewers|Boston Red Sox|Cincinnati Reds,2008|2009|2010|2011|2012|2013|2014|2015
+14,St. Louis Browns,1904
+15,New York Giants|Boston Red Sox|Boston Red Sox,1912|1917|1918
+16,St. Louis Browns|St. Louis Browns,1929|1930
+17,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Chicago Cubs|Chicago Cubs|St. Louis Browns,1926|1927|1928|1931|1932|1937
+18,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|San Diego Padres,2004|2006|2007|2008|2008
+19,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|New York Mets|New York Mets|New York Mets|San Diego Padres|Cleveland Indians|Boston Red Sox|Arizona Diamondbacks|Arizona Diamondbacks|Washington Nationals,1990|1991|1992|1993|1994|1995|1996|1996|1997|1998|1999|1999|2002|2003|2004|2005
+20,Florida Marlins,2001
+21,Cleveland Indians|Cleveland Indians|Cleveland Indians|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Los Angeles Dodgers|Atlanta Braves|Baltimore Orioles|Baltimore Orioles|Philadelphia Phillies|Philadelphia Phillies,2001|2002|2003|2004|2005|2006|2006|2007|2009|2010|2011
+22,Chicago Cubs|Chicago Cubs,2014|2015
+23,Seattle Mariners|Seattle Mariners,1977|1978
+24,New York Mets|New York Mets|New York Mets,1990|1992|1993
+25,Los Angeles Dodgers|Los Angeles Dodgers,2014|2015
+26,Cincinnati Reds|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Pittsburgh Pirates,1912|1916|1917|1918|1919|1920|1921|1922|1923
+27,Boston Red Sox|Boston Red Sox|Boston Red Sox|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Boston Red Sox|Pittsburgh Pirates,1938|1939|1940|1941|1942|1943|1944|1945|1946|1947
+28,New York Gothams|New York Metropolitans,1884|1885
+29,New York Giants,1886
+30,Boston Braves|Philadelphia Athletics,1923|1925
+31,Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros,1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005
+32,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Oakland Athletics|Oakland Athletics|Oakland Athletics|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|California Angels|Philadelphia Phillies,1966|1968|1969|1970|1971|1972|1973|1974|1975|1975|1976|1977|1977|1978|1979|1980|1981|1982|1982
+33,Pittsburgh Pirates|Pittsburgh Pirates,1946|1947
+34,Baltimore Monumentals,1884
+35,St. Louis Browns,1914
+36,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|California Angels|California Angels|California Angels|Texas Rangers|Texas Rangers,1986|1987|1988|1989|1990|1991|1992|1997|1998
+37,Oakland Athletics|Oakland Athletics|Oakland Athletics|Boston Red Sox|Boston Red Sox|New York Yankees,2009|2010|2011|2012|2013|2015
+38,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|Baltimore Terrapins|Baltimore Terrapins|Chicago Whales|Detroit Tigers|St. Louis Cardinals|St. Louis Cardinals,1907|1908|1909|1910|1911|1912|1914|1915|1915|1918|1921|1922
+39,New York Highlanders,1911
+40,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Los Angeles Dodgers|Los Angeles Dodgers|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Cincinnati Reds|Cincinnati Reds|Boston Red Sox|Boston Red Sox,1962|1963|1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1977|1978
+41,Boston Red Sox|Boston Red Sox|St. Louis Cardinals|St. Louis Cardinals|San Francisco Giants|San Francisco Giants|Kansas City Royals|Kansas City Royals,1993|1994|1995|1996|1997|1998|2001|2002
+42,Cincinnati Reds|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Reds|Cincinnati Reds|San Francisco Giants|San Francisco Giants|San Francisco Giants|Milwaukee Braves|San Francisco Giants|Chicago Cubs|California Angels,1953|1954|1955|1956|1957|1958|1959|1960|1961|1961|1962|1963|1964|1965|1965|1966
+43,Boston Braves|Boston Braves|Boston Braves,1916|1917|1918
+44,Philadelphia Athletics|Boston Braves|Boston Braves|Boston Red Sox|Brooklyn Robins|Brooklyn Robins,1917|1919|1920|1920|1923|1924
+45,Boston Beaneaters|Boston Beaneaters,1899|1900
+46,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,2007|2008|2009|2010|2011|2012|2013|2014|2015
+47,Detroit Tigers|Detroit Tigers|Detroit Tigers,1981|1982|1983
+48,Boston Red Sox|Boston Red Sox|Boston Red Sox,2007|2008|2009
+49,Cincinnati Redlegs,1959
+50,Cincinnati Reds,1895
+51,Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|San Francisco Giants|San Francisco Giants,1984|1985|1986|1987|1988|1990|1992
+52,Colorado Rockies|Colorado Rockies|Colorado Rockies,1995|1996|1997
+53,Cleveland Indians|Cleveland Indians,1967|1968
+54,Chicago Cubs|Chicago Cubs|Chicago Cubs|Brooklyn Robins,1919|1920|1921|1921
+55,Baltimore Orioles|Baltimore Orioles|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|New York Mets|New York Mets|New York Mets|Los Angeles Dodgers|Los Angeles Dodgers,1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985
+56,New York Giants,1945
+57,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Texas Rangers|Texas Rangers|Oakland Athletics|Oakland Athletics|Oakland Athletics|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Chicago White Sox|Chicago White Sox|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Cleveland Indians|Baltimore Orioles|Chicago White Sox|Chicago White Sox,1980|1981|1982|1983|1984|1985|1986|1987|1988|1989|1989|1990|1990|1991|1992|1993|1994|1995|1996|1997|1997|1998|1999|1999|2000|2000|2001
+58,Pittsburgh Pirates|Oakland Athletics|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Detroit Tigers|Detroit Tigers|Detroit Tigers|St. Louis Cardinals|Oakland Athletics|Philadelphia Phillies|Toronto Blue Jays|Pittsburgh Pirates|Pittsburgh Pirates,1976|1977|1978|1979|1980|1981|1981|1982|1983|1983|1984|1985|1985|1986|1987|1988|1989|1990
+59,New York Giants|New York Giants,1917|1919
+60,Washington Senators|Washington Senators,1962|1963
+61,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|St. Louis Cardinals|St. Louis Cardinals|Philadelphia Phillies|St. Louis Cardinals|Brooklyn Robins|Brooklyn Robins|New York Giants,1915|1916|1917|1917|1918|1919|1919|1919|1920|1920
+62,Oakland Athletics,2008
+63,Chicago White Sox|Chicago White Sox|Arizona Diamondbacks,2004|2005|2006
+64,St. Louis Cardinals,1964
+65,Boston Red Sox,1938
+66,Cincinnati Reds|Cincinnati Reds|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|St. Louis Cardinals|St. Louis Cardinals,1940|1941|1941|1942|1943|1946|1948|1949
+67,Cleveland Blues|Philadelphia Athletics,1901|1901
+68,Chicago/Pittsburgh,1884
+69,San Diego Padres|San Diego Padres|Minnesota Twins,1978|1980|1981
+70,Toronto Blue Jays,1982
+71,Detroit Tigers|Detroit Tigers|Detroit Tigers,1914|1915|1916
+72,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Minnesota Twins|Minnesota Twins|Minnesota Twins,1984|1985|1986|1987|1988|1989|1990
+73,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|San Francisco Giants|Oakland Athletics|Oakland Athletics,1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986
+74,Cincinnati Reds,1905
+75,St. Louis Browns|St. Louis Browns|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Washington Senators|Washington Senators|Boston Red Sox|Boston Red Sox|Philadelphia Phillies|Philadelphia Phillies,1943|1944|1945|1946|1947|1948|1949|1950|1951|1952|1953|1953|1954|1954|1955
+76,Cleveland Indians|Cleveland Indians,1969|1971
+77,New York Yankees|New York Yankees|Baltimore Orioles|Baltimore Orioles,1970|1971|1973|1974
+78,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1953|1954|1955|1956|1957|1957|1958|1960|1961
+79,Baltimore Orioles|St. Louis Maroons|St. Louis Maroons|Kansas City Cowboys,1883|1884|1885|1886
+80,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees,1908|1909|1910|1911|1912|1913|1914|1916|1917|1918|1919|1921|1922
+81,Cleveland Naps|Chicago White Sox|Chicago White Sox|New York Giants,1912|1914|1915|1915
+82,Boston Red Sox|Boston Red Sox,1976|1977
+83,Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Detroit Tigers|Atlanta Braves|Texas Rangers|Miami Marlins|Miami Marlins,2005|2006|2007|2008|2009|2009|2010|2011|2012|2012|2012|2013|2014|2015
+84,Chicago White Sox,1911
+85,Washington Senators,1919
+86,Florida Marlins|Florida Marlins|Florida Marlins|Florida Marlins|San Diego Padres|San Diego Padres|Chicago Cubs,2008|2009|2010|2011|2012|2013|2014
+87,Pittsburgh Alleghenys|Baltimore Orioles|Baltimore Orioles|Washington Senators|Washington Senators,1890|1893|1894|1898|1899
+88,Philadelphia Athletics,1927
+89,Pittsburgh Alleghenys|Louisville Colonels|Baltimore Orioles,1883|1885|1890
+90,Baltimore Orioles|Washington Nationals|Washington Nationals,1883|1884|1886
+91,Oakland Athletics,1995
+92,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Chicago Cubs|Texas Rangers|Los Angeles Dodgers,2005|2006|2007|2008|2009|2010|2011|2013|2014|2015
+93,Detroit Tigers|Detroit Tigers|Oakland Athletics|Oakland Athletics|St. Louis Cardinals,1978|1979|1982|1983|1983
+94,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|New York Giants|New York Giants,1935|1936|1937|1937|1938
+95,Chicago Cubs,1963
+96,Boston Red Sox,1911
+97,Philadelphia Athletics|Philadelphia Keystones|Wilmington Quicksteps|Kansas City Cowboys|Cleveland Blues|Cleveland Spiders|Cleveland Infants|Washington Statesmen|Baltimore Orioles,1883|1884|1884|1884|1888|1889|1890|1891|1891
+98,Detroit Tigers|Houston Astros|Houston Astros|Florida Marlins|Atlanta Braves|Atlanta Braves|Milwaukee Brewers|Chicago Cubs|Chicago Cubs|Los Angeles Dodgers|Kansas City Royals|Baltimore Orioles|Cincinnati Reds|Philadelphia Phillies,1998|1999|2000|2000|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009
+99,Boston Bees,1938
+100,California Angels|California Angels,1974|1975
+101,New York Yankees|New York Yankees|New York Yankees|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Seattle Mariners|New York Yankees|New York Yankees|Texas Rangers,1981|1982|1983|1984|1985|1986|1987|1988|1988|1989|1990|1993
+102,Cincinnati Redlegs,1956
+103,Tampa Bay Devil Rays|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Tampa Bay Rays|Boston Red Sox|Tampa Bay Rays,2003|2004|2006|2007|2008|2009|2010
+104,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Cincinnati Reds|Cincinnati Reds|San Diego Padres|San Diego Padres,1961|1962|1963|1964|1965|1966|1967|1969|1970
+105,Detroit Tigers|New York Mets,1975|1976
+106,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Milwaukee Brewers|Chicago White Sox,1966|1967|1968|1969|1970|1973
+107,Cincinnati Reds,1953
+108,New York Giants|New York Giants,1924|1925
+109,Philadelphia Phillies,1927
+110,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Los Angeles Dodgers|Seattle Mariners|Minnesota Twins|New York Mets|Baltimore Orioles|Texas Rangers|Baltimore Orioles,1995|1996|1997|1998|1999|2000|2001|2001|2002|2003|2004|2005|2005|2005
+111,Houston Astros,1990
+112,Kansas City Cowboys|Chicago/Pittsburgh|Cincinnati Red Stockings|Cincinnati Red Stockings|Cincinnati Red Stockings|Cincinnati Red Stockings|Cincinnati Red Stockings|Cincinnati Reds|Philadelphia Athletics,1884|1884|1885|1886|1887|1888|1889|1890|1890
+113,Milwaukee Brewers|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Brooklyn Bridegrooms|Buffalo Bisons,1884|1885|1886|1887|1888|1890|1890
+114,Chicago White Stockings|Chicago White Stockings|Columbus Solons|Chicago Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|New York Giants,1887|1888|1889|1890|1891|1892|1893|1893
+115,St. Louis Cardinals,1908
+116,Houston Astros|Houston Astros,1978|1979
+117,New York Mets|New York Mets|New York Mets,1975|1976|1977
+118,Toronto Blue Jays|Toronto Blue Jays|Baltimore Orioles|Cincinnati Reds|Kansas City Royals|Kansas City Royals|Kansas City Royals,1999|2000|2001|2003|2007|2008|2009
+119,Cincinnati Reds|St. Louis Browns,1911|1913
+120,Seattle Mariners|Seattle Mariners|Seattle Mariners|Cincinnati Reds,2007|2008|2009|2009
+121,Atlanta Braves|Houston Astros,1966|1967
+122,Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals|Detroit Tigers|Cincinnati Reds,2008|2009|2010|2011|2012|2015
+123,Minnesota Twins|Minnesota Twins|Minnesota Twins|Milwaukee Brewers|Tampa Bay Devil Rays|Tampa Bay Rays|Tampa Bay Rays|Tampa Bay Rays|Oakland Athletics|Oakland Athletics|Oakland Athletics|Tampa Bay Rays|Tampa Bay Rays,2001|2003|2004|2007|2007|2008|2009|2010|2011|2012|2013|2014|2015
+124,St. Louis Browns|Baltimore Orioles,1894|1898
+125,San Francisco Giants,1998
+126,Boston Doves|Boston Doves,1907|1908
+127,New York Highlanders|New York Highlanders|New York Highlanders|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Boston Red Sox|Boston Red Sox,1907|1908|1909|1909|1910|1911|1912|1912|1913
+128,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Pittsburgh Pirates|Pittsburgh Pirates,1987|1988|1989|1990|1991|1993|1994
+129,Washington Senators,1928
+130,Philadelphia Phillies|Chicago Cubs|Chicago Cubs|Chicago Cubs|Kansas City Royals|Philadelphia Phillies,1982|1985|1986|1987|1990|1992
+131,Cleveland Indians,1971
+132,Washington Senators|St. Louis Browns|St. Louis Browns|Brooklyn Robins,1925|1926|1927|1929
+133,Chicago Cubs,1962
+134,New York Giants|New York Giants|Baltimore Orioles,1951|1952|1959
+135,New York Giants,1948
+136,New Haven Elm Citys,1875
+137,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|New York Giants|New York Giants|New York Giants|New York Giants|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Brooklyn Robins|Brooklyn Robins|New York Giants,1915|1916|1917|1918|1919|1920|1920|1921|1922|1923|1924|1925|1926|1927|1928|1929|1930
+138,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Detroit Tigers|Oakland Athletics,1981|1982|1983|1984|1985|1986|1987|1988|1988|1989
+139,Kansas City Athletics|Kansas City Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers,1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981
+140,Los Angeles Angels of Anaheim,2015
+141,Minnesota Twins|Minnesota Twins|Minnesota Twins,1973|1975|1976
+142,Seattle Pilots|Cincinnati Reds|Cincinnati Reds,1969|1973|1974
+143,Pittsburgh Pirates,1991
+144,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers,1947|1950|1951
+145,Kansas City Royals|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Cincinnati Reds|Boston Red Sox|Boston Red Sox|New York Yankees,1986|1987|1988|1989|1990|1991|1992|1993|1994|1995
+146,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Florida Marlins|Florida Marlins,1996|1997|1998|1999|2002|2003
+147,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs,1953|1954|1955|1956|1957|1958|1959|1960|1961|1962|1963|1964|1965|1966|1967|1968|1969|1970|1971
+148,Minnesota Twins|Minnesota Twins|Minnesota Twins|Cleveland Indians|Cleveland Indians|Cleveland Indians,1962|1963|1964|1964|1965|1966
+149,Toronto Blue Jays|San Diego Padres|San Diego Padres|Houston Astros,2007|2008|2009|2010
+150,Minnesota Twins|Minnesota Twins|Minnesota Twins|Chicago Cubs|Chicago Cubs|Los Angeles Dodgers|Florida Marlins|New York Yankees|New York Yankees|Arizona Diamondbacks|Boston Red Sox|Boston Red Sox,1991|1992|1993|1994|1995|1995|1995|1997|1998|1998|2001|2002
+151,Philadelphia Athletics,1915
+152,Oakland Athletics,2008
+153,Washington Nationals|Washington Nationals,1888|1889
+154,Philadelphia Phillies|Philadelphia Phillies|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Houston Astros|Texas Rangers|Texas Rangers,1974|1975|1976|1977|1978|1979|1980|1980|1981|1982|1983|1984|1984|1985
+155,New York Mets|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals,2006|2007|2008|2009|2010
+156,Houston Astros|Houston Astros|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Kansas City Royals|Kansas City Royals|California Angels|Texas Rangers,1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989|1991|1992
+157,St. Louis Browns|Boston Beaneaters|Boston Beaneaters|Boston Beaneaters,1893|1894|1895|1896
+158,New York Giants|New York Giants,1895|1896
+159,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers,1947|1948|1949|1950
+160,Seattle Mariners,2013
+161,Atlanta Braves,2015
+162,Minnesota Twins,1998
+163,Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Texas Rangers|Texas Rangers|Texas Rangers|Philadelphia Phillies|Toronto Blue Jays|Toronto Blue Jays|New York Mets|Los Angeles Dodgers|Los Angeles Dodgers|Pittsburgh Pirates,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2010|2011|2012
+164,Cleveland Naps|Cleveland Indians|Cleveland Indians|Boston Red Sox|Pittsburgh Pirates|Pittsburgh Pirates|Boston Braves|Boston Braves,1914|1915|1916|1918|1919|1920|1921|1922
+165,Washington Senators,1943
+166,Cleveland Naps|Cleveland Naps|Pittsburgh Pirates|St. Louis Cardinals|St. Louis Cardinals,1905|1906|1909|1909|1910
+167,Philadelphia Athletics|Pittsburgh Pirates,1926|1932
+168,St. Louis Cardinals|St. Louis Cardinals|Kansas City Royals|Kansas City Royals,1995|1996|1998|1999
+169,Cincinnati Outlaw Reds,1884
+170,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|New York Yankees|New York Yankees|Seattle Pilots|Chicago Cubs|Atlanta Braves|Atlanta Braves|Atlanta Braves|California Angels|California Angels|San Francisco Giants,1960|1961|1962|1963|1964|1965|1966|1967|1967|1968|1969|1970|1970|1971|1972|1972|1973|1974
+171,Minnesota Twins|Minnesota Twins,1970|1971
+172,Washington Senators|Washington Senators|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Brooklyn Robins,1915|1916|1917|1918|1919|1920|1921|1922|1923
+173,Boston Doves|Boston Red Sox,1907|1910
+174,Montreal Expos|Montreal Expos|Florida Marlins|Florida Marlins|Baltimore Orioles|Chicago Cubs,1991|1992|1993|1994|1995|1996
+175,Los Angeles Dodgers,1966
+176,Chicago White Sox|Chicago White Sox|Chicago White Sox,2000|2001|2002
+177,New York Giants|San Francisco Giants|San Francisco Giants,1957|1958|1959
+178,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Boston Beaneaters|Boston Beaneaters,1902|1903|1904|1904|1905
+179,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox,2009|2010|2011|2012|2013
+180,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Boston Red Sox|San Diego Padres|San Diego Padres|San Diego Padres|Washington Nationals|Seattle Mariners|Seattle Mariners,2002|2003|2004|2005|2006|2006|2007|2008|2009|2010|2011
+181,Arizona Diamondbacks|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Florida Marlins,2007|2007|2008|2009|2010
+182,St. Louis Cardinals|St. Louis Cardinals|Detroit Tigers|Detroit Tigers|Detroit Tigers,1972|1974|1975|1976|1977
+183,Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|New York Yankees|New York Yankees|New York Yankees|New York Yankees,1981|1982|1983|1984|1985|1986|1987|1988|1989|1989|1990|1991|1992
+184,Texas Rangers|Texas Rangers|Texas Rangers,1989|1990|1991
+185,San Diego Padres|Cleveland Indians|Cleveland Indians|Cleveland Indians,2006|2007|2008|2009
+186,St. Louis Cardinals|St. Louis Cardinals|Detroit Tigers,1922|1923|1926
+187,Montreal Expos|Montreal Expos|St. Louis Cardinals,1983|1984|1986
+188,New York Highlanders|New York Highlanders|Brooklyn Superbas|Brooklyn Dodgers|Brooklyn Dodgers|Pittsburgh Rebels|Pittsburgh Rebels,1906|1907|1910|1911|1912|1914|1915
+189,Boston Red Sox,1995
+190,Rockford Forest Citys,1871
+191,Houston Astros|Houston Astros|Houston Astros,1999|2000|2001
+192,Milwaukee Brewers|Milwaukee Brewers|San Diego Padres|Toronto Blue Jays|Cincinnati Reds,1999|2000|2002|2006|2009
+193,Texas Rangers|Texas Rangers|Texas Rangers|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Atlanta Braves|Atlanta Braves|Atlanta Braves|Milwaukee Brewers,1976|1977|1978|1979|1980|1981|1982|1983|1983|1984|1985|1987
+194,Baltimore Orioles|Cleveland Indians|New York Yankees|New York Yankees|New York Yankees,1960|1965|1965|1966|1967
+195,Chicago Cubs,1999
+196,Colorado Rockies,2007
+197,Pittsburgh Pirates,2001
+198,Boston Red Sox,1998
+199,Cleveland Indians|Cleveland Indians,1984|1985
+200,St. Louis Browns|Boston Bees|Brooklyn Dodgers,1937|1939|1943
+201,Toledo Blue Stockings|St. Louis Browns|Pittsburgh Alleghenys|Pittsburgh Alleghenys|Kansas City Cowboys|Kansas City Cowboys,1884|1885|1886|1887|1888|1889
+202,St. Louis Cardinals|Houston Astros|California Angels|California Angels|California Angels|Toronto Blue Jays|Toronto Blue Jays,1975|1976|1977|1978|1979|1980|1981
+203,Brooklyn Atlantics|Brooklyn Atlantics|Hartford Dark Blues|New Haven Elm Citys|Brooklyn Atlantics,1872|1873|1874|1875|1875
+204,Washington Senators,1953
+205,Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Houston Astros|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|San Diego Padres,2003|2004|2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015
+206,Philadelphia Athletics|Philadelphia Athletics|New York Giants|New York Giants|New York Giants|Boston Red Sox,1937|1938|1941|1942|1943|1943
+207,Chicago White Sox|Chicago White Sox,1927|1928
+208,Los Angeles Dodgers,2015
+209,St. Paul White Caps,1884
+210,Chicago White Sox,1924
+211,Houston Astros|Houston Astros|Colorado Rockies|Colorado Rockies,2012|2013|2014|2015
+212,Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Cleveland Indians|Los Angeles Dodgers,1990|1991|1992|1993|1994|1994
+213,Pittsburgh Pirates|Pittsburgh Pirates,1923|1924
+214,Detroit Tigers|New York Yankees,1929|1930
+215,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1957|1958|1960
+216,New York Yankees,1926
+217,Boston Braves|Boston Braves|Boston Braves|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|Boston Braves|Boston Braves|Boston Braves|Brooklyn Robins|Brooklyn Robins,1915|1916|1917|1918|1919|1920|1921|1922|1923|1923|1924|1925|1926|1927
+218,Minnesota Twins|Minnesota Twins,2000|2001
+219,Cincinnati Reds,1934
+220,Anaheim Angels|Los Angeles Dodgers,2001|2003
+221,New York Mets|New York Mets,1972|1973
+222,Boston Red Sox,2014
+223,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Chicago White Sox,1927|1928|1929|1930|1930
+224,Chicago White Sox|Cleveland Indians,1982|1983
+225,Boston Red Stockings|Boston Red Stockings|Boston Red Stockings|Boston Red Stockings|Boston Red Stockings|Chicago White Stockings|Chicago White Stockings|Cincinnati Reds|Boston Red Stockings,1871|1872|1873|1874|1875|1876|1877|1879|1881
+226,Detroit Tigers,1921
+227,Cleveland Indians|Cleveland Indians,2012|2013
+228,Cincinnati Reds|Cincinnati Reds|Montreal Expos|St. Louis Cardinals|Cincinnati Reds|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers,1983|1984|1985|1987|1989|1991|1992|1993|1994
+229,New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|Boston Braves,1919|1920|1922|1923|1924|1925|1926|1927|1928|1928
+230,St. Louis Cardinals,1907
+231,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Los Angeles Dodgers|Los Angeles Dodgers|Toronto Blue Jays,2010|2011|2012|2013|2014|2014|2015|2015
+232,New York Yankees|Pittsburgh Pirates|Pittsburgh Pirates,1915|1915|1916
+233,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers,1943|1946|1947|1948|1949|1950
+234,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1920|1921|1922|1923|1924|1925|1926|1927|1928
+235,St. Louis Browns,1924
+236,Cleveland Indians|Cleveland Indians,1928|1930
+237,Cincinnati Reds|Cincinnati Reds,2014|2015
+238,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1944|1945|1946
+239,Boston Bees|Boston Bees|Boston Braves,1939|1940|1941
+240,Hartford Dark Blues|Keokuk Westerns|New York Mutuals|Baltimore Orioles|Baltimore Orioles,1874|1875|1875|1883|1886
+241,Baltimore Orioles|Baltimore Orioles,1965|1966
+242,Milwaukee Brewers,2006
+243,Chicago White Sox|Chicago White Sox|Chicago White Sox|Seattle Mariners|Seattle Mariners|Philadelphia Phillies,1982|1983|1984|1984|1985|1988
+244,Seattle Mariners,2015
+245,Florida Marlins,2007
+246,Pittsburgh Pirates,1960
+247,Pittsburgh Alleghenys|Washington Nationals|Indianapolis Hoosiers|Washington Nationals|Rochester Broncos|New York Giants,1883|1884|1884|1886|1890|1891
+248,Brooklyn Dodgers,1935
+249,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|California Angels|California Angels|San Francisco Giants|San Francisco Giants,1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1982|1983
+250,Philadelphia Athletics|Philadelphia Athletics,1908|1909
+251,Boston Red Sox|Boston Red Sox|Texas Rangers,1974|1975|1976
+252,Miami Marlins,2015
+253,Chicago Cubs|Chicago Cubs|Chicago Cubs,1961|1962|1963
+254,Kansas City Royals|Kansas City Royals|Cincinnati Reds|Cincinnati Reds,1979|1980|1981|1982
+255,Washington Nationals|Washington Nationals,2014|2015
+256,Fort Wayne Kekiongas|Washington Olympics|Baltimore Canaries,1871|1872|1873
+257,Philadelphia Athletics|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Boston Red Sox|Boston Red Sox|Washington Senators,1921|1923|1924|1925|1926|1927|1928|1929|1929|1930|1930
+258,Chicago Cubs|Chicago Cubs|Chicago Cubs|Brooklyn Robins|Brooklyn Robins|Boston Red Sox,1923|1924|1925|1925|1927|1929
+259,Philadelphia Athletics|Boston Braves|Chicago Cubs|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1933|1934|1943|1943|1944|1945
+260,St. Louis Cardinals|Boston Red Sox|Boston Red Sox|Boston Braves|Pittsburgh Pirates,1939|1944|1945|1946|1950
+261,Cincinnati Reds|Cincinnati Reds|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Cincinnati Reds|Boston Americans|Boston Red Sox,1899|1900|1901|1902|1903|1904|1905|1906|1907|1908
+262,Brooklyn Atlantics,1872
+263,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Boston Braves,1942|1943|1944|1945|1946|1946
+264,Boston Beaneaters|Indianapolis Hoosiers,1884|1884
+265,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|San Diego Padres,1982|1983|1984|1985|1986|1987|1988|1989|1990|1991
+266,Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|San Diego Padres|San Diego Padres|Toronto Blue Jays,1998|1999|2000|2001|2002|2003|2004|2005|2006|2007|2007|2008|2009
+267,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Boston Braves|Boston Braves|Boston Braves|St. Louis Cardinals|St. Louis Cardinals|Boston Braves|Boston Braves|Boston Braves,1937|1938|1939|1940|1943|1944|1945|1945|1946|1947|1948|1949
+268,Montreal Expos,1988
+269,Philadelphia Phillies|Philadelphia Phillies|Boston Red Sox,1988|1989|1992
+270,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox,1974|1976|1977|1978|1979|1980|1981
+271,San Francisco Giants,1982
+272,Houston Astros|Florida Marlins|Los Angeles Dodgers,1997|1998|1998
+273,Milwaukee Brewers,2015
+274,Washington Senators,1914
+275,Boston Braves,1929
+276,Montreal Expos|Philadelphia Phillies,1996|1997
+277,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox,1909|1910|1911|1912
+278,Boston Red Stockings,1871
+279,Boston Americans|Boston Americans|Boston Americans,1905|1906|1907
+280,Philadelphia Athletics,1912
+281,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox,1908|1909|1910|1911|1912|1913|1914|1915|1915|1916|1917|1919
+282,New York Mets|Colorado Rockies|Colorado Rockies,1995|1998|1999
+283,Atlanta Braves|Atlanta Braves,2006|2007
+284,Philadelphia Phillies,1969
+285,Washington Senators|Boston Beaneaters|Boston Beaneaters|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Chicago Cubs|Chicago Cubs|Cincinnati Reds|Cincinnati Reds|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|New York Giants,1899|1900|1901|1901|1902|1903|1904|1904|1905|1905|1906|1906|1907|1908|1908
+286,Philadelphia Phillies,1904
+287,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Cincinnati Reds|Colorado Rockies,1996|1997|1998|1999|2000|2001
+288,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|New York Giants|New York Giants|New York Giants|New York Giants|Chicago Cubs|Detroit Tigers|Detroit Tigers|New York Giants|New York Giants|New York Giants|New York Giants,1927|1928|1929|1930|1931|1932|1933|1934|1935|1936|1937|1938|1939|1940|1941|1941|1942|1943|1946
+289,New York Giants,1944
+290,Pittsburgh Pirates,2008
+291,Philadelphia Athletics,1904
+292,Pittsburgh Pirates|Chicago White Sox,1928|1932
+293,Pittsburgh Pirates,1952
+294,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Tampa Bay Rays|Tampa Bay Rays|Tampa Bay Rays|San Diego Padres|San Diego Padres|Minnesota Twins,2004|2005|2006|2007|2008|2009|2010|2011|2012|2014
+295,New York Giants|Philadelphia Athletics|Philadelphia Athletics,1903|1906|1907
+296,Brooklyn Dodgers,1943
+297,Philadelphia Athletics,1938
+298,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Diego Padres|San Diego Padres|San Diego Padres|Cincinnati Reds|San Diego Padres,1965|1966|1967|1968|1969|1970|1971|1972|1973|1974
+299,St. Louis Cardinals|Atlanta Braves,2008|2009
+300,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics,2007|2008|2009|2010|2011|2012|2013|2014
+301,Philadelphia Athletics,1905
+302,Seattle Mariners|San Francisco Giants|San Francisco Giants,1992|1995|1996
+303,Chicago Cubs|Chicago Cubs,1931|1932
+304,St. Louis Cardinals,1945
+305,Cleveland Indians|Chicago Cubs,2004|2005
+306,Chicago Pirates,1890
+307,Houston Astros,2006
+308,New York Yankees,2007
+309,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1948|1949|1951
+310,Detroit Tigers|Brooklyn Robins,1912|1918
+311,Philadelphia Phillies,1936
+312,Brooklyn Dodgers|Brooklyn Dodgers|Pittsburgh Pirates,1944|1945|1947
+313,Cleveland Naps|Cleveland Naps|Cleveland Naps,1911|1912|1913
+314,San Diego Padres|San Diego Padres|San Diego Padres|Houston Astros|Texas Rangers,2011|2012|2013|2014|2015
+315,Minnesota Twins|Baltimore Orioles|Baltimore Orioles|Pittsburgh Pirates,2008|2008|2009|2010
+316,Washington Senators,1939
+317,Boston Braves,1918
+318,Cleveland Forest Citys|Brooklyn Atlantics|Hartfords of Brooklyn,1871|1872|1877
+319,Milwaukee Brewers|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|San Francisco Giants|San Francisco Giants|San Francisco Giants|New York Mets|Houston Astros|Houston Astros|Baltimore Orioles,1982|1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1992|1993|1994|1995
+320,Kansas City Athletics|Kansas City Athletics|Kansas City Athletics,1961|1962|1963
+321,Minnesota Twins|Kansas City Royals|Montreal Expos|San Diego Padres|San Diego Padres|San Diego Padres|Texas Rangers,1977|1978|1979|1980|1981|1982|1982
+322,Providence Grays|Providence Grays|Kansas City Cowboys|Indianapolis Hoosiers|Indianapolis Hoosiers|Indianapolis Hoosiers|New York Giants|New York Giants|New York Giants|Louisville Colonels,1884|1885|1886|1887|1888|1889|1890|1891|1892|1892
+323,Chicago White Sox|Oakland Athletics,2014|2015
+324,Cleveland Naps|Cleveland Naps|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers,1913|1914|1921|1922|1923|1924|1925|1926|1927
+325,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Pittsburgh Pirates,2009|2010|2011|2012|2013|2014|2015
+326,Wilmington Quicksteps|Kansas City Cowboys|Philadelphia Quakers|Philadelphia Quakers|Philadelphia Quakers|Philadelphia Quakers|Chicago White Stockings|Chicago Pirates|Cincinnati Kelly's Killers|Philadelphia Phillies,1884|1884|1885|1886|1887|1888|1889|1890|1891|1891
+327,Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas,1904|1905|1906|1907
+328,Boston Braves|Boston Braves|Boston Braves,1923|1924|1925
+329,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|San Diego Padres,1993|1996|1997|1997
+330,Houston Colt .45's|Houston Colt .45's|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Philadelphia Phillies,1963|1964|1965|1966|1967|1968|1969|1970|1971|1972|1972
+331,Boston Red Sox,2009
+332,Milwaukee Brewers|Milwaukee Brewers|Cincinnati Reds,1989|1990|1990
+333,Philadelphia Phillies,1939
+334,Philadelphia Athletics,1927
+335,Philadelphia Phillies,1970
+336,Seattle Pilots,1969
+337,Cleveland Spiders|St. Louis Perfectos|Cleveland Spiders,1898|1899|1899
+338,Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies,1995|1996|1997|1998
+339,Kansas City Cowboys,1889
+340,Boston Beaneaters|Boston Doves|Boston Doves|Boston Doves|Philadelphia Phillies|Philadelphia Phillies|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Chicago Cubs|Baltimore Terrapins,1906|1907|1908|1909|1909|1910|1911|1912|1913|1914|1914|1914
+341,Cleveland Naps|Philadelphia Athletics,1913|1917
+342,Oakland Athletics|San Francisco Giants|San Francisco Giants,1986|1989|1990
+343,Pittsburgh Pirates|Florida Marlins|Chicago Cubs|Montreal Expos|Montreal Expos|Montreal Expos|Kansas City Royals|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Toronto Blue Jays|Toronto Blue Jays|Arizona Diamondbacks|Seattle Mariners|Seattle Mariners|Seattle Mariners|Washington Nationals|St. Louis Cardinals|New York Mets|New York Mets|Atlanta Braves,1992|1996|1997|1998|1999|2000|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2011|2012|2012
+344,Houston Astros|Houston Astros,1973|1975
+345,Oakland Athletics|Oakland Athletics|Arizona Diamondbacks|Arizona Diamondbacks|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Montreal Expos|Minnesota Twins|Washington Nationals,1996|1997|1998|1999|1999|2000|2001|2001|2002|2003|2004|2006|2007
+346,Toronto Blue Jays,1989
+347,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|San Francisco Giants,1991|1992|1993|1994|1996
+348,Pittsburgh Pirates,1916
+349,New York Giants,1895
+350,New York Highlanders,1912
+351,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Washington Senators|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins,1955|1956|1957|1958|1959|1960|1961|1962|1963|1964|1965|1966|1967
+352,Cleveland Forest Citys|Philadelphia Athletics|Philadelphia Athletics|St. Louis Brown Stockings|St. Louis Brown Stockings|St. Louis Brown Stockings|Pittsburgh Alleghenys|Pittsburgh Alleghenys|Pittsburgh Alleghenys|Chicago/Pittsburgh|Baltimore Monumentals|Syracuse Stars,1871|1873|1874|1875|1876|1877|1882|1883|1884|1884|1884|1890
+353,St. Louis Cardinals|Oakland Athletics,1995|1996
+354,Toronto Blue Jays|Philadelphia Phillies|Atlanta Braves,1995|1996|1999
+355,Chicago White Sox,1927
+356,Oakland Athletics,1976
+357,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|St. Louis Browns|Detroit Tigers|Detroit Tigers|Detroit Tigers|Chicago White Sox|Cincinnati Redlegs|Cincinnati Redlegs,1947|1948|1949|1950|1951|1951|1952|1953|1954|1954|1955|1956
+358,Columbus Buckeyes|St. Louis Maroons,1884|1886
+359,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Kansas City Athletics|Kansas City Athletics,1948|1949|1950|1951|1952|1953|1954|1955|1956|1957|1958|1959|1960|1961
+360,Philadelphia Athletics,1918
+361,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Texas Rangers|Cleveland Indians,2001|2002|2003|2004|2005|2006|2008
+362,Arizona Diamondbacks|Cleveland Indians|Cleveland Indians|Cleveland Indians,2012|2013|2014|2015
+363,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Chicago Cubs|St. Louis Browns,1936|1937|1938|1939|1940|1941|1946|1950
+364,Anaheim Angels|Anaheim Angels,1998|2000
+365,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago Cubs,1955|1956|1957|1958|1959|1960|1961|1962|1963|1964|1965
+366,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|New York Yankees|New York Yankees|New York Yankees,1911|1912|1913|1914|1915|1916|1917
+367,Chicago White Sox|Cincinnati Reds,1949|1961
+368,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns,1912|1913|1914|1915|1916
+369,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Pittsburgh Pirates,1978|1979|1980|1981|1982
+370,Detroit Tigers,1920
+371,Detroit Tigers,1953
+372,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics,1914|1915|1916|1921|1922|1924|1925|1926
+373,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Philadelphia Phillies|Philadelphia Phillies,1947|1948|1949|1949|1951|1952|1953|1954|1955|1956|1957
+374,Philadelphia Athletics,1889
+375,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|New York Mets|New York Mets,1960|1961|1962|1963|1963|1964
+376,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Atlanta Braves|Atlanta Braves|Atlanta Braves|Florida Marlins|Florida Marlins|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks,1993|1994|1995|1996|1996|1997|1998|1999|2000|2000|2001|2002|2003|2004
+377,Baltimore Orioles|Kansas City Royals|Kansas City Royals|Kansas City Royals|Colorado Rockies|Colorado Rockies|Detroit Tigers|Pittsburgh Pirates|Pittsburgh Pirates|San Francisco Giants,2004|2004|2005|2006|2006|2007|2008|2008|2009|2010
+378,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Chicago Cubs|Chicago Cubs|San Francisco Giants|San Francisco Giants|Detroit Tigers|St. Louis Cardinals,1988|1989|1990|1991|1993|1994|1995|1996|1997|1997
+379,Baltimore Orioles|Tampa Bay Devil Rays|Kansas City Royals|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays,2004|2004|2004|2004|2005|2006|2007|2008|2008|2009|2010|2011|2012|2013|2014|2015
+380,Los Angeles Dodgers|Cleveland Indians,1959|1959
+381,Kansas City Athletics|Kansas City Athletics,1956|1958
+382,San Diego Padres|New York Mets|New York Mets|New York Mets|Los Angeles Dodgers|Chicago Cubs,2010|2011|2012|2013|2014|2015
+383,St. Louis Cardinals,1907
+384,Cincinnati Reds|Cincinnati Reds|Cleveland Bronchos|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps,1901|1902|1902|1903|1904|1905|1906|1907|1908
+385,San Diego Padres|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Boston Red Sox|Boston Red Sox|New York Mets|New York Mets|New York Mets|Seattle Mariners,2003|2003|2004|2005|2006|2007|2008|2008|2009|2010|2011|2012|2013
+386,Louisville Colonels,1899
+387,Cincinnati Reds,1908
+388,Kansas City Royals|Pittsburgh Pirates|Pittsburgh Pirates,2005|2006|2007
+389,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Oakland Athletics|California Angels|California Angels|California Angels|California Angels|California Angels|California Angels|New York Yankees|New York Yankees|New York Yankees|Boston Red Sox|Boston Red Sox|Minnesota Twins|Oakland Athletics,1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1987|1988
+390,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|Cleveland Indians|Boston Red Sox|Boston Red Sox,1919|1920|1921|1922|1923|1924|1928|1929|1930
+391,Florida Marlins|Detroit Tigers|Detroit Tigers|Houston Astros,2005|2007|2008|2009
+392,Washington Nationals,1884
+393,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Los Angeles Dodgers,2010|2011|2012|2013|2015
+394,Detroit Wolverines,1884
+395,Atlanta Braves|Atlanta Braves|Atlanta Braves|Pittsburgh Pirates,1975|1978|1979|1980
+396,Cleveland Naps|Chicago White Sox|Cincinnati Reds|Cincinnati Reds|St. Louis Cardinals,1913|1913|1915|1916|1918
+397,New York Yankees|New York Yankees|New York Yankees|New York Yankees|Washington Senators,1924|1925|1926|1927|1929
+398,Washington Olympics|Washington Olympics|Washington Blue Legs|Boston Red Stockings|Boston Red Stockings|Chicago White Stockings,1871|1872|1873|1874|1875|1880
+399,Pittsburgh Alleghenys,1889
+400,Philadelphia Phillies,1895
+401,New York Yankees|Pittsburgh Pirates,2006|2008
+402,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles,1956|1957|1958
+403,Seattle Mariners|Seattle Mariners|Toronto Blue Jays,1978|1979|1981
+404,Pittsburgh Pirates|San Diego Padres|Detroit Tigers,1996|1997|1998
+405,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Washington Senators,1930|1931|1933|1934|1935|1935
+406,Detroit Tigers|Detroit Tigers|Detroit Tigers|Los Angeles Dodgers|San Diego Padres|San Diego Padres|San Diego Padres,1987|1988|1989|1989|1993|1994|1995
+407,New York Yankees|New York Yankees|New York Yankees,2005|2006|2007
+408,New York Giants,1902
+409,New York Mets|New York Mets|Minnesota Twins|Minnesota Twins|Detroit Tigers|Oakland Athletics,1984|1985|1986|1987|1988|1989
+410,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Seattle Mariners|Chicago Cubs|Detroit Tigers,1980|1981|1982|1983|1984|1985|1989
+411,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves,1974|1975|1976|1977
+412,Cincinnati Red Stockings|Cincinnati Reds|Louisville Colonels,1889|1890|1891
+413,St. Louis Cardinals,1954
+414,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Chicago White Sox|Chicago White Sox,1948|1949|1950|1951|1952|1957|1958
+415,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Washington Senators|Washington Senators|Detroit Tigers|St. Louis Browns|Chicago White Sox,1947|1948|1949|1950|1950|1951|1951|1952|1953
+416,Milwaukee Brewers|Milwaukee Brewers,1976|1977
+417,New York Mets|New York Mets|New York Mets|New York Mets|Milwaukee Brewers,1963|1964|1965|1966|1971
+418,Cleveland Indians,1990
+419,California Angels,1991
+420,Texas Rangers,1977
+421,Detroit Wolverines|Detroit Wolverines|Cleveland Spiders|Cleveland Spiders|Cleveland Spiders,1887|1888|1889|1890|1891
+422,New York Mets|New York Mets|Boston Red Sox|Boston Red Sox|Atlanta Braves,2011|2012|2012|2013|2014
+423,New York Yankees|New York Yankees|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners,1978|1979|1980|1981|1982|1983|1984|1985|1986
+424,New York Mets|New York Mets,1989|1991
+425,New York Giants,1914
+426,St. Louis Cardinals|Houston Colt .45's|Houston Astros|Milwaukee Braves|Atlanta Braves|Cincinnati Reds|Cincinnati Reds|Houston Astros|St. Louis Cardinals|St. Louis Cardinals|New York Mets|New York Mets,1963|1964|1965|1965|1967|1968|1969|1970|1970|1971|1972|1973
+427,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Boston Doves|Boston Doves|Boston Doves|Chicago Cubs,1899|1900|1901|1902|1903|1904|1905|1906|1907|1908|1909|1910
+428,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners,2011|2012|2013|2014
+429,Troy Haymakers|Brooklyn Atlantics,1871|1872
+430,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Boston Braves|Boston Braves|Boston Braves,1941|1942|1946|1947|1948|1949
+431,New York Metropolitans|New York Metropolitans|New York Giants,1884|1885|1887
+432,Baltimore Orioles,2002
+433,Philadelphia Athletics|New York Mutuals|Philadelphia Whites|Philadelphia Whites|Philadelphia Centennials|Philadelphia Athletics|Louisville Grays|New York Mutuals,1871|1872|1873|1874|1875|1875|1876|1876
+434,St. Louis Browns|St. Louis Browns|St. Louis Browns|Brooklyn Dodgers|Brooklyn Dodgers|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Detroit Tigers|Cincinnati Reds|Pittsburgh Pirates,1924|1927|1928|1933|1934|1939|1940|1941|1942|1943|1944|1945|1945
+435,Toronto Blue Jays|Toronto Blue Jays,2011|2012
+436,Chicago White Sox,2015
+437,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Cincinnati Reds,1926|1927|1928|1929|1930|1931
+438,Brooklyn Superbas|Cleveland Blues|Cincinnati Reds|Detroit Tigers,1899|1901|1902|1902
+439,Pittsburgh Alleghenys|Baltimore Monumentals,1884|1884
+440,Boston Doves|Boston Doves|Cincinnati Reds|Philadelphia Phillies|Chicago Chi-Feds|Chicago Whales,1909|1910|1911|1911|1914|1915
+441,Cleveland Naps,1914
+442,New York Yankees,1965
+443,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Chicago Cubs|Chicago Cubs|Boston Red Sox|Boston Red Sox|Boston Red Sox|San Diego Padres|San Diego Padres,1991|1992|1993|1994|1995|1996|1997|1998|1999|1999|2000|2001|2003|2004
+444,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|New York Yankees,1913|1914|1915|1916|1918
+445,Detroit Tigers|Detroit Tigers|Washington Senators,1909|1910|1910
+446,Pittsburgh Pirates|Boston Doves|Boston Doves|New York Giants|New York Giants|New York Giants|Cincinnati Reds|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1908|1908|1909|1910|1911|1912|1913|1913|1914|1915
+447,Philadelphia Phillies|Philadelphia Phillies,1897|1898
+448,Washington Senators|Washington Senators,1911|1912
+449,Chicago Cubs|Chicago Cubs|Chicago Cubs|Cleveland Indians|Cleveland Indians,1943|1945|1946|1946|1947
+450,Cleveland Indians|Cleveland Indians,1936|1937
+451,New York Giants,1915
+452,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|New York Mets|Baltimore Orioles|Milwaukee Brewers|Oakland Athletics|Oakland Athletics|Detroit Tigers,1993|1994|1995|1996|1997|1998|1998|1999|1999|2000|2000
+453,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|San Diego Padres|San Diego Padres,1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975
+454,Florida Marlins|Florida Marlins|Florida Marlins|Florida Marlins|Florida Marlins|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers,2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2012|2012|2013|2014
+455,Colorado Rockies|Colorado Rockies,1996|1997
+456,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Los Angeles Angels of Anaheim|Chicago White Sox,2009|2010|2011|2012|2013|2014|2014|2015
+457,Tampa Bay Rays|Tampa Bay Rays,2013|2015
+458,Pittsburgh Alleghenys|Pittsburgh Alleghenys|Pittsburgh Burghers|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|New York Giants|New York Giants|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1888|1889|1890|1891|1892|1893|1894|1895|1896|1896|1897|1897|1898|1899|1900|1901|1902|1903|1904|1905|1906|1907
+459,Cincinnati Reds|Cincinnati Reds,1927|1928
+460,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|St. Louis Cardinals,1939|1940|1941|1942|1942
+461,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Kansas City Royals|Kansas City Royals|Los Angeles Dodgers,1979|1980|1982|1983|1984|1985|1986
+462,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Los Angeles Angels|Minnesota Twins|Minnesota Twins,1955|1957|1958|1959|1960|1961|1961|1963
+463,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Seattle Mariners|Seattle Mariners|Seattle Mariners|Boston Red Sox|Pittsburgh Pirates|Houston Astros|Tampa Bay Rays,2002|2004|2005|2006|2007|2008|2009|2011|2011|2012|2013|2014
+464,Milwaukee Braves|Philadelphia Phillies,1962|1968
+465,Cleveland Indians,1925
+466,Cleveland Indians|Cleveland Indians,1922|1923
+467,Boston Red Sox|Boston Red Sox|Boston Red Sox|Buffalo Blues,1912|1913|1914|1915
+468,Pittsburgh Pirates|Pittsburgh Pirates,1930|1931
+469,Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim,2014|2015
+470,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|San Francisco Giants|San Francisco Giants|Minnesota Twins|Atlanta Braves|Atlanta Braves|Atlanta Braves,1981|1982|1983|1984|1985|1986|1987|1988|1989|1989|1990|1991|1993|1994|1995
+471,Chicago Cubs|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Cincinnati Reds|Philadelphia Phillies|Cleveland Indians,1906|1906|1907|1908|1909|1910|1911|1916
+472,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1996|1997|1998
+473,Pittsburgh Alleghenys|Washington Nationals|Buffalo Bisons|Washington Statesmen|Philadelphia Athletics,1887|1889|1890|1891|1891
+474,New York Giants|New York Giants,1907|1908
+475,Chicago Cubs|Chicago Cubs,2014|2015
+476,Cincinnati Reds,1944
+477,Milwaukee Brewers|Milwaukee Brewers,1983|1984
+478,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|New York Yankees|New York Yankees|New York Yankees|Cleveland Indians|Cleveland Indians,1968|1969|1970|1972|1973|1974|1974|1975
+479,St. Louis Cardinals,1948
+480,New York Yankees|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Giants|New York Giants,1938|1940|1941|1942|1943|1944|1946|1947|1947|1948
+481,Cincinnati Reds,1924
+482,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1921|1922|1923
+483,Milwaukee Brewers|New York Metropolitans,1884|1886
+484,Atlanta Braves|Cleveland Indians|Cleveland Indians|Cleveland Indians,1983|1983|1984|1985
+485,Cincinnati Reds,1970
+486,Brooklyn Dodgers|Brooklyn Dodgers|Pittsburgh Pirates|Brooklyn Dodgers|Brooklyn Dodgers|New York Giants,1946|1947|1947|1947|1948|1949
+487,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Minnesota Twins|Tampa Bay Devil Rays|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Washington Nationals|Colorado Rockies|Colorado Rockies|Pittsburgh Pirates|Seattle Mariners|Seattle Mariners,2001|2002|2003|2004|2005|2006|2007|2008|2009|2009|2010|2011|2014|2015
+488,Chicago White Sox|Toronto Blue Jays|Los Angeles Dodgers,2000|2001|2002
+489,St. Louis Browns|St. Louis Browns|St. Louis Browns|Chicago White Sox,1934|1935|1936|1939
+490,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Los Angeles Dodgers,1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982
+491,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Detroit Tigers|Detroit Tigers|Detroit Tigers,1950|1951|1953|1954|1954|1955|1956
+492,Texas Rangers,1990
+493,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Cincinnati Reds|Cincinnati Reds|Chicago White Sox|Detroit Tigers|Seattle Mariners|Kansas City Royals|Kansas City Royals|Kansas City Royals|Anaheim Angels|Anaheim Angels,1987|1988|1989|1990|1991|1992|1993|1993|1994|1995|1996|1997|1998|1999|2000
+494,Cleveland Spiders,1897
+495,Baltimore Orioles,2013
+496,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Kansas City Royals|Kansas City Royals|Boston Red Sox|Boston Red Sox|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Colorado Rockies|Atlanta Braves,1989|1990|1991|1992|1993|1993|1994|1995|1996|1997|1998|1999|2000|2000
+497,Los Angeles Angels|Los Angeles Angels|Los Angeles Angels|Philadelphia Phillies|Philadelphia Phillies|Houston Astros|Pittsburgh Pirates|Cincinnati Reds,1962|1963|1964|1965|1966|1967|1969|1970
+498,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Chicago White Sox|Tampa Bay Rays,2009|2010|2012|2013|2014|2015
+499,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|St. Louis Cardinals,2003|2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015
+500,Oakland Athletics|Colorado Rockies,2000|2001
+501,Chicago Cubs|Tampa Bay Rays|Tampa Bay Rays|Tampa Bay Rays,2012|2013|2014|2015
+502,Cincinnati Reds,1996
+503,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|Detroit Tigers|Cleveland Indians|Cleveland Indians,1935|1936|1937|1938|1939|1939|1940|1941
+504,Pittsburgh Pirates|Pittsburgh Pirates,1952|1955
+505,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Houston Astros|Texas Rangers,1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1985|1986|1987|1988|1988|1989
+506,Kansas City Cowboys|Louisville Colonels|Cincinnati Kelly's Killers,1889|1891|1891
+507,Cleveland Indians|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Cleveland Indians|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|San Francisco Giants|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Milwaukee Brewers,1995|1995|1996|1997|1998|1998|1998|1999|2000|2001|2002|2003|2004|2005|2006|2006
+508,Toronto Blue Jays|Toronto Blue Jays|San Diego Padres|San Diego Padres|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|New York Mets|Pittsburgh Pirates,1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001
+509,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Cleveland Indians|Cleveland Indians|Houston Astros,1985|1986|1987|1991|1992|1993
+510,Pittsburgh Pirates|Pittsburgh Pirates,1939|1940
+511,Brooklyn Grays,1885
+512,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Boston Red Sox|Boston Red Sox|Seattle Pilots|Chicago White Sox,1958|1959|1960|1961|1962|1963|1964|1965|1966|1967|1967|1968|1969|1969
+513,Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Dodgers,1907|1908|1909|1910|1911
+514,Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Chicago Cubs|Chicago White Sox|Chicago White Sox,1981|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1993
+515,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Cincinnati Reds|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Reds|Cincinnati Reds|New York Mets|Milwaukee Braves|Milwaukee Braves|Milwaukee Braves,1950|1951|1952|1953|1954|1955|1956|1957|1958|1959|1960|1961|1962|1962|1963|1964
+516,New York Mets|New York Mets|New York Mets|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|Miami Marlins|Arizona Diamondbacks|Tampa Bay Rays,2004|2005|2006|2007|2008|2009|2010|2011|2012|2013|2014
+517,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|New York Giants|New York Giants|New York Giants,1924|1926|1927|1929|1930|1932|1933|1934
+518,Cleveland Indians|Cleveland Indians|Cleveland Indians|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Kansas City Royals|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|New York Mets,1986|1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001|2002|2003
+519,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers,1971|1972|1973|1974
+520,Baltimore Orioles|Baltimore Orioles|Arizona Diamondbacks,2010|2011|2012
+521,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Philadelphia Phillies|Philadelphia Phillies|Milwaukee Brewers|Montreal Expos|Boston Red Sox,1989|1990|1991|1992|1993|1993|1994|1995
+522,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Oakland Athletics,1976|1977|1978|1979|1980|1982
+523,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Boston Braves|Boston Braves|Chicago Cubs|Chicago Cubs,1923|1924|1925|1926|1927|1928|1929|1930|1931
+524,Atlanta Braves|Atlanta Braves,1990|1991
+525,Cincinnati Reds,2000
+526,Chicago White Sox,1912
+527,Cincinnati Reds|Cincinnati Reds|Texas Rangers|Texas Rangers|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Baltimore Orioles,2000|2001|2001|2002|2003|2004|2005|2007
+528,New York Highlanders,1907
+529,Kansas City Royals|Atlanta Braves,1986|1987
+530,Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Cincinnati Reds,2009|2010|2011|2014
+531,New York Yankees|Kansas City Athletics,1957|1959
+532,Troy Haymakers|Troy Haymakers|New York Mutuals,1871|1872|1873
+533,Tampa Bay Rays,2015
+534,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Chicago White Sox|Chicago White Sox|Baltimore Orioles|Baltimore Orioles,1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000
+535,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Chicago Cubs|Chicago Cubs|Colorado Rockies|Boston Red Sox|Boston Red Sox|New York Yankees|San Diego Padres|Cincinnati Reds,1997|1998|2000|2001|2002|2003|2003|2004|2005|2005|2006|2007
+536,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves,1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998
+537,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Colorado Rockies|Cleveland Indians|Cleveland Indians|Cleveland Indians|St. Louis Cardinals|Washington Nationals|Washington Nationals|Washington Nationals|Los Angeles Dodgers|Los Angeles Dodgers,1998|1999|2000|2001|2002|2003|2004|2005|2006|2006|2007|2008|2009|2009|2010
+538,New York Yankees|New York Yankees|New York Yankees|Anaheim Angels,1999|2000|2001|2002
+539,St. Louis Browns,1889
+540,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves,1975|1976|1977|1978
+541,Colorado Rockies|Colorado Rockies|Colorado Rockies,2007|2008|2009
+542,Tampa Bay Rays,2014
+543,Detroit Tigers|Detroit Tigers|Miami Marlins,2011|2012|2013
+544,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants,2011|2012|2013|2014|2015
+545,Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Houston Astros|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|San Francisco Giants|St. Louis Cardinals|St. Louis Cardinals|New York Yankees|New York Yankees,1998|1999|2000|2001|2002|2003|2004|2004|2005|2006|2007|2008|2009|2010|2011|2011|2012|2013|2014|2015
+546,Chicago Cubs|Chicago Cubs|Montreal Expos|Detroit Tigers,2002|2004|2004|2008
+547,St. Louis Cardinals|New York Mets|New York Mets|Colorado Rockies|Colorado Rockies|Montreal Expos,1997|1998|1999|1999|2000|2004
+548,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Boston Red Sox|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers,1998|1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015
+549,Texas Rangers,2013
+550,Chicago White Sox|Chicago White Sox|Texas Rangers|Texas Rangers|Boston Red Sox,1991|1992|1994|1995|1996
+551,Texas Rangers,2010
+552,Cleveland Bronchos|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps,1902|1903|1904|1905|1906|1907|1908|1909|1910
+553,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants,1995|1996|1997|1998|1999|2000|2001|2002|2003
+554,Cincinnati Reds|Cincinnati Reds|Colorado Rockies|Montreal Expos,1991|1992|1993|1994
+555,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983
+556,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Baltimore Terrapins|Philadelphia Phillies|Philadelphia Phillies|Chicago White Sox,1903|1904|1905|1906|1907|1908|1909|1910|1911|1912|1913|1914|1915|1916|1917|1925
+557,Philadelphia Quakers,1883
+558,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves,1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989
+559,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Chicago Cubs|Chicago Cubs|Texas Rangers,1995|1996|1997|1999|2000|2001|2002|2003|2003
+560,San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|Seattle Mariners|St. Louis Cardinals|St. Louis Cardinals|Arizona Diamondbacks|Arizona Diamondbacks|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1989|1990|1991|1992|1993|1994|1995|1995|1996|1997|1998|1999|2000|2001|2002
+561,St. Louis Cardinals,1931
+562,Cleveland Indians|Cleveland Indians|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Boston Bees|Philadelphia Phillies|Cincinnati Reds,1925|1926|1928|1929|1930|1931|1932|1933|1934|1935|1936|1936|1938
+563,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|St. Louis Browns|St. Louis Browns,1923|1924|1925|1926|1927|1928|1929|1930|1931|1932
+564,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Texas Rangers|Texas Rangers|Texas Rangers|New York Yankees|Seattle Mariners|California Angels|California Angels|California Angels|California Angels|California Angels|Baltimore Orioles|Kansas City Royals|Toronto Blue Jays|Toronto Blue Jays,1971|1972|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1987|1988
+565,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Yankees|Seattle Mariners|Florida Marlins|San Francisco Giants|San Francisco Giants|San Francisco Giants|Florida Marlins|Toronto Blue Jays,1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2003|2003|2004|2005|2006|2007|2007|2008
+566,Montreal Expos|Montreal Expos|Kansas City Royals|Arizona Diamondbacks,1995|1996|1997|1998
+567,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Philadelphia Phillies|Boston Red Sox|Boston Red Sox|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2002
+568,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Cleveland Indians,1939|1940|1941|1942|1945
+569,Cleveland Naps,1914
+570,Brooklyn Atlantics|Wilmington Quicksteps,1884|1884
+571,St. Louis Browns|Chicago White Sox|St. Louis Browns,1918|1921|1921
+572,Milwaukee Grays|Worcester Ruby Legs|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Detroit Wolverines|Boston Beaneaters|Boston Beaneaters|Boston Beaneaters|Boston Beaneaters|Boston Beaneaters,1878|1880|1881|1882|1883|1884|1885|1886|1887|1888|1889|1890|1891|1892|1893
+573,Philadelphia Phillies,1964
+574,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Boston Red Sox|Boston Red Sox|Boston Red Sox|New York Mets|California Angels,1962|1963|1964|1965|1966|1967|1967|1968
+575,California Angels|Minnesota Twins,1995|1996
+576,Boston Red Sox|Boston Red Sox,1927|1928
+577,St. Louis Browns|Pittsburgh Pirates,1928|1931
+578,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|New York Mets|Colorado Rockies|Colorado Rockies|San Diego Padres|Milwaukee Brewers|Washington Nationals|St. Louis Cardinals|St. Louis Cardinals|Los Angeles Dodgers,1995|1996|1998|1999|2000|2001|2001|2001|2002|2003|2004|2005|2006|2007|2008
+579,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns,1923|1924|1925|1926|1927
+580,Milwaukee Brewers|Atlanta Braves|Atlanta Braves|Atlanta Braves|Tampa Bay Rays,2004|2007|2008|2009|2009
+581,Philadelphia Phillies,1923
+582,Baltimore Orioles|Philadelphia Phillies,1998|1999
+583,St. Louis Cardinals|St. Louis Cardinals,1906|1907
+584,Montreal Expos|Montreal Expos|Montreal Expos,1997|1998|1999
+585,Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Tampa Bay Rays|Detroit Tigers|Detroit Tigers|Detroit Tigers|San Diego Padres|San Diego Padres,2001|2002|2003|2004|2005|2006|2007|2008|2010|2011|2012|2013|2014|2015
+586,Washington Senators,1934
+587,Minnesota Twins,2011
+588,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|New York Mets|New York Mets|Baltimore Orioles|Texas Rangers|Arizona Diamondbacks,1999|2000|2002|2003|2004|2004|2005|2006|2009|2010
+589,Philadelphia Athletics|Philadelphia Athletics|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1943|1946|1951|1952|1953
+590,Middletown Mansfields,1872
+591,Washington Senators|Washington Senators|Washington Senators|Washington Senators|New York Giants|New York Giants|New York Giants|Philadelphia Phillies|New York Giants|New York Giants,1913|1914|1915|1916|1923|1924|1925|1926|1926|1927
+592,Philadelphia Athletics|Philadelphia Athletics|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Cleveland Indians|Cleveland Indians|Boston Red Sox,1934|1935|1938|1939|1940|1941|1942|1945|1946|1947|1948|1949|1950|1952
+593,New York Mets|New York Mets|Chicago Cubs|Cleveland Indians,1978|1980|1982|1985
+594,Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|New York Giants|New York Giants|New York Giants|New York Giants|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Boston Braves,1923|1924|1925|1926|1927|1927|1928|1929|1930|1930|1931|1932|1933|1934|1935
+595,Philadelphia Phillies,1922
+596,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,1910|1911|1912|1913|1914|1915|1915|1916|1917|1918|1919|1920|1921|1923|1924|1925
+597,St. Louis Cardinals,1922
+598,Montreal Expos|Florida Marlins,2004|2005
+599,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox,1911|1912|1913|1914|1915|1916|1917|1918|1919
+600,Boston Red Sox|Boston Red Sox|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Kansas City Royals|Los Angeles Dodgers|San Francisco Giants|San Francisco Giants|San Francisco Giants,1987|1988|1989|1990|1991|1991|1992|1993|1994|1995
+601,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|Cleveland Indians|Cleveland Indians|Cleveland Indians|Pittsburgh Pirates|St. Louis Browns|Cleveland Indians|Pittsburgh Pirates,1939|1940|1941|1942|1946|1947|1948|1949|1950|1950|1951|1952|1952
+602,New York Yankees|New York Yankees|Washington Senators|Washington Senators|Washington Senators|Boston Red Sox|Detroit Tigers|Detroit Tigers,1954|1955|1956|1957|1958|1958|1959|1960
+603,St. Louis Cardinals,1997
+604,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Cincinnati Reds|Cincinnati Reds|Milwaukee Brewers|Milwaukee Brewers|Cleveland Indians|Chicago Cubs|Chicago Cubs|Cleveland Indians,1993|1994|1995|1996|1997|1998|1998|1999|1999|2000|2000|2001|2002|2003
+605,New York Mets|New York Mets|New York Mets|Kansas City Royals|Toronto Blue Jays|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|San Francisco Giants|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Atlanta Braves|Atlanta Braves|Kansas City Royals,1978|1979|1980|1981|1981|1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1992
+606,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Mets|New York Mets|New York Mets,1980|1981|1982|1983|1984|1984|1985|1986
+607,Florida Marlins|Florida Marlins|Florida Marlins|Florida Marlins|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays,1998|1999|2000|2001|2002|2003|2004
+608,Chicago Cubs|Chicago Cubs|Chicago Cubs,2009|2010|2011
+609,Brooklyn Robins|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Cleveland Indians|Washington Senators|Washington Senators|Washington Senators|Cleveland Indians|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox,1923|1926|1927|1928|1929|1930|1931|1932|1933|1934|1934|1935|1936|1937|1938|1939
+610,St. Louis Cardinals|St. Louis Cardinals,1944|1945
+611,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Superbas|Brooklyn Dodgers,1901|1902|1903|1904|1905|1906|1907|1908|1909|1910|1911
+612,Boston Beaneaters|Boston Beaneaters|Boston Beaneaters|Boston Beaneaters,1896|1897|1898|1899
+613,Cleveland Indians|Cleveland Indians|Cleveland Indians|Chicago White Sox|Chicago White Sox|Boston Red Sox,1932|1935|1936|1937|1938|1939
+614,Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals,2001|2002|2003|2004
+615,Pittsburgh Pirates,1914
+616,Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps,1907|1908|1909|1910
+617,Chicago White Sox|Chicago White Sox,1913|1914
+618,Philadelphia Athletics|Washington Senators,1922|1927
+619,Pittsburgh Alleghenys|Pittsburgh Pirates|Washington Senators,1890|1891|1892
+620,Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Bees|Boston Bees|New York Giants|New York Giants|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Philadelphia Phillies,1930|1931|1932|1933|1934|1935|1936|1937|1937|1938|1938|1939|1940|1940
+621,Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos,1999|2000|2001|2002|2004
+622,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Arizona Diamondbacks,2009|2010|2011|2012
+623,Philadelphia Athletics|Boston Red Stockings,1876|1880
+624,Chicago White Sox|Cincinnati Reds|Cincinnati Reds|Pittsburgh Rebels,1911|1913|1914|1915
+625,Cleveland Indians,1916
+626,Colorado Rockies|Colorado Rockies,2014|2015
+627,New York Yankees|New York Yankees|Houston Astros|Houston Astros|Houston Astros|Houston Astros|San Francisco Giants|San Francisco Giants|San Francisco Giants|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers,1975|1977|1978|1979|1980|1981|1981|1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992
+628,Anaheim Angels,2004
+629,Detroit Tigers|Detroit Tigers|Detroit Tigers|San Diego Padres|San Diego Padres|Houston Astros|Houston Astros|Atlanta Braves|Minnesota Twins,1993|1994|1995|1996|1997|1998|1999|1999|2000
+630,Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals,2005|2006|2007|2008|2009|2010
+631,Cincinnati Reds,2005
+632,Cincinnati Red Stockings,1884
+633,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Chicago Cubs,2009|2010|2011|2012|2012
+634,Philadelphia Athletics,1871
+635,Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|New York Yankees|St. Louis Cardinals|St. Louis Cardinals|Texas Rangers,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2010|2011|2012|2013
+636,St. Louis Cardinals|New York Giants|Philadelphia Phillies|Philadelphia Phillies,1924|1931|1932|1933
+637,Washington Senators,1918
+638,Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals|Washington Nationals|Philadelphia Phillies|Cincinnati Reds|Los Angeles Dodgers,2008|2009|2010|2011|2012|2013|2013|2014|2014
+639,San Diego Padres,1977
+640,New York Giants|New York Giants,1900|1901
+641,New York Mets|New York Mets|Milwaukee Brewers|Milwaukee Brewers,1978|1979|1981|1982
+642,St. Louis Cardinals,1909
+643,Montreal Expos|Montreal Expos|Chicago White Sox|Chicago White Sox|Chicago White Sox|Seattle Mariners|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Oakland Athletics|Detroit Tigers,1979|1980|1981|1982|1983|1983|1984|1985|1986|1987|1987|1991
+644,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Colorado Rockies|Colorado Rockies|Atlanta Braves|Philadelphia Phillies|Kansas City Royals,2000|2001|2002|2003|2003|2004|2005|2006|2006
+645,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Athletics|Philadelphia Athletics|Cleveland Bronchos|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps,1899|1900|1901|1902|1902|1903|1904|1905|1906|1907
+646,New York Yankees|Seattle Mariners|Seattle Mariners|Seattle Mariners,1976|1977|1978|1979
+647,New York Yankees,1918
+648,Pittsburgh Pirates,1953
+649,Colorado Rockies|Minnesota Twins|Minnesota Twins|Minnesota Twins,2008|2013|2014|2015
+650,Detroit Tigers|St. Louis Browns,1948|1951
+651,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|New York Yankees|New York Yankees|Houston Astros,1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987
+652,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Mets,1946|1947|1948|1949|1950|1951|1952|1953|1954|1955|1956|1957|1958|1959|1960|1961|1962|1963|1965
+653,Chicago White Sox,1912
+654,Brooklyn Dodgers|Brooklyn Dodgers|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Boston Bees|Boston Braves|New York Giants|New York Giants|New York Giants|New York Giants,1934|1936|1937|1938|1939|1940|1940|1941|1942|1943|1944|1945
+655,Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Los Angeles Dodgers|New York Yankees|New York Mets,2001|2002|2003|2004|2005|2006|2007|2008|2009|2009
+656,Atlanta Braves|Atlanta Braves|Cincinnati Reds|Florida Marlins|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Baltimore Orioles|Cleveland Indians|Detroit Tigers|Toronto Blue Jays|Los Angeles Dodgers,1989|1990|1992|1993|1994|1995|1996|1997|1997|1998|1998|1999|2000
+657,Altoona Mountain City|Kansas City Cowboys|Chicago/Pittsburgh,1884|1884|1884
+658,Philadelphia Athletics|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Chicago White Sox|Chicago White Sox|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics,1925|1928|1929|1930|1931|1932|1932|1933|1934|1935|1936|1938
+659,Chicago White Sox|Philadelphia Athletics|Philadelphia Athletics|Pittsburgh Rebels|Pittsburgh Rebels,1904|1906|1907|1914|1915
+660,Philadelphia Phillies,1902
+661,New York Giants|New York Giants,1921|1922
+662,Chicago Cubs|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Cleveland Indians,1942|1944|1945|1946|1946
+663,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|California Angels|California Angels|California Angels|Milwaukee Brewers|Cleveland Indians,1962|1963|1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975
+664,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|St. Louis Browns|Chicago White Sox|Baltimore Orioles,1948|1949|1950|1951|1952|1953|1953|1954
+665,Detroit Tigers|Boston Red Sox|Baltimore Orioles|Chicago Cubs,2012|2013|2014|2015
+666,Kansas City Royals|Kansas City Royals|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Houston Astros|Houston Astros|Houston Astros|Milwaukee Brewers|Milwaukee Brewers|Boston Red Sox,1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2000
+667,Philadelphia Athletics,1871
+668,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Atlanta Braves|Atlanta Braves|Atlanta Braves|Boston Red Sox|Cincinnati Reds|San Francisco Giants,1987|1988|1989|1990|1991|1991|1992|1993|1994|1995|1997
+669,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Washington Senators|Washington Senators|Washington Senators|Baltimore Orioles|St. Louis Cardinals,1964|1965|1966|1967|1967|1968|1969|1969|1970
+670,St. Louis Cardinals,1903
+671,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|San Francisco Giants|Chicago Cubs,1960|1961|1962|1963|1964|1965|1965|1967
+672,Washington Olympics,1871
+673,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Washington Senators|Washington Senators|Minnesota Twins|Kansas City Athletics|Detroit Tigers|Detroit Tigers,1953|1954|1955|1956|1957|1958|1959|1960|1961|1961|1961|1962
+674,Chicago White Sox|Chicago White Sox|Chicago White Sox,1995|1996|1997
+675,Philadelphia Phillies,1936
+676,San Diego Padres|San Diego Padres,1995|1996
+677,Baltimore Orioles,1956
+678,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Giants|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Cleveland Indians,1908|1909|1910|1911|1912|1913|1914|1915|1916|1917|1918
+679,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics,1940|1941|1942|1943|1946
+680,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Los Angeles Dodgers,1955|1956|1957|1958
+681,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Minnesota Twins,1983|1984|1985|1986|1988
+682,Brooklyn Eckfords,1872
+683,San Diego Padres,1978
+684,New York Yankees|New York Yankees|New York Yankees|New York Yankees,2011|2013|2014|2015
+685,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies,2003|2004|2005|2006|2007|2008|2009|2009|2010|2011|2012|2013|2015
+686,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Kansas City Royals|Kansas City Royals|Milwaukee Brewers|Kansas City Royals|Milwaukee Brewers,2005|2006|2007|2008|2009|2009|2010|2011|2012|2013
+687,St. Louis Cardinals,1910
+688,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Los Angeles Dodgers|Los Angeles Dodgers|New York Yankees|New York Yankees|Chicago White Sox|Kansas City Royals|Kansas City Royals|Detroit Tigers|Baltimore Orioles|Baltimore Orioles,2001|2004|2005|2006|2006|2007|2007|2008|2009|2010|2011|2011|2012|2013
+689,Atlanta Braves|Atlanta Braves|Atlanta Braves,2013|2014|2015
+690,Minnesota Twins,1964
+691,New York Mets,1965
+692,St. Louis Browns|St. Louis Browns|St. Louis Browns,1928|1931|1932
+693,Oakland Athletics,1984
+694,Colorado Rockies|Colorado Rockies|Colorado Rockies,2013|2014|2015
+695,St. Louis Cardinals|Cincinnati Reds,1903|1913
+696,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Boston Braves|Boston Braves|Boston Braves|Boston Braves,1920|1921|1922|1923|1924|1925|1932|1933|1934|1935
+697,Boston Red Sox|Boston Red Sox,2014|2015
+698,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1914|1915|1916|1917|1918
+699,Cleveland Indians|Cleveland Indians|Kansas City Royals|Pittsburgh Pirates|Kansas City Royals|Milwaukee Brewers|Milwaukee Brewers|Texas Rangers|Texas Rangers|San Diego Padres|San Diego Padres|Pittsburgh Pirates|Pittsburgh Pirates|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres,1971|1972|1973|1974|1974|1975|1976|1977|1978|1979|1980|1980|1981|1982|1983|1984|1985
+700,Boston Red Sox|Philadelphia Athletics|Kansas City Athletics|Cincinnati Reds,1952|1952|1955|1961
+701,New York Yankees|New York Yankees|New York Yankees|New York Yankees,1944|1945|1946|1947
+702,Cleveland Indians|Detroit Tigers,2002|2002
+703,Kansas City Royals|Kansas City Royals|Kansas City Royals,1996|1997|1998
+704,Washington Senators,1942
+705,Boston Americans,1901
+706,New York Highlanders|New York Highlanders|Detroit Tigers,1903|1904|1904
+707,Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Houston Astros,1982|1983|1984|1985|1986|1987|1987
+708,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Boston Red Sox,2012|2013|2014|2015
+709,Milwaukee Brewers,1975
+710,Philadelphia Athletics,1949
+711,St. Louis Cardinals|St. Louis Cardinals|Texas Rangers|Texas Rangers|Texas Rangers|Cleveland Indians|Cleveland Indians|Cleveland Indians|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Texas Rangers,1972|1973|1973|1974|1975|1975|1976|1977|1978|1979|1980|1981|1983|1984
+712,California Angels|California Angels|California Angels|Milwaukee Brewers|Milwaukee Brewers|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Cincinnati Reds|Boston Red Sox|Boston Red Sox,1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2000|2001
+713,Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Milwaukee Braves|Baltimore Orioles,1948|1949|1950|1951|1952|1953|1954
+714,Cincinnati Red Stockings,1886
+715,Philadelphia Phillies|Philadelphia Phillies,1948|1949
+716,Chicago White Sox|Chicago White Sox|Chicago White Sox|Montreal Expos|Montreal Expos,2000|2001|2002|2003|2004
+717,St. Louis Browns|Cleveland Spiders,1897|1898
+718,Washington Nationals|Washington Blue Legs|Baltimore Canaries|Chicago White Stockings|Chicago White Stockings,1872|1873|1874|1875|1876
+719,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Atlanta Braves|Atlanta Braves|Cleveland Indians|Atlanta Braves|California Angels|Atlanta Braves|Atlanta Braves,1984|1985|1986|1987|1988|1989|1990|1991|1991|1992|1993|1994|1995|1996|1997
+720,Washington Senators|Cincinnati Reds,1920|1925
+721,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Brooklyn Ward's Wonders|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|St. Louis Browns|St. Louis Browns,1886|1887|1888|1889|1890|1891|1892|1893|1894|1895|1896|1897|1898
+722,Arizona Diamondbacks|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Cleveland Indians|Texas Rangers,2001|2001|2003|2003|2004
+723,Baltimore Orioles,2008
+724,Fort Wayne Kekiongas,1871
+725,New York Mets|Pittsburgh Pirates,1997|1998
+726,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1916|1917|1918|1919|1920|1921|1922|1923|1924|1925|1926
+727,Philadelphia Athletics|Pittsburgh Pirates,1920|1921
+728,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Colorado Rockies|St. Louis Cardinals,2001|2002|2003|2004|2005|2005|2006
+729,Boston Red Sox,1929
+730,Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros,1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005|2006|2007
+731,Chicago White Sox,1932
+732,St. Louis Browns,1917
+733,Milwaukee Brewers,1884
+734,Washington Senators|Washington Senators|Texas Rangers|Texas Rangers|Montreal Expos|Montreal Expos|Montreal Expos|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Cincinnati Reds|Cincinnati Reds|Texas Rangers,1970|1971|1972|1973|1974|1975|1976|1976|1977|1978|1979|1980|1981|1982|1983
+735,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Montreal Expos|Pittsburgh Pirates|Pittsburgh Pirates|San Diego Padres|San Diego Padres,1983|1984|1985|1986|1989|1990|1991|1992
+736,St. Louis Browns,1949
+737,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns,1937|1938|1939|1940|1941
+738,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Chicago Cubs|Cincinnati Redlegs|Los Angeles Dodgers|Detroit Tigers|Los Angeles Angels|Los Angeles Angels,1949|1950|1951|1952|1953|1954|1954|1958|1958|1960|1961|1962
+739,New York Highlanders|Indianapolis Hoosiers|Newark Pepper,1908|1914|1915
+740,Los Angeles Dodgers|Houston Astros|Houston Astros|Houston Astros|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Detroit Tigers|Detroit Tigers|Detroit Tigers|Boston Red Sox,1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1980
+741,Colorado Rockies|Oakland Athletics|New York Yankees,2011|2011|2014
+742,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Texas Rangers|Texas Rangers|Texas Rangers|St. Louis Cardinals|St. Louis Cardinals,1968|1969|1970|1971|1972|1973|1974|1974|1975
+743,Cleveland Naps|Cleveland Naps|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns,1913|1914|1915|1916|1917|1918|1919|1920|1921|1922|1923
+744,Detroit Tigers|Detroit Tigers|Detroit Tigers,1927|1928|1929
+745,Florida Marlins,1999
+746,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Philadelphia Phillies,2006|2007|2008|2009|2010|2011|2012|2013|2015
+747,Washington Senators|Washington Senators|Washington Senators|Philadelphia Athletics|Philadelphia Athletics|St. Louis Browns,1944|1945|1946|1947|1948|1948
+748,Cleveland Indians,1944
+749,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics,1882|1883|1884
+750,Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Philadelphia Phillies|New York Yankees|New York Yankees|Chicago Cubs|Chicago Cubs|Boston Red Sox,1973|1974|1975|1976|1977|1978|1979|1980|1981|1981|1982|1983
+751,St. Louis Browns,1892
+752,Rockford Forest Citys,1871
+753,New York Yankees,2015
+754,Washington Senators,1921
+755,Boston Red Stockings|Boston Red Stockings|Boston Red Stockings,1871|1872|1873
+756,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|New York Mets|New York Mets,1986|1987|1988|1989|1992|1995
+757,Baltimore Orioles|Baltimore Orioles|Tampa Bay Rays,2006|2007|2008
+758,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Brooklyn Dodgers,1933|1934|1935|1936|1937
+759,Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps,1906|1907|1908|1909|1910|1911|1912|1913|1914
+760,Detroit Tigers|Baltimore Orioles|Los Angeles Dodgers,1955|1956|1958
+761,Oakland Athletics|Oakland Athletics|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,1985|1986|1988|1989|1990
+762,St. Louis Browns|St. Louis Browns|St. Louis Browns,1942|1946|1948
+763,Chicago White Sox|Boston Red Sox|Boston Red Sox,1925|1925|1926
+764,Philadelphia Phillies|Washington Nationals,2007|2010
+765,Pittsburgh Alleghenys|Pittsburgh Alleghenys|Chicago White Stockings,1886|1887|1889
+766,Philadelphia Athletics,1921
+767,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Kansas City Athletics,1952|1953|1954|1955
+768,Chicago/Pittsburgh,1884
+769,Philadelphia Phillies|Philadelphia Phillies,1923|1924
+770,Cleveland Naps,1914
+771,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Boston Red Sox|Boston Red Sox,1924|1925|1926|1927|1928|1929|1930|1931|1932|1933|1934|1935
+772,New York Mets,1983
+773,Pittsburgh Pirates|St. Louis Browns|Cleveland Naps,1912|1913|1914
+774,Brooklyn Robins|Brooklyn Robins|Brooklyn Robins|Brooklyn Robins|Brooklyn Dodgers,1928|1929|1930|1931|1933
+775,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago White Sox,1942|1943|1946|1947
+776,Oakland Athletics|Texas Rangers|Texas Rangers,1990|1990|1991
+777,Philadelphia Phillies|Minnesota Twins|Chicago White Sox|Chicago White Sox,1986|1987|1988|1989
+778,Kansas City Cowboys,1889
+779,Philadelphia Phillies,1935
+780,Pittsburgh Pirates|Pittsburgh Pirates|Washington Nationals|Houston Astros,2008|2009|2011|2012
+781,Houston Astros,1983
+782,Chicago White Sox,1924
+783,Kansas City Cowboys,1884
+784,Detroit Tigers|Detroit Tigers|Detroit Tigers,1952|1955|1956
+785,Seattle Mariners|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Cleveland Indians|Cleveland Indians|Cleveland Indians|Toronto Blue Jays|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Cleveland Indians,1981|1982|1983|1984|1985|1986|1987|1988|1988|1989|1990|1990|1991|1992|1993|1994|1995
+786,Chicago Chi-Feds|Chicago Whales|Baltimore Terrapins|Boston Red Sox,1914|1915|1915|1923
+787,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Cleveland Indians|Cleveland Indians|Cleveland Indians,1943|1944|1945|1946|1947|1948
+788,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Cincinnati Redlegs|Cincinnati Redlegs|Washington Senators,1952|1953|1954|1955|1955|1956|1957
+789,St. Louis Browns,1911
+790,Pittsburgh Pirates|New York Mets|New York Mets,2013|2013|2014
+791,Milwaukee Braves|Milwaukee Braves,1962|1964
+792,Kansas City Packers|Chicago White Sox,1915|1921
+793,Pittsburgh Pirates|Cincinnati Reds|Cincinnati Reds|Boston Braves|Boston Braves|Chicago Cubs,1912|1912|1913|1915|1916|1917
+794,Baltimore Orioles,1897
+795,Cincinnati Reds|Cincinnati Reds,1948|1951
+796,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins,2007|2008|2009|2010|2011|2012
+797,Pittsburgh Pirates|Pittsburgh Pirates,1958|1959
+798,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Cincinnati Reds|Boston Braves|Philadelphia Phillies|Chicago White Sox|Chicago White Sox,1910|1912|1914|1915|1918|1919|1919|1927|1929
+799,Chicago White Sox,1928
+800,Seattle Mariners|San Francisco Giants|San Francisco Giants|Oakland Athletics|Houston Astros|Texas Rangers,2004|2007|2012|2012|2013|2013
+801,Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies|Colorado Rockies,2011|2012|2013|2014|2015
+802,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Yankees|New York Yankees|Kansas City Athletics,1942|1946|1947|1948|1949|1950|1951|1952|1952|1953|1955
+803,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1917|1918|1919
+804,Boston Red Sox|Boston Red Sox|Philadelphia Phillies|Philadelphia Phillies|Montreal Expos|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Montreal Expos|Montreal Expos,1974|1975|1976|1977|1977|1978|1979|1980|1981|1982|1983
+805,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1922|1923|1924|1925|1926|1927|1928|1930|1931|1932
+806,Chicago Cubs|New York Yankees,1969|1975
+807,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|Philadelphia Athletics|Cleveland Indians,1925|1927|1928|1929|1930|1931|1932|1933|1934|1935|1935|1936
+808,New York Giants,1941
+809,Philadelphia Athletics,1888
+810,Philadelphia Athletics,1942
+811,Oakland Athletics,2015
+812,Montreal Expos|Montreal Expos|Montreal Expos|San Diego Padres,1974|1975|1976|1980
+813,Chicago Cubs|Chicago Cubs|Chicago Cubs,1929|1930|1931
+814,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|New York Yankees|New York Yankees|New York Yankees|Cincinnati Reds|New York Yankees,1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1979|1980
+815,New York Highlanders|New York Highlanders|New York Highlanders|New York Highlanders|New York Highlanders|Buffalo Buffeds|Buffalo Blues,1907|1908|1909|1910|1911|1914|1915
+816,Toronto Blue Jays|Cleveland Indians|Houston Astros|Colorado Rockies|Colorado Rockies|San Diego Padres|San Diego Padres|Detroit Tigers|Arizona Diamondbacks|New York Mets|Detroit Tigers|Detroit Tigers|Detroit Tigers,1990|1991|1992|1993|1994|1995|1996|1997|1998|1998|1999|2000|2001
+817,Kansas City Cowboys,1884
+818,Toronto Blue Jays|Minnesota Twins|Minnesota Twins|Baltimore Orioles|Minnesota Twins|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers,1999|2000|2001|2001|2002|2003|2004|2005|2006|2007|2008|2008|2009|2010|2011
+819,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Kansas City Athletics,1951|1952|1953|1957
+820,Cleveland Spiders|Cleveland Spiders|Cleveland Spiders|Cleveland Spiders|Cleveland Spiders|St. Louis Perfectos,1894|1895|1896|1897|1898|1899
+821,Pittsburgh Pirates|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Philadelphia Phillies|St. Louis Browns|St. Louis Cardinals,1920|1924|1925|1926|1927|1928|1929|1930|1931|1931|1937|1937
+822,Cincinnati Reds,1934
+823,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Indianapolis Hoosiers,1882|1883|1884|1884
+824,Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Tampa Bay Rays,2002|2003|2004|2005|2006|2007|2008|2009|2010
+825,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Kansas City Athletics|Milwaukee Braves,1955|1959|1960|1961|1962|1963|1964|1965|1965|1965
+826,Boston Braves|Boston Bees,1935|1936
+827,Kansas City Royals|Kansas City Royals|Kansas City Royals|Chicago Cubs|Texas Rangers|Texas Rangers|Philadelphia Phillies|Philadelphia Phillies,2004|2005|2006|2009|2010|2011|2014|2015
+828,San Francisco Giants|San Francisco Giants|San Francisco Giants,1972|1973|1974
+829,New York Yankees|Kansas City Athletics,1965|1966
+830,Atlanta Braves|Atlanta Braves|Atlanta Braves|Kansas City Royals|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants,2008|2009|2010|2010|2012|2013|2014|2015
+831,Los Angeles Dodgers|Colorado Rockies|Milwaukee Brewers|Milwaukee Brewers|Atlanta Braves|Atlanta Braves|Minnesota Twins|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|San Diego Padres|New York Mets|Arizona Diamondbacks|Arizona Diamondbacks|Toronto Blue Jays|Seattle Mariners,1997|1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2012|2013|2013
+832,Chicago White Sox|Cleveland Indians,1970|1974
+833,Washington Nationals,2005
+834,Houston Astros,2003
+835,Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps,1910|1911|1912|1913|1914
+836,St. Louis Cardinals,1909
+837,Cincinnati Reds,1894
+838,Montreal Expos|Montreal Expos,2000|2001
+839,Cincinnati Reds|Washington Senators|Washington Senators,1905|1907|1909
+840,Chicago White Sox|Chicago White Sox|Pittsburgh Pirates,1922|1923|1928
+841,Atlanta Braves|Chicago Cubs|Chicago Cubs|Chicago Cubs,1988|1988|1989|1990
+842,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics,1988|1989|1990|1991|1992|1993
+843,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox,1922|1923|1924|1925|1926|1927|1928|1929|1930
+844,San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|Oakland Athletics|Texas Rangers,2009|2010|2011|2012|2013|2014|2014|2015
+845,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Cleveland Indians|Cleveland Indians|Cleveland Indians|Texas Rangers|Atlanta Braves,1972|1973|1974|1975|1976|1977|1978|1979|1980
+846,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1934|1935|1936|1937|1938|1939|1940|1941|1942
+847,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Los Angeles Dodgers|Los Angeles Angels of Anaheim|Kansas City Royals|Pittsburgh Pirates,2004|2005|2006|2007|2008|2008|2009|2010|2011|2012|2012|2013|2015|2015
+848,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|San Francisco Giants|San Francisco Giants|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Kansas City Athletics,1955|1956|1957|1958|1959|1960|1961|1961|1962|1963|1963|1964|1965|1966|1966
+849,Milwaukee Braves|Milwaukee Braves|Milwaukee Braves|Atlanta Braves|Atlanta Braves|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Houston Astros|New York Yankees,1963|1964|1965|1966|1967|1967|1968|1969|1970|1971|1972|1972
+850,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1964|1966|1967|1968|1969|1970|1971|1972|1973|1974
+851,Cincinnati Reds|New York Yankees|California Angels,1971|1972|1975
+852,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|St. Louis Cardinals,1948|1949|1950|1950
+853,St. Louis Cardinals|New York Giants|New York Giants|New York Giants|Philadelphia Phillies,1942|1946|1947|1948|1949
+854,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Chicago Cubs|Chicago Cubs,1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999
+855,Rochester Broncos,1890
+856,St. Louis Cardinals|St. Louis Cardinals,1956|1959
+857,St. Louis Cardinals|New York Yankees,1959|1959
+858,New York Giants|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1950|1955|1956|1957
+859,St. Louis Cardinals|Milwaukee Brewers|Milwaukee Brewers,2013|2013|2015
+860,Philadelphia Phillies|Philadelphia Phillies,1996|1997
+861,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Houston Astros|New York Yankees|New York Yankees|Oakland Athletics|Oakland Athletics|San Diego Padres,1965|1966|1967|1968|1969|1970|1971|1971|1972|1972
+862,Kansas City Athletics,1960
+863,Detroit Tigers,1972
+864,Boston Red Sox|Brooklyn Robins,1923|1929
+865,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Washington Nationals|New York Mets,2007|2008|2009|2010|2011|2012|2013|2014|2015
+866,New York Giants,1902
+867,Baltimore Orioles|Cincinnati Red Stockings|Columbus Solons|Columbus Solons|Louisville Colonels,1886|1888|1889|1890|1890
+868,New York Highlanders|New York Highlanders,1903|1904
+869,Milwaukee Grays,1878
+870,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1908|1909|1910|1911|1912
+871,Washington Senators|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago Chi-Feds,1907|1910|1911|1912|1914
+872,Chicago Cubs|Chicago Cubs|Chicago Cubs,1942|1945|1946
+873,New York Mets|Atlanta Braves|Atlanta Braves,1985|1988|1989
+874,Pittsburgh Alleghenys,1883
+875,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Chicago White Sox,1969|1971|1972|1973|1974|1975|1976|1978
+876,Detroit Tigers,1995
+877,St. Louis Red Stockings|St. Louis Brown Stockings|St. Louis Brown Stockings,1875|1876|1877
+878,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Detroit Tigers|Detroit Tigers|Detroit Tigers|Pittsburgh Pirates|Cincinnati Reds|Cincinnati Reds|Philadelphia Phillies|Philadelphia Phillies,1937|1939|1940|1941|1942|1943|1946|1947|1949|1950|1950|1951
+879,St. Louis Cardinals|Minnesota Twins,1963|1964
+880,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Kansas City Royals|Kansas City Royals|Cincinnati Reds|Arizona Diamondbacks|Arizona Diamondbacks|Arizona Diamondbacks|Seattle Mariners|Seattle Mariners,2002|2003|2004|2005|2006|2007|2008|2009|2010|2010|2011|2012|2013|2014|2015
+881,Boston Red Sox|Boston Red Sox,1993|1994
+882,Cincinnati Reds,1924
+883,New York Yankees|New York Yankees|New York Yankees|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Los Angeles Dodgers|Seattle Mariners|Oakland Athletics|Seattle Mariners,1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999
+884,St. Louis Browns|Philadelphia Athletics,1908|1908
+885,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|St. Louis Browns|St. Louis Browns|St. Louis Browns|Chicago White Sox|Chicago White Sox|Brooklyn Dodgers,1921|1922|1923|1924|1925|1926|1927|1928|1929|1930|1931|1932|1933
+886,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Kansas City Royals|Kansas City Royals|San Francisco Giants|San Francisco Giants,1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1985|1986
+887,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators,1922|1923|1924|1925|1926|1927|1928|1929|1930|1931|1932|1933|1934|1935|1936|1937|1938|1939
+888,Cincinnati Reds|Cincinnati Reds,1932|1933
+889,Brooklyn Tip-Tops|Brooklyn Tip-Tops|Cincinnati Reds,1914|1915|1916
+890,Boston Red Sox,1918
+891,Montreal Expos|Montreal Expos|Montreal Expos|Houston Astros|Houston Astros|Tampa Bay Devil Rays|San Diego Padres|Chicago White Sox|San Diego Padres|San Diego Padres|Houston Astros|Houston Astros|Houston Astros|Arizona Diamondbacks|Arizona Diamondbacks,1999|2000|2001|2002|2003|2004|2005|2005|2006|2007|2008|2009|2010|2011|2012
+892,Kansas City Royals,1996
+893,New York Giants|New York Giants,1922|1923
+894,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Texas Rangers|Texas Rangers|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|California Angels|California Angels|California Angels,1970|1971|1972|1973|1974|1975|1976|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1985|1986|1987|1988|1989|1990|1992
+895,St. Louis Browns|Baltimore Orioles,1953|1954
+896,Kansas City Athletics|Washington Senators,1960|1961
+897,Philadelphia Athletics|Philadelphia Athletics|St. Louis Cardinals,1913|1914|1915
+898,Baltimore Canaries,1874
+899,Chicago Cubs|Chicago Cubs,1968|1969
+900,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Detroit Tigers|Detroit Tigers|Seattle Mariners|Oakland Athletics|Oakland Athletics|Oakland Athletics|San Diego Padres,2000|2001|2002|2002|2003|2004|2005|2006|2007|2007
+901,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos|San Francisco Giants,1963|1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974
+902,Chicago White Sox|Chicago White Sox,1933|1934
+903,California Angels|California Angels|California Angels|California Angels|Cleveland Indians|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Oakland Athletics|Oakland Athletics|Oakland Athletics,1974|1975|1976|1977|1977|1978|1979|1980|1981|1982|1984|1985|1986
+904,San Diego Padres|San Diego Padres|San Diego Padres|Detroit Tigers|Los Angeles Dodgers|Kansas City Royals,1995|1996|1997|1998|1999|2000
+905,San Francisco Giants|San Francisco Giants,2014|2015
+906,Houston Astros|Houston Astros|Houston Astros|New York Mets|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres,1978|1979|1980|1982|1983|1984|1985|1986|1987
+907,New York Yankees|Cleveland Indians|Pittsburgh Pirates|Pittsburgh Pirates,1946|1947|1948|1949
+908,San Francisco Giants|San Francisco Giants|San Francisco Giants|Detroit Tigers,1986|1987|1988|1989
+909,San Francisco Giants|Philadelphia Phillies,2008|2010
+910,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Boston Red Sox|Boston Red Sox|Boston Red Sox|Kansas City Royals|Kansas City Royals|Milwaukee Brewers,1980|1981|1982|1983|1984|1985|1986|1987|1988|1988|1989|1990|1991|1992|1993
+911,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Philadelphia Athletics|New York Yankees|New York Yankees|New York Yankees|New York Yankees,1911|1912|1913|1914|1917|1918|1919|1920|1921
+912,Pittsburgh Pirates|Pittsburgh Pirates|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves,1917|1919|1919|1920|1921|1922|1923
+913,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|St. Louis Browns|St. Louis Browns|Pittsburgh Pirates|Brooklyn Robins,1912|1913|1914|1915|1916|1920|1921|1923|1926
+914,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Cleveland Indians|Cleveland Indians|Cleveland Indians,1912|1913|1914|1915|1916|1916|1917|1920
+915,Cincinnati Reds|New York Yankees|New York Yankees,1967|1969|1971
+916,New York Yankees|New York Yankees|New York Yankees|San Diego Padres|San Diego Padres|San Diego Padres|New York Yankees|San Francisco Giants|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1995|1996|1997|1998|1999|2000|2001|2001|2002|2003|2004
+917,Boston Red Sox,1932
+918,Detroit Tigers|Detroit Tigers|Detroit Tigers|New York Yankees|Los Angeles Angels of Anaheim|Cincinnati Reds,2010|2011|2012|2013|2014|2015
+919,St. Louis Cardinals|St. Louis Cardinals|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Philadelphia Phillies|Philadelphia Phillies|Houston Astros|Oakland Athletics|Detroit Tigers|Detroit Tigers|Detroit Tigers|Pittsburgh Pirates,1985|1986|1987|1988|1989|1990|1990|1991|1992|1993|1993|1994|1995|1996
+920,Boston Red Sox|Boston Red Sox|Boston Red Sox,2013|2014|2015
+921,New York Mets|New York Mets|New York Mets|New York Mets|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Los Angeles Dodgers,1993|1994|1995|1996|1997|1998|1999|2000|2001
+922,Detroit Tigers,1920
+923,Texas Rangers,1982
+924,Texas Rangers|Texas Rangers|Texas Rangers|Milwaukee Brewers,2008|2009|2010|2011
+925,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Colorado Rockies,2008|2009|2010|2011|2012|2013|2013
+926,Boston Braves,1928
+927,Texas Rangers|Texas Rangers|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Texas Rangers,1976|1977|1978|1979|1980|1981|1982|1983|1985
+928,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Tampa Bay Devil Rays|Tampa Bay Devil Rays,1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999
+929,Oakland Athletics,1968
+930,Houston Astros|Houston Astros|Houston Astros|Chicago Cubs|Philadelphia Phillies,2010|2011|2012|2013|2015
+931,Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Detroit Tigers|Toronto Blue Jays|New York Mets|New York Mets|Los Angeles Dodgers|Colorado Rockies|Colorado Rockies|Colorado Rockies,1990|1991|1992|1993|1994|1995|1996|1997|1998|1998|1999|2000|2001
+932,Philadelphia Athletics|Pittsburgh Pirates,1913|1914
+933,Louisville Eclipse,1882
+934,Seattle Mariners|Philadelphia Phillies,2006|2008
+935,St. Louis Cardinals|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Brooklyn Robins,1916|1921|1922|1923|1924|1925|1926|1926
+936,Cleveland Indians,1982
+937,New York Mets|New York Mets|New York Mets|New York Mets|New York Mets,1974|1976|1977|1978|1979
+938,Philadelphia Phillies|Milwaukee Brewers|Milwaukee Brewers|New York Mets|Texas Rangers,1978|1979|1980|1981|1982
+939,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1951|1952|1953
+940,Washington Senators|Washington Senators|Chicago White Sox,1933|1934|1934
+941,Washington Senators,1936
+942,Brooklyn Atlantics,1875
+943,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|St. Louis Browns,1915|1916|1917|1918|1919|1920|1921
+944,Philadelphia Phillies|Philadelphia Phillies|Washington Senators,1934|1935|1944
+945,St. Louis Browns,1914
+946,St. Louis Cardinals,1919
+947,St. Louis Browns|St. Louis Browns|Philadelphia Phillies|Philadelphia Phillies,1926|1927|1931|1932
+948,San Francisco Giants,1962
+949,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Cleveland Indians,1927|1928|1929|1930|1931|1932|1932
+950,Cincinnati Reds|Cincinnati Reds|Cincinnati Redlegs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Cleveland Indians|Philadelphia Phillies,1950|1951|1954|1955|1957|1958|1959|1959
+951,Montreal Expos|Anaheim Angels,1993|1998
+952,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Milwaukee Brewers|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox,1961|1962|1963|1964|1965|1966|1967|1968|1969|1970|1970|1971|1972|1973
+953,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Milwaukee Braves|Milwaukee Braves|Milwaukee Braves|Milwaukee Braves|Milwaukee Braves|Atlanta Braves,1954|1956|1957|1958|1959|1960|1961|1962|1963|1964|1965|1966
+954,Philadelphia Phillies|Brooklyn Dodgers,1939|1944
+955,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Washington Senators|Detroit Tigers,1952|1953|1954|1955|1956|1957|1957|1958
+956,Chicago White Sox|Chicago White Sox,1965|1966
+957,St. Louis Cardinals|St. Louis Cardinals|New York Yankees|Philadelphia Athletics|Kansas City Athletics,1950|1951|1953|1954|1955
+958,Arizona Diamondbacks|Los Angeles Dodgers,2014|2015
+959,Cleveland Indians,1928
+960,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Detroit Tigers|Washington Senators,1931|1933|1934|1935|1936|1937|1941
+961,Chicago White Sox|Chicago White Sox,1993|1995
+962,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Cincinnati Reds|Detroit Tigers|Baltimore Orioles,1987|1988|1989|1990|1991|1992|1992|1993|1994
+963,Milwaukee Brewers|New York Mets|Toronto Blue Jays|Toronto Blue Jays,1978|1980|1981|1982
+964,Brooklyn Atlantics|Hartford Dark Blues|Hartford Dark Blues|Boston Red Stockings|Boston Red Stockings|Boston Red Stockings|Boston Red Stockings|Boston Red Stockings|Worcester Ruby Legs|Boston Reds|Indianapolis Hoosiers,1874|1875|1876|1877|1878|1879|1880|1881|1882|1884|1884
+965,Cleveland Indians|Cleveland Indians|Cleveland Indians|Houston Colt .45's|Houston Astros|Minnesota Twins,1960|1961|1962|1964|1965|1967
+966,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Seattle Mariners|Detroit Tigers,2003|2004|2005|2006|2007|2008|2009|2010|2013|2013
+967,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants,1986|1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005|2006|2007
+968,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|New York Yankees|California Angels|California Angels|Chicago White Sox|Texas Rangers|Cleveland Indians|St. Louis Cardinals|Chicago Cubs,1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1978|1979|1980|1981
+969,Milwaukee Brewers,1901
+970,San Diego Padres|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|New York Yankees|Cincinnati Reds|Kansas City Royals|Kansas City Royals|Baltimore Orioles|Florida Marlins|Florida Marlins,1991|1992|1993|1994|1995|1996|1996|1997|1997|1998|1999|2000|2001
+971,St. Louis Browns|St. Louis Browns|Chicago Cubs,1937|1938|1940
+972,New York Giants,1927
+973,Atlanta Braves|Atlanta Braves|Cincinnati Reds,2002|2003|2004
+974,Cincinnati Reds|Cincinnati Reds,1938|1939
+975,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,1971|1972|1973|1974|1975|1976|1977|1978|1979|1980
+976,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1940|1941|1942|1943|1944|1945|1946|1947|1948|1949
+977,Arizona Diamondbacks|Arizona Diamondbacks|Washington Nationals|Florida Marlins|Florida Marlins|Florida Marlins|Miami Marlins|Toronto Blue Jays|Kansas City Royals|Chicago Cubs|Atlanta Braves|Chicago White Sox,2007|2008|2008|2009|2010|2011|2012|2013|2013|2014|2014|2015
+978,Minnesota Twins,1962
+979,Chicago White Sox|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|New York Mets|New York Mets|New York Mets|New York Mets|Baltimore Orioles|Baltimore Orioles|Florida Marlins|Florida Marlins|Los Angeles Dodgers|New York Mets|Atlanta Braves|St. Louis Cardinals,1986|1986|1987|1988|1989|1990|1991|1992|1993|1994|1995|1995|1996|1997|1998|1998|1999|2000|2001
+980,San Diego Padres|San Diego Padres|San Diego Padres|New York Yankees|Baltimore Orioles|New York Yankees,1981|1982|1983|1985|1986|1987
+981,Texas Rangers,2014
+982,St. Louis Browns|Buffalo Buffeds,1913|1914
+983,Detroit Tigers|Detroit Tigers|Detroit Tigers,2008|2009|2010
+984,Atlanta Braves|Atlanta Braves|Atlanta Braves|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Seattle Mariners|Seattle Mariners|Seattle Mariners,1977|1978|1979|1980|1981|1982|1983|1984|1985|1986
+985,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles,1980|1981|1982|1983
+986,Baltimore Orioles|Baltimore Orioles|St. Louis Browns|Brooklyn Bridegrooms|Washington Senators|Cleveland Bronchos|Philadelphia Athletics|Boston Beaneaters,1894|1895|1895|1896|1899|1902|1902|1903
+987,Cleveland Indians,1944
+988,Washington Senators,1920
+989,Minnesota Twins|Minnesota Twins|Minnesota Twins|Boston Red Sox|Oakland Athletics,2006|2007|2008|2010|2010
+990,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Washington Senators|New York Giants|Washington Senators|Chicago Cubs,1934|1935|1936|1937|1938|1939|1940|1940
+991,Pittsburgh Pirates|Indianapolis Hoosiers|Buffalo Buffeds|Indianapolis Hoosiers,1913|1914|1914|1914
+992,Cleveland Indians|Chicago White Sox,1966|1968
+993,Cincinnati Reds|Kansas City Royals|Washington Nationals|Washington Nationals,2005|2006|2006|2007
+994,San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|San Diego Padres|Minnesota Twins|San Francisco Giants,1983|1984|1985|1986|1987|1988|1989|1989|1990
+995,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Philadelphia Phillies|Philadelphia Phillies,1987|1988|1989|1990|1991
+996,Washington Senators|Pittsburgh Pirates|Boston Braves,1928|1930|1931
+997,Cleveland Naps,1909
+998,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Yankees|Cleveland Indians|Cleveland Indians|Florida Marlins|Washington Nationals|Houston Astros,1997|1998|1999|2000|2001|2002|2003|2003|2005|2006|2007|2008|2009
+999,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|California Angels|California Angels|California Angels|California Angels|California Angels|California Angels|California Angels|Kansas City Royals|Kansas City Royals,1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989|1990
+1000,Seattle Mariners|Seattle Mariners|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Atlanta Braves|San Diego Padres|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Minnesota Twins,1992|1993|1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005|2005
+1001,Philadelphia Athletics|Detroit Tigers|Cleveland Indians|Cleveland Indians,1919|1921|1922|1923
+1002,San Diego Padres|San Diego Padres|Houston Astros|Baltimore Orioles,1981|1982|1982|1990
+1003,Louisville Colonels,1891
+1004,New York Giants|Boston Red Sox|Boston Red Sox|Boston Red Sox|Chicago White Sox|Brooklyn Robins|Brooklyn Robins|Brooklyn Dodgers,1922|1923|1924|1925|1927|1930|1931|1932
+1005,New York Yankees|New York Yankees|New York Yankees|New York Yankees|Pittsburgh Pirates,1913|1914|1915|1916|1918
+1006,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Chicago White Sox|Chicago White Sox|Kansas City Athletics|Milwaukee Braves|Milwaukee Braves|Boston Red Sox,1948|1949|1950|1951|1952|1953|1953|1954|1955|1956|1957|1958|1958|1959|1959|1959|1960|1960
+1007,Anaheim Angels|Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Pittsburgh Pirates|New York Yankees,2003|2005|2006|2007|2008|2009|2013
+1008,New Haven Elm Citys,1875
+1009,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Baltimore Orioles|Louisville Eclipse,1876|1877|1880|1882|1882
+1010,Middletown Mansfields|Brooklyn Atlantics|Elizabeth Resolutes|Brooklyn Atlantics|Brooklyn Atlantics|New York Mutuals|New York Mutuals,1872|1872|1873|1873|1874|1875|1876
+1011,Florida Marlins|Florida Marlins|Florida Marlins,1996|1997|1998
+1012,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1962|1963|1964|1966|1967|1968|1969
+1013,Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers|Chicago Cubs,2009|2010|2011|2013|2013
+1014,California Angels|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|San Francisco Giants|St. Louis Cardinals,1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1979|1980
+1015,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Los Angeles Dodgers|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Houston Astros|St. Louis Cardinals,1992|1993|1995|1996|1999|2000|2001|2002|2002|2003
+1016,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Seattle Mariners|Florida Marlins|Florida Marlins,2002|2003|2004|2005|2006|2006|2007
+1017,Chicago White Stockings|Louisville Colonels,1888|1895
+1018,Chicago White Sox|Brooklyn Dodgers|Brooklyn Dodgers|St. Louis Cardinals|St. Louis Cardinals|Cincinnati Reds|New York Yankees|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers,1934|1935|1936|1937|1938|1939|1941|1942|1943|1944|1945
+1019,Philadelphia Whites|Boston Red Stockings,1875|1876
+1020,Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Kansas City Royals|Houston Astros|St. Louis Cardinals|California Angels|Chicago White Sox|Cleveland Indians|Cleveland Indians|Cleveland Indians|Toronto Blue Jays|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Minnesota Twins|Seattle Mariners,1988|1989|1990|1991|1992|1993|1994|1995|1995|1996|1996|1996|1997|1998|1999|1999|2001|2002|2003|2004|2004|2005
+1021,Oakland Athletics|Oakland Athletics|Seattle Mariners|Chicago Cubs|Chicago Cubs|New York Yankees|Baltimore Orioles|New York Yankees|Oakland Athletics,1980|1981|1982|1983|1984|1985|1986|1987|1988
+1022,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|New York Mets|Baltimore Orioles|Baltimore Orioles|Toronto Blue Jays,1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2000|2001|2002|2003
+1023,San Francisco Giants,1980
+1024,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Chicago White Sox,1972|1973|1974|1975|1976|1977|1978|1979|1980
+1025,Minnesota Twins,1982
+1026,Pittsburgh Pirates,1964
+1027,Chicago Cubs|Chicago Cubs|Cincinnati Reds|Cincinnati Reds|Cincinnati Redlegs|Cincinnati Redlegs|Brooklyn Dodgers,1950|1951|1952|1953|1954|1955|1955
+1028,Detroit Tigers|Detroit Tigers|Detroit Tigers|Baltimore Orioles|Houston Astros|Houston Astros|Houston Astros,1999|2000|2001|2004|2006|2007|2008
+1029,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|New York Mets|Boston Red Sox|Philadelphia Phillies|Anaheim Angels|Florida Marlins|Florida Marlins|Florida Marlins,1994|1995|1996|1997|1997|1998|2001|2002|2003|2004
+1030,Boston Red Sox|Boston Red Sox,1960|1961
+1031,Detroit Tigers|Detroit Tigers,1944|1945
+1032,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Chicago Cubs|Cincinnati Reds|Cincinnati Reds,1957|1958|1961|1962|1963|1964|1965
+1033,Baltimore Orioles|Atlanta Braves|Atlanta Braves|New York Yankees|New York Yankees|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Tampa Bay Devil Rays|Florida Marlins|Cleveland Indians|Cleveland Indians,1995|1996|1997|1997|1998|2001|2002|2003|2004|2005|2005|2006|2007|2008
+1034,New York Yankees|New York Yankees|New York Yankees|New York Yankees|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Philadelphia Phillies|Philadelphia Phillies|Pittsburgh Pirates|Detroit Tigers|Detroit Tigers,1942|1943|1944|1945|1945|1946|1947|1948|1949|1950|1950|1950|1951
+1035,Chicago White Sox|Chicago White Sox|New York Yankees|St. Louis Terriers|St. Louis Browns,1912|1913|1913|1915|1916
+1036,Atlanta Braves|Atlanta Braves|Atlanta Braves|Chicago Cubs,2010|2011|2012|2013
+1037,Pittsburgh Pirates|New York Mets|New York Mets|Montreal Expos,1966|1967|1968|1969
+1038,Philadelphia Phillies|St. Louis Cardinals|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays|Oakland Athletics|Oakland Athletics,1976|1977|1978|1979|1980|1981|1981|1982
+1039,Los Angeles Angels of Anaheim,2013
+1040,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners,1986|1987|1988|1989|1990|1991|1992|1993|1994|1995|1996
+1041,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Philadelphia Phillies|Seattle Mariners|California Angels|California Angels|Baltimore Orioles|Montreal Expos,1990|1991|1992|1993|1994|1994|1994|1995|1996|1997|1998
+1042,California Angels|Chicago White Sox|Chicago White Sox|Chicago White Sox|Milwaukee Brewers|Seattle Mariners|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Kansas City Royals|Kansas City Royals|California Angels|Texas Rangers|Texas Rangers,1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1988|1988|1989|1990
+1043,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Texas Rangers|Texas Rangers|Cleveland Indians|Cleveland Indians|Cleveland Indians|Oakland Athletics|Oakland Athletics,1966|1967|1968|1969|1970|1971|1972|1973|1973|1974|1975|1975|1976
+1044,Washington Senators|Washington Senators|Washington Senators|Cleveland Indians,1928|1929|1930|1933
+1045,Cincinnati Reds,1945
+1046,Philadelphia Athletics,1915
+1047,Minnesota Twins|Minnesota Twins|Minnesota Twins|California Angels,1975|1976|1977|1978
+1048,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|New York Mets|New York Mets|New York Mets|Colorado Rockies|New York Yankees,1984|1985|1986|1987|1988|1989|1990|1990|1991|1992|1993|1994
+1049,New York Giants|Washington Senators,1895|1895
+1050,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Detroit Tigers|Baltimore Orioles,1964|1965|1966|1967|1968|1969|1970|1971|1971
+1051,New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|New York Mets|Houston Astros|Houston Astros|Houston Astros,1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977
+1052,Kansas City Royals|Chicago Cubs,1982|1985
+1053,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|St. Louis Cardinals|Kansas City Royals|Philadelphia Phillies|Philadelphia Phillies|Arizona Diamondbacks|New York Mets|Milwaukee Brewers,1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005
+1054,Chicago Cubs,1937
+1055,Montreal Expos|Montreal Expos|Colorado Rockies|Colorado Rockies|San Francisco Giants|Chicago Cubs|Chicago Cubs|St. Louis Cardinals|St. Louis Cardinals|Anaheim Angels|Philadelphia Phillies|Houston Astros,1992|1993|1993|1994|1994|1996|1997|1998|1999|2000|2000|2001
+1056,California Angels|California Angels,1979|1980
+1057,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|St. Louis Browns|St. Louis Browns,1922|1923|1924|1925|1926|1927|1928|1929|1930|1931|1932|1933|1934|1935|1936|1937
+1058,Texas Rangers|Texas Rangers|Texas Rangers|Texas Rangers,2005|2006|2007|2008
+1059,Los Angeles Angels,1962
+1060,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Chicago Cubs|Chicago Cubs|New York Mets,1956|1957|1958|1959|1960|1960|1961|1962
+1061,St. Louis Terriers,1914
+1062,Toronto Blue Jays|Cleveland Indians|Cleveland Indians|Montreal Expos|Montreal Expos,1991|1991|1992|1993|1994
+1063,Baltimore Terrapins|Pittsburgh Rebels,1914|1914
+1064,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Boston Red Sox|Boston Red Sox,1938|1939|1940|1941|1942|1943|1944|1945|1946|1947|1948|1949|1950|1951|1952
+1065,Washington Senators|Washington Senators|Washington Senators|Washington Senators,1961|1962|1963|1964
+1066,Boston Doves|Boston Doves|Boston Doves,1907|1908|1909
+1067,Miami Marlins|Miami Marlins,2014|2015
+1068,Chicago White Sox|Milwaukee Brewers|Houston Astros|Houston Astros|Kansas City Royals|Tampa Bay Rays|Cincinnati Reds|Cincinnati Reds,2008|2009|2010|2011|2012|2013|2014|2015
+1069,San Francisco Giants,1996
+1070,San Francisco Giants,1980
+1071,Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|Los Angeles Angels of Anaheim|St. Louis Cardinals|St. Louis Cardinals,2010|2011|2012|2013|2014|2015
+1072,Philadelphia Phillies|Philadelphia Phillies|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Atlanta Braves|Atlanta Braves|Cleveland Indians|Cleveland Indians|Cleveland Indians|Atlanta Braves,2006|2007|2008|2009|2010|2011|2011|2012|2013|2014|2015|2015
+1073,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Oakland Athletics|Oakland Athletics|Oakland Athletics|Seattle Mariners,1992|1993|1994|1996|1997|1998|1999
+1074,Chicago Cubs|Chicago Cubs|Chicago Cubs|Oakland Athletics|Oakland Athletics|Minnesota Twins,1971|1972|1973|1973|1974|1974
+1075,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Seattle Pilots|Houston Astros|Houston Astros|Atlanta Braves,1962|1963|1964|1965|1966|1967|1968|1969|1969|1970|1978
+1076,Anaheim Angels,1997
+1077,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|New York Mets,1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1985
+1078,St. Louis Browns,1903
+1079,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Chicago Cubs|Chicago Cubs,2008|2009|2010|2011|2012|2012|2013
+1080,St. Louis Browns,1914
+1081,New York Giants,1919
+1082,New York Giants,1896
+1083,Minnesota Twins|Minnesota Twins|San Diego Padres|San Diego Padres|Chicago Cubs|Oakland Athletics|Oakland Athletics,2003|2004|2006|2007|2007|2007|2008
+1084,Houston Astros|Houston Astros|Florida Marlins|Florida Marlins|Florida Marlins,1991|1992|1993|1994|1995
+1085,Boston Red Sox|Boston Red Sox|Boston Red Sox,1977|1978|1980
+1086,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Washington Senators|Washington Senators,1963|1964|1965|1966|1967|1968|1969
+1087,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Pittsburgh Pirates|Pittsburgh Pirates|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|Boston Doves|Boston Doves,1895|1896|1897|1898|1898|1899|1900|1901|1902|1903|1904|1905|1906|1907|1908|1909
+1088,Chicago White Sox,1949
+1089,Baltimore Orioles,1996
+1090,Colorado Rockies|Oakland Athletics,2008|2010
+1091,Minnesota Twins,1997
+1092,Boston Red Sox|Boston Red Sox|Boston Red Sox,1935|1936|1937
+1093,Brooklyn Gladiators,1890
+1094,Oakland Athletics,1994
+1095,Atlanta Braves|Chicago Cubs|Oakland Athletics|Oakland Athletics|Washington Nationals|Washington Nationals|Colorado Rockies,1999|1999|2002|2003|2006|2007|2008
+1096,San Francisco Giants|San Francisco Giants|San Francisco Giants|Pittsburgh Pirates|Pittsburgh Pirates|Philadelphia Phillies,2008|2009|2010|2010|2011|2011
+1097,Chicago White Sox|Chicago White Sox,1931|1932
+1098,Toronto Blue Jays|Toronto Blue Jays|Toronto Blue Jays,2001|2002|2003
+1099,Philadelphia Athletics|Philadelphia Athletics,1943|1945
+1100,Chicago White Sox,1922
+1101,Kansas City Athletics,1967
+1102,Milwaukee Brewers|Toronto Blue Jays,1976|1977
+1103,Cleveland Naps|Cleveland Indians,1914|1915
+1104,Chicago Colts,1891
+1105,St. Louis Cardinals|St. Louis Cardinals|New York Giants|Chicago Cubs,1939|1940|1941|1942
+1106,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1955|1956|1957|1958|1959
+1107,Washington Senators,1920
+1108,San Francisco Giants|San Francisco Giants|San Francisco Giants,1961|1962|1963
+1109,Philadelphia Athletics|New York Giants|Philadelphia Phillies|Philadelphia Phillies|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Boston Red Sox|Boston Red Sox|Cincinnati Reds,1932|1934|1935|1936|1937|1938|1939|1940|1941|1944|1945|1945
+1110,New York Giants|New York Giants|New York Giants|Pittsburgh Pirates|Pittsburgh Pirates,1949|1951|1952|1953|1955
+1111,Philadelphia Phillies|Pittsburgh Alleghenys|Philadelphia Athletics,1890|1890|1891
+1112,Chicago White Sox,1910
+1113,Boston Red Sox|Boston Red Sox|Boston Red Sox|Cleveland Indians|Los Angeles Angels|Los Angeles Angels|Kansas City Athletics|Kansas City Athletics,1958|1959|1960|1960|1961|1962|1963|1964
+1114,Minnesota Twins,2005
+1115,San Diego Padres|San Diego Padres|Tampa Bay Rays|Tampa Bay Rays,2012|2013|2014|2015
+1116,New York Mutuals|Brooklyn Atlantics|Hartford Dark Blues|Brooklyn Atlantics,1872|1873|1874|1875
+1117,Chicago White Sox|Chicago White Sox|Chicago White Sox|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Kansas City Athletics|Milwaukee Braves,1951|1953|1954|1956|1957|1958|1959|1960|1961|1961
+1118,Cleveland Spiders,1893
+1119,Cleveland Indians,1969
+1120,Washington Senators|Washington Senators|Washington Senators,1894|1895|1896
+1121,Pittsburgh Pirates|Philadelphia Phillies|San Diego Padres|Cleveland Indians|Pittsburgh Pirates,1999|2000|2002|2003|2004
+1122,Toronto Blue Jays|Detroit Tigers,2015|2015
+1123,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Montreal Expos|Montreal Expos|Texas Rangers,1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1991
+1124,St. Louis Browns|Cincinnati Reds,1910|1911
+1125,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|St. Louis Cardinals|Arizona Diamondbacks|Arizona Diamondbacks|New York Mets|San Diego Padres|Minnesota Twins,2005|2006|2007|2008|2009|2009|2009|2010|2011|2014|2015
+1126,Kansas City Athletics|Kansas City Athletics|Kansas City Athletics|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves,1955|1956|1957|1959|1960|1961|1962|1963|1964|1965|1966|1967|1968|1969|1970|1971
+1127,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Kansas City Athletics,1949|1950|1951|1952|1955
+1128,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|New York Mets|New York Mets|Chicago White Sox|Chicago White Sox|Los Angeles Dodgers|Los Angeles Dodgers,1955|1956|1957|1958|1959|1960|1961|1962|1963|1964|1965|1966|1967|1967|1968|1968|1969
+1129,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1978|1979|1981
+1130,Boston Braves|Boston Braves|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers,1929|1930|1933|1934|1935
+1131,Louisville Colonels|Pittsburgh Pirates,1896|1896
+1132,St. Louis Maroons|St. Louis Maroons|St. Louis Maroons|Indianapolis Hoosiers|Indianapolis Hoosiers|Indianapolis Hoosiers,1884|1885|1886|1887|1888|1889
+1133,Cincinnati Red Stockings|St. Louis Browns|St. Louis Browns|St. Louis Browns|Chicago Pirates|St. Louis Browns|New York Giants|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1886|1887|1888|1889|1890|1891|1892|1893|1894|1895|1896|1897|1898
+1134,Philadelphia Phillies,1912
+1135,New York Giants,1926
+1136,Chicago White Sox|Chicago White Sox,1938|1939
+1137,Milwaukee Brewers,1996
+1138,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Seattle Pilots|Milwaukee Brewers,1966|1967|1968|1969|1970
+1139,San Diego Padres|San Diego Padres|San Diego Padres|Baltimore Orioles|Baltimore Orioles,2011|2012|2013|2014|2015
+1140,Arizona Diamondbacks,2015
+1141,Brooklyn Dodgers|Brooklyn Dodgers|Philadelphia Phillies|Philadelphia Phillies,1937|1938|1938|1939
+1142,Cleveland Blues,1901
+1143,Philadelphia Phillies,1904
+1144,New York Yankees,2011
+1145,Milwaukee Brewers|Milwaukee Brewers,2010|2011
+1146,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics,2007|2008|2009|2010|2011
+1147,Houston Colt .45's,1964
+1148,Kansas City Athletics,1956
+1149,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Cleveland Indians|Cleveland Indians|Cincinnati Reds|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|St. Louis Cardinals|Chicago White Sox,1966|1967|1968|1969|1970|1970|1971|1971|1972|1973|1974|1975|1975|1976
+1150,Chicago White Sox|Chicago White Sox|Chicago White Sox|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Boston Red Sox|New York Mets|Baltimore Orioles|Baltimore Orioles|Tampa Bay Rays|Tampa Bay Rays,1998|1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2008|2009
+1151,Atlanta Braves|Atlanta Braves|Atlanta Braves|Atlanta Braves,1977|1979|1980|1981
+1152,New York Giants,1943
+1153,Washington Nationals,1884
+1154,Arizona Diamondbacks,2015
+1155,Oakland Athletics,1983
+1156,Chicago Orphans|Chicago Orphans|Cleveland Blues|Cleveland Bronchos|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Cleveland Naps|Brooklyn Tip-Tops|Kansas City Packers,1899|1900|1901|1902|1903|1904|1905|1906|1907|1908|1909|1910|1914|1915
+1157,Boston Red Stockings,1876
+1158,Chicago White Sox|Chicago White Sox,1948|1949
+1159,St. Louis Brown Stockings|St. Louis Brown Stockings|Chicago White Stockings|Troy Trojans|Providence Grays|Detroit Wolverines|Cleveland Blues|Cleveland Blues|Cleveland Blues|Philadelphia Athletics|Cincinnati Outlaw Reds|Philadelphia Athletics|Baltimore Orioles,1875|1876|1877|1879|1880|1881|1881|1882|1883|1883|1884|1886|1888
+1160,St. Louis Browns,1946
+1161,Boston Red Sox|Boston Red Sox|Boston Red Sox,1927|1928|1929
+1162,Boston Red Sox|Boston Red Sox|Boston Red Sox|Pittsburgh Rebels|Pittsburgh Rebels|Brooklyn Tip-Tops|Newark Pepper,1910|1911|1912|1914|1915|1915|1915
+1163,Cleveland Indians,1916
+1164,Boston Red Sox|Boston Red Sox|Boston Red Sox,2013|2014|2015
+1165,Los Angeles Dodgers|Los Angeles Dodgers|New York Mets,1981|1982|1983
+1166,Montreal Expos|Montreal Expos|Cleveland Indians|Cleveland Indians|Cleveland Indians|Los Angeles Dodgers|Los Angeles Dodgers|Oakland Athletics|Oakland Athletics|San Diego Padres|Texas Rangers|Chicago Cubs|Seattle Mariners|Seattle Mariners,2000|2001|2001|2002|2003|2004|2005|2006|2007|2007|2008|2009|2010|2011
+1167,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Philadelphia Phillies|Baltimore Orioles|Baltimore Orioles|Chicago White Sox,1983|1984|1985|1986|1987|1988|1989|1990|1990
+1168,New York Yankees,1998
+1169,New York Yankees|New York Yankees|Chicago White Sox|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Cincinnati Reds,1984|1985|1986|1986|1987|1988|1989|1990|1991|1992|1992
+1170,California Angels|California Angels|Chicago White Sox|Chicago White Sox|San Francisco Giants|San Francisco Giants|San Francisco Giants,1969|1970|1971|1972|1973|1974|1975
+1171,Philadelphia Athletics,1917
+1172,Washington Senators,1952
+1173,Brooklyn Robins,1929
+1174,St. Louis Cardinals|St. Louis Cardinals,1995|1996
+1175,Boston Braves,1912
+1176,Boston Braves|Boston Braves,1946|1947
+1177,California Angels,1989
+1178,Boston Red Sox,1920
+1179,Chicago White Sox,1995
+1180,Detroit Tigers,1956
+1181,Philadelphia Phillies|Pittsburgh Pirates|Pittsburgh Pirates|Boston Red Sox|Boston Braves,1905|1906|1907|1908|1912
+1182,New York Yankees|New York Yankees|Cincinnati Reds,1915|1917|1925
+1183,Chicago White Stockings,1875
+1184,Hartford Dark Blues|Washington Nationals|Hartford Dark Blues|New York Metropolitans|New York Metropolitans|New York Metropolitans|New York Metropolitans,1874|1875|1875|1883|1884|1885|1886
+1185,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers,1940|1941|1942|1943|1944|1947|1948
+1186,Seattle Mariners|Seattle Mariners|Seattle Mariners|Boston Red Sox|Boston Red Sox|Boston Red Sox|St. Louis Cardinals|Colorado Rockies|New York Mets|New York Yankees|Atlanta Braves|Atlanta Braves|San Diego Padres|Cincinnati Reds,1994|1995|1996|1996|1997|1998|1999|2000|2001|2001|2002|2003|2004|2004
+1187,Cleveland Blues,1901
+1188,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,1986|1987|1988|1989|1990|1990|1991|1992
+1189,Chicago White Sox|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Pittsburgh Pirates|Boston Beaneaters|Boston Doves|Cincinnati Reds|New York Giants,1901|1903|1904|1905|1905|1906|1907|1908|1908
+1190,Washington Olympics|Washington Olympics|Middletown Mansfields|Baltimore Canaries|Baltimore Canaries,1871|1872|1872|1873|1874
+1191,New York Giants|New York Giants|New York Giants,1914|1915|1916
+1192,Pittsburgh Rebels,1915
+1193,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1928|1929|1930|1931|1932
+1194,Philadelphia Phillies,1935
+1195,Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Brooklyn Dodgers|Detroit Tigers|Detroit Tigers|New York Yankees|Brooklyn Dodgers,1944|1945|1946|1947|1948|1949|1950|1951|1952|1953|1953|1954|1954|1956
+1196,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics,1939|1940|1941|1945
+1197,St. Louis Cardinals,1962
+1198,New York Yankees|New York Yankees,1941|1942
+1199,Seattle Mariners,1979
+1200,Pittsburgh Pirates|Houston Astros|Houston Astros|Houston Astros|Houston Astros|Montreal Expos|Montreal Expos|Montreal Expos,1963|1965|1966|1967|1968|1969|1970|1971
+1201,Texas Rangers|Texas Rangers|Boston Red Sox|Boston Red Sox,1995|1996|1996|1997
+1202,Pittsburgh Pirates|Pittsburgh Pirates|Newark Pepper,1908|1909|1915
+1203,Boston Red Sox|Boston Red Sox|Boston Red Sox|Seattle Pilots|Minnesota Twins|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1966|1967|1968|1969|1969|1971|1972|1973
+1204,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates,1941|1942|1943
+1205,Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Boston Braves|Brooklyn Dodgers|Pittsburgh Pirates|Pittsburgh Pirates,1928|1929|1930|1931|1932|1933|1934|1935|1936|1937|1938
+1206,St. Louis Cardinals|New York Giants|San Francisco Giants|San Francisco Giants|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Philadelphia Phillies|Philadelphia Phillies|Houston Astros,1956|1956|1958|1959|1960|1961|1962|1963|1964|1965|1966|1967|1967
+1207,St. Louis Browns|St. Louis Browns,1928|1929
+1208,Chicago White Stockings|Chicago White Stockings,1871|1875
+1209,Philadelphia Athletics,1927
+1210,Boston Beaneaters|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Chicago Cubs,1898|1901|1902|1903|1904|1905|1906|1907|1908|1909|1910|1911|1911
+1211,Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cleveland Indians|Cleveland Indians|Los Angeles Dodgers|Los Angeles Dodgers,1992|1993|1994|1995|1996|1997|1997|1998|2000|2001
+1212,New York Yankees|Oakland Athletics,1980|1983
+1213,Philadelphia Phillies|Philadelphia Phillies,1991|1992
+1214,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|St. Louis Cardinals|Philadelphia Phillies|Philadelphia Phillies|Texas Rangers,1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001
+1215,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians,2009|2010|2011|2012|2013|2014|2015
+1216,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners,1986|1987|1988|1989
+1217,Miami Marlins|Miami Marlins|Chicago White Sox,2012|2013|2015
+1218,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Cincinnati Reds|Cincinnati Reds|Milwaukee Brewers|Milwaukee Brewers|Tampa Bay Devil Rays|San Diego Padres|San Diego Padres|Philadelphia Phillies|St. Louis Cardinals|Milwaukee Brewers|Seattle Mariners|Cleveland Indians|Seattle Mariners|Arizona Diamondbacks|Los Angeles Angels of Anaheim,1998|1999|2000|2001|2002|2002|2003|2004|2005|2006|2006|2007|2007|2007|2008|2009|2010|2010|2011|2011
+1219,Louisville Colonels,1899
+1220,St. Louis Cardinals|Philadelphia Phillies,1902|1903
+1221,Los Angeles Angels of Anaheim,2013
+1222,St. Louis Cardinals,1924
+1223,Chicago White Sox|Boston Red Sox|Boston Red Sox,1921|1926|1927
+1224,Milwaukee Braves,1964
+1225,Kansas City Royals|Kansas City Royals,2006|2007
+1226,Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers,2007|2008|2009|2010|2011|2012|2013|2014|2015
+1227,Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Minnesota Twins|Seattle Mariners|Seattle Mariners|Kansas City Royals|Kansas City Royals|Kansas City Royals|Toronto Blue Jays|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1971|1972|1973|1974|1975|1976|1977|1978|1978|1979|1980|1980|1981|1982|1983|1984|1985
+1228,Chicago White Sox|Cincinnati Reds|Cincinnati Reds|San Diego Padres,1969|1970|1971|1971
+1229,Boston Braves|Boston Braves|New York Yankees|New York Yankees|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Chicago White Sox|Chicago White Sox|St. Louis Browns|St. Louis Browns,1921|1922|1925|1926|1927|1928|1929|1930|1930|1931|1931|1933
+1230,Washington Nationals|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds,2006|2006|2007|2008|2010|2011|2012
+1231,Boston Braves,1941
+1232,New York Mets|Kansas City Royals,2004|2007
+1233,Tampa Bay Devil Rays|Tampa Bay Devil Rays|Tampa Bay Devil Rays|Tampa Bay Devil Rays|San Diego Padres,2002|2003|2004|2005|2006
+1234,Philadelphia Athletics|Philadelphia Athletics,1921|1922
+1235,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1943|1946|1947|1948|1949|1950|1951|1952|1953|1954
+1236,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Arizona Diamondbacks,2004|2005|2006|2007|2008|2011
+1237,Baltimore Orioles|Baltimore Orioles,2000|2001
+1238,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Atlanta Braves|Atlanta Braves|Atlanta Braves|Houston Astros,1983|1984|1985|1985|1986|1987|1988|1989|1990|1991|1992|1993|1994
+1239,Atlanta Braves|Atlanta Braves|Atlanta Braves|Chicago White Sox,1969|1971|1972|1978
+1240,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Browns,1940|1943|1944|1945|1946|1947|1948|1949|1950|1951|1952|1953
+1241,Philadelphia Athletics,1929
+1242,Minnesota Twins|Minnesota Twins|Arizona Diamondbacks,1996|1997|1998
+1243,Cincinnati Reds|Chicago Cubs,1969|1971
+1244,Chicago Cubs|Montreal Expos|Montreal Expos|Montreal Expos|Montreal Expos,1971|1972|1973|1974|1975
+1245,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Washington Senators|Los Angeles Dodgers,1960|1961|1962|1963|1963
+1246,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Montreal Expos,1980|1981|1982|1983|1984
+1247,Philadelphia Quakers,1883
+1248,St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|St. Louis Browns|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|St. Louis Cardinals,1891|1892|1893|1894|1895|1896|1897|1898|1899|1900|1901
+1249,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1937|1938|1939
+1250,Pittsburgh Pirates,1914
+1251,San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Toronto Blue Jays|San Francisco Giants,1981|1982|1983|1984|1985|1986|1987|1988|1989|1989
+1252,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Chicago Chi-Feds|Chicago Whales|Washington Senators|Cleveland Indians,1910|1911|1912|1913|1914|1915|1918|1918
+1253,New York Yankees|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|New York Giants,1933|1934|1935|1936|1937|1937
+1254,St. Louis Maroons|St. Louis Maroons|Kansas City Cowboys|Philadelphia Athletics|Cleveland Infants,1884|1885|1888|1889|1890
+1255,Cleveland Indians|Cleveland Indians|Cleveland Indians|Chicago White Sox|Los Angeles Dodgers,1981|1982|1983|1984|1985
+1256,Los Angeles Dodgers|Chicago Cubs,1988|1993
+1257,New York Yankees,1965
+1258,Cleveland Naps,1912
+1259,Cleveland Naps|Cleveland Indians|Cincinnati Reds|Cincinnati Reds,1913|1915|1920|1921
+1260,Boston Red Sox,2014
+1261,Pittsburgh Pirates|Cleveland Indians|Cleveland Indians,1932|1934|1935
+1262,San Diego Padres|Boston Red Sox|Cleveland Indians|Minnesota Twins|Minnesota Twins|Oakland Athletics|Oakland Athletics|Oakland Athletics|Arizona Diamondbacks|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox,2005|2006|2008|2008|2009|2009|2010|2011|2012|2012|2013|2014|2015
+1263,Washington Senators|Chicago Orphans|Baltimore Orioles|Baltimore Orioles|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|New York Giants|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Chicago Cubs|Chicago Cubs|Chicago Cubs,1897|1900|1901|1902|1902|1903|1904|1905|1906|1907|1908|1909|1910|1911|1912|1913|1914|1915
+1264,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Cincinnati Reds|Brooklyn Robins|Brooklyn Robins|Brooklyn Robins|Brooklyn Robins|Philadelphia Phillies|St. Louis Cardinals,1914|1915|1916|1917|1918|1919|1920|1921|1922|1923|1924|1925|1926|1927|1928|1929|1930|1931|1932|1932
+1265,New York Giants|New York Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|San Francisco Giants|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|New York Mets|St. Louis Cardinals,1956|1957|1958|1959|1960|1961|1962|1963|1964|1965|1966|1967
+1266,Chicago White Sox|Chicago White Sox|Chicago White Sox,1913|1914|1915
+1267,Chicago Cubs|Chicago Cubs,1924|1925
+1268,Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals|Kansas City Royals,1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989|1990|1991|1992|1993
+1269,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Milwaukee Brewers|Philadelphia Phillies|Pittsburgh Pirates|Pittsburgh Pirates|New York Yankees|Chicago White Sox|Chicago White Sox|California Angels|California Angels|Minnesota Twins|Los Angeles Dodgers|Kansas City Royals|Kansas City Royals,1967|1969|1970|1971|1972|1973|1974|1975|1976|1976|1977|1977|1978|1979|1979|1980|1981
+1270,Tampa Bay Rays,2015
+1271,New York Yankees|New York Yankees|New York Yankees|New York Yankees|New York Yankees,1939|1940|1941|1942|1943
+1272,Kansas City Royals|Kansas City Royals|Kansas City Royals|New York Yankees|Oakland Athletics|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1993|1994|1995|1996|1997|1997|1998|1999
+1273,Arizona Diamondbacks,2013
+1274,New York Giants|New York Giants|New York Giants,1944|1945|1946
+1275,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|California Angels|California Angels,1960|1961|1962|1963|1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1975|1976
+1276,Kansas City Royals,1986
+1277,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1990|1991|1992|1993
+1278,Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox,1954|1955|1956|1957|1958|1959|1960|1961
+1279,Los Angeles Dodgers,1984
+1280,San Francisco Giants|Cleveland Indians,1995|2000
+1281,Cincinnati Reds|Philadelphia Phillies|Chicago Cubs|Cleveland Indians,1943|1943|1944|1946
+1282,Chicago White Sox,1961
+1283,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies,1926|1927|1928|1929|1930|1930|1931|1932|1933
+1284,New York Yankees|New York Yankees|Los Angeles Angels,1958|1959|1961
+1285,Philadelphia Athletics,1913
+1286,Boston Red Sox,1952
+1287,New York Yankees|New York Yankees|New York Yankees|Baltimore Orioles|Chicago White Sox|Chicago White Sox|Detroit Tigers|Baltimore Orioles,1951|1952|1953|1954|1955|1956|1956|1957
+1288,St. Louis Cardinals|St. Louis Cardinals|Cincinnati Reds|Cincinnati Reds|New York Yankees|New York Yankees|Washington Senators|Washington Senators,1959|1960|1960|1961|1962|1963|1964|1965
+1289,Brooklyn Dodgers|Brooklyn Dodgers|Cincinnati Reds|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Cincinnati Redlegs|Washington Senators|Washington Senators|Detroit Tigers|Detroit Tigers|Cleveland Indians|St. Louis Cardinals|Los Angeles Angels,1951|1952|1953|1954|1955|1956|1957|1957|1958|1959|1960|1960|1960|1961
+1290,Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers,1930|1931|1932|1933|1934|1935|1936|1937|1938|1939|1940|1941|1942|1943|1945|1946
+1291,Cincinnati Reds|Boston Beaneaters|Boston Doves|New York Giants|New York Giants|New York Giants|New York Giants|Boston Rustlers|Boston Braves|Chicago Cubs|St. Louis Terriers|St. Louis Terriers,1905|1906|1907|1908|1909|1910|1911|1911|1912|1913|1914|1915
+1292,St. Louis Browns|St. Louis Browns|Chicago White Sox|Pittsburgh Pirates,1912|1913|1915|1917
+1293,Chicago Colts|Chicago Colts|Chicago Orphans|Chicago Cubs|Chicago Cubs,1896|1897|1898|1904|1905
+1294,Chicago/Pittsburgh,1884
+1295,California Angels|California Angels|California Angels|Cleveland Indians|San Diego Padres|Montreal Expos|Chicago Cubs,1975|1976|1977|1978|1979|1981|1982
+1296,Syracuse Stars|Louisville Colonels|St. Louis Browns|Louisville Colonels,1890|1891|1892|1895
+1297,Chicago Cubs|Chicago Cubs|Chicago Cubs|Cleveland Indians|Cleveland Indians|Kansas City Athletics,1956|1957|1958|1959|1960|1960
+1298,Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Minnesota Twins,1964|1965|1966|1967|1968|1969|1970|1971|1971|1972|1973|1974|1975|1975
+1299,Atlanta Braves,2015
+1300,Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Washington Senators|Washington Senators|Cincinnati Reds|New York Yankees|New York Yankees|Chicago Cubs,1958|1959|1960|1961|1962|1963|1963|1964|1965
+1301,Tampa Bay Rays|Tampa Bay Rays|Tampa Bay Rays|Tampa Bay Rays|Tampa Bay Rays|Colorado Rockies|New York Yankees|Philadelphia Phillies|Miami Marlins,2008|2009|2010|2011|2012|2013|2013|2014|2015
+1302,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Pittsburgh Pirates|Pittsburgh Pirates|Pittsburgh Pirates|Kansas City Royals|Kansas City Royals|Texas Rangers|Texas Rangers|Baltimore Orioles|Baltimore Orioles,1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1977|1978
+1303,Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Seattle Mariners|Florida Marlins,1988|1989|1990|1991|1992|1993
+1304,Detroit Wolverines,1884
+1305,Washington Senators|Washington Senators|Chicago Cubs|Boston Red Sox,1922|1923|1927|1931
+1306,Philadelphia Phillies|Philadelphia Phillies|San Francisco Giants,1992|1993|1994
+1307,Philadelphia Phillies,1912
+1308,Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Chicago White Sox|Pittsburgh Pirates,1969|1970|1971|1972|1973|1974|1974
+1309,Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Washington Senators|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|St. Louis Cardinals|Texas Rangers|New York Yankees,1961|1962|1963|1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1975|1975
+1310,Chicago Cubs,1952
+1311,Troy Trojans|Cleveland Blues|Cleveland Blues|Cleveland Blues|Cincinnati Outlaw Reds|St. Louis Maroons|Kansas City Cowboys|Detroit Wolverines|Kansas City Cowboys,1880|1882|1883|1884|1884|1885|1886|1887|1888
+1312,Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics|Oakland Athletics,1991|1992|1993|1994|1995|1996
+1313,Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Philadelphia Athletics|Cleveland Indians|Cleveland Indians|Cleveland Indians,1947|1948|1949|1950|1951|1951|1952|1953
+1314,Cleveland Spiders,1899
+1315,Minnesota Twins|Minnesota Twins|Minnesota Twins,1992|1993|1995
+1316,Philadelphia Phillies|Philadelphia Phillies,2005|2006
+1317,Colorado Rockies|Colorado Rockies,1995|1996
+1318,Kansas City Royals|Arizona Diamondbacks,2002|2004
+1319,Arizona Diamondbacks,2015
+1320,Toronto Blue Jays|Toronto Blue Jays|Oakland Athletics,1996|1997|1997
+1321,Brooklyn Atlantics|Brooklyn Atlantics,1872|1873
+1322,Cincinnati Reds,1937
+1323,Philadelphia Phillies|Philadelphia Phillies,1950|1951
+1324,Baltimore Orioles|New York Yankees|New York Yankees,2006|2007|2008
+1325,Boston Red Sox|Boston Red Sox,2013|2014
+1326,Pittsburgh Pirates,1913
+1327,Atlanta Braves|Atlanta Braves|Atlanta Braves|Montreal Expos,1967|1968|1969|1971
+1328,Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles,2011|2012|2013|2014|2015
+1329,Atlanta Braves|Atlanta Braves|Atlanta Braves,1979|1983|1984
+1330,New York Yankees|New York Yankees|New York Yankees|New York Yankees|Cleveland Indians,1934|1935|1936|1937|1939
+1331,Chicago White Sox|Chicago White Sox|Chicago White Sox|New York Mets,2007|2008|2009|2009
+1332,San Francisco Giants,2015
+1333,Washington Senators|Texas Rangers|Texas Rangers|Texas Rangers|Milwaukee Brewers|Milwaukee Brewers|Chicago Cubs|Oakland Athletics,1971|1972|1973|1974|1975|1976|1977|1978
+1334,San Diego Padres|San Diego Padres|San Diego Padres|Houston Astros|Houston Astros|Detroit Tigers|Detroit Tigers|Detroit Tigers|Detroit Tigers|Texas Rangers|Texas Rangers|San Diego Padres|San Diego Padres|Houston Astros|Houston Astros,1992|1993|1994|1995|1996|1997|1998|1999|2000|2004|2005|2006|2007|2008|2009
+1335,Atlanta Braves|San Francisco Giants|San Francisco Giants|Philadelphia Phillies|Philadelphia Phillies|Baltimore Orioles,1997|1998|1999|2000|2001|2002
+1336,Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Los Angeles Dodgers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers|Milwaukee Brewers,1982|1983|1984|1985|1986|1987|1988|1989|1990|1991
+1337,St. Louis Cardinals|St. Louis Cardinals,1917|1918
+1338,Chicago Cubs|Chicago Cubs|Chicago Cubs|Chicago Cubs|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals,1961|1962|1963|1964|1964|1965|1966|1967|1968|1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979
+1339,Chicago Cubs,2000
+1340,New York Highlanders|New York Highlanders|New York Highlanders,1907|1909|1911
+1341,Washington Nationals,2011
+1342,Brooklyn Superbas,1903
+1343,Boston Beaneaters|Boston Beaneaters|St. Louis Browns|St. Louis Browns|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|Pittsburgh Pirates|Pittsburgh Pirates|Baltimore Orioles|Baltimore Orioles|Baltimore Orioles|New York Giants,1890|1891|1892|1893|1893|1894|1895|1896|1897|1898|1898|1899|1901|1902
+1344,Boston Red Sox|Boston Red Sox|Washington Senators|Washington Senators|Cleveland Indians|Cleveland Indians,1952|1955|1956|1957|1958|1959
+1345,St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|St. Louis Cardinals|Chicago Cubs|Chicago Cubs|Chicago Cubs,1959|1960|1961|1962|1963|1964|1964|1965|1966
+1346,Detroit Tigers|New York Mets|New York Mets|New York Mets|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Philadelphia Phillies|Boston Red Sox|Atlanta Braves,1992|1994|1995|1996|1997|1998|1999|2000|2000|2001
+1347,Cleveland Indians|Cleveland Indians|Cleveland Indians|Cleveland Indians|Chicago White Sox|Chicago White Sox|Boston Red Sox|Boston Red Sox|Boston Red Sox|Cleveland Indians,1972|1973|1974|1975|1976|1977|1978|1979|1980|1980
+1348,Arizona Diamondbacks|San Francisco Giants|Los Angeles Dodgers,2001|2002|2003
+1349,,
+1350,,
+1351,,
+1352,,
+1353,,
+1354,,
+1355,,
+1356,,
+1357,,
+1358,,
+1359,,
+1360,,
+1361,,
+1362,,
+1363,,
+1364,,
+1365,,
+1366,,
+1367,,
+1368,,
+1369,,
+1370,,
+1371,,
+1372,,
+1373,,
+1374,,
+1375,,
+1376,,
+1377,,
+1378,,
+1379,,
+1380,,
+1381,,
+1382,,
+1383,,
+1384,,
+1385,,
+1386,,
+1387,,
+1388,,
+1389,,
+1390,,
+1391,,
+1392,,
+1393,,
+1394,,
+1395,,
+1396,,
+1397,,
+1398,,
+1399,,
+1400,,
+1401,,
+1402,,
+1403,,
+1404,,
+1405,,
+1406,,
+1407,,
+1408,,
+1409,,
+1410,,
+1411,,
+1412,,
+1413,,
+1414,,
+1415,,
+1416,,
+1417,,
+1418,,
+1419,,
+1420,,
+1421,,
+1422,,
+1423,,
+1424,,
+1425,,
+1426,,
+1427,,
+1428,,
+1429,,
+1430,,
+1431,,
+1432,,
+1433,,
+1434,,
+1435,,
+1436,,
+1437,,
+1438,,
+1439,,
+1440,,
+1441,,
+1442,,
+1443,,
+1444,,
+1445,,
+1446,,
+1447,,
+1448,,
+1449,,
+1450,,
+1451,,
+1452,,
+1453,,
+1454,,
+1455,,
+1456,,
+1457,,
+1458,,
+1459,,
+1460,,
+1461,,
+1462,,
+1463,,
+1464,,
+1465,,
+1466,,
+1467,,
+1468,,
+1469,,
+1470,,
+1471,,
+1472,,
+1473,,
+1474,,
+1475,,
+1476,,
+1477,,
+1478,,
+1479,,
+1480,,
+1481,,
+1482,,
+1483,,
+1484,,
+1485,,
+1486,,
+1487,,
+1488,,
+1489,,
+1490,,
+1491,,
+1492,,
+1493,,
+1494,,
+1495,,
+1496,,
+1497,,
+1498,,
+1499,,
+1500,,
+1501,,
+1502,,
+1503,,
+1504,,
+1505,,
+1506,,
+1507,,
+1508,,
+1509,,
+1510,,
+1511,,
+1512,,
+1513,,
+1514,,
+1515,,
+1516,,
+1517,,
+1518,,
+1519,,
+1520,,
+1521,,
+1522,,
+1523,,
+1524,,
+1525,,
+1526,,
+1527,,
+1528,,
+1529,,
+1530,,
+1531,,
+1532,,
+1533,,
+1534,,
+1535,,
+1536,,
+1537,,
+1538,,
+1539,,
+1540,,
+1541,,
+1542,,
+1543,,
+1544,,
+1545,,
+1546,,
+1547,,
+1548,,
+1549,,
+1550,,
+1551,,
+1552,,
+1553,,
+1554,,
+1555,,
+1556,,
+1557,,
+1558,,
+1559,,
+1560,,
+1561,,
+1562,,
+1563,,
+1564,,
+1565,,
+1566,,
+1567,,
+1568,,
+1569,,
+1570,,
+1571,,
+1572,,
+1573,,
+1574,,
+1575,,
+1576,,
+1577,,
+1578,,
+1579,,
+1580,,
+1581,,
+1582,,
+1583,,
+1584,,
+1585,,
+1586,,
+1587,,
+1588,,
+1589,,
+1590,,
+1591,,
+1592,,
+1593,,
+1594,,
+1595,,
+1596,,
+1597,,
+1598,,
+1599,,
+1600,,
+1601,,
+1602,,
+1603,,
+1604,,
+1605,,
+1606,,
+1607,,
+1608,,
+1609,,
+1610,,
+1611,,
+1612,,
+1613,,
+1614,,
+1615,,
+1616,,
+1617,,
+1618,,
+1619,,
+1620,,
+1621,,
+1622,,
+1623,,
+1624,,
+1625,,
+1626,,
+1627,,
+1628,,
+1629,,
+1630,,
+1631,,
+1632,,
+1633,,
+1634,,
+1635,,
+1636,,
+1637,,
+1638,,
+1639,,
+1640,,
+1641,,
+1642,,
+1643,,
+1644,,
+1645,,
+1646,,
+1647,,
+1648,,
+1649,,
+1650,,
+1651,,
+1652,,
+1653,,
+1654,,
+1655,,
+1656,,
+1657,,
+1658,,
+1659,,
+1660,,
+1661,,
+1662,,
+1663,,
+1664,,
+1665,,
+1666,,
+1667,,
+1668,,
+1669,,
+1670,,
+1671,,
+1672,,
+1673,,
+1674,,
+1675,,
+1676,,
+1677,,
+1678,,
+1679,,
+1680,,
+1681,,
+1682,,
+1683,,
+1684,,
+1685,,
+1686,,
+1687,,
+1688,,
+1689,,
+1690,,
+1691,,
+1692,,
+1693,,
+1694,,
+1695,,
+1696,,
+1697,,
+1698,,
+1699,,
+1700,,
+1701,,
+1702,,
+1703,,
+1704,,
+1705,,
+1706,,
+1707,,
+1708,,
+1709,,
+1710,,
+1711,,
+1712,,
+1713,,
+1714,,
+1715,,
+1716,,
+1717,,
+1718,,
+1719,,
+1720,,
+1721,,
+1722,,
+1723,,
+1724,,
+1725,,
+1726,,
+1727,,
+1728,,
+1729,,
+1730,,
+1731,,
+1732,,
+1733,,
+1734,,
+1735,,
+1736,,
+1737,,
+1738,,
+1739,,
+1740,,
+1741,,
+1742,,
+1743,,
+1744,,
+1745,,
+1746,,
+1747,,
+1748,,
+1749,,
+1750,,
+1751,,
+1752,,
+1753,,
+1754,,
+1755,,
+1756,,
+1757,,
+1758,,
+1759,,
+1760,,
+1761,,
+1762,,
+1763,,
+1764,,
+1765,,
+1766,,
+1767,,
+1768,,
+1769,,
+1770,,
+1771,,
+1772,,
+1773,,
+1774,,
+1775,,
+1776,,
+1777,,
+1778,,
