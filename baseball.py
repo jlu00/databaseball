@@ -16,32 +16,16 @@ def make_database():
     
     c.execute('''CREATE TABLE player_employment
                  (player_id VARCHAR, teams VARCHAR, years VARCHAR)''')
-    #cur.execute('CREATE TABLE IF NOT EXISTS mytable (field2 VARCHAR, field4 VARCHAR)')
-    reader = csv.reader(open("player_employment_table.txt", "r"))
+    reader = csv.reader(open("player_employment_table.csv", "r"))
     for player_id, teams, years in reader:
         c.execute('INSERT INTO player_employment (player_id, teams, years) VALUES (?,?,?)', (player_id, teams, years))
-
-
-
-    #with open('player_employment_table.csv','rb') as fin: # `with` statement available in 2.5+
-    # csv.DictReader uses first line in file for column headings by default
-        #dr = csv.DictReader(fin, fieldnames = ["player_id", "teams", "years"]) # comma is default delimiter
-        #for i in dr:
-            #print(i['player_id'])
-
-        #to_db = [(i['player_id'], i['teams'], i['years']) for i in dr]
-
-    #cur.executemany("INSERT INTO t (player_id, teams, years) VALUES (?, ?, ?);", to_db)
-    conn.commit()
-    
-
     #c.execute('''CREATE TABLE player_bios
                  #(player_id, position, player_name, playoffs, won_ws, years_played, span)''')
     #c.execute('''CREATE TABLE stats_nonpitcher 
                  #(player_id, season, WAR, UBR, AVG, OBP, SLG, WRC+, WPA, clutch)''')
     #c.execute('''CREATE TABLE stats_pitcher
                  #(player_id, season, WAR, ERA, IP, GS, K%, BB%, FIP, E-F, FIP-)''')
-    #conn.commit()
+    conn.commit()
     conn.close()
 
 def url_check(url, parent_url):
@@ -58,16 +42,14 @@ def url_check(url, parent_url):
     else:
         return None
 
-   
-
 
 def go_player_employment():
     '''
     Creates a dictionary with all the data from baseball-reference for the players and converts
     that into a csv file called player_employment_table.csv
     '''
-    br_player_dict = make_br_player_dict()
-    make_player_employment_csv_file(br_player_dict, "player_employment_table.csv")
+    br_player_dict = make_br_alpha_player_dict("a")
+    make_player_employment_csv_file(br_player_dict, "a_player_employment_table.csv")
     
 def make_player_employment_csv_file(data_dict, filename):
     '''
@@ -93,42 +75,42 @@ def make_br_games_dict():
         if request:
             text = request.text
             soup = bs4.BeautifulSoup(text, parse_only=bs4.SoupStrainer("table", class_="large_text"))
-            regular_season_year_urls = get_regular_season_year_urls(soup, urls_visited)
-            master_regular_game_dict = get_day_urls(regular_season_year_urls, urls_visited, parent_url, master_regular_game_dict)
-            #master_ps_game_dict = get_post_season_urls(soup, urls_visited, parent_url)
+            regular_season_year_urls = get_regular_season_year_urls(soup)
+            day_urls = get_day_urls(regular_season_year_urls, parent_url)
+            master_regular_game_dict = get_game_urls(master_regular_game_dict, day_urls)
+            
+            series_urls = get_post_season_urls(parent_url)
+            master_ps_game_dict = get_ps_series_page(series_urls, parent_url)
     return master_game_dict
 
-def get_post_season_urls(soup, urls_visited, parent_url):
+def get_post_season_urls(parent_url):
     #need to get all urls for all the world series/postseason stuff until it gets to 1903, when I 
     #should stop getting data bc there is barely any data
-    ps_link = soup.find("a", href="/postseason/")
-    ps_url = ps_link.get("href")
-    if ps_url not in urls_visited:
-        urls_visited.append(ps_url)
-        abs_ps_url = url_check(ps_url, parent_url)
-        if abs_ps_url:
-            parent_url = abs_ps_url
-            ps_request = util.get_request(abs_ps_url)
-            if ps_request:
+    abs_ps_url = parent_url + "/postseason/"
+    if abs_ps_url:
+        parent_url = abs_ps_url
+        ps_request = util.get_request(abs_ps_url)
+        if ps_request:
                 ps_text = ps_request.text
-                ps_soup1 = bs4.BeautifulSoup(ps_text, parse_only=bs4.SoupStrainer("table", class_="stats_table nav_table"))
-                table_rows = ps_soup1.find_all("tr")
+                ps_soup = bs4.BeautifulSoup(ps_text, parse_only=bs4.SoupStrainer("div", id="page_content"))
+                #table_rows = ps_soup.find_all("tr")
                 #print("table_rows", table_rows)
-                for row in table_rows:
-                    possible_links = row.find_all("a", href=True)
+                #for row in table_rows:
+                series_urls = [a.attrs.get("href") for a in year_soup.select("a[href^=/postseason/]")]
+                    #possible_links = row.find_all("a", href^="/postseason")
                     #print("possible links", possible_links)
-                    print("len possible_links", len(possible_links))
-                    if len(possible_links) > 3:
-                        series_urls = [possible_links[0].get("href"), possible_links[len(possible_links)//2].get("href")]
-                    elif len(possible_links) > 0:
-                        series_urls = [possible_links[0].get("href")]
-                    for series_url in series_urls:
-                        master_ps_game_dict = get_ps_game_info(series_url, urls_visited, parent_url)
-
+                    #print("len possible_links", len(possible_links))
+                    #if len(possible_links) > 3:
+                        #series_urls = [possible_links[0].get("href"), possible_links[len(possible_links)//2].get("href")]
+                    #elif len(possible_links) > 0:
+                        #series_urls = [possible_links[0].get("href")]
+                #for series_url in series_urls:
                     
-                ps_soup2 = bs4.BeautifulSoup(text, parse_only=bs4.SoupStrainer("table", class_="stats_table"))
+    return series_urls
+                    
+                #ps_soup2 = bs4.BeautifulSoup(text, parse_only=bs4.SoupStrainer("table", class_="stats_table"))
 
-def get_ps_game_info(series_url, urls_visited, parent_url):
+def get_ps_series_page(series_urls, urls_visited, parent_url):
     if series_url not in urls_visited:
         urls_visited.append(series_url)
         abs_series_url = url_check(series_url, parent_url)
@@ -138,11 +120,43 @@ def get_ps_game_info(series_url, urls_visited, parent_url):
                 series_text = series_request.text
                 series_soup = bs4.BeautifulSoup(series_text, parse_only=bs4.SoupStrainer("pre"))
                 games = series_soup.find_all("pre")
-                print("games", games)
-                #for game in games:
-                    #date = 
+                if len(games) != 0:
+                    print("games", games)
+                    for game in games:
+                        count = 0
+                        game_id = "ps" + str(count)
+                        game_dict = get_ps_game_info(game)
+                        master_ps_game_dict[game_id] = game_dict
+                        count += 1
+                return master_ps_game_dict
+                    
+def get_ps_game_info(game):
+    game_dict = {"date": "", "stadium": "", "team1": "", "team2": "", "team1_runs": "", "team2_runs": "", "team1_hits": "", "team2_hits": "", "team1_hr": "", "team2_hr": "", "winner": ""}
+    game_text = game.text
+    date = game_text[2:27]
+    stadium = game_text[31:47]
+    #team1 = game_text[]
+    #team2 = game_text[]
+    #team1_runs = game_text[]
+    #team2_runs = game_text[]
+    #team1_hits = game_text[]
+    #team2_hits = game_text[]
+    #team1_hr_list = game_text[].split(", ")
+    #team1_hr = len(team1_hr_list)
+    #team2_hr_list = game_text[].split(", ")
+    #team2_hr = len(team2_hr_list)
+    game_dict["date"] = date 
+    game_dict["stadium"] = stadium 
+    #game_dict["team1"] = team1 
+    #game_dict["team2"] = team2 
+    #game_dict["team1_runs"] = team1_runs
+    #game_dict["team2_runs"] = team2_runs
+    #game_dict["team1_hits"] = team1_hits
+    #game_dict["team2_hits"] = team2_hits
+    #game_dict["team1_hr"] = team1_hr
+    #game_dict["team2_hr"] = team2_hr 
+    return game_dict
 
-                
 
 
 def get_regular_season_year_urls(soup, urls_visited):
@@ -155,26 +169,22 @@ def get_regular_season_year_urls(soup, urls_visited):
     #print("regular_season_year_urls:", regular_season_year_urls)
     return regular_season_year_urls
 
-def get_day_urls(regular_season_year_urls, urls_visited, parent_url, master_regular_game_dict):
-    parent_url = "www.baseball-reference.com/boxes/"
+def get_day_urls(regular_season_year_urls, parent_url, master_regular_game_dict):
+    parent_url = "http://www.baseball-reference.com/boxes/"
     for year_url in regular_season_year_urls:
-        if year_url not in urls_visited:
-            urls_visited.append(year_url)
-            abs_year_url = url_check(year_url, parent_url)
-            print("if abs_year_url", abs_year_url)
-            if abs_year_url:
-                year_request = util.get_request(abs_year_url)
-                if year_request:
-                    year_text = year_request.text
-                    year_soup = bs4.BeautifulSoup(year_text, parse_only=bs4.SoupStrainer("table", class_="wide_container"))
-                    #print("year soup", year_soup)
-                    day_urls = [a.attrs.get("href") for a in year_soup.select("a")]
-                    day_links = year_soup.find("a")
-                    print("day urls:", day_urls)
-                    print("day links", day_links)
-                    #idk why it can't find "a" bc it's there this is so annoying 
-                    #parent_url = abs_year_url
-                    master_regular_game_dict = get_game_urls(master_regular_game_dict, day_urls, urls_visited)
+        abs_year_url = parent_url + year_url
+        print("year_url", year_url)
+        print("if abs_year_url", abs_year_url)
+        year_request = util.get_request(abs_year_url)
+        if year_request:
+            year_text = year_request.text
+            year_soup = bs4.BeautifulSoup(year_text, parse_only=bs4.SoupStrainer("table", class_="wide_container"))
+            #print("year soup", year_soup)
+            day_urls = [a.attrs.get("href") for a in year_soup.select("a")]
+            #day_links = year_soup.find("a")
+            print("day urls:", day_urls)
+            #print("day links", day_links)
+            
     return master_regular_game_dict
 
 def get_game_urls(master_regular_game_dict, day_urls, urls_visited):
@@ -276,26 +286,48 @@ def make_br_player_dict():
     year for each team
     '''
     master_player_dict = {}
-    
     letter_urls = []
     player_urls = []
-    urls_visited = []
     starting_url = "http://www.baseball-reference.com/players/"
-    parent_url = starting_url
-    if starting_url not in urls_visited:
-        urls_visited.append(starting_url)
-        request = util.get_request(starting_url)
-        if request:
-            text = request.text
-            soup = bs4.BeautifulSoup(text, parse_only=bs4.SoupStrainer("td", class_="xx_large_text bold_text"))
-            letter_urls = [a.attrs.get("href") for a in soup.select("a")]#makes list of letter urls
-            #print("letter urls:", letter_urls)
-            master_player_dict = get_player_urls(letter_urls, urls_visited, parent_url, master_player_dict)
+    parent_url = "http://www.baseball-reference.com"
+    request = util.get_request(starting_url)
+    if request:
+        text = request.text
+        soup = bs4.BeautifulSoup(text, parse_only=bs4.SoupStrainer("td", class_="xx_large_text bold_text"))
+        letter_urls = [a.attrs.get("href") for a in soup.select("a")]#makes list of letter urls
+        #print("letter urls:", letter_urls)
+        player_urls = get_player_urls(letter_urls, parent_url)
+        master_player_dict = create_players(master_player_dict, player_urls, parent_url)
         
     return master_player_dict
 
+def make_br_alpha_player_dict(letter):
+    master_player_dict = {}
+    player_urls = []
+    letter_url = "http://www.baseball-reference.com/players/" + letter + "/"
+    parent_url = "http://www.baseball-reference.com"
+    #print("letter urls:", letter_urls)
+    player_urls = get_alpha_player_urls(letter_url)
+    master_player_dict = create_players(master_player_dict, player_urls, parent_url)
+        
+    return master_player_dict
 
-def get_player_urls(letter_urls, urls_visited, parent_url, master_player_dict):
+def get_alpha_player_urls(letter_url):
+    abs_letter_url = letter_url
+    #print("abs_letter_url", abs_letter_url)
+    letter_request = util.get_request(abs_letter_url)
+    if letter_request:
+        letter_text = letter_request.text
+        letter_soup = bs4.BeautifulSoup(letter_text, parse_only=bs4.SoupStrainer("pre"))
+        #players = letter_soup.find_all("a",href=True)
+        player_urls = [a.attrs.get("href") for a in letter_soup.select("a")] #makes list of player urls
+        #print("player_urls:", player_urls)
+        #parent_url = abs_letter_url
+                
+    return player_urls
+    
+
+def get_player_urls(letter_urls, parent_url):
     '''
     Loops through the the list of letter urls and gets a list of player urls, which it passes down to
     create_players so that the info for each player can be made into a mini dictionary that can be
@@ -303,65 +335,62 @@ def get_player_urls(letter_urls, urls_visited, parent_url, master_player_dict):
     '''
     
     for letter_url in letter_urls:
-        if letter_url not in urls_visited:
-            urls_visited.append(letter_url)
-            abs_letter_url = url_check(letter_url, parent_url)
-            if abs_letter_url:
-                letter_request = util.get_request(abs_letter_url)
-                if letter_request:
-                    letter_text = letter_request.text
-                    letter_soup = bs4.BeautifulSoup(letter_text, parse_only=bs4.SoupStrainer("pre"))
-                    #players = letter_soup.find_all("a",href=True)
-                    player_urls = [a.attrs.get("href") for a in letter_soup.select("a")] #makes list of player urls
-                    #print("player_urls:", player_urls)
-                    parent_url = abs_letter_url
-                    master_player_dict = create_players(master_player_dict, player_urls, parent_url, urls_visited)
-    return master_player_dict
+        abs_letter_url = parent_url + letter_url
+        print("abs_letter_url", abs_letter_url)
+        letter_request = util.get_request(abs_letter_url)
+        if letter_request:
+            letter_text = letter_request.text
+            letter_soup = bs4.BeautifulSoup(letter_text, parse_only=bs4.SoupStrainer("pre"))
+            #players = letter_soup.find_all("a",href=True)
+            player_urls = [a.attrs.get("href") for a in letter_soup.select("a")] #makes list of player urls
+            #print("player_urls:", player_urls)
+            #parent_url = abs_letter_url
+                
+    return player_urls
     
 
-def create_players(master_player_dict, player_urls, parent_url, urls_visited):
+def create_players(master_player_dict, player_urls, parent_url):
     '''
     Loops through the list of player urls and passes the rows of the standard batting table
     down to get_player info so that function can get the team and year information
     '''
     id_number = 0
     for player_url in player_urls:
-        if player_url not in urls_visited:
-            #print("player_url:", player_url)
-            player_dict = {"name": "", "positions": "", "years": "", "span": "", "years_played": "", "teams": "", "WARs_nonpitcher": "", "WARs_pitcher": "", "ERAs": "", "IPs": "", "GSs": "", "FIPs": "", "E_Fs": ""}
-            urls_visited.append(player_url)
-            abs_player_url = url_check(player_url, parent_url)
-            if abs_player_url:
-                player_request = util.get_request(abs_player_url)
-                if player_request:
-                    player_text = player_request.text
-                    #all the things to put in the player_employment_dict
-                    years = get_player_info_from_standard_batting(player_text)[0]
-                    teams = get_player_info_from_standard_batting(player_text)[1]
-                    player_name = get_player_info_from_main_player_page(player_text)[0]
-                    positions = get_player_info_from_main_player_page(player_text)[1]
-                    #put them in the player_employment_dict
-                    player_dict["years"] = years
-                    player_dict["teams"] = teams
-                    player_dict["name"] = player_name
-                    player_dict["positions"] = positions
+        print("index player_url", player_urls.index(player_url))
+        #print("player_url:", player_url)
+        player_dict = {"name": "", "positions": "", "years": "", "span": "", "years_played": "", "teams": "", "WARs_nonpitcher": "", "WARs_pitcher": "", "ERAs": "", "IPs": "", "GSs": "", "FIPs": "", "E_Fs": ""}
+        abs_player_url = parent_url + player_url
+        if abs_player_url:
+            player_request = util.get_request(abs_player_url)
+            if player_request:
+                player_text = player_request.text
+                #all the things to put in the player_employment_dict
+                years = get_player_info_from_standard_batting(player_text)[0]
+                teams = get_player_info_from_standard_batting(player_text)[1]
+                player_name = get_player_info_from_main_player_page(player_text)[0]
+                positions = get_player_info_from_main_player_page(player_text)[1]
+                #put them in the player_employment_dict
+                player_dict["years"] = years
+                player_dict["teams"] = teams
+                player_dict["name"] = player_name
+                player_dict["positions"] = positions
 
-                    if "Pitcher" in positions:
-                        eras = get_player_info_from_standard_pitching(player_text)[0]
-                        ips = get_player_info_from_standard_pitching(player_text)[1]
-                        gss = get_player_info_from_standard_pitching(player_text)[2]
-                        fips = get_player_info_from_standard_pitching(player_text)[3]
-                        e_fs = get_player_info_from_standard_pitching(player_text)[4]
-                        wars_pitcher = get_player_info_from_player_value_pitchers(player_text)
-                        player_dict["ERAs"] = eras
-                        player_dict["IPs"] = ips
-                        player_dict["GSs"] = gss
-                        player_dict["FIPs"] = fips
-                        player_dict["E_Fs"] = e_fs
-                        player_dict["WARs_pitcher"] = wars_pitcher 
-                    #else:should this be an else or should there always be nonpitcher stats?
-                    wars_nonpitcher = get_player_info_from_player_value_batters(player_text)
-                    player_dict["WARs_nonpitcher"] = wars_nonpitcher 
+                if "Pitcher" in positions:
+                    eras = get_player_info_from_standard_pitching(player_text)[0]
+                    ips = get_player_info_from_standard_pitching(player_text)[1]
+                    gss = get_player_info_from_standard_pitching(player_text)[2]
+                    fips = get_player_info_from_standard_pitching(player_text)[3]
+                    e_fs = get_player_info_from_standard_pitching(player_text)[4]
+                    wars_pitcher = get_player_info_from_player_value_pitchers(player_text)
+                    player_dict["ERAs"] = eras
+                    player_dict["IPs"] = ips
+                    player_dict["GSs"] = gss
+                    player_dict["FIPs"] = fips
+                    player_dict["E_Fs"] = e_fs
+                    player_dict["WARs_pitcher"] = wars_pitcher 
+                #else:should this be an else or should there always be nonpitcher stats?
+                wars_nonpitcher = get_player_info_from_player_value_batters(player_text)
+                player_dict["WARs_nonpitcher"] = wars_nonpitcher 
             if player_dict["years"] != "":
                 player_dict["span"] = "-".join([player_dict["years"][:4], player_dict["years"][len(player_dict["years"])-4:]])
                 player_dict["years_played"] = int(player_dict["years"][len(player_dict["years"])-4:]) - int(player_dict["years"][:4])
@@ -417,25 +446,31 @@ def get_player_info_from_standard_pitching(player_text):
     GSs = ""
     FIPs = ""
     E_Fs = ""
+    seasons = ""
     for row in rows:
-        era = None
-        ip = None
-        gs = None
-        fip = None
+        #season = None
+        #era = None
+        #ip = None
+        #gs = None
+        #fip = None
         row_values = row.find_all("td")
         era = row_values[7].text
         ip = row_values[14].text
         gs = row_values[9].text
         fip = row_values[27].text
-        if era and era != "" and ip and ip != "" and gs and gs != "" and fip and fip != "":
+        season = row_values[0].text
+        e_f = ""
+        if era != "" and fip != "":
             e_f = str(float(era) - float(fip))
+        if e_f != "" and ip != "" and gs != "" and season != "":
             ERAs = "|".join([ERAs, era])
             IPs = "|".join([IPs, ip])
             GSs = "|".join([GSs, gs])
             FIPs = "|".join([FIPs, fip])
             E_Fs = "|".join([E_Fs, e_f])
+            seasons = "|".join([seasons, season])
     
-    return ERAs[1:], IPs[1:], GSs[1:], FIPs[1:], E_Fs[1:]
+    return ERAs[1:], IPs[1:], GSs[1:], FIPs[1:], E_Fs[1:], seasons[1:]
 
 def get_player_info_from_main_player_page(player_text):
     '''
@@ -466,6 +501,6 @@ def get_player_info_from_player_value_pitchers(player_text):
     are a pitcher
     '''
     war_soup = bs4.BeautifulSoup(player_text, parse_only=bs4.SoupStrainer("table", id="pitching_value")) 
-    wars = [td.text for td in war_soup.select('tr.full > td:nth-of-type(16)')]
+    wars = [td.text for td in war_soup.select('tr.full > td:nth-of-type(19)')]
     WARs_pitcher = "|".join(wars)
     return WARs_pitcher
