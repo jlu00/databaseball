@@ -40,3 +40,9 @@ def grab_stat_pitcher(player, stats, seasons):
     ON Player_Bios.player_ID = Stats_pitcher.player_ID""" + where_clause
 
     print('query', query, 'inputs', inputs)
+
+def grab_top_players_for_stat(stat, num_players):
+    query = """SELECT Player_Bios.name AND stats.? FROM Player_Bios JOIN stats 
+    ON Player_Bios.player_ID = stats.player_ID GROUP BY stats.stat LIMIT ?"""
+    params = [stat, num_players]
+    
