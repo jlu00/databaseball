@@ -61,9 +61,6 @@ class Teams:
                 if len(self.roster['P']) < self.pitchers_needed:
                     self.roster['P'] += [player]
                     self.team_size += 1
-                
-
-
 
     def __repr__(self):
         str_var = ''
