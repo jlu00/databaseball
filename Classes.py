@@ -3,11 +3,11 @@
 
 class Players:
 
-    def __init__(self, namefirst, namelast, position, years):
+    def __init__(self, namefirst, namelast, position):
         self.firstname = namefirst
         self.lastname = namelast
         self.position = position
-        self.years_played = years
+        self.years_played = None
         self.stats = {}
         self.ranks = {}
         self.power_index = 0
@@ -22,6 +22,9 @@ class Players:
 
     def add_war(self, war):
         self.war += war
+
+    def add_years(self, years):
+        self.years = years
 
     def add_rank(self, category, ranking):
         self.ranks[category] = ranking
@@ -42,6 +45,7 @@ class Teams:
         self.max_size = 25
         self.pitchers_needed = 8
         self.team_war = 0
+        self.team_stats = {}
 
     def add_player(self, player):
         '''
@@ -61,6 +65,9 @@ class Teams:
                 if len(self.roster['P']) < self.pitchers_needed:
                     self.roster['P'] += [player]
                     self.team_size += 1
+
+    def add_stat(self, statname, value):
+        self.team_stats[statname] = value
 
     def __repr__(self):
         str_var = ''

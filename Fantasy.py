@@ -69,7 +69,7 @@ def compute_wins(WAR):
     win_percentage = total_wins / games
     return win_percentage
             
-def create_team(prefs_pos, prefs_pitch, params, database_filename):
+def create_team(prefs_pos, prefs_pitch, params):
 
     '''
     Sample prefs:
@@ -78,18 +78,45 @@ def create_team(prefs_pos, prefs_pitch, params, database_filename):
     {'date': (1980, 2015), 'playoffs': True, 'all_star': True, 'current_player': False}
     '''
     db = sqlite3.connect(database_filename)
+    c = db.cursor()
     team = Classes.Teams()
     possible_players = Classes.PlayerContainer()
+    players = []
     for i in prefs_pos:
+        players = grab_players(i, players)
         #create a list of top x player objects for a certain stat
         #if the player object already exists, make sure to use it instead of creating
         #an entirely new object
         #end result should just be a list of players for whom a certain number of stats is listed
     for i in prefs_pitch:
+        players = grab_players(i, players)
         #add all the pitchers to the list
+    db.close()
     for i in players:
         a = compute_power_index(i)
         i.incr_power_index(a)
+
+    team = select_top_pos(pos)
+
+
+
+def grab_players(pref, players):
+    query = """SELECT Players.player_name AND Players.position AND Stats.? FROM Players
+         JOIN Stats ON Players.player_id = Stats.player_id ORDER BY Stats.? LIMIT 80;"""
+    params = [pref, pref]
+    r = c.execute(query, params)
+    results_pos = r.fetchall()
+    for j in results_pos:
+        name = j[0].split()
+        new_player = Classes.Players(name[0], name[1], j[1])
+        if new_player not in players:
+            new_player.add_stats(pref, j[2])
+            players += [new_player]
+        else:
+            a = players.index(new_player)
+            players[a].add_stats(pref, j[2])
+    return players
+
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
@@ -105,7 +132,7 @@ def select_top_pos(pos):
     returns a dictionary 'roster' of the top players
     '''
 
-    #sorted_pos = sorted(pos, key = lambda player: player.power_index)
+    sorted_pos = sorted(pos, key = lambda player: player.power_index)
     team = Classes.Teams()
     x = 0
     loop = 0
@@ -134,3 +161,24 @@ def calculate_team_stat(team, stat):
                 rv += player.stats[stat]
                 counter += 1
     return rv / counter
+
+def calculate_pergame_runs(team):
+    '''
+    '''
+    runs = 0
+    for position in team.roster:
+        if position != 'P':
+            for player in position:
+                runs += player.war
+    return runs * 10 / 162
+
+
+def go(prefs_pos, prefs_pitch, params):
+    '''
+    '''
+    team = create_team(prefs_pos, prefs_pitch, params)
+    team.add_stat('Win Percentage', compute_wins(team.team_war))
+    team.add_stat('Team Batting Average', calculate_team_stat(team, 'BA'))
+    team.add_stat('Team OBP', calculate_team_stat(team, 'OBP'))
+    team.add_stat('Team ERA', calculate_team_stat(team, 'ERA'))
+    team.add_stat('Runs per Game', calculate_per_game_runs(team))
