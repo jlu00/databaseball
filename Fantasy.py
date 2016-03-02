@@ -13,6 +13,29 @@ Still need to get all the SQL coding done
 
 '''
 
+Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
+            the number of earned runs allowed, normalizing to per game by multiplying
+            by 9, and then dividing by number of innings pitched''',
+            'BA': '''Batting average: calculated by taking total number of 
+            hits divided by total number of plate appearances'''
+            'OBP': '''On Base Percentage: total times reaching base divided by
+            total plate appearances '''
+            'wOBA': '''Weighted on Base Average: a formula meant to calculate the
+            overall offensive impact of a player. Formula:
+            (0.690×uBB + 0.722×HBP + 0.888×1B + 1.271×2B + 1.616×3B +
+            2.101×HR) / (AB + BB – IBB + SF + HBP) (HBP = Hit by pitch
+            uBB = unintentional Base on Balls, AB = At Bats
+            IBB = Intentional Bases on Balls, SF = Sacrifice Fly'''
+            'WRC+' = '''Weighted Runs Created--kind of like wOBA in which
+            it attempts to quantify runs created, except that this
+            stat normalizes the league average to 100'''
+            'FIP': '''Fielding Independent Pitching: estimates a pitcher's
+            abilities normalized for the defense playing behind him
+            Takes into account home runs, walks, strikeouts, and hit by pitch
+            Formula: ((13*HR)+(3*(BB+HBP))-(2*K))/IP + constant
+            The constant normalizes FIP to ERA so the two can be compared
+            and is usually around 3.10
+             '''}
 import operator
 import Classes
 import search_code_generator
@@ -79,8 +102,6 @@ def create_team(prefs_pos, prefs_pitch, params):
     '''
     db = sqlite3.connect(database_filename)
     c = db.cursor()
-    team = Classes.Teams()
-    possible_players = Classes.PlayerContainer()
     players = []
     for i in prefs_pos:
         players = grab_players(i, players)
@@ -99,32 +120,50 @@ def create_team(prefs_pos, prefs_pitch, params):
     team = select_top_pos(pos)
 
 
-
 def grab_players(pref, players):
-    query = """SELECT Players.player_name AND Players.position AND Stats.? FROM Players
+    query = """SELECT Players.player_name AND Players.years_played AND Players.position AND Stats.? FROM Players
          JOIN Stats ON Players.player_id = Stats.player_id ORDER BY Stats.? LIMIT 80;"""
     params = [pref, pref]
     r = c.execute(query, params)
     results_pos = r.fetchall()
     for j in results_pos:
         name = j[0].split()
-        new_player = Classes.Players(name[0], name[1], j[1])
+        new_player = Classes.Players(name[0], name[1], j[2])
         if new_player not in players:
-            new_player.add_stats(pref, j[2])
+            new_played.add_years(j[1])
+            new_player.add_stats(pref, j[3])
             players += [new_player]
         else:
             a = players.index(new_player)
-            players[a].add_stats(pref, j[2])
+            players[a].add_stats(pref, j[3])
     return players
+
+def apply_params(players, params):
+    '''
+    Sample Params:
+    'Years': (1988, 2000)
+    'Playoffs': True
+    'All Star': False
+    '''
+
+    if params['years'] or params['Playoffs'] or params['All Star']:
+        for i in players:
+            if params['years']:
+                player_stays = ((i.years_played[0] > params['years'][0] and 
+                    i.years_played[0] < params['years'][1]) or (i.years_played[1] 
+                    > params['years'][0] and i.years_played[1] < params['years'][1]))
+                if not player_stays: 
+                    players.remove(i)
+            if params['playoffs']:
 
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.rankings:
         if i in prefs_pos:
-            power_index += (100 - player.rankings[i]) * (49 - prefs_pos[i] ** 2)
+            power_index += (100 - player.rankings[i]) * (49 - i ** 2)
         else:
-            power_index += (100 - player.rankings[i]) * (49 - prefs_pitch[i] ** 2)
+            power_index += (100 - player.rankings[i]) * (49 - i ** 2)
     return power_index
 
 def select_top_pos(pos):

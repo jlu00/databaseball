@@ -24,7 +24,7 @@ class Players:
         self.war += war
 
     def add_years(self, years):
-        self.years = years
+        self.years_played = years
 
     def add_rank(self, category, ranking):
         self.ranks[category] = ranking
