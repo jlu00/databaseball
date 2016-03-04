@@ -15,10 +15,11 @@ def make_player_employment_csv_file(data_dict, filename):
     '''
     Makes a csv file for the player_employment table info from a dictionary
     '''
-    print("start csv",datetime.now().time())
-    strfilename = "%s.csv" % (filename)
+    print("start employment csv",datetime.now().time())
+    strfilename = "%s_employment.csv" % (filename)
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
+        indexwriter.writerow(["player_id","team_names","years"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["teams"], data_dict[player_id]["years"]])
     print("finish csv",datetime.now().time())
@@ -31,6 +32,7 @@ def make_player_bio_csv_file(data_dict, filename):
     print("start bio csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
+        indexwriter.writerow(["player_id","positions","name","playoffs","playoffs_won","world_series","world_series_won","years_played","span"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["positions"], data_dict[player_id]["name"],data_dict[player_id]["Playoffs"],
 data_dict[player_id]["Playoffs_Won"], data_dict[player_id]["World_Series"], data_dict[player_id]["World_Series_Won"], data_dict[player_id]["years_played"],
@@ -45,6 +47,7 @@ def make_player_stats_nonpitcher_csv_file(data_dict, filename):
     print("start stats nonpitcher csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
+        indexwriter.writerow(["player_id","years","WARS_nonpitcher","AVGs","OBPs","SLGs","UBR_WRC_Years","UBRs","WRCs","WPA_years","WPAs","Clutchs"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["years"], data_dict[player_id]["WARs_nonpitcher"],
 data_dict[player_id]["AVGs"],data_dict[player_id]["OBPs"], data_dict[player_id]["SLGs"], data_dict[player_id]["UBR_WRC_Years"], 
@@ -60,6 +63,7 @@ def make_player_stats_pitcher_csv_file(data_dict, filename):
     print("start stats pitcher csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
+        indexwriter.writerow(["player_id","Pitcher_years","WARs_pitcher","ERAs","IPs","GSs","FIPs","E_Fs","K_Pers","BB_Pers"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["Pitcher_Years"], data_dict[player_id]["WARs_pitcher"],
 data_dict[player_id]["ERAs"],data_dict[player_id]["IPs"], data_dict[player_id]["GSs"], data_dict[player_id]["FIPs"], 
@@ -239,6 +243,7 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                year_span = player_pitching_info[3]
                player_dict["Pitcher_Years"] = years
 
+
             #check all pitcher stats even if they have batting info             
             if "Pitcher" in positions:
                 eras = player_pitching_info[4]
@@ -258,6 +263,7 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                 player_dict["K_Pers"] = k_pers
                 player_dict["BB_Pers"] = bb_pers
                 player_dict["WARs_pitcher"] = wars_pitcher
+                player_dict["Pitcher_Years"] = player_pitching_info[0]
 
             #put values in the player_employment_dict
             player_dict["years"] = years
@@ -740,14 +746,14 @@ def get_player_info_from_postseason_pitching(player_text):
     return playoffs[1:], playoffs_won[1:], worldseries[1:], worldseries_won[1:]
 
 
-
-
-dict_response = make_br_alpha_player_dict("b")
-str_file = "letter_b"
-make_player_employment_csv_file(dict_response, str_file)
-make_player_bio_csv_file(dict_response, str_file)
-make_player_stats_nonpitcher_csv_file(dict_response, str_file)
-make_player_stats_pitcher_csv_file(dict_response, str_file)         
+alphabet = ["e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"]
+for letter in alphabet:
+    dict_response = make_br_alpha_player_dict(letter)
+    str_file = "letter_" + letter
+    make_player_employment_csv_file(dict_response, str_file)
+    make_player_bio_csv_file(dict_response, str_file)
+    make_player_stats_nonpitcher_csv_file(dict_response, str_file)
+    make_player_stats_pitcher_csv_file(dict_response, str_file)         
 
         
 end=datetime.now().time()
