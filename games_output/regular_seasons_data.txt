@@ -1,0 +1,1237 @@
+game_id,game_date,stadium,team1,team2,team1_runs,team2_runs,team1_hits,team2_hits,team1_hrs,team2_hrs,winner,postseason
+19400,19400416,Comiskey Park I,Cleveland Indians,Chicago White Sox,1,0,6,0,0,0,Cleveland Indians,False
+19401,19400416,Shibe Park,New York Yankees,Philadelphia Athletics,1,2,6,6,0,1,Philadelphia Athletics,False
+19402,19400416,Tiger Stadium,St. Louis Browns,Detroit Tigers,5,1,10,7,1,0,St. Louis Browns,False
+19403,19400416,Griffith Stadium,Boston Red Sox,Washington Senators,1,0,7,2,0,0,Boston Red Sox,False
+19404,19400416,Braves Field,Brooklyn Dodgers,Boston Bees,5,0,7,5,0,0,Brooklyn Dodgers,False
+19405,19400416,Crosley Field,Chicago Cubs,Cincinnati Reds,1,2,6,8,1,2,Cincinnati Reds,False
+19406,19400416,Polo Grounds V,Philadelphia Phillies,New York Giants,3,1,6,3,1,0,Philadelphia Phillies,False
+19407,19400416,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,6,4,15,7,1,0,Pittsburgh Pirates,False
+19408,19400417,Shibe Park,New York Yankees,Philadelphia Athletics,4,1,7,4,1,0,New York Yankees,False
+19409,19400418,Tiger Stadium,St. Louis Browns,Detroit Tigers,2,4,7,7,0,2,Detroit Tigers,False
+194010,19400418,Griffith Stadium,Boston Red Sox,Washington Senators,7,0,9,5,1,0,Boston Red Sox,False
+194011,19400418,Crosley Field,Chicago Cubs,Cincinnati Reds,1,2,5,8,0,0,Cincinnati Reds,False
+194012,19400419,Fenway Park,Philadelphia Athletics,Boston Red Sox,6,7,8,8,0,1,Boston Red Sox,False
+194013,19400419,Fenway Park,Philadelphia Athletics,Boston Red Sox,3,1,5,5,1,0,Philadelphia Athletics,False
+194014,19400419,Cleveland Stadium,Detroit Tigers,Cleveland Indians,0,4,3,7,0,1,Cleveland Indians,False
+194015,19400419,Yankee Stadium I,Washington Senators,New York Yankees,3,5,7,9,0,1,New York Yankees,False
+194016,19400419,Ebbets Field,New York Giants,Brooklyn Dodgers,0,12,9,12,0,0,Brooklyn Dodgers,False
+194017,19400419,Wrigley Field,St. Louis Cardinals,Chicago Cubs,0,5,6,9,0,0,Chicago Cubs,False
+194018,19400420,Sportsman's Park III,Chicago White Sox,St. Louis Browns,1,11,8,13,1,1,St. Louis Browns,False
+194019,19400420,Wrigley Field,St. Louis Cardinals,Chicago Cubs,3,4,12,7,0,0,Chicago Cubs,False
+194020,19400421,Cleveland Stadium,Detroit Tigers,Cleveland Indians,12,2,15,5,0,1,Detroit Tigers,False
+194021,19400421,Sportsman's Park III,Chicago White Sox,St. Louis Browns,6,2,12,7,1,0,Chicago White Sox,False
+194022,19400421,Wrigley Field,St. Louis Cardinals,Chicago Cubs,5,4,9,11,0,0,St. Louis Cardinals,False
+194023,19400422,Sportsman's Park III,Cleveland Indians,St. Louis Browns,5,2,8,7,0,1,Cleveland Indians,False
+194024,19400422,Comiskey Park I,Detroit Tigers,Chicago White Sox,6,5,11,11,0,0,Detroit Tigers,False
+194025,19400422,Crosley Field,St. Louis Cardinals,Cincinnati Reds,1,6,7,9,0,0,Cincinnati Reds,False
+194026,19400422,Forbes Field,Chicago Cubs,Pittsburgh Pirates,5,9,9,10,0,0,Pittsburgh Pirates,False
+194027,19400423,Yankee Stadium I,Philadelphia Athletics,New York Yankees,3,0,4,4,0,0,Philadelphia Athletics,False
+194028,19400423,Fenway Park,Washington Senators,Boston Red Sox,2,7,7,8,0,3,Boston Red Sox,False
+194029,19400423,Ebbets Field,Boston Bees,Brooklyn Dodgers,3,8,10,12,1,3,Brooklyn Dodgers,False
+194030,19400423,Forbes Field,Chicago Cubs,Pittsburgh Pirates,2,3,7,9,0,0,Pittsburgh Pirates,False
+194031,19400423,Shibe Park,New York Giants,Philadelphia Phillies,1,0,5,4,0,0,New York Giants,False
+194032,19400424,Yankee Stadium I,Philadelphia Athletics,New York Yankees,4,9,10,11,1,4,New York Yankees,False
+194033,19400424,Sportsman's Park III,Cleveland Indians,St. Louis Browns,6,4,12,12,1,0,Cleveland Indians,False
+194034,19400424,Fenway Park,Washington Senators,Boston Red Sox,9,6,12,6,1,1,Washington Senators,False
+194035,19400424,Comiskey Park I,Detroit Tigers,Chicago White Sox,2,1,8,5,1,0,Detroit Tigers,False
+194036,19400424,Ebbets Field,Boston Bees,Brooklyn Dodgers,6,8,9,10,0,1,Brooklyn Dodgers,False
+194037,19400424,Forbes Field,Chicago Cubs,Pittsburgh Pirates,9,4,10,11,0,0,Chicago Cubs,False
+194038,19400424,Shibe Park,New York Giants,Philadelphia Phillies,5,2,7,5,1,0,New York Giants,False
+194039,19400425,League Park IV,Chicago White Sox,Cleveland Indians,1,3,8,7,0,2,Cleveland Indians,False
+194040,19400425,Griffith Stadium,Philadelphia Athletics,Washington Senators,6,7,13,13,0,0,Washington Senators,False
+194041,19400425,Sportsman's Park III,Detroit Tigers,St. Louis Browns,4,2,10,5,1,0,Detroit Tigers,False
+194042,19400425,Wrigley Field,Cincinnati Reds,Chicago Cubs,2,4,5,11,0,0,Chicago Cubs,False
+194043,19400425,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,3,1,8,5,1,0,Brooklyn Dodgers,False
+194044,19400425,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,10,9,22,12,0,0,St. Louis Cardinals,False
+194045,19400425,Polo Grounds V,Boston Bees,New York Giants,1,9,6,11,0,1,New York Giants,False
+194046,19400426,Fenway Park,New York Yankees,Boston Red Sox,1,8,7,11,0,0,Boston Red Sox,False
+194047,19400426,League Park IV,Chicago White Sox,Cleveland Indians,11,1,13,4,0,0,Chicago White Sox,False
+194048,19400426,Griffith Stadium,Philadelphia Athletics,Washington Senators,6,8,10,6,0,0,Washington Senators,False
+194049,19400426,Wrigley Field,Cincinnati Reds,Chicago Cubs,2,6,5,8,0,1,Chicago Cubs,False
+194050,19400426,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,6,0,8,7,1,0,Brooklyn Dodgers,False
+194051,19400426,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,4,10,10,9,0,2,Pittsburgh Pirates,False
+194052,19400426,Polo Grounds V,Boston Bees,New York Giants,3,5,9,12,0,0,New York Giants,False
+194053,19400427,Tiger Stadium,Cleveland Indians,Detroit Tigers,4,2,10,7,2,0,Cleveland Indians,False
+194054,19400427,Shibe Park,Boston Red Sox,Philadelphia Athletics,3,8,7,9,0,2,Philadelphia Athletics,False
+194055,19400427,Griffith Stadium,New York Yankees,Washington Senators,2,3,5,9,0,0,Washington Senators,False
+194056,19400427,Comiskey Park I,St. Louis Browns,Chicago White Sox,6,2,10,10,2,0,St. Louis Browns,False
+194057,19400427,Braves Field,Philadelphia Phillies,Boston Bees,5,4,10,16,0,0,Philadelphia Phillies,False
+194058,19400427,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,0,3,3,8,0,1,Cincinnati Reds,False
+194059,19400427,Polo Grounds V,Brooklyn Dodgers,New York Giants,4,1,10,8,0,1,Brooklyn Dodgers,False
+194060,19400427,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,4,0,8,7,0,0,Chicago Cubs,False
+194061,19400428,Tiger Stadium,Cleveland Indians,Detroit Tigers,11,9,17,12,3,2,Cleveland Indians,False
+194062,19400428,Shibe Park,Boston Red Sox,Philadelphia Athletics,5,4,17,10,1,0,Boston Red Sox,False
+194063,19400428,Griffith Stadium,New York Yankees,Washington Senators,2,3,6,6,0,0,Washington Senators,False
+194064,19400428,Comiskey Park I,St. Louis Browns,Chicago White Sox,11,8,17,9,2,0,St. Louis Browns,False
+194065,19400428,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,2,8,5,15,0,1,Cincinnati Reds,False
+194066,19400428,Polo Grounds V,Brooklyn Dodgers,New York Giants,5,3,8,10,2,1,Brooklyn Dodgers,False
+194067,19400428,Braves Field,Philadelphia Phillies,Boston Bees,2,3,7,9,0,0,Boston Bees,False
+194068,19400428,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,5,7,8,11,0,3,St. Louis Cardinals,False
+194069,19400429,Tiger Stadium,Cleveland Indians,Detroit Tigers,3,4,10,6,0,0,Detroit Tigers,False
+194070,19400429,Shibe Park,Boston Red Sox,Philadelphia Athletics,11,3,19,7,1,1,Boston Red Sox,False
+194071,19400429,Griffith Stadium,New York Yankees,Washington Senators,5,4,7,8,0,0,New York Yankees,False
+194072,19400429,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,2,3,9,5,0,2,Cincinnati Reds,False
+194073,19400429,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,5,6,15,13,2,2,St. Louis Cardinals,False
+194074,19400430,Fenway Park,Chicago White Sox,Boston Red Sox,9,4,12,6,1,1,Chicago White Sox,False
+194075,19400430,Shibe Park,Cleveland Indians,Philadelphia Athletics,10,5,13,12,4,1,Cleveland Indians,False
+194076,19400430,Yankee Stadium I,St. Louis Browns,New York Yankees,2,1,5,2,1,0,St. Louis Browns,False
+194077,19400430,Griffith Stadium,Detroit Tigers,Washington Senators,4,9,9,13,1,0,Washington Senators,False
+194078,19400430,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,3,0,5,0,1,0,Brooklyn Dodgers,False
+194079,19400430,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,6,2,11,8,0,0,Philadelphia Phillies,False
+194080,19400430,Wrigley Field,Boston Bees,Chicago Cubs,7,8,12,13,0,2,Chicago Cubs,False
+194081,19400501,Yankee Stadium I,St. Louis Browns,New York Yankees,3,5,5,9,0,0,New York Yankees,False
+194082,19400501,Shibe Park,Cleveland Indians,Philadelphia Athletics,1,5,7,11,1,2,Philadelphia Athletics,False
+194083,19400501,Fenway Park,Chicago White Sox,Boston Red Sox,4,12,8,13,2,1,Boston Red Sox,False
+194084,19400501,Griffith Stadium,Detroit Tigers,Washington Senators,10,7,10,9,0,0,Detroit Tigers,False
+194085,19400501,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,2,9,6,8,1,2,Cincinnati Reds,False
+194086,19400502,Griffith Stadium,Detroit Tigers,Washington Senators,5,3,8,6,1,0,Detroit Tigers,False
+194087,19400502,Sportsman's Park III,New York Giants,St. Louis Cardinals,7,4,14,5,2,1,New York Giants,False
+194088,19400503,Yankee Stadium I,Chicago White Sox,New York Yankees,4,8,10,9,1,3,New York Yankees,False
+194089,19400503,Fenway Park,St. Louis Browns,Boston Red Sox,8,9,15,12,1,4,Boston Red Sox,False
+194090,19400503,Sportsman's Park III,Boston Bees,St. Louis Cardinals,4,2,10,7,0,0,Boston Bees,False
+194091,19400504,Yankee Stadium I,Chicago White Sox,New York Yankees,10,3,15,9,2,0,Chicago White Sox,False
+194092,19400504,Shibe Park,Detroit Tigers,Philadelphia Athletics,5,14,10,17,1,2,Philadelphia Athletics,False
+194093,19400504,Griffith Stadium,Cleveland Indians,Washington Senators,12,4,13,12,1,0,Cleveland Indians,False
+194094,19400504,Fenway Park,St. Louis Browns,Boston Red Sox,1,4,11,6,0,0,Boston Red Sox,False
+194095,19400504,Wrigley Field,New York Giants,Chicago Cubs,2,3,8,6,0,2,Chicago Cubs,False
+194096,19400504,Crosley Field,Philadelphia Phillies,Cincinnati Reds,2,3,6,8,0,0,Cincinnati Reds,False
+194097,19400504,Sportsman's Park III,Boston Bees,St. Louis Cardinals,1,3,4,7,0,0,St. Louis Cardinals,False
+194098,19400505,Fenway Park,Cleveland Indians,Boston Red Sox,6,1,13,7,1,0,Cleveland Indians,False
+194099,19400505,Yankee Stadium I,Detroit Tigers,New York Yankees,6,4,12,9,0,0,Detroit Tigers,False
+1940100,19400505,Shibe Park,Chicago White Sox,Philadelphia Athletics,6,5,11,10,1,1,Chicago White Sox,False
+1940101,19400505,Griffith Stadium,St. Louis Browns,Washington Senators,7,3,11,9,0,1,St. Louis Browns,False
+1940102,19400505,Crosley Field,New York Giants,Cincinnati Reds,2,3,7,7,0,0,Cincinnati Reds,False
+1940103,19400505,Forbes Field,Boston Bees,Pittsburgh Pirates,5,1,8,4,0,1,Boston Bees,False
+1940104,19400505,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,9,6,12,14,0,2,Brooklyn Dodgers,False
+1940105,19400505,Wrigley Field,Philadelphia Phillies,Chicago Cubs,7,5,11,11,0,0,Philadelphia Phillies,False
+1940106,19400506,Fenway Park,Cleveland Indians,Boston Red Sox,5,8,11,11,1,1,Boston Red Sox,False
+1940107,19400506,Yankee Stadium I,Detroit Tigers,New York Yankees,6,4,9,7,3,0,Detroit Tigers,False
+1940108,19400506,Shibe Park,Chicago White Sox,Philadelphia Athletics,2,3,9,9,0,1,Philadelphia Athletics,False
+1940109,19400506,Griffith Stadium,St. Louis Browns,Washington Senators,11,9,16,13,0,0,St. Louis Browns,False
+1940110,19400506,Crosley Field,New York Giants,Cincinnati Reds,1,9,5,14,0,1,Cincinnati Reds,False
+1940111,19400506,Forbes Field,Boston Bees,Pittsburgh Pirates,10,7,15,11,0,1,Boston Bees,False
+1940112,19400506,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,6,2,12,9,1,0,Brooklyn Dodgers,False
+1940113,19400506,Wrigley Field,Philadelphia Phillies,Chicago Cubs,4,5,12,13,0,1,Chicago Cubs,False
+1940114,19400507,Fenway Park,Cleveland Indians,Boston Red Sox,4,6,13,8,2,0,Boston Red Sox,False
+1940115,19400507,Yankee Stadium I,Detroit Tigers,New York Yankees,4,2,12,9,0,0,Detroit Tigers,False
+1940116,19400507,Shibe Park,Chicago White Sox,Philadelphia Athletics,6,3,9,5,0,0,Chicago White Sox,False
+1940117,19400507,Griffith Stadium,St. Louis Browns,Washington Senators,5,6,11,11,2,0,Washington Senators,False
+1940118,19400507,Crosley Field,New York Giants,Cincinnati Reds,6,7,9,12,2,0,Cincinnati Reds,False
+1940119,19400507,Forbes Field,Boston Bees,Pittsburgh Pirates,11,9,16,15,1,0,Boston Bees,False
+1940120,19400507,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,2,18,9,20,0,7,St. Louis Cardinals,False
+1940121,19400507,Wrigley Field,Philadelphia Phillies,Chicago Cubs,1,0,5,4,0,0,Philadelphia Phillies,False
+1940122,19400508,Yankee Stadium I,Cleveland Indians,New York Yankees,10,4,14,9,3,1,Cleveland Indians,False
+1940123,19400508,Shibe Park,St. Louis Browns,Philadelphia Athletics,8,10,11,13,1,0,Philadelphia Athletics,False
+1940124,19400508,Fenway Park,Detroit Tigers,Boston Red Sox,4,5,12,12,1,0,Boston Red Sox,False
+1940125,19400508,Griffith Stadium,Chicago White Sox,Washington Senators,6,3,10,5,0,0,Chicago White Sox,False
+1940126,19400508,Crosley Field,Boston Bees,Cincinnati Reds,10,4,13,10,1,0,Boston Bees,False
+1940127,19400508,Forbes Field,New York Giants,Pittsburgh Pirates,10,6,17,12,0,0,New York Giants,False
+1940128,19400508,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,4,7,9,10,1,2,St. Louis Cardinals,False
+1940129,19400509,Fenway Park,Detroit Tigers,Boston Red Sox,5,6,10,13,1,0,Boston Red Sox,False
+1940130,19400509,Yankee Stadium I,Cleveland Indians,New York Yankees,4,0,10,3,0,0,Cleveland Indians,False
+1940131,19400509,Shibe Park,St. Louis Browns,Philadelphia Athletics,4,2,9,7,0,0,St. Louis Browns,False
+1940132,19400509,Griffith Stadium,Chicago White Sox,Washington Senators,4,8,10,15,0,2,Washington Senators,False
+1940133,19400509,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,4,1,7,4,0,0,Brooklyn Dodgers,False
+1940134,19400509,Crosley Field,Boston Bees,Cincinnati Reds,1,4,5,9,1,1,Cincinnati Reds,False
+1940135,19400509,Forbes Field,New York Giants,Pittsburgh Pirates,17,6,15,11,0,0,New York Giants,False
+1940136,19400509,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,4,8,11,13,0,1,St. Louis Cardinals,False
+1940137,19400510,League Park IV,St. Louis Browns,Cleveland Indians,4,9,10,12,1,0,Cleveland Indians,False
+1940138,19400510,Yankee Stadium I,Boston Red Sox,New York Yankees,3,2,6,9,0,1,Boston Red Sox,False
+1940139,19400510,Shibe Park,Washington Senators,Philadelphia Athletics,7,8,11,11,1,1,Philadelphia Athletics,False
+1940140,19400510,Tiger Stadium,Chicago White Sox,Detroit Tigers,0,3,7,7,0,0,Detroit Tigers,False
+1940141,19400510,Ebbets Field,New York Giants,Brooklyn Dodgers,7,2,12,5,1,0,New York Giants,False
+1940142,19400510,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,8,3,12,5,1,0,Pittsburgh Pirates,False
+1940143,19400511,League Park IV,St. Louis Browns,Cleveland Indians,0,1,5,5,0,0,Cleveland Indians,False
+1940144,19400511,Tiger Stadium,Chicago White Sox,Detroit Tigers,1,0,2,2,0,0,Chicago White Sox,False
+1940145,19400511,Yankee Stadium I,Boston Red Sox,New York Yankees,9,8,13,10,1,3,Boston Red Sox,False
+1940146,19400511,Shibe Park,Washington Senators,Philadelphia Athletics,9,6,12,11,0,0,Washington Senators,False
+1940147,19400511,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,5,4,8,7,1,0,Philadelphia Phillies,False
+1940148,19400511,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,5,7,10,10,0,0,Chicago Cubs,False
+1940149,19400511,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,12,5,17,8,1,1,Cincinnati Reds,False
+1940150,19400511,Braves Field,New York Giants,Boston Bees,10,2,13,5,0,0,New York Giants,False
+1940151,19400512,Cleveland Stadium,St. Louis Browns,Cleveland Indians,5,2,12,9,0,0,St. Louis Browns,False
+1940152,19400512,Yankee Stadium I,Boston Red Sox,New York Yankees,0,4,6,9,0,0,New York Yankees,False
+1940153,19400512,Shibe Park,Washington Senators,Philadelphia Athletics,2,4,6,10,0,0,Philadelphia Athletics,False
+1940154,19400512,Tiger Stadium,Chicago White Sox,Detroit Tigers,4,3,9,8,0,2,Chicago White Sox,False
+1940155,19400512,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,3,5,7,8,1,0,Brooklyn Dodgers,False
+1940156,19400512,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,7,1,9,4,1,0,Cincinnati Reds,False
+1940157,19400512,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,13,4,11,16,3,0,Cincinnati Reds,False
+1940158,19400512,Braves Field,New York Giants,Boston Bees,3,2,10,9,0,0,New York Giants,False
+1940159,19400512,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,5,7,10,9,1,1,Chicago Cubs,False
+1940160,19400513,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,3,6,7,11,0,0,Brooklyn Dodgers,False
+1940161,19400513,Braves Field,New York Giants,Boston Bees,11,5,10,11,1,0,New York Giants,False
+1940162,19400513,Crosley Field,St. Louis Cardinals,Cincinnati Reds,8,8,13,14,4,0,tie,False
+1940163,19400514,League Park IV,Philadelphia Athletics,Cleveland Indians,9,7,15,9,1,2,Philadelphia Athletics,False
+1940164,19400514,Comiskey Park I,Boston Red Sox,Chicago White Sox,7,6,14,11,3,0,Boston Red Sox,False
+1940165,19400514,Tiger Stadium,Washington Senators,Detroit Tigers,4,2,11,11,1,0,Washington Senators,False
+1940166,19400514,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,5,6,13,11,1,0,Brooklyn Dodgers,False
+1940167,19400514,Polo Grounds V,Pittsburgh Pirates,New York Giants,7,2,10,7,1,0,Pittsburgh Pirates,False
+1940168,19400514,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,0,4,9,8,0,0,Philadelphia Phillies,False
+1940169,19400515,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,5,2,8,5,1,0,Cincinnati Reds,False
+1940170,19400515,Braves Field,Chicago Cubs,Boston Bees,2,0,7,2,0,0,Chicago Cubs,False
+1940171,19400515,Polo Grounds V,Pittsburgh Pirates,New York Giants,2,5,8,7,2,1,New York Giants,False
+1940172,19400515,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,3,6,11,9,1,0,Philadelphia Phillies,False
+1940173,19400516,Sportsman's Park III,Boston Red Sox,St. Louis Browns,7,5,14,12,2,0,Boston Red Sox,False
+1940174,19400516,Braves Field,Chicago Cubs,Boston Bees,5,4,6,9,1,1,Chicago Cubs,False
+1940175,19400517,Comiskey Park I,New York Yankees,Chicago White Sox,6,1,6,5,1,0,New York Yankees,False
+1940176,19400517,League Park IV,Washington Senators,Cleveland Indians,1,18,7,15,0,2,Cleveland Indians,False
+1940177,19400517,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,3,4,7,6,1,2,Brooklyn Dodgers,False
+1940178,19400517,Shibe Park,Cincinnati Reds,Philadelphia Phillies,7,2,12,6,2,0,Cincinnati Reds,False
+1940179,19400517,Polo Grounds V,Chicago Cubs,New York Giants,4,0,7,2,1,0,Chicago Cubs,False
+1940180,19400518,Comiskey Park I,New York Yankees,Chicago White Sox,3,0,11,2,1,0,New York Yankees,False
+1940181,19400518,League Park IV,Washington Senators,Cleveland Indians,3,2,7,7,1,0,Washington Senators,False
+1940182,19400518,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,6,8,7,9,2,1,Detroit Tigers,False
+1940183,19400518,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,6,2,7,7,5,0,St. Louis Cardinals,False
+1940184,19400518,Polo Grounds V,Chicago Cubs,New York Giants,4,6,8,11,0,0,New York Giants,False
+1940185,19400518,Shibe Park,Cincinnati Reds,Philadelphia Phillies,3,8,7,14,0,0,Philadelphia Phillies,False
+1940186,19400518,Braves Field,Pittsburgh Pirates,Boston Bees,5,15,10,20,1,2,Boston Bees,False
+1940187,19400519,Cleveland Stadium,New York Yankees,Cleveland Indians,1,5,4,9,0,0,Cleveland Indians,False
+1940188,19400519,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,4,10,9,9,1,3,St. Louis Browns,False
+1940189,19400519,Comiskey Park I,Washington Senators,Chicago White Sox,12,10,19,15,3,3,Washington Senators,False
+1940190,19400519,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,7,6,14,10,2,0,Chicago Cubs,False
+1940191,19400519,Braves Field,Cincinnati Reds,Boston Bees,8,4,12,5,1,1,Cincinnati Reds,False
+1940192,19400519,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,5,6,7,10,1,1,Philadelphia Phillies,False
+1940193,19400519,Polo Grounds V,St. Louis Cardinals,New York Giants,6,5,9,9,3,1,St. Louis Cardinals,False
+1940194,19400520,League Park IV,New York Yankees,Cleveland Indians,2,10,3,17,0,2,Cleveland Indians,False
+1940195,19400520,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,8,4,10,9,4,1,Philadelphia Athletics,False
+1940196,19400520,Comiskey Park I,Washington Senators,Chicago White Sox,4,5,9,11,0,0,Chicago White Sox,False
+1940197,19400520,Tiger Stadium,Boston Red Sox,Detroit Tigers,7,10,12,12,2,4,Detroit Tigers,False
+1940198,19400520,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,6,4,13,8,1,1,Chicago Cubs,False
+1940199,19400520,Braves Field,Cincinnati Reds,Boston Bees,4,13,11,13,0,2,Boston Bees,False
+1940200,19400520,Polo Grounds V,St. Louis Cardinals,New York Giants,0,6,6,9,0,2,New York Giants,False
+1940201,19400520,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,7,8,10,14,0,1,Philadelphia Phillies,False
+1940202,19400521,League Park IV,New York Yankees,Cleveland Indians,10,2,12,3,1,0,New York Yankees,False
+1940203,19400521,Comiskey Park I,Washington Senators,Chicago White Sox,8,9,11,15,0,2,Chicago White Sox,False
+1940204,19400521,Tiger Stadium,Boston Red Sox,Detroit Tigers,11,8,11,16,4,2,Boston Red Sox,False
+1940205,19400521,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,3,4,12,6,2,0,Brooklyn Dodgers,False
+1940206,19400522,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,1,10,7,18,0,0,Chicago White Sox,False
+1940207,19400522,League Park IV,Boston Red Sox,Cleveland Indians,6,9,16,15,1,3,Cleveland Indians,False
+1940208,19400522,Tiger Stadium,New York Yankees,Detroit Tigers,8,2,16,6,2,0,New York Yankees,False
+1940209,19400522,Sportsman's Park III,Washington Senators,St. Louis Browns,9,2,13,7,1,0,Washington Senators,False
+1940210,19400522,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,1,3,6,8,0,0,Brooklyn Dodgers,False
+1940211,19400522,Polo Grounds V,Cincinnati Reds,New York Giants,4,6,7,10,2,1,New York Giants,False
+1940212,19400523,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,4,13,16,13,0,1,Chicago White Sox,False
+1940213,19400523,Tiger Stadium,New York Yankees,Detroit Tigers,2,3,6,7,1,1,Detroit Tigers,False
+1940214,19400523,Sportsman's Park III,Washington Senators,St. Louis Browns,7,8,14,10,1,2,St. Louis Browns,False
+1940215,19400523,Shibe Park,Chicago Cubs,Philadelphia Phillies,4,3,15,14,1,0,Chicago Cubs,False
+1940216,19400524,Sportsman's Park III,Cleveland Indians,St. Louis Browns,3,2,9,7,1,0,Cleveland Indians,False
+1940217,19400524,Comiskey Park I,Detroit Tigers,Chicago White Sox,1,2,3,4,0,0,Chicago White Sox,False
+1940218,19400524,Polo Grounds V,Boston Bees,New York Giants,1,8,5,13,0,3,New York Giants,False
+1940219,19400525,Comiskey Park I,Detroit Tigers,Chicago White Sox,10,4,17,10,1,1,Detroit Tigers,False
+1940220,19400525,Griffith Stadium,Philadelphia Athletics,Washington Senators,2,4,7,9,1,0,Washington Senators,False
+1940221,19400525,Crosley Field,St. Louis Cardinals,Cincinnati Reds,2,7,4,8,0,1,Cincinnati Reds,False
+1940222,19400525,Crosley Field,St. Louis Cardinals,Cincinnati Reds,5,1,9,6,1,0,St. Louis Cardinals,False
+1940223,19400525,Forbes Field,Chicago Cubs,Pittsburgh Pirates,7,12,12,14,1,1,Pittsburgh Pirates,False
+1940224,19400526,Fenway Park,New York Yankees,Boston Red Sox,7,2,10,9,1,1,New York Yankees,False
+1940225,19400526,Sportsman's Park III,Cleveland Indians,St. Louis Browns,3,5,11,12,0,1,St. Louis Browns,False
+1940226,19400526,Sportsman's Park III,Cleveland Indians,St. Louis Browns,13,1,10,7,1,0,Cleveland Indians,False
+1940227,19400526,Griffith Stadium,Philadelphia Athletics,Washington Senators,3,4,5,10,1,1,Washington Senators,False
+1940228,19400526,Crosley Field,St. Louis Cardinals,Cincinnati Reds,0,4,1,11,0,0,Cincinnati Reds,False
+1940229,19400526,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,2,1,4,6,1,0,Brooklyn Dodgers,False
+1940230,19400526,Forbes Field,Chicago Cubs,Pittsburgh Pirates,2,3,6,5,0,0,Pittsburgh Pirates,False
+1940231,19400526,Polo Grounds V,Boston Bees,New York Giants,8,10,12,11,1,5,New York Giants,False
+1940232,19400527,Cleveland Stadium,Detroit Tigers,Cleveland Indians,6,1,10,6,1,0,Detroit Tigers,False
+1940233,19400527,Yankee Stadium I,Washington Senators,New York Yankees,0,5,4,4,0,2,New York Yankees,False
+1940234,19400527,Sportsman's Park III,Chicago White Sox,St. Louis Browns,7,5,15,9,0,1,Chicago White Sox,False
+1940235,19400527,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,0,6,4,12,0,0,Brooklyn Dodgers,False
+1940236,19400527,Braves Field,New York Giants,Boston Bees,1,7,4,13,0,0,Boston Bees,False
+1940237,19400527,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,2,1,5,4,0,0,Cincinnati Reds,False
+1940238,19400527,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,7,3,11,9,0,1,Cincinnati Reds,False
+1940239,19400527,Wrigley Field,St. Louis Cardinals,Chicago Cubs,1,7,7,10,0,0,Chicago Cubs,False
+1940240,19400528,League Park IV,Detroit Tigers,Cleveland Indians,8,5,11,11,0,0,Detroit Tigers,False
+1940241,19400528,Yankee Stadium I,Washington Senators,New York Yankees,4,12,12,14,0,2,New York Yankees,False
+1940242,19400528,Yankee Stadium I,Washington Senators,New York Yankees,1,3,7,9,1,0,New York Yankees,False
+1940243,19400528,Shibe Park,Boston Red Sox,Philadelphia Athletics,4,1,14,8,0,0,Boston Red Sox,False
+1940244,19400528,Sportsman's Park III,Chicago White Sox,St. Louis Browns,9,10,16,12,2,3,St. Louis Browns,False
+1940245,19400528,Sportsman's Park III,Chicago White Sox,St. Louis Browns,5,7,10,12,2,0,St. Louis Browns,False
+1940246,19400528,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,2,4,6,11,0,0,Brooklyn Dodgers,False
+1940247,19400528,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,2,5,5,8,1,0,Pittsburgh Pirates,False
+1940248,19400528,Wrigley Field,St. Louis Cardinals,Chicago Cubs,5,0,8,4,0,0,St. Louis Cardinals,False
+1940249,19400529,League Park IV,Detroit Tigers,Cleveland Indians,4,7,8,14,1,0,Cleveland Indians,False
+1940250,19400529,Yankee Stadium I,Washington Senators,New York Yankees,1,2,4,6,0,2,New York Yankees,False
+1940251,19400529,Shibe Park,Boston Red Sox,Philadelphia Athletics,8,3,9,12,1,0,Boston Red Sox,False
+1940252,19400529,Sportsman's Park III,Chicago White Sox,St. Louis Browns,4,3,9,7,0,0,Chicago White Sox,False
+1940253,19400529,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,4,0,8,4,0,0,Cincinnati Reds,False
+1940254,19400529,Braves Field,Philadelphia Phillies,Boston Bees,1,3,5,6,0,0,Boston Bees,False
+1940255,19400529,Wrigley Field,St. Louis Cardinals,Chicago Cubs,8,2,10,10,1,0,St. Louis Cardinals,False
+1940256,19400530,Cleveland Stadium,Chicago White Sox,Cleveland Indians,1,3,6,7,1,0,Cleveland Indians,False
+1940257,19400530,Cleveland Stadium,Chicago White Sox,Cleveland Indians,1,3,5,6,0,1,Cleveland Indians,False
+1940258,19400530,Yankee Stadium I,Boston Red Sox,New York Yankees,0,4,2,9,0,1,New York Yankees,False
+1940259,19400530,Yankee Stadium I,Boston Red Sox,New York Yankees,11,4,14,6,1,1,Boston Red Sox,False
+1940260,19400530,Shibe Park,Washington Senators,Philadelphia Athletics,6,7,14,17,0,1,Philadelphia Athletics,False
+1940261,19400530,Shibe Park,Washington Senators,Philadelphia Athletics,14,2,13,3,2,0,Washington Senators,False
+1940262,19400530,Tiger Stadium,St. Louis Browns,Detroit Tigers,1,2,7,5,0,1,Detroit Tigers,False
+1940263,19400530,Tiger Stadium,St. Louis Browns,Detroit Tigers,6,15,8,13,1,1,Detroit Tigers,False
+1940264,19400530,Ebbets Field,New York Giants,Brooklyn Dodgers,7,0,14,1,0,0,New York Giants,False
+1940265,19400530,Ebbets Field,New York Giants,Brooklyn Dodgers,12,5,20,12,1,1,New York Giants,False
+1940266,19400530,Braves Field,Philadelphia Phillies,Boston Bees,5,1,9,5,0,1,Philadelphia Phillies,False
+1940267,19400530,Braves Field,Philadelphia Phillies,Boston Bees,1,5,6,8,0,1,Boston Bees,False
+1940268,19400530,Wrigley Field,Cincinnati Reds,Chicago Cubs,4,2,8,10,0,1,Cincinnati Reds,False
+1940269,19400530,Wrigley Field,Cincinnati Reds,Chicago Cubs,9,8,16,14,0,0,Cincinnati Reds,False
+1940270,19400601,Yankee Stadium I,St. Louis Browns,New York Yankees,5,8,9,12,1,1,New York Yankees,False
+1940271,19400601,Shibe Park,Cleveland Indians,Philadelphia Athletics,1,6,2,9,1,1,Philadelphia Athletics,False
+1940272,19400601,Griffith Stadium,Detroit Tigers,Washington Senators,12,3,19,12,0,0,Detroit Tigers,False
+1940273,19400601,Fenway Park,Chicago White Sox,Boston Red Sox,1,2,7,9,0,1,Boston Red Sox,False
+1940274,19400601,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,3,4,9,8,0,2,Chicago Cubs,False
+1940275,19400601,Crosley Field,Boston Bees,Cincinnati Reds,2,3,3,9,0,1,Cincinnati Reds,False
+1940276,19400601,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,5,4,11,4,1,1,Philadelphia Phillies,False
+1940277,19400602,Yankee Stadium I,St. Louis Browns,New York Yankees,4,13,7,14,1,2,New York Yankees,False
+1940278,19400602,Yankee Stadium I,St. Louis Browns,New York Yankees,1,11,5,12,0,2,New York Yankees,False
+1940279,19400602,Shibe Park,Cleveland Indians,Philadelphia Athletics,7,2,8,8,2,0,Cleveland Indians,False
+1940280,19400602,Shibe Park,Cleveland Indians,Philadelphia Athletics,6,12,14,13,0,0,Philadelphia Athletics,False
+1940281,19400602,Fenway Park,Chicago White Sox,Boston Red Sox,6,0,13,6,1,0,Chicago White Sox,False
+1940282,19400602,Fenway Park,Chicago White Sox,Boston Red Sox,8,10,17,12,1,3,Boston Red Sox,False
+1940283,19400602,Griffith Stadium,Detroit Tigers,Washington Senators,8,6,9,12,1,1,Detroit Tigers,False
+1940284,19400602,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,3,2,7,7,0,0,Brooklyn Dodgers,False
+1940285,19400602,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,2,1,6,6,0,0,Brooklyn Dodgers,False
+1940286,19400602,Crosley Field,Boston Bees,Cincinnati Reds,1,11,5,14,0,2,Cincinnati Reds,False
+1940287,19400602,Crosley Field,Boston Bees,Cincinnati Reds,2,0,4,8,0,0,Boston Bees,False
+1940288,19400602,Forbes Field,New York Giants,Pittsburgh Pirates,1,2,5,9,0,0,Pittsburgh Pirates,False
+1940289,19400602,Forbes Field,New York Giants,Pittsburgh Pirates,7,3,10,11,0,2,New York Giants,False
+1940290,19400602,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,4,2,11,7,0,0,Philadelphia Phillies,False
+1940291,19400602,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,2,9,7,10,1,3,St. Louis Cardinals,False
+1940292,19400603,Fenway Park,Chicago White Sox,Boston Red Sox,7,4,10,14,0,0,Chicago White Sox,False
+1940293,19400603,Yankee Stadium I,St. Louis Browns,New York Yankees,1,7,5,8,1,1,New York Yankees,False
+1940294,19400603,Shibe Park,Cleveland Indians,Philadelphia Athletics,4,0,8,7,1,0,Cleveland Indians,False
+1940295,19400603,Griffith Stadium,Detroit Tigers,Washington Senators,3,9,10,12,0,2,Washington Senators,False
+1940296,19400603,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,3,2,11,5,1,1,Brooklyn Dodgers,False
+1940297,19400603,Crosley Field,Boston Bees,Cincinnati Reds,2,3,8,5,0,0,Cincinnati Reds,False
+1940298,19400603,Forbes Field,New York Giants,Pittsburgh Pirates,4,3,10,8,1,0,New York Giants,False
+1940299,19400604,Fenway Park,St. Louis Browns,Boston Red Sox,5,3,7,10,0,0,St. Louis Browns,False
+1940300,19400604,Yankee Stadium I,Chicago White Sox,New York Yankees,7,3,12,7,3,1,Chicago White Sox,False
+1940301,19400604,Shibe Park,Detroit Tigers,Philadelphia Athletics,6,8,11,11,1,2,Philadelphia Athletics,False
+1940302,19400604,Griffith Stadium,Cleveland Indians,Washington Senators,2,7,10,15,0,0,Washington Senators,False
+1940303,19400604,Griffith Stadium,Cleveland Indians,Washington Senators,3,2,9,11,0,0,Cleveland Indians,False
+1940304,19400604,Crosley Field,New York Giants,Cincinnati Reds,5,4,11,11,0,1,New York Giants,False
+1940305,19400604,Forbes Field,Boston Bees,Pittsburgh Pirates,2,14,5,11,1,0,Pittsburgh Pirates,False
+1940306,19400604,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,10,1,13,11,1,0,Brooklyn Dodgers,False
+1940307,19400604,Wrigley Field,Philadelphia Phillies,Chicago Cubs,6,12,8,15,0,2,Chicago Cubs,False
+1940308,19400605,Fenway Park,St. Louis Browns,Boston Red Sox,4,3,12,12,0,0,St. Louis Browns,False
+1940309,19400605,Yankee Stadium I,Chicago White Sox,New York Yankees,5,7,9,12,1,1,New York Yankees,False
+1940310,19400605,Shibe Park,Detroit Tigers,Philadelphia Athletics,9,1,17,7,0,0,Detroit Tigers,False
+1940311,19400605,Griffith Stadium,Cleveland Indians,Washington Senators,1,6,4,10,0,1,Washington Senators,False
+1940312,19400605,Crosley Field,New York Giants,Cincinnati Reds,2,7,10,7,0,0,Cincinnati Reds,False
+1940313,19400605,Wrigley Field,Philadelphia Phillies,Chicago Cubs,2,3,9,6,1,0,Chicago Cubs,False
+1940314,19400606,Yankee Stadium I,Chicago White Sox,New York Yankees,4,3,6,9,0,0,Chicago White Sox,False
+1940315,19400606,Shibe Park,Detroit Tigers,Philadelphia Athletics,4,7,8,11,1,1,Philadelphia Athletics,False
+1940316,19400606,Griffith Stadium,Cleveland Indians,Washington Senators,5,4,13,10,1,0,Cleveland Indians,False
+1940317,19400606,Fenway Park,St. Louis Browns,Boston Red Sox,1,3,6,10,1,1,Boston Red Sox,False
+1940318,19400606,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,9,5,10,9,1,2,Brooklyn Dodgers,False
+1940319,19400606,Wrigley Field,Philadelphia Phillies,Chicago Cubs,5,11,10,17,1,2,Chicago Cubs,False
+1940320,19400606,Forbes Field,Boston Bees,Pittsburgh Pirates,6,7,15,10,0,0,Pittsburgh Pirates,False
+1940321,19400607,Yankee Stadium I,Cleveland Indians,New York Yankees,4,5,5,9,1,0,New York Yankees,False
+1940322,19400607,Shibe Park,St. Louis Browns,Philadelphia Athletics,2,3,6,9,1,0,Philadelphia Athletics,False
+1940323,19400607,Fenway Park,Detroit Tigers,Boston Red Sox,7,1,10,7,0,0,Detroit Tigers,False
+1940324,19400607,Griffith Stadium,Chicago White Sox,Washington Senators,2,3,9,8,0,0,Washington Senators,False
+1940325,19400607,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,4,2,9,6,2,1,Brooklyn Dodgers,False
+1940326,19400607,Wrigley Field,Boston Bees,Chicago Cubs,3,5,8,11,1,1,Chicago Cubs,False
+1940327,19400607,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,4,10,7,18,1,0,Pittsburgh Pirates,False
+1940328,19400607,Sportsman's Park III,New York Giants,St. Louis Cardinals,2,3,10,6,0,0,St. Louis Cardinals,False
+1940329,19400608,Yankee Stadium I,Cleveland Indians,New York Yankees,3,0,7,2,1,0,Cleveland Indians,False
+1940330,19400608,Shibe Park,St. Louis Browns,Philadelphia Athletics,15,1,14,5,2,0,St. Louis Browns,False
+1940331,19400608,Fenway Park,Detroit Tigers,Boston Red Sox,4,2,5,9,2,0,Detroit Tigers,False
+1940332,19400608,Griffith Stadium,Chicago White Sox,Washington Senators,12,6,13,13,0,0,Chicago White Sox,False
+1940333,19400608,Wrigley Field,Boston Bees,Chicago Cubs,1,3,8,9,1,0,Chicago Cubs,False
+1940334,19400608,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,2,23,7,27,0,3,Cincinnati Reds,False
+1940335,19400608,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,5,6,12,8,0,1,Pittsburgh Pirates,False
+1940336,19400608,Sportsman's Park III,New York Giants,St. Louis Cardinals,4,2,9,13,0,0,New York Giants,False
+1940337,19400608,Sportsman's Park III,New York Giants,St. Louis Cardinals,5,2,14,9,0,1,New York Giants,False
+1940338,19400609,Yankee Stadium I,Cleveland Indians,New York Yankees,3,4,9,6,1,3,New York Yankees,False
+1940339,19400609,Shibe Park,St. Louis Browns,Philadelphia Athletics,8,7,14,8,3,1,St. Louis Browns,False
+1940340,19400609,Shibe Park,St. Louis Browns,Philadelphia Athletics,4,2,8,10,2,0,St. Louis Browns,False
+1940341,19400609,Griffith Stadium,Chicago White Sox,Washington Senators,4,3,11,8,0,1,Chicago White Sox,False
+1940342,19400609,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,9,1,15,5,0,1,Brooklyn Dodgers,False
+1940343,19400609,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,2,6,5,13,0,2,Cincinnati Reds,False
+1940344,19400609,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,6,1,10,7,1,0,Philadelphia Phillies,False
+1940345,19400609,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,5,11,10,13,0,0,Pittsburgh Pirates,False
+1940346,19400609,Wrigley Field,Boston Bees,Chicago Cubs,1,7,6,14,0,0,Chicago Cubs,False
+1940347,19400609,Wrigley Field,Boston Bees,Chicago Cubs,8,15,9,13,0,0,Chicago Cubs,False
+1940348,19400609,Sportsman's Park III,New York Giants,St. Louis Cardinals,11,9,16,16,2,1,New York Giants,False
+1940349,19400609,Sportsman's Park III,New York Giants,St. Louis Cardinals,7,4,14,8,1,0,New York Giants,False
+1940350,19400610,Griffith Stadium,St. Louis Browns,Washington Senators,7,4,10,10,0,0,St. Louis Browns,False
+1940351,19400610,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,8,7,13,12,0,1,Brooklyn Dodgers,False
+1940352,19400610,Sportsman's Park III,Boston Bees,St. Louis Cardinals,12,2,21,7,0,1,Boston Bees,False
+1940353,19400611,Fenway Park,Cleveland Indians,Boston Red Sox,2,9,7,11,1,2,Boston Red Sox,False
+1940354,19400611,Yankee Stadium I,Detroit Tigers,New York Yankees,6,1,11,5,3,0,Detroit Tigers,False
+1940355,19400611,Shibe Park,Chicago White Sox,Philadelphia Athletics,5,4,8,8,1,1,Chicago White Sox,False
+1940356,19400611,Griffith Stadium,St. Louis Browns,Washington Senators,5,2,8,9,0,0,St. Louis Browns,False
+1940357,19400611,Crosley Field,Philadelphia Phillies,Cincinnati Reds,4,1,9,7,0,0,Philadelphia Phillies,False
+1940358,19400611,Wrigley Field,New York Giants,Chicago Cubs,4,0,10,5,0,0,New York Giants,False
+1940359,19400611,Wrigley Field,New York Giants,Chicago Cubs,3,1,9,4,1,0,New York Giants,False
+1940360,19400612,Fenway Park,Cleveland Indians,Boston Red Sox,5,9,13,11,0,1,Boston Red Sox,False
+1940361,19400612,Yankee Stadium I,Detroit Tigers,New York Yankees,5,7,7,12,1,1,New York Yankees,False
+1940362,19400612,Shibe Park,Chicago White Sox,Philadelphia Athletics,2,3,6,3,0,2,Philadelphia Athletics,False
+1940363,19400612,Griffith Stadium,St. Louis Browns,Washington Senators,2,3,6,8,0,0,Washington Senators,False
+1940364,19400612,Crosley Field,Philadelphia Phillies,Cincinnati Reds,1,2,8,5,0,0,Cincinnati Reds,False
+1940365,19400612,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,5,4,11,9,0,1,Brooklyn Dodgers,False
+1940366,19400613,League Park IV,Detroit Tigers,Cleveland Indians,2,3,13,10,1,0,Cleveland Indians,False
+1940367,19400614,League Park IV,Philadelphia Athletics,Cleveland Indians,0,8,2,14,0,0,Cleveland Indians,False
+1940368,19400614,Comiskey Park I,Boston Red Sox,Chicago White Sox,5,1,8,7,0,0,Boston Red Sox,False
+1940369,19400614,Tiger Stadium,Washington Senators,Detroit Tigers,1,10,5,13,0,0,Detroit Tigers,False
+1940370,19400614,Sportsman's Park III,New York Yankees,St. Louis Browns,12,3,17,9,2,0,New York Yankees,False
+1940371,19400614,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,0,2,2,8,0,0,Brooklyn Dodgers,False
+1940372,19400614,Braves Field,Chicago Cubs,Boston Bees,2,4,4,10,0,0,Boston Bees,False
+1940373,19400614,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,6,2,9,10,0,0,St. Louis Cardinals,False
+1940374,19400614,Polo Grounds V,Pittsburgh Pirates,New York Giants,6,8,8,13,2,0,New York Giants,False
+1940375,19400615,League Park IV,Philadelphia Athletics,Cleveland Indians,7,4,10,11,1,0,Philadelphia Athletics,False
+1940376,19400615,Comiskey Park I,Boston Red Sox,Chicago White Sox,5,2,8,4,2,0,Boston Red Sox,False
+1940377,19400615,Tiger Stadium,Washington Senators,Detroit Tigers,1,11,3,15,1,2,Detroit Tigers,False
+1940378,19400615,Tiger Stadium,Washington Senators,Detroit Tigers,0,8,4,13,0,1,Detroit Tigers,False
+1940379,19400615,Sportsman's Park III,New York Yankees,St. Louis Browns,7,6,10,11,1,1,New York Yankees,False
+1940380,19400615,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,6,11,8,14,4,1,Brooklyn Dodgers,False
+1940381,19400615,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,14,1,19,4,0,0,St. Louis Cardinals,False
+1940382,19400615,Braves Field,Chicago Cubs,Boston Bees,11,5,13,7,0,0,Chicago Cubs,False
+1940383,19400615,Polo Grounds V,Pittsburgh Pirates,New York Giants,1,12,5,17,1,1,New York Giants,False
+1940384,19400616,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,2,4,3,4,0,1,Cleveland Indians,False
+1940385,19400616,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,3,4,8,9,0,0,Cleveland Indians,False
+1940386,19400616,Comiskey Park I,Boston Red Sox,Chicago White Sox,4,3,6,8,1,1,Boston Red Sox,False
+1940387,19400616,Comiskey Park I,Boston Red Sox,Chicago White Sox,14,5,20,9,5,1,Boston Red Sox,False
+1940388,19400616,Tiger Stadium,Washington Senators,Detroit Tigers,7,8,10,16,0,2,Detroit Tigers,False
+1940389,19400616,Sportsman's Park III,New York Yankees,St. Louis Browns,6,12,11,13,2,1,St. Louis Browns,False
+1940390,19400616,Sportsman's Park III,New York Yankees,St. Louis Browns,5,6,7,12,2,2,St. Louis Browns,False
+1940391,19400616,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,1,0,2,6,1,0,Cincinnati Reds,False
+1940392,19400616,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,5,2,10,8,0,2,Cincinnati Reds,False
+1940393,19400616,Braves Field,Chicago Cubs,Boston Bees,4,5,6,10,1,0,Boston Bees,False
+1940394,19400616,Braves Field,Chicago Cubs,Boston Bees,9,1,10,5,0,0,Chicago Cubs,False
+1940395,19400616,Polo Grounds V,Pittsburgh Pirates,New York Giants,5,0,10,2,0,0,Pittsburgh Pirates,False
+1940396,19400616,Polo Grounds V,Pittsburgh Pirates,New York Giants,5,3,11,12,0,1,Pittsburgh Pirates,False
+1940397,19400616,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,9,3,14,8,0,1,St. Louis Cardinals,False
+1940398,19400616,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,3,1,7,4,2,1,St. Louis Cardinals,False
+1940399,19400617,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,3,1,7,4,0,0,St. Louis Cardinals,False
+1940400,19400617,Braves Field,Pittsburgh Pirates,Boston Bees,3,5,6,13,1,0,Boston Bees,False
+1940401,19400617,Braves Field,Pittsburgh Pirates,Boston Bees,1,5,6,11,1,0,Boston Bees,False
+1940402,19400617,Polo Grounds V,Chicago Cubs,New York Giants,1,2,6,6,1,1,New York Giants,False
+1940403,19400617,Shibe Park,Cincinnati Reds,Philadelphia Phillies,6,2,9,3,1,0,Cincinnati Reds,False
+1940404,19400618,Cleveland Stadium,Washington Senators,Cleveland Indians,1,2,5,10,0,0,Cleveland Indians,False
+1940405,19400618,Comiskey Park I,New York Yankees,Chicago White Sox,3,5,6,14,2,2,Chicago White Sox,False
+1940406,19400618,Sportsman's Park III,Boston Red Sox,St. Louis Browns,7,11,13,16,1,1,St. Louis Browns,False
+1940407,19400618,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,7,5,12,9,1,1,St. Louis Cardinals,False
+1940408,19400618,Shibe Park,Cincinnati Reds,Philadelphia Phillies,1,3,8,5,0,2,Philadelphia Phillies,False
+1940409,19400618,Polo Grounds V,Chicago Cubs,New York Giants,6,1,10,6,1,0,Chicago Cubs,False
+1940410,19400619,Comiskey Park I,New York Yankees,Chicago White Sox,0,1,7,8,0,0,Chicago White Sox,False
+1940411,19400619,League Park IV,Washington Senators,Cleveland Indians,1,4,8,9,0,1,Cleveland Indians,False
+1940412,19400619,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,4,5,10,9,1,1,Detroit Tigers,False
+1940413,19400619,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,4,9,10,12,0,0,Detroit Tigers,False
+1940414,19400619,Sportsman's Park III,Boston Red Sox,St. Louis Browns,4,6,12,11,0,1,St. Louis Browns,False
+1940415,19400619,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,3,8,9,9,0,0,Brooklyn Dodgers,False
+1940416,19400619,Braves Field,Pittsburgh Pirates,Boston Bees,5,1,9,9,0,0,Pittsburgh Pirates,False
+1940417,19400620,League Park IV,Washington Senators,Cleveland Indians,1,12,4,10,1,0,Cleveland Indians,False
+1940418,19400620,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,6,4,12,8,2,1,Philadelphia Athletics,False
+1940419,19400620,Comiskey Park I,New York Yankees,Chicago White Sox,0,1,5,11,0,0,Chicago White Sox,False
+1940420,19400620,Sportsman's Park III,Boston Red Sox,St. Louis Browns,1,2,5,6,0,1,St. Louis Browns,False
+1940421,19400620,Sportsman's Park III,Boston Red Sox,St. Louis Browns,4,11,11,15,0,4,St. Louis Browns,False
+1940422,19400620,Braves Field,Pittsburgh Pirates,Boston Bees,8,7,12,15,0,1,Pittsburgh Pirates,False
+1940423,19400620,Polo Grounds V,Chicago Cubs,New York Giants,3,6,9,7,1,0,New York Giants,False
+1940424,19400620,Shibe Park,Cincinnati Reds,Philadelphia Phillies,3,4,8,11,1,1,Philadelphia Phillies,False
+1940425,19400621,League Park IV,Boston Red Sox,Cleveland Indians,4,7,10,8,2,1,Cleveland Indians,False
+1940426,19400621,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,12,1,11,4,3,0,Philadelphia Athletics,False
+1940427,19400621,Tiger Stadium,New York Yankees,Detroit Tigers,12,7,17,12,2,1,New York Yankees,False
+1940428,19400621,Sportsman's Park III,Washington Senators,St. Louis Browns,1,0,10,1,0,0,Washington Senators,False
+1940429,19400621,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,8,10,11,15,2,1,Brooklyn Dodgers,False
+1940430,19400621,Polo Grounds V,Cincinnati Reds,New York Giants,3,4,6,7,0,0,New York Giants,False
+1940431,19400621,Shibe Park,Chicago Cubs,Philadelphia Phillies,5,6,12,8,0,0,Philadelphia Phillies,False
+1940432,19400622,League Park IV,Boston Red Sox,Cleveland Indians,5,7,12,13,0,0,Cleveland Indians,False
+1940433,19400622,Tiger Stadium,New York Yankees,Detroit Tigers,2,3,7,9,1,0,Detroit Tigers,False
+1940434,19400622,Sportsman's Park III,Washington Senators,St. Louis Browns,11,10,17,10,1,3,Washington Senators,False
+1940435,19400622,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,7,2,8,9,3,0,Pittsburgh Pirates,False
+1940436,19400622,Braves Field,St. Louis Cardinals,Boston Bees,9,2,13,10,0,0,St. Louis Cardinals,False
+1940437,19400622,Polo Grounds V,Cincinnati Reds,New York Giants,3,1,10,8,1,0,Cincinnati Reds,False
+1940438,19400622,Shibe Park,Chicago Cubs,Philadelphia Phillies,10,2,14,8,0,0,Chicago Cubs,False
+1940439,19400623,Cleveland Stadium,Boston Red Sox,Cleveland Indians,1,4,6,10,0,2,Cleveland Indians,False
+1940440,19400623,Cleveland Stadium,Boston Red Sox,Cleveland Indians,2,0,8,8,2,0,Boston Red Sox,False
+1940441,19400623,Tiger Stadium,New York Yankees,Detroit Tigers,2,9,4,15,0,1,Detroit Tigers,False
+1940442,19400623,Sportsman's Park III,Washington Senators,St. Louis Browns,12,5,19,9,2,0,Washington Senators,False
+1940443,19400623,Sportsman's Park III,Washington Senators,St. Louis Browns,2,3,7,6,0,1,St. Louis Browns,False
+1940444,19400623,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,8,5,16,9,0,0,Pittsburgh Pirates,False
+1940445,19400623,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,4,4,10,13,1,1,tie,False
+1940446,19400623,Polo Grounds V,Cincinnati Reds,New York Giants,7,4,13,9,1,0,Cincinnati Reds,False
+1940447,19400623,Polo Grounds V,Cincinnati Reds,New York Giants,2,0,8,3,0,0,Cincinnati Reds,False
+1940448,19400623,Braves Field,St. Louis Cardinals,Boston Bees,5,7,6,12,2,0,Boston Bees,False
+1940449,19400623,Braves Field,St. Louis Cardinals,Boston Bees,5,10,8,12,1,2,Boston Bees,False
+1940450,19400623,Shibe Park,Chicago Cubs,Philadelphia Phillies,3,2,9,6,0,1,Chicago Cubs,False
+1940451,19400623,Shibe Park,Chicago Cubs,Philadelphia Phillies,7,2,12,10,0,2,Chicago Cubs,False
+1940452,19400624,Cleveland Stadium,New York Yankees,Cleveland Indians,1,7,7,11,0,0,Cleveland Indians,False
+1940453,19400624,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,4,9,9,12,0,4,St. Louis Browns,False
+1940454,19400625,League Park IV,New York Yankees,Cleveland Indians,3,5,5,9,0,3,Cleveland Indians,False
+1940455,19400625,Comiskey Park I,Washington Senators,Chicago White Sox,7,6,15,9,0,2,Washington Senators,False
+1940456,19400625,Tiger Stadium,Boston Red Sox,Detroit Tigers,11,7,15,14,1,3,Boston Red Sox,False
+1940457,19400625,Tiger Stadium,Boston Red Sox,Detroit Tigers,1,5,4,7,0,0,Detroit Tigers,False
+1940458,19400625,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,10,12,14,13,0,0,St. Louis Browns,False
+1940459,19400625,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,8,3,14,10,0,1,Chicago Cubs,False
+1940460,19400625,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,9,7,15,14,0,1,Pittsburgh Pirates,False
+1940461,19400626,League Park IV,New York Yankees,Cleveland Indians,3,1,6,6,0,0,New York Yankees,False
+1940462,19400626,Comiskey Park I,Washington Senators,Chicago White Sox,6,7,12,15,0,0,Chicago White Sox,False
+1940463,19400626,Tiger Stadium,Boston Red Sox,Detroit Tigers,3,1,7,8,0,0,Boston Red Sox,False
+1940464,19400626,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,9,4,11,7,1,1,Philadelphia Athletics,False
+1940465,19400626,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,2,4,7,7,1,1,Philadelphia Phillies,False
+1940466,19400626,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,11,6,14,9,3,1,Pittsburgh Pirates,False
+1940467,19400626,Polo Grounds V,St. Louis Cardinals,New York Giants,9,10,13,18,2,3,New York Giants,False
+1940468,19400627,Sportsman's Park III,Detroit Tigers,St. Louis Browns,2,1,3,7,2,0,Detroit Tigers,False
+1940469,19400627,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,4,5,9,9,1,0,Brooklyn Dodgers,False
+1940470,19400627,Shibe Park,New York Giants,Philadelphia Phillies,7,0,15,3,0,0,New York Giants,False
+1940471,19400628,Fenway Park,Washington Senators,Boston Red Sox,4,3,13,7,0,0,Washington Senators,False
+1940472,19400628,Yankee Stadium I,Philadelphia Athletics,New York Yankees,1,4,9,6,0,1,New York Yankees,False
+1940473,19400628,Ebbets Field,Boston Bees,Brooklyn Dodgers,1,2,5,7,0,0,Brooklyn Dodgers,False
+1940474,19400628,Crosley Field,Chicago Cubs,Cincinnati Reds,3,2,11,6,0,0,Chicago Cubs,False
+1940475,19400628,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,8,2,10,7,1,1,St. Louis Cardinals,False
+1940476,19400629,Comiskey Park I,Cleveland Indians,Chicago White Sox,7,3,10,8,0,0,Cleveland Indians,False
+1940477,19400629,Yankee Stadium I,Philadelphia Athletics,New York Yankees,9,12,12,14,2,3,New York Yankees,False
+1940478,19400629,Fenway Park,Washington Senators,Boston Red Sox,9,7,18,10,0,2,Washington Senators,False
+1940479,19400629,Sportsman's Park III,Detroit Tigers,St. Louis Browns,9,5,12,6,2,1,Detroit Tigers,False
+1940480,19400629,Sportsman's Park III,Detroit Tigers,St. Louis Browns,9,9,12,14,0,2,tie,False
+1940481,19400629,Ebbets Field,Boston Bees,Brooklyn Dodgers,4,10,8,11,2,2,Brooklyn Dodgers,False
+1940482,19400629,Crosley Field,Chicago Cubs,Cincinnati Reds,1,4,8,5,0,0,Cincinnati Reds,False
+1940483,19400629,Shibe Park,New York Giants,Philadelphia Phillies,5,0,9,7,0,0,New York Giants,False
+1940484,19400630,Comiskey Park I,Cleveland Indians,Chicago White Sox,7,5,14,9,1,0,Cleveland Indians,False
+1940485,19400630,Comiskey Park I,Cleveland Indians,Chicago White Sox,1,3,5,7,0,1,Chicago White Sox,False
+1940486,19400630,Yankee Stadium I,Philadelphia Athletics,New York Yankees,3,4,8,9,0,0,New York Yankees,False
+1940487,19400630,Yankee Stadium I,Philadelphia Athletics,New York Yankees,3,2,13,5,0,0,Philadelphia Athletics,False
+1940488,19400630,Fenway Park,Washington Senators,Boston Red Sox,5,6,13,6,1,2,Boston Red Sox,False
+1940489,19400630,Fenway Park,Washington Senators,Boston Red Sox,4,5,11,7,0,0,Boston Red Sox,False
+1940490,19400630,Sportsman's Park III,Detroit Tigers,St. Louis Browns,6,7,7,10,0,1,St. Louis Browns,False
+1940491,19400630,Sportsman's Park III,Detroit Tigers,St. Louis Browns,10,1,16,5,1,0,Detroit Tigers,False
+1940492,19400630,Ebbets Field,Boston Bees,Brooklyn Dodgers,2,9,8,9,0,0,Brooklyn Dodgers,False
+1940493,19400630,Ebbets Field,Boston Bees,Brooklyn Dodgers,7,2,10,9,1,1,Boston Bees,False
+1940494,19400630,Crosley Field,Chicago Cubs,Cincinnati Reds,4,7,10,13,1,2,Cincinnati Reds,False
+1940495,19400630,Crosley Field,Chicago Cubs,Cincinnati Reds,6,7,9,15,1,1,Cincinnati Reds,False
+1940496,19400630,Shibe Park,New York Giants,Philadelphia Phillies,4,7,8,12,1,3,Philadelphia Phillies,False
+1940497,19400630,Shibe Park,New York Giants,Philadelphia Phillies,7,3,13,6,0,1,New York Giants,False
+1940498,19400630,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,1,0,6,5,0,0,St. Louis Cardinals,False
+1940499,19400630,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,0,2,4,6,0,0,Pittsburgh Pirates,False
+1940500,19400701,Fenway Park,Philadelphia Athletics,Boston Red Sox,9,1,15,8,2,0,Philadelphia Athletics,False
+1940501,19400701,Cleveland Stadium,St. Louis Browns,Cleveland Indians,2,1,7,8,1,0,St. Louis Browns,False
+1940502,19400701,Griffith Stadium,New York Yankees,Washington Senators,8,4,10,10,2,0,New York Yankees,False
+1940503,19400701,Tiger Stadium,Chicago White Sox,Detroit Tigers,1,3,6,5,0,0,Detroit Tigers,False
+1940504,19400701,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,4,3,8,11,1,0,Pittsburgh Pirates,False
+1940505,19400701,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,4,3,7,8,0,0,Brooklyn Dodgers,False
+1940506,19400701,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,2,3,7,5,0,2,St. Louis Cardinals,False
+1940507,19400701,Polo Grounds V,Boston Bees,New York Giants,1,7,6,7,0,3,New York Giants,False
+1940508,19400702,League Park IV,St. Louis Browns,Cleveland Indians,5,3,10,13,3,0,St. Louis Browns,False
+1940509,19400702,Griffith Stadium,New York Yankees,Washington Senators,6,2,14,9,0,0,New York Yankees,False
+1940510,19400702,Fenway Park,Philadelphia Athletics,Boston Red Sox,4,3,9,7,0,0,Philadelphia Athletics,False
+1940511,19400702,Fenway Park,Philadelphia Athletics,Boston Red Sox,9,15,16,14,2,2,Boston Red Sox,False
+1940512,19400702,Tiger Stadium,Chicago White Sox,Detroit Tigers,9,10,16,11,0,1,Detroit Tigers,False
+1940513,19400702,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,0,10,5,11,0,0,Chicago Cubs,False
+1940514,19400702,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,4,1,7,3,2,0,Brooklyn Dodgers,False
+1940515,19400702,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,0,4,7,13,0,0,St. Louis Cardinals,False
+1940516,19400702,Polo Grounds V,Boston Bees,New York Giants,5,3,11,11,2,0,Boston Bees,False
+1940517,19400703,Fenway Park,Philadelphia Athletics,Boston Red Sox,11,12,16,14,3,4,Boston Red Sox,False
+1940518,19400703,League Park IV,St. Louis Browns,Cleveland Indians,2,5,7,10,0,2,Cleveland Indians,False
+1940519,19400703,Tiger Stadium,Chicago White Sox,Detroit Tigers,12,7,14,12,2,0,Chicago White Sox,False
+1940520,19400703,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,5,7,11,12,0,0,Chicago Cubs,False
+1940521,19400703,Polo Grounds V,Brooklyn Dodgers,New York Giants,7,3,9,6,2,0,Brooklyn Dodgers,False
+1940522,19400703,Shibe Park,Boston Bees,Philadelphia Phillies,8,3,8,9,0,1,Boston Bees,False
+1940523,19400704,Fenway Park,New York Yankees,Boston Red Sox,12,4,11,10,5,0,New York Yankees,False
+1940524,19400704,Fenway Park,New York Yankees,Boston Red Sox,7,3,12,9,3,0,New York Yankees,False
+1940525,19400704,Tiger Stadium,Cleveland Indians,Detroit Tigers,3,5,5,11,1,1,Detroit Tigers,False
+1940526,19400704,Tiger Stadium,Cleveland Indians,Detroit Tigers,2,1,6,7,0,0,Cleveland Indians,False
+1940527,19400704,Griffith Stadium,Philadelphia Athletics,Washington Senators,1,5,6,11,0,0,Washington Senators,False
+1940528,19400704,Comiskey Park I,St. Louis Browns,Chicago White Sox,3,7,7,17,0,0,Chicago White Sox,False
+1940529,19400704,Comiskey Park I,St. Louis Browns,Chicago White Sox,5,8,7,12,1,0,Chicago White Sox,False
+1940530,19400704,Griffith Stadium,Philadelphia Athletics,Washington Senators,5,9,6,18,0,0,Washington Senators,False
+1940531,19400704,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,1,9,7,12,0,1,Cincinnati Reds,False
+1940532,19400704,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,1,3,3,9,0,0,Cincinnati Reds,False
+1940533,19400704,Polo Grounds V,Brooklyn Dodgers,New York Giants,5,1,10,7,3,0,Brooklyn Dodgers,False
+1940534,19400704,Polo Grounds V,Brooklyn Dodgers,New York Giants,6,1,16,3,1,0,Brooklyn Dodgers,False
+1940535,19400704,Shibe Park,Boston Bees,Philadelphia Phillies,3,4,8,6,0,0,Philadelphia Phillies,False
+1940536,19400704,Shibe Park,Boston Bees,Philadelphia Phillies,5,4,7,9,1,0,Boston Bees,False
+1940537,19400704,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,4,3,11,10,0,0,Chicago Cubs,False
+1940538,19400704,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,2,5,5,9,0,0,St. Louis Cardinals,False
+1940539,19400705,Shibe Park,New York Yankees,Philadelphia Athletics,3,6,7,7,2,2,Philadelphia Athletics,False
+1940540,19400705,Comiskey Park I,St. Louis Browns,Chicago White Sox,8,10,7,13,2,1,Chicago White Sox,False
+1940541,19400705,Griffith Stadium,Boston Red Sox,Washington Senators,9,4,14,12,2,1,Boston Red Sox,False
+1940542,19400705,Braves Field,Brooklyn Dodgers,Boston Bees,6,2,12,14,0,0,Brooklyn Dodgers,False
+1940543,19400705,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,4,5,6,14,1,1,Cincinnati Reds,False
+1940544,19400705,Polo Grounds V,Philadelphia Phillies,New York Giants,2,15,7,17,1,1,New York Giants,False
+1940545,19400705,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,11,5,15,8,3,2,Chicago Cubs,False
+1940546,19400706,League Park IV,Chicago White Sox,Cleveland Indians,3,7,11,8,0,0,Cleveland Indians,False
+1940547,19400706,Shibe Park,New York Yankees,Philadelphia Athletics,7,8,10,15,3,0,Philadelphia Athletics,False
+1940548,19400706,Tiger Stadium,St. Louis Browns,Detroit Tigers,2,11,3,17,0,1,Detroit Tigers,False
+1940549,19400706,Tiger Stadium,St. Louis Browns,Detroit Tigers,0,2,5,4,0,0,Detroit Tigers,False
+1940550,19400706,Griffith Stadium,Boston Red Sox,Washington Senators,5,3,9,10,0,0,Boston Red Sox,False
+1940551,19400706,Braves Field,Brooklyn Dodgers,Boston Bees,2,0,8,3,0,0,Brooklyn Dodgers,False
+1940552,19400706,Wrigley Field,Cincinnati Reds,Chicago Cubs,4,0,9,1,1,0,Cincinnati Reds,False
+1940553,19400706,Polo Grounds V,Philadelphia Phillies,New York Giants,8,2,12,6,0,0,Philadelphia Phillies,False
+1940554,19400706,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,15,8,14,10,3,1,Pittsburgh Pirates,False
+1940555,19400706,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,4,3,7,7,1,1,Pittsburgh Pirates,False
+1940556,19400707,Cleveland Stadium,Chicago White Sox,Cleveland Indians,3,1,8,6,0,0,Chicago White Sox,False
+1940557,19400707,Shibe Park,New York Yankees,Philadelphia Athletics,6,3,6,12,1,2,New York Yankees,False
+1940558,19400707,Shibe Park,New York Yankees,Philadelphia Athletics,5,10,6,12,2,1,Philadelphia Athletics,False
+1940559,19400707,Griffith Stadium,Boston Red Sox,Washington Senators,7,1,9,7,0,0,Boston Red Sox,False
+1940560,19400707,Tiger Stadium,St. Louis Browns,Detroit Tigers,2,5,5,9,2,0,Detroit Tigers,False
+1940561,19400707,Griffith Stadium,Boston Red Sox,Washington Senators,4,7,11,8,0,0,Washington Senators,False
+1940562,19400707,Braves Field,Brooklyn Dodgers,Boston Bees,0,1,7,4,0,0,Boston Bees,False
+1940563,19400707,Braves Field,Brooklyn Dodgers,Boston Bees,1,2,8,7,0,0,Boston Bees,False
+1940564,19400707,Wrigley Field,Cincinnati Reds,Chicago Cubs,4,3,9,10,1,0,Cincinnati Reds,False
+1940565,19400707,Polo Grounds V,Philadelphia Phillies,New York Giants,4,6,6,8,1,2,New York Giants,False
+1940566,19400707,Polo Grounds V,Philadelphia Phillies,New York Giants,4,2,7,8,2,1,Philadelphia Phillies,False
+1940567,19400707,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,7,6,9,11,0,1,Pittsburgh Pirates,False
+1940568,19400707,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,4,1,5,8,1,1,Pittsburgh Pirates,False
+1940569,19400711,Fenway Park,Chicago White Sox,Boston Red Sox,2,3,11,7,1,1,Boston Red Sox,False
+1940570,19400711,Yankee Stadium I,St. Louis Browns,New York Yankees,4,6,3,10,0,2,New York Yankees,False
+1940571,19400711,Shibe Park,Cleveland Indians,Philadelphia Athletics,8,5,15,7,3,1,Cleveland Indians,False
+1940572,19400711,Griffith Stadium,Detroit Tigers,Washington Senators,3,7,9,11,0,0,Washington Senators,False
+1940573,19400711,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,5,6,5,11,0,0,Cincinnati Reds,False
+1940574,19400711,Wrigley Field,Boston Bees,Chicago Cubs,2,8,9,12,0,1,Chicago Cubs,False
+1940575,19400711,Wrigley Field,Boston Bees,Chicago Cubs,2,1,7,9,0,0,Boston Bees,False
+1940576,19400711,Sportsman's Park III,New York Giants,St. Louis Cardinals,8,6,10,10,0,1,New York Giants,False
+1940577,19400712,Shibe Park,Cleveland Indians,Philadelphia Athletics,1,0,6,1,0,0,Cleveland Indians,False
+1940578,19400712,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,6,3,12,7,0,0,Philadelphia Phillies,False
+1940579,19400712,Wrigley Field,Boston Bees,Chicago Cubs,0,2,5,6,0,0,Chicago Cubs,False
+1940580,19400713,Fenway Park,Chicago White Sox,Boston Red Sox,5,0,10,7,0,0,Chicago White Sox,False
+1940581,19400713,Yankee Stadium I,St. Louis Browns,New York Yankees,4,10,11,10,1,2,New York Yankees,False
+1940582,19400713,Yankee Stadium I,St. Louis Browns,New York Yankees,6,12,7,7,1,2,New York Yankees,False
+1940583,19400713,Shibe Park,Cleveland Indians,Philadelphia Athletics,6,4,11,7,0,1,Cleveland Indians,False
+1940584,19400713,Fenway Park,Chicago White Sox,Boston Red Sox,7,0,15,2,0,0,Chicago White Sox,False
+1940585,19400713,Griffith Stadium,Detroit Tigers,Washington Senators,4,3,9,7,0,0,Detroit Tigers,False
+1940586,19400713,Griffith Stadium,Detroit Tigers,Washington Senators,4,0,9,2,1,0,Detroit Tigers,False
+1940587,19400713,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,6,7,13,8,1,0,Cincinnati Reds,False
+1940588,19400713,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,3,1,10,8,0,0,Brooklyn Dodgers,False
+1940589,19400713,Wrigley Field,Boston Bees,Chicago Cubs,5,0,8,6,0,0,Boston Bees,False
+1940590,19400713,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,8,9,13,14,0,0,Pittsburgh Pirates,False
+1940591,19400713,Sportsman's Park III,New York Giants,St. Louis Cardinals,6,7,11,13,0,1,St. Louis Cardinals,False
+1940592,19400713,Sportsman's Park III,New York Giants,St. Louis Cardinals,3,4,7,10,0,0,St. Louis Cardinals,False
+1940593,19400714,Yankee Stadium I,Chicago White Sox,New York Yankees,0,4,4,12,0,0,New York Yankees,False
+1940594,19400714,Shibe Park,Detroit Tigers,Philadelphia Athletics,2,8,8,13,1,3,Philadelphia Athletics,False
+1940595,19400714,Shibe Park,Detroit Tigers,Philadelphia Athletics,2,5,9,10,0,1,Philadelphia Athletics,False
+1940596,19400714,Griffith Stadium,Cleveland Indians,Washington Senators,5,6,12,14,0,0,Washington Senators,False
+1940597,19400714,Fenway Park,St. Louis Browns,Boston Red Sox,4,5,10,11,1,0,Boston Red Sox,False
+1940598,19400714,Fenway Park,St. Louis Browns,Boston Red Sox,3,7,11,9,1,2,Boston Red Sox,False
+1940599,19400714,Crosley Field,Philadelphia Phillies,Cincinnati Reds,2,3,10,7,0,2,Cincinnati Reds,False
+1940600,19400714,Crosley Field,Philadelphia Phillies,Cincinnati Reds,1,7,4,7,0,0,Cincinnati Reds,False
+1940601,19400714,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,2,6,5,10,0,1,Pittsburgh Pirates,False
+1940602,19400714,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,2,0,9,4,0,0,Brooklyn Dodgers,False
+1940603,19400714,Wrigley Field,New York Giants,Chicago Cubs,5,6,15,17,1,1,Chicago Cubs,False
+1940604,19400714,Wrigley Field,New York Giants,Chicago Cubs,2,0,6,7,1,0,New York Giants,False
+1940605,19400714,Sportsman's Park III,Boston Bees,St. Louis Cardinals,7,8,12,14,0,2,St. Louis Cardinals,False
+1940606,19400714,Sportsman's Park III,Boston Bees,St. Louis Cardinals,1,3,8,11,1,0,St. Louis Cardinals,False
+1940607,19400715,Griffith Stadium,Cleveland Indians,Washington Senators,6,8,8,11,0,0,Washington Senators,False
+1940608,19400715,Fenway Park,St. Louis Browns,Boston Red Sox,6,10,11,15,0,1,Boston Red Sox,False
+1940609,19400715,Yankee Stadium I,Chicago White Sox,New York Yankees,3,2,7,9,1,0,Chicago White Sox,False
+1940610,19400715,Shibe Park,Detroit Tigers,Philadelphia Athletics,9,8,10,12,2,0,Detroit Tigers,False
+1940611,19400715,Crosley Field,Philadelphia Phillies,Cincinnati Reds,2,3,5,10,1,0,Cincinnati Reds,False
+1940612,19400715,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,10,1,17,10,1,0,Brooklyn Dodgers,False
+1940613,19400715,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,3,4,10,12,0,0,Pittsburgh Pirates,False
+1940614,19400715,Wrigley Field,New York Giants,Chicago Cubs,3,5,15,7,0,1,Chicago Cubs,False
+1940615,19400715,Sportsman's Park III,Boston Bees,St. Louis Cardinals,2,12,8,20,0,0,St. Louis Cardinals,False
+1940616,19400716,Griffith Stadium,Cleveland Indians,Washington Senators,8,11,12,12,0,1,Washington Senators,False
+1940617,19400716,Yankee Stadium I,Chicago White Sox,New York Yankees,5,1,12,6,1,0,Chicago White Sox,False
+1940618,19400716,Shibe Park,Detroit Tigers,Philadelphia Athletics,1,3,6,6,0,1,Philadelphia Athletics,False
+1940619,19400716,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,3,5,8,8,1,0,Pittsburgh Pirates,False
+1940620,19400716,Wrigley Field,New York Giants,Chicago Cubs,0,2,6,4,0,0,Chicago Cubs,False
+1940621,19400716,Sportsman's Park III,Boston Bees,St. Louis Cardinals,3,4,12,9,1,3,St. Louis Cardinals,False
+1940622,19400717,Yankee Stadium I,Cleveland Indians,New York Yankees,3,4,7,6,2,0,New York Yankees,False
+1940623,19400717,Fenway Park,Detroit Tigers,Boston Red Sox,3,8,5,13,0,0,Boston Red Sox,False
+1940624,19400717,Fenway Park,Detroit Tigers,Boston Red Sox,5,8,12,12,0,1,Boston Red Sox,False
+1940625,19400717,Griffith Stadium,Chicago White Sox,Washington Senators,2,5,8,9,1,0,Washington Senators,False
+1940626,19400717,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,2,1,8,3,0,0,Brooklyn Dodgers,False
+1940627,19400717,Crosley Field,Boston Bees,Cincinnati Reds,3,4,8,9,0,0,Cincinnati Reds,False
+1940628,19400717,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,3,0,7,5,0,0,Philadelphia Phillies,False
+1940629,19400718,Fenway Park,Detroit Tigers,Boston Red Sox,10,8,17,14,0,0,Detroit Tigers,False
+1940630,19400718,Yankee Stadium I,Cleveland Indians,New York Yankees,6,9,8,10,1,3,New York Yankees,False
+1940631,19400718,Shibe Park,St. Louis Browns,Philadelphia Athletics,3,10,5,17,0,0,Philadelphia Athletics,False
+1940632,19400718,Griffith Stadium,Chicago White Sox,Washington Senators,4,5,8,11,1,0,Washington Senators,False
+1940633,19400718,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,7,4,11,7,1,2,Brooklyn Dodgers,False
+1940634,19400718,Forbes Field,New York Giants,Pittsburgh Pirates,6,1,16,6,0,0,New York Giants,False
+1940635,19400719,Yankee Stadium I,Cleveland Indians,New York Yankees,6,15,10,13,1,4,New York Yankees,False
+1940636,19400719,Shibe Park,St. Louis Browns,Philadelphia Athletics,9,7,16,12,1,2,St. Louis Browns,False
+1940637,19400719,Fenway Park,Detroit Tigers,Boston Red Sox,4,0,7,7,1,0,Detroit Tigers,False
+1940638,19400719,Griffith Stadium,Chicago White Sox,Washington Senators,9,1,12,5,0,0,Chicago White Sox,False
+1940639,19400719,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,4,11,11,17,0,2,Chicago Cubs,False
+1940640,19400719,Crosley Field,Boston Bees,Cincinnati Reds,8,7,8,14,0,0,Boston Bees,False
+1940641,19400719,Forbes Field,New York Giants,Pittsburgh Pirates,5,2,9,7,0,0,New York Giants,False
+1940642,19400719,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,2,3,9,6,0,0,St. Louis Cardinals,False
+1940643,19400719,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,3,5,6,9,1,2,St. Louis Cardinals,False
+1940644,19400720,Fenway Park,Cleveland Indians,Boston Red Sox,9,6,13,12,2,3,Cleveland Indians,False
+1940645,19400720,Yankee Stadium I,Detroit Tigers,New York Yankees,3,1,10,8,0,0,Detroit Tigers,False
+1940646,19400720,Shibe Park,Chicago White Sox,Philadelphia Athletics,19,7,19,14,1,1,Chicago White Sox,False
+1940647,19400720,Griffith Stadium,St. Louis Browns,Washington Senators,4,1,8,7,1,0,St. Louis Browns,False
+1940648,19400720,Wrigley Field,Philadelphia Phillies,Chicago Cubs,9,3,16,8,1,1,Philadelphia Phillies,False
+1940649,19400720,Crosley Field,New York Giants,Cincinnati Reds,1,5,3,13,1,0,Cincinnati Reds,False
+1940650,19400720,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,2,3,10,7,1,0,St. Louis Cardinals,False
+1940651,19400720,Forbes Field,Boston Bees,Pittsburgh Pirates,6,17,11,22,0,1,Pittsburgh Pirates,False
+1940652,19400721,Fenway Park,Cleveland Indians,Boston Red Sox,3,2,10,5,0,1,Cleveland Indians,False
+1940653,19400721,Fenway Park,Cleveland Indians,Boston Red Sox,2,0,4,7,0,0,Cleveland Indians,False
+1940654,19400721,Yankee Stadium I,Detroit Tigers,New York Yankees,4,3,14,7,1,2,Detroit Tigers,False
+1940655,19400721,Yankee Stadium I,Detroit Tigers,New York Yankees,3,2,11,8,1,1,Detroit Tigers,False
+1940656,19400721,Shibe Park,Chicago White Sox,Philadelphia Athletics,10,8,14,12,1,2,Chicago White Sox,False
+1940657,19400721,Shibe Park,Chicago White Sox,Philadelphia Athletics,7,2,12,11,0,0,Chicago White Sox,False
+1940658,19400721,Griffith Stadium,St. Louis Browns,Washington Senators,8,4,15,12,3,0,St. Louis Browns,False
+1940659,19400721,Griffith Stadium,St. Louis Browns,Washington Senators,4,5,11,6,1,1,Washington Senators,False
+1940660,19400721,Crosley Field,New York Giants,Cincinnati Reds,1,6,2,10,1,1,Cincinnati Reds,False
+1940661,19400721,Crosley Field,New York Giants,Cincinnati Reds,2,4,8,12,0,1,Cincinnati Reds,False
+1940662,19400721,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,3,1,8,7,2,0,Brooklyn Dodgers,False
+1940663,19400721,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,2,5,5,8,0,2,St. Louis Cardinals,False
+1940664,19400721,Wrigley Field,Philadelphia Phillies,Chicago Cubs,8,2,14,6,1,0,Philadelphia Phillies,False
+1940665,19400721,Wrigley Field,Philadelphia Phillies,Chicago Cubs,5,8,11,15,3,2,Chicago Cubs,False
+1940666,19400721,Forbes Field,Boston Bees,Pittsburgh Pirates,3,5,8,8,0,0,Pittsburgh Pirates,False
+1940667,19400721,Forbes Field,Boston Bees,Pittsburgh Pirates,2,16,9,18,0,0,Pittsburgh Pirates,False
+1940668,19400723,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,0,1,6,6,0,0,Cleveland Indians,False
+1940669,19400723,Tiger Stadium,Washington Senators,Detroit Tigers,6,3,14,7,0,2,Washington Senators,False
+1940670,19400723,Sportsman's Park III,New York Yankees,St. Louis Browns,5,9,12,14,0,2,St. Louis Browns,False
+1940671,19400723,Comiskey Park I,Boston Red Sox,Chicago White Sox,7,8,12,15,1,1,Chicago White Sox,False
+1940672,19400723,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,4,3,8,10,0,0,Cincinnati Reds,False
+1940673,19400723,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,9,2,17,7,1,1,Cincinnati Reds,False
+1940674,19400723,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,7,3,14,9,0,0,St. Louis Cardinals,False
+1940675,19400723,Braves Field,Chicago Cubs,Boston Bees,6,1,11,8,0,0,Chicago Cubs,False
+1940676,19400723,Polo Grounds V,Pittsburgh Pirates,New York Giants,1,9,5,17,0,1,New York Giants,False
+1940677,19400724,League Park IV,Philadelphia Athletics,Cleveland Indians,6,7,12,14,0,1,Cleveland Indians,False
+1940678,19400724,Sportsman's Park III,New York Yankees,St. Louis Browns,12,14,11,17,4,1,St. Louis Browns,False
+1940679,19400724,Comiskey Park I,Boston Red Sox,Chicago White Sox,10,12,14,20,2,4,Chicago White Sox,False
+1940680,19400724,Tiger Stadium,Washington Senators,Detroit Tigers,5,7,11,12,0,2,Detroit Tigers,False
+1940681,19400724,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,6,3,11,7,0,1,Cincinnati Reds,False
+1940682,19400724,Braves Field,Chicago Cubs,Boston Bees,3,4,10,13,0,0,Boston Bees,False
+1940683,19400725,League Park IV,Philadelphia Athletics,Cleveland Indians,7,6,11,10,1,0,Philadelphia Athletics,False
+1940684,19400725,Sportsman's Park III,New York Yankees,St. Louis Browns,13,8,16,12,2,2,New York Yankees,False
+1940685,19400725,Comiskey Park I,Boston Red Sox,Chicago White Sox,4,6,8,11,3,1,Chicago White Sox,False
+1940686,19400725,Tiger Stadium,Washington Senators,Detroit Tigers,2,5,9,8,0,0,Detroit Tigers,False
+1940687,19400725,Braves Field,Chicago Cubs,Boston Bees,8,4,13,9,0,0,Chicago Cubs,False
+1940688,19400725,Polo Grounds V,Pittsburgh Pirates,New York Giants,2,1,6,9,0,0,Pittsburgh Pirates,False
+1940689,19400726,Comiskey Park I,New York Yankees,Chicago White Sox,10,2,13,5,3,1,New York Yankees,False
+1940690,19400726,League Park IV,Washington Senators,Cleveland Indians,2,13,8,20,0,0,Cleveland Indians,False
+1940691,19400726,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,7,4,11,8,0,0,Philadelphia Athletics,False
+1940692,19400726,Sportsman's Park III,Boston Red Sox,St. Louis Browns,14,7,19,10,4,1,Boston Red Sox,False
+1940693,19400726,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,3,3,7,5,2,0,tie,False
+1940694,19400726,Braves Field,Pittsburgh Pirates,Boston Bees,9,0,13,5,0,0,Pittsburgh Pirates,False
+1940695,19400726,Shibe Park,Cincinnati Reds,Philadelphia Phillies,9,5,8,9,1,2,Cincinnati Reds,False
+1940696,19400726,Polo Grounds V,Chicago Cubs,New York Giants,14,1,13,7,1,1,Chicago Cubs,False
+1940697,19400727,Comiskey Park I,New York Yankees,Chicago White Sox,5,6,9,9,2,1,Chicago White Sox,False
+1940698,19400727,League Park IV,Washington Senators,Cleveland Indians,7,1,13,7,0,0,Washington Senators,False
+1940699,19400727,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,2,15,6,16,1,1,Detroit Tigers,False
+1940700,19400727,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,7,8,11,11,1,2,Detroit Tigers,False
+1940701,19400727,Sportsman's Park III,Boston Red Sox,St. Louis Browns,5,13,11,15,0,2,St. Louis Browns,False
+1940702,19400727,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,4,2,9,7,0,0,St. Louis Cardinals,False
+1940703,19400727,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,6,3,9,8,1,0,St. Louis Cardinals,False
+1940704,19400727,Polo Grounds V,Chicago Cubs,New York Giants,0,1,3,4,0,0,New York Giants,False
+1940705,19400727,Shibe Park,Cincinnati Reds,Philadelphia Phillies,3,5,7,8,0,1,Philadelphia Phillies,False
+1940706,19400727,Braves Field,Pittsburgh Pirates,Boston Bees,10,4,17,9,0,1,Pittsburgh Pirates,False
+1940707,19400728,Comiskey Park I,New York Yankees,Chicago White Sox,10,9,13,15,6,1,New York Yankees,False
+1940708,19400728,Comiskey Park I,New York Yankees,Chicago White Sox,4,8,5,8,0,0,Chicago White Sox,False
+1940709,19400728,Cleveland Stadium,Washington Senators,Cleveland Indians,3,6,7,15,0,0,Cleveland Indians,False
+1940710,19400728,Cleveland Stadium,Washington Senators,Cleveland Indians,9,1,15,6,0,0,Washington Senators,False
+1940711,19400728,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,9,5,14,12,1,1,Philadelphia Athletics,False
+1940712,19400728,Sportsman's Park III,Boston Red Sox,St. Louis Browns,3,1,5,9,0,0,Boston Red Sox,False
+1940713,19400728,Sportsman's Park III,Boston Red Sox,St. Louis Browns,13,10,22,10,3,0,Boston Red Sox,False
+1940714,19400728,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,0,3,3,9,0,0,Brooklyn Dodgers,False
+1940715,19400728,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,4,7,9,13,0,0,Brooklyn Dodgers,False
+1940716,19400728,Shibe Park,Cincinnati Reds,Philadelphia Phillies,7,2,14,7,2,1,Cincinnati Reds,False
+1940717,19400728,Shibe Park,Cincinnati Reds,Philadelphia Phillies,1,4,7,8,0,0,Philadelphia Phillies,False
+1940718,19400728,Braves Field,Pittsburgh Pirates,Boston Bees,5,2,9,8,1,0,Pittsburgh Pirates,False
+1940719,19400728,Braves Field,Pittsburgh Pirates,Boston Bees,7,3,9,4,0,0,Pittsburgh Pirates,False
+1940720,19400728,Polo Grounds V,Chicago Cubs,New York Giants,4,8,8,10,2,3,New York Giants,False
+1940721,19400729,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,9,7,13,15,0,2,Philadelphia Athletics,False
+1940722,19400729,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,6,7,10,11,0,0,Brooklyn Dodgers,False
+1940723,19400729,Polo Grounds V,Cincinnati Reds,New York Giants,3,4,7,14,2,1,New York Giants,False
+1940724,19400729,Braves Field,St. Louis Cardinals,Boston Bees,8,3,10,7,0,0,St. Louis Cardinals,False
+1940725,19400729,Shibe Park,Chicago Cubs,Philadelphia Phillies,7,3,11,7,1,1,Chicago Cubs,False
+1940726,19400730,Cleveland Stadium,Boston Red Sox,Cleveland Indians,1,2,8,9,0,0,Cleveland Indians,False
+1940727,19400730,Tiger Stadium,New York Yankees,Detroit Tigers,8,6,10,12,1,3,New York Yankees,False
+1940728,19400730,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,1,3,5,8,0,0,Chicago White Sox,False
+1940729,19400730,Sportsman's Park III,Washington Senators,St. Louis Browns,4,0,11,7,0,0,Washington Senators,False
+1940730,19400730,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,8,2,12,6,1,0,Pittsburgh Pirates,False
+1940731,19400730,Polo Grounds V,Cincinnati Reds,New York Giants,6,3,13,8,0,1,Cincinnati Reds,False
+1940732,19400730,Braves Field,St. Louis Cardinals,Boston Bees,13,5,19,10,3,1,St. Louis Cardinals,False
+1940733,19400730,Shibe Park,Chicago Cubs,Philadelphia Phillies,5,7,16,11,0,0,Philadelphia Phillies,False
+1940734,19400731,Cleveland Stadium,Boston Red Sox,Cleveland Indians,11,12,10,16,0,1,Cleveland Indians,False
+1940735,19400731,Tiger Stadium,New York Yankees,Detroit Tigers,6,7,8,14,2,0,Detroit Tigers,False
+1940736,19400731,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,4,3,7,4,1,0,Philadelphia Athletics,False
+1940737,19400731,Sportsman's Park III,Washington Senators,St. Louis Browns,13,5,14,11,2,0,Washington Senators,False
+1940738,19400731,Polo Grounds V,Cincinnati Reds,New York Giants,4,5,6,10,2,2,New York Giants,False
+1940739,19400731,Braves Field,St. Louis Cardinals,Boston Bees,3,1,8,7,1,1,St. Louis Cardinals,False
+1940740,19400731,Braves Field,St. Louis Cardinals,Boston Bees,17,8,22,13,1,1,St. Louis Cardinals,False
+1940741,19400731,Shibe Park,Chicago Cubs,Philadelphia Phillies,3,7,9,6,1,1,Philadelphia Phillies,False
+1940742,19400801,Cleveland Stadium,Boston Red Sox,Cleveland Indians,5,2,10,7,1,0,Boston Red Sox,False
+1940743,19400801,Tiger Stadium,New York Yankees,Detroit Tigers,2,11,7,15,0,1,Detroit Tigers,False
+1940744,19400801,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,4,5,9,10,1,0,Chicago White Sox,False
+1940745,19400801,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,3,8,7,12,0,1,Brooklyn Dodgers,False
+1940746,19400801,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,7,8,6,12,0,0,Brooklyn Dodgers,False
+1940747,19400802,Cleveland Stadium,New York Yankees,Cleveland Indians,10,2,13,6,0,0,New York Yankees,False
+1940748,19400802,Comiskey Park I,Washington Senators,Chicago White Sox,2,10,2,16,1,1,Chicago White Sox,False
+1940749,19400802,Tiger Stadium,Boston Red Sox,Detroit Tigers,12,9,14,13,3,0,Boston Red Sox,False
+1940750,19400802,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,0,5,8,4,0,2,St. Louis Browns,False
+1940751,19400802,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,4,3,10,9,0,0,Chicago Cubs,False
+1940752,19400802,Braves Field,Cincinnati Reds,Boston Bees,3,10,6,13,1,0,Boston Bees,False
+1940753,19400802,Braves Field,Cincinnati Reds,Boston Bees,3,4,7,11,0,0,Boston Bees,False
+1940754,19400802,Polo Grounds V,St. Louis Cardinals,New York Giants,4,5,10,9,0,3,New York Giants,False
+1940755,19400802,Polo Grounds V,St. Louis Cardinals,New York Giants,3,1,9,7,1,0,St. Louis Cardinals,False
+1940756,19400802,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,5,2,8,12,1,0,Pittsburgh Pirates,False
+1940757,19400803,Comiskey Park I,Washington Senators,Chicago White Sox,6,7,10,7,1,0,Chicago White Sox,False
+1940758,19400803,Cleveland Stadium,New York Yankees,Cleveland Indians,1,5,6,12,0,0,Cleveland Indians,False
+1940759,19400803,Tiger Stadium,Boston Red Sox,Detroit Tigers,4,6,7,11,0,0,Detroit Tigers,False
+1940760,19400803,Tiger Stadium,Boston Red Sox,Detroit Tigers,2,14,5,14,1,1,Detroit Tigers,False
+1940761,19400803,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,11,7,16,12,2,1,Philadelphia Athletics,False
+1940762,19400803,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,2,1,10,5,1,1,Chicago Cubs,False
+1940763,19400803,Braves Field,Cincinnati Reds,Boston Bees,3,1,6,11,0,0,Cincinnati Reds,False
+1940764,19400803,Braves Field,Cincinnati Reds,Boston Bees,2,5,6,8,0,1,Boston Bees,False
+1940765,19400803,Polo Grounds V,St. Louis Cardinals,New York Giants,8,3,17,9,3,0,St. Louis Cardinals,False
+1940766,19400803,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,8,0,14,3,1,0,Pittsburgh Pirates,False
+1940767,19400804,Cleveland Stadium,New York Yankees,Cleveland Indians,1,3,5,10,0,0,Cleveland Indians,False
+1940768,19400804,Comiskey Park I,Washington Senators,Chicago White Sox,4,3,9,9,0,1,Washington Senators,False
+1940769,19400804,Comiskey Park I,Washington Senators,Chicago White Sox,1,0,6,3,0,0,Washington Senators,False
+1940770,19400804,Tiger Stadium,Boston Red Sox,Detroit Tigers,7,3,8,8,1,1,Boston Red Sox,False
+1940771,19400804,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,4,5,10,10,0,3,St. Louis Browns,False
+1940772,19400804,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,4,6,10,8,0,0,St. Louis Browns,False
+1940773,19400804,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,11,3,21,8,1,1,Chicago Cubs,False
+1940774,19400804,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,6,7,11,13,1,2,Brooklyn Dodgers,False
+1940775,19400804,Braves Field,Cincinnati Reds,Boston Bees,3,5,5,9,0,0,Boston Bees,False
+1940776,19400804,Braves Field,Cincinnati Reds,Boston Bees,12,9,17,16,1,1,Cincinnati Reds,False
+1940777,19400804,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,6,1,12,4,0,0,Pittsburgh Pirates,False
+1940778,19400804,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,6,4,13,8,1,0,Pittsburgh Pirates,False
+1940779,19400804,Polo Grounds V,St. Louis Cardinals,New York Giants,2,3,7,11,1,0,New York Giants,False
+1940780,19400804,Polo Grounds V,St. Louis Cardinals,New York Giants,6,3,14,9,0,1,St. Louis Cardinals,False
+1940781,19400805,Fenway Park,New York Yankees,Boston Red Sox,1,4,7,10,0,1,Boston Red Sox,False
+1940782,19400805,Comiskey Park I,Cleveland Indians,Chicago White Sox,10,1,12,5,0,1,Cleveland Indians,False
+1940783,19400805,Sportsman's Park III,Detroit Tigers,St. Louis Browns,9,2,12,6,2,1,Detroit Tigers,False
+1940784,19400805,Sportsman's Park III,Detroit Tigers,St. Louis Browns,0,4,0,5,0,1,St. Louis Browns,False
+1940785,19400805,Ebbets Field,New York Giants,Brooklyn Dodgers,0,6,6,11,0,0,Brooklyn Dodgers,False
+1940786,19400806,Fenway Park,New York Yankees,Boston Red Sox,3,8,8,14,1,0,Boston Red Sox,False
+1940787,19400806,Comiskey Park I,Cleveland Indians,Chicago White Sox,1,5,2,9,0,0,Chicago White Sox,False
+1940788,19400806,Comiskey Park I,Cleveland Indians,Chicago White Sox,3,2,10,7,0,0,Cleveland Indians,False
+1940789,19400806,Sportsman's Park III,Detroit Tigers,St. Louis Browns,6,2,11,7,1,0,Detroit Tigers,False
+1940790,19400806,Griffith Stadium,Philadelphia Athletics,Washington Senators,0,11,1,13,0,2,Washington Senators,False
+1940791,19400806,Shibe Park,Boston Bees,Philadelphia Phillies,3,0,6,4,1,0,Boston Bees,False
+1940792,19400806,Shibe Park,Boston Bees,Philadelphia Phillies,12,2,15,7,1,0,Boston Bees,False
+1940793,19400806,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,1,3,9,7,0,0,Pittsburgh Pirates,False
+1940794,19400807,Fenway Park,New York Yankees,Boston Red Sox,7,10,11,16,1,2,Boston Red Sox,False
+1940795,19400807,Fenway Park,New York Yankees,Boston Red Sox,6,3,10,8,0,2,New York Yankees,False
+1940796,19400807,Comiskey Park I,Cleveland Indians,Chicago White Sox,9,3,12,10,2,0,Cleveland Indians,False
+1940797,19400807,Sportsman's Park III,Detroit Tigers,St. Louis Browns,7,5,14,12,0,1,Detroit Tigers,False
+1940798,19400807,Crosley Field,Chicago Cubs,Cincinnati Reds,5,3,11,11,2,0,Chicago Cubs,False
+1940799,19400807,Polo Grounds V,Brooklyn Dodgers,New York Giants,8,4,14,10,1,0,Brooklyn Dodgers,False
+1940800,19400807,Shibe Park,Boston Bees,Philadelphia Phillies,6,3,8,10,2,0,Boston Bees,False
+1940801,19400807,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,9,10,18,9,1,1,Pittsburgh Pirates,False
+1940802,19400807,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,6,12,11,13,0,0,Pittsburgh Pirates,False
+1940803,19400808,Fenway Park,New York Yankees,Boston Red Sox,5,6,9,13,0,1,Boston Red Sox,False
+1940804,19400808,Sportsman's Park III,Cleveland Indians,St. Louis Browns,7,4,13,10,1,1,Cleveland Indians,False
+1940805,19400808,Sportsman's Park III,Cleveland Indians,St. Louis Browns,1,2,8,3,0,0,St. Louis Browns,False
+1940806,19400808,Griffith Stadium,Philadelphia Athletics,Washington Senators,6,4,8,10,1,0,Philadelphia Athletics,False
+1940807,19400808,Crosley Field,Chicago Cubs,Cincinnati Reds,1,3,9,6,0,0,Cincinnati Reds,False
+1940808,19400808,Polo Grounds V,Brooklyn Dodgers,New York Giants,6,3,10,12,2,1,Brooklyn Dodgers,False
+1940809,19400808,Shibe Park,Boston Bees,Philadelphia Phillies,6,2,9,7,1,0,Boston Bees,False
+1940810,19400809,Comiskey Park I,Detroit Tigers,Chicago White Sox,2,3,5,10,0,0,Chicago White Sox,False
+1940811,19400809,Yankee Stadium I,Philadelphia Athletics,New York Yankees,0,2,2,8,0,0,New York Yankees,False
+1940812,19400809,Sportsman's Park III,Cleveland Indians,St. Louis Browns,3,4,9,10,0,1,St. Louis Browns,False
+1940813,19400809,Griffith Stadium,Boston Red Sox,Washington Senators,5,6,10,9,0,0,Washington Senators,False
+1940814,19400809,Braves Field,Brooklyn Dodgers,Boston Bees,1,0,8,4,0,0,Brooklyn Dodgers,False
+1940815,19400809,Crosley Field,St. Louis Cardinals,Cincinnati Reds,2,7,8,10,0,0,Cincinnati Reds,False
+1940816,19400809,Forbes Field,Chicago Cubs,Pittsburgh Pirates,2,6,4,9,1,1,Pittsburgh Pirates,False
+1940817,19400810,Yankee Stadium I,Philadelphia Athletics,New York Yankees,0,13,5,13,0,5,New York Yankees,False
+1940818,19400810,Griffith Stadium,Boston Red Sox,Washington Senators,3,0,5,9,0,0,Boston Red Sox,False
+1940819,19400810,Comiskey Park I,Detroit Tigers,Chicago White Sox,5,2,7,8,1,0,Detroit Tigers,False
+1940820,19400810,Braves Field,Brooklyn Dodgers,Boston Bees,3,4,11,8,1,1,Boston Bees,False
+1940821,19400810,Crosley Field,St. Louis Cardinals,Cincinnati Reds,0,5,4,9,0,1,Cincinnati Reds,False
+1940822,19400810,Forbes Field,Chicago Cubs,Pittsburgh Pirates,1,0,8,7,0,0,Chicago Cubs,False
+1940823,19400810,Shibe Park,New York Giants,Philadelphia Phillies,1,0,5,5,0,0,New York Giants,False
+1940824,19400811,Yankee Stadium I,Philadelphia Athletics,New York Yankees,6,7,13,12,3,2,New York Yankees,False
+1940825,19400811,Sportsman's Park III,Cleveland Indians,St. Louis Browns,12,4,18,11,0,0,Cleveland Indians,False
+1940826,19400811,Sportsman's Park III,Cleveland Indians,St. Louis Browns,6,7,10,11,1,2,St. Louis Browns,False
+1940827,19400811,Griffith Stadium,Boston Red Sox,Washington Senators,1,2,5,11,0,0,Washington Senators,False
+1940828,19400811,Comiskey Park I,Detroit Tigers,Chicago White Sox,3,4,11,10,0,1,Chicago White Sox,False
+1940829,19400811,Comiskey Park I,Detroit Tigers,Chicago White Sox,3,4,6,7,2,0,Chicago White Sox,False
+1940830,19400811,Braves Field,Brooklyn Dodgers,Boston Bees,2,3,8,9,0,0,Boston Bees,False
+1940831,19400811,Braves Field,Brooklyn Dodgers,Boston Bees,3,0,7,7,0,0,Brooklyn Dodgers,False
+1940832,19400811,Crosley Field,St. Louis Cardinals,Cincinnati Reds,3,2,6,2,1,0,St. Louis Cardinals,False
+1940833,19400811,Crosley Field,St. Louis Cardinals,Cincinnati Reds,3,1,11,10,0,0,St. Louis Cardinals,False
+1940834,19400811,Shibe Park,New York Giants,Philadelphia Phillies,0,2,5,6,0,0,Philadelphia Phillies,False
+1940835,19400811,Shibe Park,New York Giants,Philadelphia Phillies,8,2,11,3,2,0,New York Giants,False
+1940836,19400811,Forbes Field,Chicago Cubs,Pittsburgh Pirates,3,7,8,12,0,0,Pittsburgh Pirates,False
+1940837,19400811,Forbes Field,Chicago Cubs,Pittsburgh Pirates,1,5,4,9,0,0,Pittsburgh Pirates,False
+1940838,19400812,League Park IV,Detroit Tigers,Cleveland Indians,5,8,7,12,0,3,Cleveland Indians,False
+1940839,19400812,Sportsman's Park III,Chicago White Sox,St. Louis Browns,6,5,16,10,0,0,Chicago White Sox,False
+1940840,19400812,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,2,4,9,10,1,0,Pittsburgh Pirates,False
+1940841,19400813,League Park IV,Detroit Tigers,Cleveland Indians,5,6,9,8,1,0,Cleveland Indians,False
+1940842,19400813,Yankee Stadium I,Boston Red Sox,New York Yankees,1,9,5,12,1,2,New York Yankees,False
+1940843,19400813,Yankee Stadium I,Boston Red Sox,New York Yankees,8,19,12,15,2,3,New York Yankees,False
+1940844,19400813,Shibe Park,Washington Senators,Philadelphia Athletics,3,6,12,13,0,0,Philadelphia Athletics,False
+1940845,19400813,Sportsman's Park III,Chicago White Sox,St. Louis Browns,4,3,7,8,0,0,Chicago White Sox,False
+1940846,19400813,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,4,3,8,10,1,0,Cincinnati Reds,False
+1940847,19400813,Braves Field,New York Giants,Boston Bees,1,4,8,9,0,0,Boston Bees,False
+1940848,19400813,Wrigley Field,St. Louis Cardinals,Chicago Cubs,5,1,12,7,1,1,St. Louis Cardinals,False
+1940849,19400814,Cleveland Stadium,Chicago White Sox,Cleveland Indians,0,4,1,6,0,1,Cleveland Indians,False
+1940850,19400814,Yankee Stadium I,Boston Red Sox,New York Yankees,3,8,6,11,3,0,New York Yankees,False
+1940851,19400814,Tiger Stadium,St. Louis Browns,Detroit Tigers,7,13,11,15,1,0,Detroit Tigers,False
+1940852,19400814,Shibe Park,Washington Senators,Philadelphia Athletics,5,3,11,7,0,1,Washington Senators,False
+1940853,19400814,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,5,6,9,9,1,1,Brooklyn Dodgers,False
+1940854,19400814,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,9,6,11,11,2,1,Philadelphia Phillies,False
+1940855,19400814,Braves Field,New York Giants,Boston Bees,1,0,8,5,0,0,New York Giants,False
+1940856,19400814,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,6,7,17,15,0,2,St. Louis Cardinals,False
+1940857,19400814,Braves Field,New York Giants,Boston Bees,0,6,8,9,0,0,Boston Bees,False
+1940858,19400815,League Park IV,Chicago White Sox,Cleveland Indians,4,5,10,15,0,0,Cleveland Indians,False
+1940859,19400815,Yankee Stadium I,Boston Red Sox,New York Yankees,11,1,14,3,2,0,Boston Red Sox,False
+1940860,19400815,Tiger Stadium,St. Louis Browns,Detroit Tigers,2,5,6,8,0,2,Detroit Tigers,False
+1940861,19400815,Shibe Park,Washington Senators,Philadelphia Athletics,9,4,15,14,0,0,Washington Senators,False
+1940862,19400815,Shibe Park,Washington Senators,Philadelphia Athletics,5,6,9,8,0,0,Philadelphia Athletics,False
+1940863,19400815,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,4,2,9,5,1,0,Philadelphia Phillies,False
+1940864,19400815,Braves Field,New York Giants,Boston Bees,1,12,6,18,0,0,Boston Bees,False
+1940865,19400815,Wrigley Field,Cincinnati Reds,Chicago Cubs,0,1,5,5,0,0,Chicago Cubs,False
+1940866,19400816,League Park IV,St. Louis Browns,Cleveland Indians,3,8,12,13,0,0,Cleveland Indians,False
+1940867,19400816,Fenway Park,Washington Senators,Boston Red Sox,6,7,13,15,2,3,Boston Red Sox,False
+1940868,19400816,Tiger Stadium,Chicago White Sox,Detroit Tigers,13,4,14,8,1,1,Chicago White Sox,False
+1940869,19400816,Ebbets Field,Boston Bees,Brooklyn Dodgers,2,1,6,5,1,0,Boston Bees,False
+1940870,19400816,Wrigley Field,Cincinnati Reds,Chicago Cubs,9,4,14,9,0,1,Cincinnati Reds,False
+1940871,19400816,Wrigley Field,Cincinnati Reds,Chicago Cubs,6,3,13,8,0,0,Cincinnati Reds,False
+1940872,19400816,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,6,5,15,14,0,0,Pittsburgh Pirates,False
+1940873,19400816,Polo Grounds V,Philadelphia Phillies,New York Giants,3,5,8,9,1,0,New York Giants,False
+1940874,19400816,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,5,9,11,11,1,0,St. Louis Cardinals,False
+1940875,19400817,Fenway Park,Washington Senators,Boston Red Sox,9,12,11,18,2,3,Boston Red Sox,False
+1940876,19400817,League Park IV,St. Louis Browns,Cleveland Indians,2,1,7,5,0,1,St. Louis Browns,False
+1940877,19400817,Tiger Stadium,Chicago White Sox,Detroit Tigers,9,5,15,10,0,0,Chicago White Sox,False
+1940878,19400817,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,5,6,14,15,1,0,Chicago Cubs,False
+1940879,19400818,Cleveland Stadium,St. Louis Browns,Cleveland Indians,2,2,7,4,0,1,tie,False
+1940880,19400818,Shibe Park,New York Yankees,Philadelphia Athletics,9,1,13,6,0,0,New York Yankees,False
+1940881,19400818,Shibe Park,New York Yankees,Philadelphia Athletics,3,7,7,9,1,0,Philadelphia Athletics,False
+1940882,19400818,Fenway Park,Washington Senators,Boston Red Sox,2,4,5,9,0,2,Boston Red Sox,False
+1940883,19400818,Tiger Stadium,Chicago White Sox,Detroit Tigers,7,5,13,11,0,2,Chicago White Sox,False
+1940884,19400818,Ebbets Field,Boston Bees,Brooklyn Dodgers,2,7,7,10,1,2,Brooklyn Dodgers,False
+1940885,19400818,Ebbets Field,Boston Bees,Brooklyn Dodgers,1,3,7,11,0,0,Brooklyn Dodgers,False
+1940886,19400818,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,1,9,6,11,0,0,Chicago Cubs,False
+1940887,19400818,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,1,3,7,8,0,1,St. Louis Cardinals,False
+1940888,19400818,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,4,5,12,11,0,0,St. Louis Cardinals,False
+1940889,19400818,Polo Grounds V,Philadelphia Phillies,New York Giants,6,3,12,10,1,0,Philadelphia Phillies,False
+1940890,19400818,Polo Grounds V,Philadelphia Phillies,New York Giants,8,6,12,11,3,3,Philadelphia Phillies,False
+1940891,19400819,Fenway Park,Cleveland Indians,Boston Red Sox,7,16,12,14,3,4,Boston Red Sox,False
+1940892,19400819,Crosley Field,New York Giants,Cincinnati Reds,9,2,14,7,1,1,New York Giants,False
+1940893,19400819,Forbes Field,Boston Bees,Pittsburgh Pirates,3,0,9,9,0,0,Boston Bees,False
+1940894,19400820,Fenway Park,Cleveland Indians,Boston Red Sox,11,6,16,12,2,1,Cleveland Indians,False
+1940895,19400820,Yankee Stadium I,Detroit Tigers,New York Yankees,3,4,8,8,1,1,New York Yankees,False
+1940896,19400820,Yankee Stadium I,Detroit Tigers,New York Yankees,2,4,8,8,0,0,New York Yankees,False
+1940897,19400820,Shibe Park,Chicago White Sox,Philadelphia Athletics,6,1,7,3,0,1,Chicago White Sox,False
+1940898,19400820,Shibe Park,Chicago White Sox,Philadelphia Athletics,3,4,8,11,0,0,Philadelphia Athletics,False
+1940899,19400820,Griffith Stadium,St. Louis Browns,Washington Senators,6,3,10,8,0,1,St. Louis Browns,False
+1940900,19400820,Crosley Field,New York Giants,Cincinnati Reds,2,3,7,7,0,0,Cincinnati Reds,False
+1940901,19400820,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,0,3,6,6,0,0,St. Louis Cardinals,False
+1940902,19400820,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,3,4,7,10,2,1,St. Louis Cardinals,False
+1940903,19400820,Wrigley Field,Philadelphia Phillies,Chicago Cubs,0,4,3,8,0,1,Chicago Cubs,False
+1940904,19400820,Forbes Field,Boston Bees,Pittsburgh Pirates,3,6,13,15,0,0,Pittsburgh Pirates,False
+1940905,19400821,Fenway Park,Cleveland Indians,Boston Red Sox,4,2,7,14,1,1,Cleveland Indians,False
+1940906,19400821,Yankee Stadium I,Detroit Tigers,New York Yankees,5,6,7,11,0,1,New York Yankees,False
+1940907,19400821,Shibe Park,Chicago White Sox,Philadelphia Athletics,0,3,5,5,0,0,Philadelphia Athletics,False
+1940908,19400821,Griffith Stadium,St. Louis Browns,Washington Senators,0,3,8,8,0,0,Washington Senators,False
+1940909,19400821,Wrigley Field,Philadelphia Phillies,Chicago Cubs,7,5,13,12,1,1,Philadelphia Phillies,False
+1940910,19400821,Crosley Field,New York Giants,Cincinnati Reds,5,4,11,7,0,2,New York Giants,False
+1940911,19400821,Sportsman's Park III,Brooklyn Dodgers,St. Louis Cardinals,5,7,7,6,2,0,St. Louis Cardinals,False
+1940912,19400821,Forbes Field,Boston Bees,Pittsburgh Pirates,2,3,8,10,0,0,Pittsburgh Pirates,False
+1940913,19400822,Yankee Stadium I,Cleveland Indians,New York Yankees,2,15,6,12,2,3,New York Yankees,False
+1940914,19400822,Shibe Park,St. Louis Browns,Philadelphia Athletics,8,4,18,8,0,0,St. Louis Browns,False
+1940915,19400822,Fenway Park,Detroit Tigers,Boston Red Sox,9,8,12,10,0,2,Detroit Tigers,False
+1940916,19400822,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,0,5,2,10,0,0,Chicago Cubs,False
+1940917,19400822,Crosley Field,Boston Bees,Cincinnati Reds,2,3,7,9,1,1,Cincinnati Reds,False
+1940918,19400822,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,0,9,6,12,0,1,St. Louis Cardinals,False
+1940919,19400822,Forbes Field,New York Giants,Pittsburgh Pirates,5,4,17,12,1,2,New York Giants,False
+1940920,19400822,Forbes Field,New York Giants,Pittsburgh Pirates,0,4,5,7,0,1,Pittsburgh Pirates,False
+1940921,19400823,Yankee Stadium I,Cleveland Indians,New York Yankees,3,5,6,9,2,1,New York Yankees,False
+1940922,19400823,Shibe Park,St. Louis Browns,Philadelphia Athletics,4,6,6,9,1,0,Philadelphia Athletics,False
+1940923,19400823,Griffith Stadium,Chicago White Sox,Washington Senators,2,3,11,11,0,1,Washington Senators,False
+1940924,19400823,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,4,5,11,13,1,1,Chicago Cubs,False
+1940925,19400823,Crosley Field,Boston Bees,Cincinnati Reds,7,2,13,10,2,1,Boston Bees,False
+1940926,19400823,Forbes Field,New York Giants,Pittsburgh Pirates,10,13,15,18,0,1,Pittsburgh Pirates,False
+1940927,19400823,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,2,5,6,7,0,0,St. Louis Cardinals,False
+1940928,19400824,Yankee Stadium I,Cleveland Indians,New York Yankees,2,3,7,5,1,0,New York Yankees,False
+1940929,19400824,Griffith Stadium,Chicago White Sox,Washington Senators,4,2,9,7,0,0,Chicago White Sox,False
+1940930,19400824,Fenway Park,Detroit Tigers,Boston Red Sox,12,1,16,8,1,0,Detroit Tigers,False
+1940931,19400824,Fenway Park,Detroit Tigers,Boston Red Sox,7,8,12,12,2,0,Boston Red Sox,False
+1940932,19400824,Shibe Park,St. Louis Browns,Philadelphia Athletics,6,5,12,10,1,0,St. Louis Browns,False
+1940933,19400824,Griffith Stadium,Chicago White Sox,Washington Senators,2,1,7,7,0,0,Chicago White Sox,False
+1940934,19400824,Wrigley Field,Brooklyn Dodgers,Chicago Cubs,11,3,14,6,2,1,Brooklyn Dodgers,False
+1940935,19400824,Crosley Field,Boston Bees,Cincinnati Reds,0,5,4,7,0,0,Cincinnati Reds,False
+1940936,19400824,Forbes Field,New York Giants,Pittsburgh Pirates,7,6,12,12,0,1,New York Giants,False
+1940937,19400824,Sportsman's Park III,Philadelphia Phillies,St. Louis Cardinals,0,1,4,6,0,0,St. Louis Cardinals,False
+1940938,19400825,Yankee Stadium I,Chicago White Sox,New York Yankees,1,0,5,3,0,0,Chicago White Sox,False
+1940939,19400825,Yankee Stadium I,Chicago White Sox,New York Yankees,1,3,5,8,0,0,New York Yankees,False
+1940940,19400825,Shibe Park,Detroit Tigers,Philadelphia Athletics,7,3,13,9,1,1,Detroit Tigers,False
+1940941,19400825,Griffith Stadium,Cleveland Indians,Washington Senators,4,5,11,10,0,0,Washington Senators,False
+1940942,19400825,Fenway Park,St. Louis Browns,Boston Red Sox,7,2,15,8,1,0,St. Louis Browns,False
+1940943,19400825,Fenway Park,St. Louis Browns,Boston Red Sox,3,17,7,15,0,2,Boston Red Sox,False
+1940944,19400825,Crosley Field,Philadelphia Phillies,Cincinnati Reds,2,3,5,7,0,0,Cincinnati Reds,False
+1940945,19400825,Crosley Field,Philadelphia Phillies,Cincinnati Reds,5,6,11,7,2,1,Cincinnati Reds,False
+1940946,19400825,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,3,4,8,7,1,2,Pittsburgh Pirates,False
+1940947,19400825,Forbes Field,Brooklyn Dodgers,Pittsburgh Pirates,8,1,12,5,1,0,Brooklyn Dodgers,False
+1940948,19400825,Wrigley Field,New York Giants,Chicago Cubs,4,5,8,11,1,0,Chicago Cubs,False
+1940949,19400825,Wrigley Field,New York Giants,Chicago Cubs,12,8,18,13,2,1,New York Giants,False
+1940950,19400825,Sportsman's Park III,Boston Bees,St. Louis Cardinals,4,1,8,5,1,1,Boston Bees,False
+1940951,19400825,Sportsman's Park III,Boston Bees,St. Louis Cardinals,5,8,13,10,1,2,St. Louis Cardinals,False
+1940952,19400826,Griffith Stadium,Cleveland Indians,Washington Senators,4,3,7,8,1,1,Cleveland Indians,False
+1940953,19400826,Fenway Park,St. Louis Browns,Boston Red Sox,6,7,8,11,0,0,Boston Red Sox,False
+1940954,19400826,Crosley Field,Philadelphia Phillies,Cincinnati Reds,2,3,5,8,1,1,Cincinnati Reds,False
+1940955,19400826,Crosley Field,Philadelphia Phillies,Cincinnati Reds,6,1,10,3,0,0,Philadelphia Phillies,False
+1940956,19400826,Wrigley Field,New York Giants,Chicago Cubs,10,5,16,11,0,0,New York Giants,False
+1940957,19400826,Sportsman's Park III,Boston Bees,St. Louis Cardinals,3,1,5,5,1,1,Boston Bees,False
+1940958,19400827,Yankee Stadium I,Chicago White Sox,New York Yankees,4,5,9,7,0,1,New York Yankees,False
+1940959,19400827,Wrigley Field,New York Giants,Chicago Cubs,1,3,7,8,0,1,Chicago Cubs,False
+1940960,19400827,Sportsman's Park III,Boston Bees,St. Louis Cardinals,3,4,7,13,0,2,St. Louis Cardinals,False
+1940961,19400828,Fenway Park,Chicago White Sox,Boston Red Sox,3,2,5,5,0,0,Chicago White Sox,False
+1940962,19400828,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,0,5,3,9,0,0,Pittsburgh Pirates,False
+1940963,19400828,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,2,5,8,6,0,1,Pittsburgh Pirates,False
+1940964,19400828,Wrigley Field,Boston Bees,Chicago Cubs,8,3,15,9,1,0,Boston Bees,False
+1940965,19400828,Sportsman's Park III,New York Giants,St. Louis Cardinals,5,2,9,10,2,1,New York Giants,False
+1940966,19400829,Yankee Stadium I,St. Louis Browns,New York Yankees,3,10,10,11,0,0,New York Yankees,False
+1940967,19400829,Yankee Stadium I,St. Louis Browns,New York Yankees,5,6,9,13,2,1,New York Yankees,False
+1940968,19400829,Fenway Park,Chicago White Sox,Boston Red Sox,3,4,9,11,0,0,Boston Red Sox,False
+1940969,19400829,Griffith Stadium,Detroit Tigers,Washington Senators,3,2,9,9,1,0,Detroit Tigers,False
+1940970,19400829,Griffith Stadium,Detroit Tigers,Washington Senators,6,0,6,4,1,0,Detroit Tigers,False
+1940971,19400829,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,3,9,7,12,1,2,Cincinnati Reds,False
+1940972,19400829,Wrigley Field,Boston Bees,Chicago Cubs,3,1,9,5,0,0,Boston Bees,False
+1940973,19400829,Forbes Field,Philadelphia Phillies,Pittsburgh Pirates,0,4,9,8,0,0,Pittsburgh Pirates,False
+1940974,19400829,Sportsman's Park III,New York Giants,St. Louis Cardinals,0,5,2,8,0,0,St. Louis Cardinals,False
+1940975,19400830,Comiskey Park I,Cleveland Indians,Chicago White Sox,4,2,8,12,1,1,Cleveland Indians,False
+1940976,19400830,Shibe Park,Boston Red Sox,Philadelphia Athletics,5,4,11,8,0,0,Boston Red Sox,False
+1940977,19400830,Crosley Field,Brooklyn Dodgers,Cincinnati Reds,6,2,11,10,2,1,Brooklyn Dodgers,False
+1940978,19400831,Comiskey Park I,Cleveland Indians,Chicago White Sox,5,4,7,15,0,0,Cleveland Indians,False
+1940979,19400831,Yankee Stadium I,Washington Senators,New York Yankees,1,7,3,10,0,2,New York Yankees,False
+1940980,19400831,Shibe Park,Boston Red Sox,Philadelphia Athletics,10,6,15,13,1,2,Boston Red Sox,False
+1940981,19400831,Sportsman's Park III,Detroit Tigers,St. Louis Browns,6,1,13,6,2,0,Detroit Tigers,False
+1940982,19400831,Ebbets Field,New York Giants,Brooklyn Dodgers,6,7,13,10,0,0,Brooklyn Dodgers,False
+1940983,19400831,Crosley Field,Chicago Cubs,Cincinnati Reds,4,5,12,11,0,0,Cincinnati Reds,False
+1940984,19400831,Braves Field,Philadelphia Phillies,Boston Bees,4,9,9,12,2,2,Boston Bees,False
+1940985,19400901,Comiskey Park I,Cleveland Indians,Chicago White Sox,7,4,12,6,0,0,Cleveland Indians,False
+1940986,19400901,Yankee Stadium I,Washington Senators,New York Yankees,2,3,8,7,0,1,New York Yankees,False
+1940987,19400901,Yankee Stadium I,Washington Senators,New York Yankees,0,3,4,10,0,0,New York Yankees,False
+1940988,19400901,Sportsman's Park III,Detroit Tigers,St. Louis Browns,2,8,4,12,0,1,St. Louis Browns,False
+1940989,19400901,Ebbets Field,New York Giants,Brooklyn Dodgers,1,4,5,8,0,0,Brooklyn Dodgers,False
+1940990,19400901,Ebbets Field,New York Giants,Brooklyn Dodgers,3,7,7,15,0,0,Brooklyn Dodgers,False
+1940991,19400901,Braves Field,Philadelphia Phillies,Boston Bees,1,2,6,7,1,1,Boston Bees,False
+1940992,19400901,Crosley Field,Chicago Cubs,Cincinnati Reds,5,6,12,8,0,0,Cincinnati Reds,False
+1940993,19400901,Crosley Field,Chicago Cubs,Cincinnati Reds,1,2,5,5,1,0,Cincinnati Reds,False
+1940994,19400901,Braves Field,Philadelphia Phillies,Boston Bees,0,10,6,13,0,1,Boston Bees,False
+1940995,19400901,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,0,10,4,15,0,0,Pittsburgh Pirates,False
+1940996,19400901,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,5,5,7,12,2,0,tie,False
+1940997,19400902,Cleveland Stadium,St. Louis Browns,Cleveland Indians,2,1,6,7,0,0,St. Louis Browns,False
+1940998,19400902,Cleveland Stadium,St. Louis Browns,Cleveland Indians,3,0,7,5,0,0,St. Louis Browns,False
+1940999,19400902,Yankee Stadium I,Philadelphia Athletics,New York Yankees,3,6,5,7,1,1,New York Yankees,False
+19401000,19400902,Yankee Stadium I,Philadelphia Athletics,New York Yankees,3,0,8,5,1,0,Philadelphia Athletics,False
+19401001,19400902,Comiskey Park I,Detroit Tigers,Chicago White Sox,1,2,6,6,0,0,Chicago White Sox,False
+19401002,19400902,Comiskey Park I,Detroit Tigers,Chicago White Sox,0,4,2,11,0,0,Chicago White Sox,False
+19401003,19400902,Griffith Stadium,Boston Red Sox,Washington Senators,0,1,10,8,0,0,Washington Senators,False
+19401004,19400902,Griffith Stadium,Boston Red Sox,Washington Senators,4,5,6,5,0,0,Washington Senators,False
+19401005,19400902,Braves Field,Brooklyn Dodgers,Boston Bees,6,7,7,12,0,0,Boston Bees,False
+19401006,19400902,Braves Field,Brooklyn Dodgers,Boston Bees,6,2,13,8,2,0,Brooklyn Dodgers,False
+19401007,19400902,Crosley Field,St. Louis Cardinals,Cincinnati Reds,1,2,5,6,0,0,Cincinnati Reds,False
+19401008,19400902,Crosley Field,St. Louis Cardinals,Cincinnati Reds,7,4,13,12,1,0,St. Louis Cardinals,False
+19401009,19400902,Shibe Park,New York Giants,Philadelphia Phillies,2,11,6,12,0,1,Philadelphia Phillies,False
+19401010,19400902,Forbes Field,Chicago Cubs,Pittsburgh Pirates,2,5,7,10,0,1,Pittsburgh Pirates,False
+19401011,19400902,Forbes Field,Chicago Cubs,Pittsburgh Pirates,7,1,9,8,1,0,Chicago Cubs,False
+19401012,19400902,Shibe Park,New York Giants,Philadelphia Phillies,5,6,12,12,2,1,Philadelphia Phillies,False
+19401013,19400903,Comiskey Park I,Detroit Tigers,Chicago White Sox,2,10,6,11,0,0,Chicago White Sox,False
+19401014,19400903,Crosley Field,St. Louis Cardinals,Cincinnati Reds,3,4,12,7,0,1,Cincinnati Reds,False
+19401015,19400904,Comiskey Park I,St. Louis Browns,Chicago White Sox,4,1,10,8,0,0,St. Louis Browns,False
+19401016,19400904,Tiger Stadium,Cleveland Indians,Detroit Tigers,2,7,7,11,1,3,Detroit Tigers,False
+19401017,19400904,Griffith Stadium,New York Yankees,Washington Senators,5,6,10,10,0,0,Washington Senators,False
+19401018,19400904,Fenway Park,Philadelphia Athletics,Boston Red Sox,5,6,8,11,2,2,Boston Red Sox,False
+19401019,19400904,Fenway Park,Philadelphia Athletics,Boston Red Sox,4,5,10,9,0,0,Boston Red Sox,False
+19401020,19400904,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,2,3,10,8,0,0,Cincinnati Reds,False
+19401021,19400904,Polo Grounds V,Boston Bees,New York Giants,2,0,7,5,1,0,Boston Bees,False
+19401022,19400904,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,3,0,9,7,0,0,Brooklyn Dodgers,False
+19401023,19400904,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,2,4,8,9,0,0,St. Louis Cardinals,False
+19401024,19400905,Fenway Park,Philadelphia Athletics,Boston Red Sox,7,9,11,12,1,0,Boston Red Sox,False
+19401025,19400905,Tiger Stadium,Cleveland Indians,Detroit Tigers,3,11,10,11,0,2,Detroit Tigers,False
+19401026,19400905,Griffith Stadium,New York Yankees,Washington Senators,2,1,8,7,0,0,New York Yankees,False
+19401027,19400905,Griffith Stadium,New York Yankees,Washington Senators,8,1,9,12,0,0,New York Yankees,False
+19401028,19400905,Comiskey Park I,St. Louis Browns,Chicago White Sox,2,4,4,6,1,1,Chicago White Sox,False
+19401029,19400905,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,3,6,9,10,0,1,Cincinnati Reds,False
+19401030,19400905,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,8,5,15,12,1,0,Brooklyn Dodgers,False
+19401031,19400905,Polo Grounds V,Boston Bees,New York Giants,7,8,10,15,0,0,New York Giants,False
+19401032,19400905,Polo Grounds V,Boston Bees,New York Giants,1,4,3,5,0,1,New York Giants,False
+19401033,19400906,Comiskey Park I,St. Louis Browns,Chicago White Sox,3,6,4,12,0,0,Chicago White Sox,False
+19401034,19400906,Tiger Stadium,Cleveland Indians,Detroit Tigers,5,10,9,14,0,2,Detroit Tigers,False
+19401035,19400906,Griffith Stadium,New York Yankees,Washington Senators,1,3,8,10,0,2,Washington Senators,False
+19401036,19400906,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,3,0,7,10,1,0,Brooklyn Dodgers,False
+19401037,19400906,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,14,3,18,10,2,1,Brooklyn Dodgers,False
+19401038,19400906,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,4,6,6,12,0,1,St. Louis Cardinals,False
+19401039,19400907,Fenway Park,New York Yankees,Boston Red Sox,4,3,8,8,1,1,New York Yankees,False
+19401040,19400907,Cleveland Stadium,Chicago White Sox,Cleveland Indians,5,4,10,10,0,1,Chicago White Sox,False
+19401041,19400907,Tiger Stadium,St. Louis Browns,Detroit Tigers,4,5,11,7,0,1,Detroit Tigers,False
+19401042,19400907,Griffith Stadium,Philadelphia Athletics,Washington Senators,8,5,16,6,1,0,Philadelphia Athletics,False
+19401043,19400907,Wrigley Field,Cincinnati Reds,Chicago Cubs,7,6,12,10,1,1,Cincinnati Reds,False
+19401044,19400907,Shibe Park,Boston Bees,Philadelphia Phillies,3,2,13,13,0,0,Boston Bees,False
+19401045,19400907,Shibe Park,Boston Bees,Philadelphia Phillies,3,1,6,11,1,0,Boston Bees,False
+19401046,19400907,Polo Grounds V,Brooklyn Dodgers,New York Giants,1,4,5,7,1,1,New York Giants,False
+19401047,19400907,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,14,9,20,12,2,1,Pittsburgh Pirates,False
+19401048,19400908,Fenway Park,New York Yankees,Boston Red Sox,9,4,12,8,1,1,New York Yankees,False
+19401049,19400908,Cleveland Stadium,Chicago White Sox,Cleveland Indians,4,5,10,14,1,1,Cleveland Indians,False
+19401050,19400908,Tiger Stadium,St. Louis Browns,Detroit Tigers,4,5,8,8,0,1,Detroit Tigers,False
+19401051,19400908,Griffith Stadium,Philadelphia Athletics,Washington Senators,6,7,13,13,1,0,Washington Senators,False
+19401052,19400908,Griffith Stadium,Philadelphia Athletics,Washington Senators,4,0,6,3,0,0,Philadelphia Athletics,False
+19401053,19400908,Wrigley Field,Cincinnati Reds,Chicago Cubs,1,3,7,14,0,0,Chicago Cubs,False
+19401054,19400908,Polo Grounds V,Brooklyn Dodgers,New York Giants,7,2,12,6,1,0,Brooklyn Dodgers,False
+19401055,19400908,Polo Grounds V,Brooklyn Dodgers,New York Giants,4,2,12,9,1,0,Brooklyn Dodgers,False
+19401056,19400908,Shibe Park,Boston Bees,Philadelphia Phillies,1,2,6,11,0,1,Philadelphia Phillies,False
+19401057,19400908,Shibe Park,Boston Bees,Philadelphia Phillies,1,3,7,7,1,0,Philadelphia Phillies,False
+19401058,19400908,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,16,14,21,15,2,5,Pittsburgh Pirates,False
+19401059,19400908,Sportsman's Park III,Pittsburgh Pirates,St. Louis Cardinals,5,4,10,6,0,0,Pittsburgh Pirates,False
+19401060,19400909,Cleveland Stadium,Chicago White Sox,Cleveland Indians,2,1,11,4,0,0,Chicago White Sox,False
+19401061,19400909,Polo Grounds V,Brooklyn Dodgers,New York Giants,4,7,13,14,0,0,New York Giants,False
+19401062,19400910,Comiskey Park I,Washington Senators,Chicago White Sox,5,2,9,6,1,0,Washington Senators,False
+19401063,19400910,Tiger Stadium,Boston Red Sox,Detroit Tigers,6,5,13,10,1,1,Boston Red Sox,False
+19401064,19400910,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,6,4,9,13,2,0,Philadelphia Athletics,False
+19401065,19400910,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,11,3,13,11,1,0,Pittsburgh Pirates,False
+19401066,19400910,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,11,1,16,6,1,1,Pittsburgh Pirates,False
+19401067,19400911,Comiskey Park I,Washington Senators,Chicago White Sox,4,7,11,16,1,1,Chicago White Sox,False
+19401068,19400911,Cleveland Stadium,New York Yankees,Cleveland Indians,3,1,5,5,0,0,New York Yankees,False
+19401069,19400911,Cleveland Stadium,New York Yankees,Cleveland Indians,3,5,5,6,0,0,Cleveland Indians,False
+19401070,19400911,Tiger Stadium,Boston Red Sox,Detroit Tigers,7,11,14,18,1,1,Detroit Tigers,False
+19401071,19400911,Sportsman's Park III,Philadelphia Athletics,St. Louis Browns,0,3,5,5,0,1,St. Louis Browns,False
+19401072,19400911,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,8,5,14,8,1,1,Chicago Cubs,False
+19401073,19400911,Ebbets Field,Chicago Cubs,Brooklyn Dodgers,3,2,6,6,1,1,Chicago Cubs,False
+19401074,19400911,Braves Field,Cincinnati Reds,Boston Bees,8,0,10,4,1,0,Cincinnati Reds,False
+19401075,19400911,Braves Field,Cincinnati Reds,Boston Bees,3,1,8,6,0,0,Cincinnati Reds,False
+19401076,19400911,Polo Grounds V,St. Louis Cardinals,New York Giants,7,4,17,7,0,1,St. Louis Cardinals,False
+19401077,19400911,Polo Grounds V,St. Louis Cardinals,New York Giants,3,2,10,9,1,0,St. Louis Cardinals,False
+19401078,19400911,Shibe Park,Pittsburgh Pirates,Philadelphia Phillies,9,3,12,11,0,0,Pittsburgh Pirates,False
+19401079,19400912,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,0,1,4,9,0,0,Chicago White Sox,False
+19401080,19400912,Cleveland Stadium,Boston Red Sox,Cleveland Indians,1,8,3,10,0,0,Cleveland Indians,False
+19401081,19400912,Tiger Stadium,New York Yankees,Detroit Tigers,3,6,11,9,0,1,Detroit Tigers,False
+19401082,19400912,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,3,4,5,8,0,1,Chicago White Sox,False
+19401083,19400912,Sportsman's Park III,Washington Senators,St. Louis Browns,7,2,13,6,0,0,Washington Senators,False
+19401084,19400912,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,0,7,3,12,0,0,Brooklyn Dodgers,False
+19401085,19400912,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,4,7,10,12,0,1,Brooklyn Dodgers,False
+19401086,19400912,Braves Field,St. Louis Cardinals,Boston Bees,7,17,12,21,2,0,Boston Bees,False
+19401087,19400912,Braves Field,St. Louis Cardinals,Boston Bees,1,6,6,15,0,0,Boston Bees,False
+19401088,19400912,Polo Grounds V,Cincinnati Reds,New York Giants,9,4,13,11,0,1,Cincinnati Reds,False
+19401089,19400912,Shibe Park,Chicago Cubs,Philadelphia Phillies,5,1,14,5,1,0,Chicago Cubs,False
+19401090,19400913,Cleveland Stadium,Boston Red Sox,Cleveland Indians,0,1,3,2,0,0,Cleveland Indians,False
+19401091,19400913,Tiger Stadium,New York Yankees,Detroit Tigers,0,8,6,16,0,1,Detroit Tigers,False
+19401092,19400913,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,2,6,7,9,0,0,Chicago White Sox,False
+19401093,19400913,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,4,8,8,11,0,0,Chicago White Sox,False
+19401094,19400913,Sportsman's Park III,Washington Senators,St. Louis Browns,3,7,9,12,0,0,St. Louis Browns,False
+19401095,19400913,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,2,8,7,11,0,0,Brooklyn Dodgers,False
+19401096,19400913,Braves Field,St. Louis Cardinals,Boston Bees,9,3,11,8,0,0,St. Louis Cardinals,False
+19401097,19400913,Polo Grounds V,Cincinnati Reds,New York Giants,5,2,10,6,0,0,Cincinnati Reds,False
+19401098,19400913,Shibe Park,Chicago Cubs,Philadelphia Phillies,1,6,4,11,0,2,Philadelphia Phillies,False
+19401099,19400914,Cleveland Stadium,Boston Red Sox,Cleveland Indians,6,1,8,4,0,0,Boston Red Sox,False
+19401100,19400914,Tiger Stadium,New York Yankees,Detroit Tigers,16,7,16,10,3,2,New York Yankees,False
+19401101,19400914,Comiskey Park I,Philadelphia Athletics,Chicago White Sox,3,6,9,10,2,1,Chicago White Sox,False
+19401102,19400914,Sportsman's Park III,Washington Senators,St. Louis Browns,2,5,6,7,0,0,St. Louis Browns,False
+19401103,19400914,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,0,5,4,13,0,2,Brooklyn Dodgers,False
+19401104,19400914,Ebbets Field,Pittsburgh Pirates,Brooklyn Dodgers,2,4,7,5,0,1,Brooklyn Dodgers,False
+19401105,19400914,Polo Grounds V,Cincinnati Reds,New York Giants,3,2,7,11,1,1,Cincinnati Reds,False
+19401106,19400914,Braves Field,St. Louis Cardinals,Boston Bees,6,5,11,9,0,0,St. Louis Cardinals,False
+19401107,19400914,Shibe Park,Chicago Cubs,Philadelphia Phillies,3,5,5,6,2,1,Philadelphia Phillies,False
+19401108,19400915,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,0,5,2,6,0,0,Cleveland Indians,False
+19401109,19400915,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,5,8,11,9,0,0,Cleveland Indians,False
+19401110,19400915,Sportsman's Park III,New York Yankees,St. Louis Browns,5,10,12,11,1,1,St. Louis Browns,False
+19401111,19400915,Sportsman's Park III,New York Yankees,St. Louis Browns,1,2,8,5,0,1,St. Louis Browns,False
+19401112,19400915,Comiskey Park I,Boston Red Sox,Chicago White Sox,1,5,3,9,0,0,Chicago White Sox,False
+19401113,19400915,Comiskey Park I,Boston Red Sox,Chicago White Sox,2,4,5,11,0,1,Chicago White Sox,False
+19401114,19400915,Tiger Stadium,Washington Senators,Detroit Tigers,6,1,10,6,1,1,Washington Senators,False
+19401115,19400915,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,13,3,16,5,1,1,Cincinnati Reds,False
+19401116,19400915,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,1,1,8,8,0,0,tie,False
+19401117,19400915,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,7,0,10,3,1,0,St. Louis Cardinals,False
+19401118,19400915,Braves Field,Chicago Cubs,Boston Bees,3,7,7,14,0,0,Boston Bees,False
+19401119,19400915,Braves Field,Chicago Cubs,Boston Bees,7,4,13,9,0,0,Chicago Cubs,False
+19401120,19400915,Polo Grounds V,Pittsburgh Pirates,New York Giants,10,3,15,8,1,0,Pittsburgh Pirates,False
+19401121,19400915,Polo Grounds V,Pittsburgh Pirates,New York Giants,4,3,7,7,2,2,Pittsburgh Pirates,False
+19401122,19400915,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,3,1,11,7,0,0,St. Louis Cardinals,False
+19401123,19400916,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,3,8,6,9,0,2,Cleveland Indians,False
+19401124,19400916,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,3,2,7,6,2,0,Philadelphia Athletics,False
+19401125,19400916,Sportsman's Park III,New York Yankees,St. Louis Browns,4,16,6,15,1,5,St. Louis Browns,False
+19401126,19400916,Comiskey Park I,Boston Red Sox,Chicago White Sox,6,2,9,5,0,0,Boston Red Sox,False
+19401127,19400916,Tiger Stadium,Washington Senators,Detroit Tigers,2,9,5,11,0,1,Detroit Tigers,False
+19401128,19400916,Ebbets Field,Cincinnati Reds,Brooklyn Dodgers,4,3,9,10,0,0,Cincinnati Reds,False
+19401129,19400916,Polo Grounds V,Pittsburgh Pirates,New York Giants,7,6,7,7,3,2,Pittsburgh Pirates,False
+19401130,19400916,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,2,3,5,7,0,0,Philadelphia Phillies,False
+19401131,19400916,Shibe Park,St. Louis Cardinals,Philadelphia Phillies,7,1,8,6,0,0,St. Louis Cardinals,False
+19401132,19400917,Cleveland Stadium,Philadelphia Athletics,Cleveland Indians,4,3,9,9,0,0,Philadelphia Athletics,False
+19401133,19400917,Sportsman's Park III,New York Yankees,St. Louis Browns,9,0,10,6,0,0,New York Yankees,False
+19401134,19400917,Tiger Stadium,Washington Senators,Detroit Tigers,3,6,7,6,1,1,Detroit Tigers,False
+19401135,19400917,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,5,0,7,5,0,0,St. Louis Cardinals,False
+19401136,19400917,Polo Grounds V,Chicago Cubs,New York Giants,9,8,14,13,2,0,Chicago Cubs,False
+19401137,19400917,Shibe Park,Cincinnati Reds,Philadelphia Phillies,2,1,7,5,0,0,Cincinnati Reds,False
+19401138,19400917,Braves Field,Pittsburgh Pirates,Boston Bees,5,10,12,14,1,1,Boston Bees,False
+19401139,19400918,Comiskey Park I,New York Yankees,Chicago White Sox,3,6,6,10,0,0,Chicago White Sox,False
+19401140,19400918,Comiskey Park I,New York Yankees,Chicago White Sox,9,8,10,12,1,0,New York Yankees,False
+19401141,19400918,Cleveland Stadium,Washington Senators,Cleveland Indians,1,3,6,9,0,0,Cleveland Indians,False
+19401142,19400918,Cleveland Stadium,Washington Senators,Cleveland Indians,1,2,5,9,0,1,Cleveland Indians,False
+19401143,19400918,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,0,14,6,17,0,2,Detroit Tigers,False
+19401144,19400918,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,13,6,15,11,2,2,Philadelphia Athletics,False
+19401145,19400918,Sportsman's Park III,Boston Red Sox,St. Louis Browns,2,11,9,14,0,0,St. Louis Browns,False
+19401146,19400918,Ebbets Field,St. Louis Cardinals,Brooklyn Dodgers,14,7,17,8,1,2,St. Louis Cardinals,False
+19401147,19400918,Polo Grounds V,Chicago Cubs,New York Giants,6,4,9,8,2,2,Chicago Cubs,False
+19401148,19400918,Shibe Park,Cincinnati Reds,Philadelphia Phillies,4,3,13,8,0,0,Cincinnati Reds,False
+19401149,19400918,Braves Field,Pittsburgh Pirates,Boston Bees,1,4,5,9,0,1,Boston Bees,False
+19401150,19400919,Comiskey Park I,New York Yankees,Chicago White Sox,10,1,14,7,1,1,New York Yankees,False
+19401151,19400919,Cleveland Stadium,Washington Senators,Cleveland Indians,1,3,8,6,1,0,Cleveland Indians,False
+19401152,19400919,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,2,13,8,14,2,2,Detroit Tigers,False
+19401153,19400919,Tiger Stadium,Philadelphia Athletics,Detroit Tigers,1,10,4,13,1,2,Detroit Tigers,False
+19401154,19400919,Sportsman's Park III,Boston Red Sox,St. Louis Browns,1,2,9,7,0,0,St. Louis Browns,False
+19401155,19400919,Polo Grounds V,Chicago Cubs,New York Giants,8,2,14,8,2,0,Chicago Cubs,False
+19401156,19400919,Shibe Park,Cincinnati Reds,Philadelphia Phillies,4,1,5,7,0,1,Cincinnati Reds,False
+19401157,19400919,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,2,1,8,5,0,0,St. Louis Cardinals,False
+19401158,19400919,Forbes Field,St. Louis Cardinals,Pittsburgh Pirates,8,2,14,10,0,0,St. Louis Cardinals,False
+19401159,19400920,Tiger Stadium,Cleveland Indians,Detroit Tigers,5,6,15,9,0,0,Detroit Tigers,False
+19401160,19400920,Sportsman's Park III,Chicago White Sox,St. Louis Browns,6,7,8,9,1,1,St. Louis Browns,False
+19401161,19400921,Tiger Stadium,Cleveland Indians,Detroit Tigers,0,5,5,11,0,0,Detroit Tigers,False
+19401162,19400921,Yankee Stadium I,Boston Red Sox,New York Yankees,4,5,12,12,1,2,New York Yankees,False
+19401163,19400921,Sportsman's Park III,Chicago White Sox,St. Louis Browns,2,3,2,7,1,0,St. Louis Browns,False
+19401164,19400921,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,4,2,10,8,1,0,Philadelphia Phillies,False
+19401165,19400921,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,8,1,12,5,0,0,Cincinnati Reds,False
+19401166,19400921,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,7,8,12,15,0,0,Pittsburgh Pirates,False
+19401167,19400921,Braves Field,New York Giants,Boston Bees,3,1,9,4,0,0,New York Giants,False
+19401168,19400921,Wrigley Field,St. Louis Cardinals,Chicago Cubs,3,4,8,13,0,0,Chicago Cubs,False
+19401169,19400922,Tiger Stadium,Cleveland Indians,Detroit Tigers,10,5,12,8,5,2,Cleveland Indians,False
+19401170,19400922,Shibe Park,Washington Senators,Philadelphia Athletics,5,4,8,6,1,0,Washington Senators,False
+19401171,19400922,Shibe Park,Washington Senators,Philadelphia Athletics,5,2,7,7,1,0,Washington Senators,False
+19401172,19400922,Yankee Stadium I,Boston Red Sox,New York Yankees,3,6,9,8,1,2,New York Yankees,False
+19401173,19400922,Sportsman's Park III,Chicago White Sox,St. Louis Browns,10,0,16,6,2,0,Chicago White Sox,False
+19401174,19400922,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,2,1,7,2,1,0,Cincinnati Reds,False
+19401175,19400922,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,1,8,7,8,0,1,Pittsburgh Pirates,False
+19401176,19400922,Braves Field,New York Giants,Boston Bees,3,4,5,8,0,0,Boston Bees,False
+19401177,19400922,Braves Field,New York Giants,Boston Bees,7,3,9,9,0,1,New York Giants,False
+19401178,19400922,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,2,10,4,12,0,0,Brooklyn Dodgers,False
+19401179,19400922,Ebbets Field,Philadelphia Phillies,Brooklyn Dodgers,2,5,6,9,0,0,Brooklyn Dodgers,False
+19401180,19400922,Wrigley Field,St. Louis Cardinals,Chicago Cubs,8,1,17,6,0,1,St. Louis Cardinals,False
+19401181,19400922,Wrigley Field,St. Louis Cardinals,Chicago Cubs,2,1,9,7,1,0,St. Louis Cardinals,False
+19401182,19400923,Braves Field,Philadelphia Phillies,Boston Bees,6,2,9,6,2,0,Philadelphia Phillies,False
+19401183,19400923,Braves Field,Philadelphia Phillies,Boston Bees,0,8,3,11,0,0,Boston Bees,False
+19401184,19400923,Wrigley Field,St. Louis Cardinals,Chicago Cubs,0,10,4,10,0,4,Chicago Cubs,False
+19401185,19400923,Forbes Field,Cincinnati Reds,Pittsburgh Pirates,9,12,17,14,1,0,Pittsburgh Pirates,False
+19401186,19400923,Ebbets Field,New York Giants,Brooklyn Dodgers,2,3,7,11,1,1,Brooklyn Dodgers,False
+19401187,19400924,Cleveland Stadium,St. Louis Browns,Cleveland Indians,7,2,14,6,0,0,St. Louis Browns,False
+19401188,19400924,Yankee Stadium I,Washington Senators,New York Yankees,5,6,13,16,0,0,New York Yankees,False
+19401189,19400924,Yankee Stadium I,Washington Senators,New York Yankees,4,9,7,8,0,2,New York Yankees,False
+19401190,19400924,Shibe Park,Boston Red Sox,Philadelphia Athletics,16,8,23,15,6,0,Boston Red Sox,False
+19401191,19400924,Shibe Park,Boston Red Sox,Philadelphia Athletics,4,3,9,6,0,0,Boston Red Sox,False
+19401192,19400924,Ebbets Field,New York Giants,Brooklyn Dodgers,4,5,9,7,0,0,Brooklyn Dodgers,False
+19401193,19400925,Cleveland Stadium,St. Louis Browns,Cleveland Indians,2,4,6,7,0,0,Cleveland Indians,False
+19401194,19400925,Tiger Stadium,Chicago White Sox,Detroit Tigers,9,10,17,16,0,1,Detroit Tigers,False
+19401195,19400925,Tiger Stadium,Chicago White Sox,Detroit Tigers,2,3,8,5,1,1,Detroit Tigers,False
+19401196,19400925,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,5,0,12,2,0,0,Cincinnati Reds,False
+19401197,19400925,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,3,4,12,8,0,1,St. Louis Cardinals,False
+19401198,19400925,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,1,2,6,5,0,0,Chicago Cubs,False
+19401199,19400925,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,4,6,11,11,0,0,Chicago Cubs,False
+19401200,19400926,Fenway Park,Washington Senators,Boston Red Sox,6,5,12,7,0,0,Washington Senators,False
+19401201,19400926,Shibe Park,New York Yankees,Philadelphia Athletics,5,4,9,10,2,0,New York Yankees,False
+19401202,19400926,Shibe Park,New York Yankees,Philadelphia Athletics,2,0,4,4,0,0,New York Yankees,False
+19401203,19400926,Ebbets Field,Boston Bees,Brooklyn Dodgers,5,2,9,7,1,0,Boston Bees,False
+19401204,19400926,Polo Grounds V,Philadelphia Phillies,New York Giants,1,3,4,6,0,1,New York Giants,False
+19401205,19400926,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,4,3,12,6,0,0,Cincinnati Reds,False
+19401206,19400926,Sportsman's Park III,Cincinnati Reds,St. Louis Cardinals,1,5,7,8,0,0,St. Louis Cardinals,False
+19401207,19400926,Ebbets Field,Boston Bees,Brooklyn Dodgers,5,4,9,9,0,1,Boston Bees,False
+19401208,19400926,Wrigley Field,Pittsburgh Pirates,Chicago Cubs,7,6,12,12,0,0,Pittsburgh Pirates,False
+19401209,19400926,Polo Grounds V,Philadelphia Phillies,New York Giants,1,2,6,6,0,0,New York Giants,False
+19401210,19400927,Fenway Park,Washington Senators,Boston Red Sox,4,24,11,22,0,2,Boston Red Sox,False
+19401211,19400927,Cleveland Stadium,Detroit Tigers,Cleveland Indians,2,0,3,6,1,0,Detroit Tigers,False
+19401212,19400927,Shibe Park,New York Yankees,Philadelphia Athletics,2,6,5,9,0,1,Philadelphia Athletics,False
+19401213,19400927,Comiskey Park I,St. Louis Browns,Chicago White Sox,3,4,8,12,0,1,Chicago White Sox,False
+19401214,19400927,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,4,3,10,10,0,0,Pittsburgh Pirates,False
+19401215,19400927,Polo Grounds V,Philadelphia Phillies,New York Giants,6,0,12,4,2,0,Philadelphia Phillies,False
+19401216,19400927,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,1,11,2,15,0,2,St. Louis Cardinals,False
+19401217,19400928,Fenway Park,Philadelphia Athletics,Boston Red Sox,4,16,8,19,0,1,Boston Red Sox,False
+19401218,19400928,Fenway Park,Philadelphia Athletics,Boston Red Sox,1,8,3,10,1,0,Boston Red Sox,False
+19401219,19400928,Griffith Stadium,New York Yankees,Washington Senators,3,4,9,9,0,0,Washington Senators,False
+19401220,19400928,Griffith Stadium,New York Yankees,Washington Senators,7,1,14,4,0,0,New York Yankees,False
+19401221,19400928,Comiskey Park I,St. Louis Browns,Chicago White Sox,1,5,6,9,0,0,Chicago White Sox,False
+19401222,19400928,Cleveland Stadium,Detroit Tigers,Cleveland Indians,1,2,7,6,0,0,Cleveland Indians,False
+19401223,19400928,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,5,6,7,13,0,2,Cincinnati Reds,False
+19401224,19400928,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,1,5,6,9,0,0,Philadelphia Phillies,False
+19401225,19400928,Polo Grounds V,Boston Bees,New York Giants,1,11,7,16,0,1,New York Giants,False
+19401226,19400928,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,3,4,12,15,0,0,St. Louis Cardinals,False
+19401227,19400929,Fenway Park,Philadelphia Athletics,Boston Red Sox,4,9,10,13,1,2,Boston Red Sox,False
+19401228,19400929,Fenway Park,Philadelphia Athletics,Boston Red Sox,1,4,5,6,0,0,Boston Red Sox,False
+19401229,19400929,Comiskey Park I,St. Louis Browns,Chicago White Sox,2,1,7,9,0,0,St. Louis Browns,False
+19401230,19400929,Cleveland Stadium,Detroit Tigers,Cleveland Indians,2,3,10,8,0,0,Cleveland Indians,False
+19401231,19400929,Griffith Stadium,New York Yankees,Washington Senators,4,3,16,10,0,0,New York Yankees,False
+19401232,19400929,Crosley Field,Pittsburgh Pirates,Cincinnati Reds,3,11,11,13,0,1,Cincinnati Reds,False
+19401233,19400929,Polo Grounds V,Boston Bees,New York Giants,0,14,3,15,0,2,New York Giants,False
+19401234,19400929,Shibe Park,Brooklyn Dodgers,Philadelphia Phillies,5,0,12,2,0,0,Brooklyn Dodgers,False
+19401235,19400929,Sportsman's Park III,Chicago Cubs,St. Louis Cardinals,0,6,6,12,0,0,St. Louis Cardinals,False
