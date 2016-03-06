@@ -11,15 +11,28 @@ from datetime import datetime
 start=datetime.now().time()
 
 
+import requests
+import bs4
+import re
+import queue
+import json
+import sys
+import csv
+from datetime import datetime
+
+
+start=datetime.now().time()
+
+
 def make_player_employment_csv_file(data_dict, filename):
     '''
     Makes a csv file for the player_employment table info from a dictionary
     '''
-    print("start employment csv",datetime.now().time())
-    strfilename = "%s_employment.csv" % (filename)
+    print("start csv",datetime.now().time())
+    strfilename = "%s.csv" % (filename)
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
-        indexwriter.writerow(["player_id","team_names","years"])
+        indexwriter.writerow(["player_id","teams","years"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["teams"], data_dict[player_id]["years"]])
     print("finish csv",datetime.now().time())
@@ -32,7 +45,7 @@ def make_player_bio_csv_file(data_dict, filename):
     print("start bio csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
-        indexwriter.writerow(["player_id","positions","name","playoffs","playoffs_won","world_series","world_series_won","years_played","span"])
+        indexwriter.writerow(["player_id","positions","name","Playoffs","Playoffs_Won","World_Series","World_Series_Won","years_played","span"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["positions"], data_dict[player_id]["name"],data_dict[player_id]["Playoffs"],
 data_dict[player_id]["Playoffs_Won"], data_dict[player_id]["World_Series"], data_dict[player_id]["World_Series_Won"], data_dict[player_id]["years_played"],
@@ -47,7 +60,7 @@ def make_player_stats_nonpitcher_csv_file(data_dict, filename):
     print("start stats nonpitcher csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
-        indexwriter.writerow(["player_id","years","WARS_nonpitcher","AVGs","OBPs","SLGs","UBR_WRC_Years","UBRs","WRCs","WPA_years","WPAs","Clutchs"])
+        indexwriter.writerow(["player_id","years","WARS_nonpitcher", "AVGs", "OBPs", "SLGs", "UBR_WRC_Years", "UBRs", "WRCs", "WPA_Years", "WPAs", "Clutchs"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["years"], data_dict[player_id]["WARs_nonpitcher"],
 data_dict[player_id]["AVGs"],data_dict[player_id]["OBPs"], data_dict[player_id]["SLGs"], data_dict[player_id]["UBR_WRC_Years"], 
@@ -63,12 +76,35 @@ def make_player_stats_pitcher_csv_file(data_dict, filename):
     print("start stats pitcher csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
-        indexwriter.writerow(["player_id","Pitcher_years","WARs_pitcher","ERAs","IPs","GSs","FIPs","E_Fs","K_Pers","BB_Pers"])
+        indexwriter.writerow(["player_id","Pitcher_Years", "WARS_pitcher", "ERAs", "IPs", "GSs", "FIPs", "E_Fs", "K_Pers", "BB_Pers"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["Pitcher_Years"], data_dict[player_id]["WARs_pitcher"],
 data_dict[player_id]["ERAs"],data_dict[player_id]["IPs"], data_dict[player_id]["GSs"], data_dict[player_id]["FIPs"], 
 data_dict[player_id]["E_Fs"],data_dict[player_id]["K_Pers"], data_dict[player_id]["BB_Pers"]])
     print("finish stats pitcher csv",datetime.now().time())
+
+def make_player_full_csv_file(data_dict, filename):
+    '''
+    Makes a csv file for the player from a dictionary
+    '''
+    strfilename = "%s_player_full.csv" % (filename)
+    print("start full csv",datetime.now().time())
+    with open(strfilename, 'w') as csvfile:
+        indexwriter = csv.writer(csvfile)
+        indexwriter.writerow(["player_id","teams","years","positions","name","Playoffs","Playoffs_Won","World_Series","World_Series_Won","years_played",
+"span", "years","WARS_nonpitcher", "AVGs", "OBPs", "SLGs", "UBR_WRC_Years", "UBRs", "WRCs", "WPA_Years", "WPAs", "Clutchs",
+"Pitcher_Years", "WARS_pitcher", "ERAs", "IPs", "GSs", "FIPs", "E_Fs", "K_Pers", "BB_Pers"])
+        for player_id in data_dict.keys():
+            indexwriter.writerow([player_id, data_dict[player_id]["teams"], data_dict[player_id]["years"], data_dict[player_id]["positions"], data_dict[player_id]["name"],data_dict[player_id]["Playoffs"],
+data_dict[player_id]["Playoffs_Won"], data_dict[player_id]["World_Series"], data_dict[player_id]["World_Series_Won"], data_dict[player_id]["years_played"],
+data_dict[player_id]["span"], data_dict[player_id]["WARs_nonpitcher"],
+data_dict[player_id]["AVGs"],data_dict[player_id]["OBPs"], data_dict[player_id]["SLGs"], data_dict[player_id]["UBR_WRC_Years"], 
+data_dict[player_id]["UBRs"],data_dict[player_id]["WRCs"], data_dict[player_id]["WPA_Years"], 
+data_dict[player_id]["WPAs"],data_dict[player_id]["Clutchs"], data_dict[player_id]["Pitcher_Years"], data_dict[player_id]["WARs_pitcher"],
+data_dict[player_id]["ERAs"],data_dict[player_id]["IPs"], data_dict[player_id]["GSs"], data_dict[player_id]["FIPs"], 
+data_dict[player_id]["E_Fs"],data_dict[player_id]["K_Pers"], data_dict[player_id]["BB_Pers"]])
+    print("finish stats full csv",datetime.now().time())
+
 
 def make_br_player_dict():
     '''
@@ -219,6 +255,7 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                 wars_nonpitcher = get_player_info_from_player_value_batters(player_text)
                 player_dict["WARs_nonpitcher"] = wars_nonpitcher
 
+                #print(player_name, year_span[4:])
                 fangraph_stats = get_player_stats_from_fangraphs(player_name,year_span[4:])
                 if fangraph_stats:
                     adv_years = fangraph_stats[0]
@@ -228,21 +265,19 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                     wpa_wpas = fangraph_stats[4]
                     wpa_clutchs = fangraph_stats[5]
 
-                player_dict["UBR_WRC_Years"] = adv_years
-                player_dict["UBRs"] = adv_ubrs
-                player_dict["WRCs"] = adv_wrcs
-                player_dict["WPA_Years"] = wpa_years
-                player_dict["WPAs"] = wpa_wpas
-                player_dict["Clutchs"] = wpa_clutchs
+                    player_dict["UBR_WRC_Years"] = adv_years
+                    player_dict["UBRs"] = adv_ubrs
+                    player_dict["WRCs"] = adv_wrcs
+                    player_dict["WPA_Years"] = wpa_years
+                    player_dict["WPAs"] = wpa_wpas
+                    player_dict["Clutchs"] = wpa_clutchs
                 
 
             elif player_pitching_info:
-               years = player_pitching_info[0]
-               teams = player_pitching_info[1]
-               years_played = player_pitching_info[2]
-               year_span = player_pitching_info[3]
-               player_dict["Pitcher_Years"] = years
-
+                years = player_pitching_info[0]
+                teams = player_pitching_info[1]
+                years_played = player_pitching_info[2]
+                year_span = player_pitching_info[3]
 
             #check all pitcher stats even if they have batting info             
             if "Pitcher" in positions:
@@ -746,14 +781,17 @@ def get_player_info_from_postseason_pitching(player_text):
     return playoffs[1:], playoffs_won[1:], worldseries[1:], worldseries_won[1:]
 
 
-alphabet = ["e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"]
+
+#alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"]
+alphabet = ["a"]
 for letter in alphabet:
     dict_response = make_br_alpha_player_dict(letter)
     str_file = "letter_" + letter
     make_player_employment_csv_file(dict_response, str_file)
     make_player_bio_csv_file(dict_response, str_file)
     make_player_stats_nonpitcher_csv_file(dict_response, str_file)
-    make_player_stats_pitcher_csv_file(dict_response, str_file)         
+    make_player_stats_pitcher_csv_file(dict_response, str_file)
+    make_player_full_csv_file(dict_response, str_file)          
 
         
 end=datetime.now().time()
