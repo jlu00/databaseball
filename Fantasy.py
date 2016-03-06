@@ -17,18 +17,18 @@ Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
             the number of earned runs allowed, normalizing to per game by multiplying
             by 9, and then dividing by number of innings pitched''',
             'BA': '''Batting average: calculated by taking total number of 
-            hits divided by total number of plate appearances'''
+            hits divided by total number of plate appearances''',
             'OBP': '''On Base Percentage: total times reaching base divided by
-            total plate appearances '''
+            total plate appearances ''',
             'wOBA': '''Weighted on Base Average: a formula meant to calculate the
             overall offensive impact of a player. Formula:
             (0.690×uBB + 0.722×HBP + 0.888×1B + 1.271×2B + 1.616×3B +
             2.101×HR) / (AB + BB – IBB + SF + HBP) (HBP = Hit by pitch
             uBB = unintentional Base on Balls, AB = At Bats
-            IBB = Intentional Bases on Balls, SF = Sacrifice Fly'''
-            'WRC+' = '''Weighted Runs Created--kind of like wOBA in which
+            IBB = Intentional Bases on Balls, SF = Sacrifice Fly''',
+            'WRC+': '''Weighted Runs Created--kind of like wOBA in which
             it attempts to quantify runs created, except that this
-            stat normalizes the league average to 100'''
+            stat normalizes the league average to 100''',
             'FIP': '''Fielding Independent Pitching: estimates a pitcher's
             abilities normalized for the defense playing behind him
             Takes into account home runs, walks, strikeouts, and hit by pitch
@@ -39,6 +39,9 @@ Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
 import operator
 import Classes
 import search_code_generator
+import sqlite3
+
+database_filename = 'all_players.db'
 
 def compile_sample_players():
     pos_list = ['C', 'P', '1B', '2B', '3B', 'SS', 'CF', 'LF', 'RF']
@@ -104,13 +107,13 @@ def create_team(prefs_pos, prefs_pitch, params):
     c = db.cursor()
     players = []
     for i in prefs_pos:
-        players = grab_players(i, players)
+        players = grab_players(i, players, False, c)
         #create a list of top x player objects for a certain stat
         #if the player object already exists, make sure to use it instead of creating
         #an entirely new object
         #end result should just be a list of players for whom a certain number of stats is listed
     for i in prefs_pitch:
-        players = grab_players(i, players)
+        players = grab_players(i, players, True, c)
         #add all the pitchers to the list
     db.close()
     for i in players:
@@ -120,11 +123,15 @@ def create_team(prefs_pos, prefs_pitch, params):
     team = select_top_pos(pos)
 
 
-def grab_players(pref, players):
-    query = """SELECT Players.player_name AND Players.years_played AND Players.position AND Stats.? FROM Players
-         JOIN Stats ON Players.player_id = Stats.player_id ORDER BY Stats.? LIMIT 80;"""
+def grab_players(pref, players, pitcher, cursor):
+    if pitcher:
+        query = """SELECT bios.name AND bios.span AND bios.positions AND stats_pitcher.? FROM bios
+             JOIN stats_pitcher ON bios.player_id = stats_pitcher.player_id ORDER BY stats_pitcher.? DESC LIMIT 80;"""
+    else:
+        query = """SELECT bios.name AND bios.span AND bios.positions AND stats_nonpitcher.? FROM bios
+             JOIN stats_nonpitcher ON bios.player_id = stats_nonpitcher.player_id ORDER BY stats_nonpitcher.? DESC LIMIT 80;"""
     params = [pref, pref]
-    r = c.execute(query, params)
+    r = cursor.execute(query, params)
     results_pos = r.fetchall()
     for j in results_pos:
         name = j[0].split()
@@ -155,7 +162,7 @@ def apply_params(players, params):
                 if not player_stays: 
                     players.remove(i)
             if params['playoffs']:
-
+                pass
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
