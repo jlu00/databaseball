@@ -7,6 +7,7 @@ import os
 from findgames import forms
 import traceback
 import sys
+import sqlite3
 
 DATA_DIR = os.path.dirname(__file__)
 DATABASE_FILENAME = os.path.join(DATA_DIR, 'all_games.db')
@@ -111,10 +112,8 @@ def fantasy(request):
 def find_games(args_from_ui):
 	if not args_from_ui:
 		return ([], [])
-	db = sqlite3.connect('regular_season_games.db')
-	print("hi")
+	db = sqlite3.connect('all_games.db')
 	cursor = db.cursor()
-	print("hi")
 	sql_query = create_query(args_from_ui)
 	print(sql_query)
 	args = create_db_arg(args_from_ui)
@@ -132,11 +131,10 @@ def format_results(results, cursor):
 	return header, results_list
 
 def create_query(args_from_ui):
-	print("yo")
 	if not args_from_ui:
 		return([], [])
 	else:
-		sql_query = "SELECT game_date, team1, team2, stadium, ps, team1_runs, team2_runs, team1_hrs, team2_hrs, team1_hits, team2_hits, winner FROM rs"
+		sql_query = "SELECT game_date, team1, team2, stadium, ps, team1_runs, team2_runs, team1_hrs, team2_hrs, team1_hits, team2_hits, winner FROM rs "
 		new_args = {}
 		for key in args_from_ui:
 			if not args_from_ui[key] == "":
