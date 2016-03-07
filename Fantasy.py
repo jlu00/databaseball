@@ -17,18 +17,18 @@ Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
             the number of earned runs allowed, normalizing to per game by multiplying
             by 9, and then dividing by number of innings pitched''',
             'BA': '''Batting average: calculated by taking total number of 
-            hits divided by total number of plate appearances'''
+            hits divided by total number of plate appearances''',
             'OBP': '''On Base Percentage: total times reaching base divided by
-            total plate appearances '''
+            total plate appearances ''',
             'wOBA': '''Weighted on Base Average: a formula meant to calculate the
             overall offensive impact of a player. Formula:
             (0.690×uBB + 0.722×HBP + 0.888×1B + 1.271×2B + 1.616×3B +
             2.101×HR) / (AB + BB – IBB + SF + HBP) (HBP = Hit by pitch
             uBB = unintentional Base on Balls, AB = At Bats
-            IBB = Intentional Bases on Balls, SF = Sacrifice Fly'''
-            'WRC+' = '''Weighted Runs Created--kind of like wOBA in which
+            IBB = Intentional Bases on Balls, SF = Sacrifice Fly''',
+            'WRC+': '''Weighted Runs Created--kind of like wOBA in which
             it attempts to quantify runs created, except that this
-            stat normalizes the league average to 100'''
+            stat normalizes the league average to 100''',
             'FIP': '''Fielding Independent Pitching: estimates a pitcher's
             abilities normalized for the defense playing behind him
             Takes into account home runs, walks, strikeouts, and hit by pitch
@@ -36,38 +36,15 @@ Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
             The constant normalizes FIP to ERA so the two can be compared
             and is usually around 3.10
              '''}
+
 import operator
 import Classes
 import search_code_generator
+import sqlite3
 
-def compile_sample_players():
-    pos_list = ['C', 'P', '1B', '2B', '3B', 'SS', 'CF', 'LF', 'RF']
-    name_list = ['Tommy', 'Dunn', 'Jess', 'Brianna', 'The', 'Poo', 'Baseball']
-    player_list = []
-    for i in range(50):
-        first_name = name_list[((i ** 3) % len(name_list) + 2) % len(name_list)]
-        last_name = name_list[((i ** 5) % len(name_list) + 7) % len(name_list)]
-        position = pos_list[i % len(pos_list)]
-        a = Classes.Players(first_name, last_name, position, (1988, 2014))
-        a.add_war(i // 6)
-        if a.position != 'P':
-            a.add_stats('BA', .322)
-            a.add_stats('OBP', .405)
-        player_list += [a]
-    return player_list
+database_filename = 'all_players.db'
 
-def other():
-    pos_list = ['C', 'P', '1B', '2B', '3B', 'SS', 'CF', 'LF', 'RF']
-    name_list = ['The', 'big', 'brown', 'dog', 'is', 'very', 'nice']
-    player_list = []
-    for i in range(50):
-        first_name = name_list[((i ** 3) % len(name_list) + 2) % len(name_list)]
-        last_name = name_list[((i ** 5) % len(name_list) + 7) % len(name_list)]
-        position = pos_list[(i + 10) % len(pos_list)]
-        a = Classes.Players(first_name, last_name, position, (1988, 2014))
-        a.add_war(i // 4)
-        player_list += [a]
-    return player_list
+
 
 def compute_team_win_percentage(team):
     '''
@@ -102,41 +79,63 @@ def create_team(prefs_pos, prefs_pitch, params):
     '''
     db = sqlite3.connect(database_filename)
     c = db.cursor()
-    players = []
+    players = {}
     for i in prefs_pos:
-        players = grab_players(i, players)
-        #create a list of top x player objects for a certain stat
-        #if the player object already exists, make sure to use it instead of creating
-        #an entirely new object
-        #end result should just be a list of players for whom a certain number of stats is listed
+        players = grab_players(i, players, False, c)
+
     for i in prefs_pitch:
-        players = grab_players(i, players)
-        #add all the pitchers to the list
+        players = grab_players(i, players, True, c)
+
     db.close()
     for i in players:
-        a = compute_power_index(i)
-        i.incr_power_index(a)
+        a = compute_power_index(players[i], prefs_pos, prefs_pitch)
+        players[i].incr_power_index(a)
 
-    team = select_top_pos(pos)
+    team = select_top_pos(players)
+    return team
 
 
-def grab_players(pref, players):
-    query = """SELECT Players.player_name AND Players.years_played AND Players.position AND Stats.? FROM Players
-         JOIN Stats ON Players.player_id = Stats.player_id ORDER BY Stats.? LIMIT 80;"""
-    params = [pref, pref]
-    r = c.execute(query, params)
+def grab_players(pref, players, pitcher, cursor):
+    pref = convert_pref(pref, pitcher)
+    if pitcher:
+        query = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id FROM bios
+             JOIN stats_pitcher ON bios.player_id = stats_pitcher.player_id ORDER BY """ + pref + """ DESC LIMIT 80;"""
+    else:
+        query = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id FROM bios
+             JOIN stats_nonpitcher ON bios.player_id = stats_nonpitcher.player_id WHERE bios.positions != 'Pitcher' ORDER BY """ + pref + """ DESC LIMIT 80;"""
+    r = cursor.execute(query)
     results_pos = r.fetchall()
+    rank = 0
     for j in results_pos:
         name = j[0].split()
-        new_player = Classes.Players(name[0], name[1], j[2])
-        if new_player not in players:
-            new_played.add_years(j[1])
+        pos = j[2]
+        first_pos = j[2]
+        if len(pos.split('|')) > 1:
+            first_pos = pos.split('|')[0]
+            other_pos = pos.split('|')[1]
+        if first_pos == 'Outfielder':
+            first_pos = 'Centerfielder'
+        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner':
+            continue
+        new_player = Classes.Players(name[0], name[1], first_pos, j[4])
+        if new_player.player_id not in players:
+            new_player.add_years(j[1])
             new_player.add_stats(pref, j[3])
-            players += [new_player]
+            new_player.add_rank(pref, rank)
+            players[new_player.player_id] = new_player
         else:
-            a = players.index(new_player)
-            players[a].add_stats(pref, j[3])
+            players[new_player.player_id].add_stats(pref, j[3])
+            players[new_player.player_id].add_rank(pref, rank)
+        rank += 1
+    if not pitcher:
+        print(players)
     return players
+
+def convert_pref(pref, pitcher):
+    if pitcher:
+        return 'stats_pitcher.' + pref
+    else:
+        return 'stats_nonpitcher.' + pref
 
 def apply_params(players, params):
     '''
@@ -155,15 +154,15 @@ def apply_params(players, params):
                 if not player_stays: 
                     players.remove(i)
             if params['playoffs']:
-
+                pass
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
-    for i in player.rankings:
+    for i in player.ranks:
         if i in prefs_pos:
-            power_index += (100 - player.rankings[i]) * (49 - i ** 2)
+            power_index += (100 - player.ranks[i])
         else:
-            power_index += (100 - player.rankings[i]) * (49 - i ** 2)
+            power_index += (100 - player.ranks[i])
     return power_index
 
 def select_top_pos(pos):
@@ -171,17 +170,13 @@ def select_top_pos(pos):
     returns a dictionary 'roster' of the top players
     '''
 
-    sorted_pos = sorted(pos, key = lambda player: player.power_index)
     team = Classes.Teams()
     x = 0
     loop = 0
-    while team.team_size < team.max_size and loop < 4:
-        team.add_player(sorted_pos[x])
-        if x < len(sorted_pos) - 1:
-            x += 1
-        else:
-            x = 0
-            loop += 1
+    print(len(pos))
+    for i in pos:
+        print(pos[i])
+        team.add_player(pos[i])
     return team
 
 
@@ -221,3 +216,4 @@ def go(prefs_pos, prefs_pitch, params):
     team.add_stat('Team OBP', calculate_team_stat(team, 'OBP'))
     team.add_stat('Team ERA', calculate_team_stat(team, 'ERA'))
     team.add_stat('Runs per Game', calculate_per_game_runs(team))
+    return team

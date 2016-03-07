@@ -2,24 +2,24 @@
 <html>
   <head>
     <br/>
-    <title>Search</title>
+    <title>Search Players</title>
     {% load staticfiles %}
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
   </head>
-  <body>
     <div align="center">
       <h1 style="color:black" class="boxed" >Compare any two players.</h1>
+      <a href="{% url 'index' %}">Back to Home</a>
       <br/>
       <br/>
     </div>
+    <form action="/search/" method="get">
     <div align="center">
-      <input type="text" name="q" placeholder="Player 1">
-      <input type="text" name="q" placeholder="Player 2">
+      <input type="text" name="q" placeholder="Player 1" required>   
+      <input type="text" name="q" placeholder="Player 2" padding="50px">
     </div>
     <br/>
     <div align="center">
-      <form action="/search/" method="get">
         <input type="submit" value="Compare">
       </form>
     </div>
