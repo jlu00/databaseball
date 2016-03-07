@@ -9,19 +9,60 @@
   </head>
     <div align="center">
       <h1 style="color:black" class="boxed" >Compare any two players.</h1>
+      <h3> <em> Choose across leagues, teams and eras. </em> </h3>
       <a href="{% url 'index' %}">Back to Home</a>
       <br/>
       <br/>
     </div>
-    <form action="/search/" method="get">
-    <div align="center">
-      <input type="text" name="q" placeholder="Player 1" required>   
-      <input type="text" name="q" placeholder="Player 2" padding="50px">
-    </div>
-    <br/>
-    <div align="center">
-        <input type="submit" value="Compare">
-      </form>
-    </div>
+   <div class="frame" align="center">
+    <h3 align="center"> Player Comparison </h3>
+            <form method="get" name="PlayerForm">
+                {% csrf_token %}
+                {% for field in form1 %}
+                {{ field.label_tag }} {{ field }}
+                {% endfor %}
+                 <input type="submit" value="Compare" />
+                <br/>
+               
+            </form>
+        </div>
+         <br/>
+          <br/>
+        
+        <h3 align="center"> Pitcher Comparison </h3>
+        
+    <div class="frame" align="center">
+            <form method="get" name="PitcherForm">
+                {% csrf_token %}
+                {% for field in form2 %}
+                {{ field.label_tag }} {{ field }}
+                {% endfor %}
+                <input type="submit" value="Compare" />
+                <br/>
+                
+            </form>
+        </div>
+    	
+    <div class="frame">
+            {% if result != None %}
+            <div class="results">
+                <table class="players">
+                    <tr>
+                        {% for col in columns %}
+                        <th>{{ col }}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for entry in result %}
+                    <tr>
+                        {% for col in entry %}
+                        <td align="center">{{ col }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    	
   </body>
 </html>

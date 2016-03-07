@@ -16,9 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from findgames import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^findresults$', views.findresults, name="findresults"),
     url(r'^findgames$', views.findgames, name="findgames"),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/$', views.index),
@@ -26,3 +26,5 @@ urlpatterns = [
     url(r'^fantasy/$', views.fantasy, name="fantasy"),
     url(r'', include('findgames.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

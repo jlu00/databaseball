@@ -1,5 +1,6 @@
 body {
   font-family: "Times New Roman", sans-serif;
+  background-color:lightblue;
   #background: url('images/jbt.jpg');
   #background-size: 100%;
   #background-repeat: repeat-y;
@@ -16,8 +17,10 @@ input {
   position:relative;
   padding:6px 15px;
   left: 0px;
+  right: 2px;
+  margin: 0 8px;
   border:2px solid #207cca;
-  background-color: "white";
+  background-color:white;
   color:#207cca;
   line-height: 2em;
 
@@ -28,4 +31,8 @@ a {
  display: inline-block;
  padding: 0px 20px;
  text-decoration: none;
+}
+
+tr {
+ border-bottom: 1px solid black;
 }

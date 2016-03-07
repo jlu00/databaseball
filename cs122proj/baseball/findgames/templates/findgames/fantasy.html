@@ -13,38 +13,25 @@
       <br/>
       <br/>
       <h3 style="color:black">Choose and rank your top five stats to create a fantasy team
-      	and see how they do.</h3>
+      	and see how it does.</h3>
     </div>
     <div align="center">
 <div class="frame">
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
-                <table class="form">
+                
                 {% for field in form %}
                 	{{ field.label_tag }}
                 	{{ field }} 
                 	<br/>
                 {% endfor %}
-                </table>
+           
                 <br/>
                 <br/>
                 <br/>
                 <input type="submit" value="Create" />
             </form>
         </div>
-
-        {% if args %}
-        <div class="args">
-            <pre>{{ args }}</pre>
-        </div>
-        {% endif %}
-
-        {% if err %}
-        <div class="error">
-            {{ err|safe }}
-        </div>
-        {% endif %}
-
 
 
         <div class="frame">
