@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html5>
 <html>
   <head>
@@ -8,31 +10,58 @@
   <body>
     <div align="center">
       <h1>Find a game with any stat.</h1>
+      <h5> <em> Enter in as few or as many fields as you want. </em> </h5>
+      <a href="{% url 'index' %}">Back to Home</a>
       {% load staticfiles %}
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
       <br/>
     </div>
-    <div align="center">
-        <input type="text" name="q" placeholder="Year Start" size="10">
-    <input type="text" name="q" placeholder="Year End" size="10">
-    <input type="text" name="q" placeholder="Team 1">
-    <input type="text" name="q" placeholder="Team 2">
-    <input type="text" name="q" placeholder="Winner">
+     <div class="frame" align="center">
+            <form method="get" name="FantasyForm">
+                {% csrf_token %}
+                <table class="form">
+                {{ form.as_table }}
+                </table>
+                <br/>
+                <br/>
+                <input type="submit" value="Search" />
+            </form>
+        </div>
+    
+    {% if args  %}
+    <div class="args">
+    	<pre>{{ args }} </pre>
     </div>
-    <br/>
-    <div align="center">
-    <input type="text" name="q" placeholder="Hits" size="4">
-    <input type="text" name="q" placeholder="Runs" size="4">
-    <input type="text" name="q" placeholder="Home runs" size="10">
+    {% endif %}
+    
+    {% if err %}
+    <div class="error">
+    	{{ err|safe }}
+    	
     </div>
-    <br/>
-    <br/>
-    <br/>
-    <div align="center">
-      <form action="/search/" method="get">
-          <input type="submit" value="Search" background-color="white">
-      </form>
-    </div>
+    {% endif %}
+    <div class="frame">
+            {% if result != None %}
+            <div class="results">
+                <table class="courses">
+                    <tr>
+                        {% for col in columns %}
+                        <th>{{ col }}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for entry in result %}
+                    <tr>
+                        {% for col in entry %}
+                        <td>{{ col }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <p class="num_results">Results: {{ num_results }}</p>
+            {% endif %}
+        </div>
+    	
   </body>
 </html>

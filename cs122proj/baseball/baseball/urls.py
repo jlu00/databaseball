@@ -18,9 +18,11 @@ from django.contrib import admin
 from findgames import views
 
 urlpatterns = [
-    url(r'', include('findgames.urls')),
+    url(r'^findresults$', views.findresults, name="findresults"),
+    url(r'^findgames$', views.findgames, name="findgames"),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^findgames/$', views.findgames),
-    url(r'^players/$', views.players),
-    url(r'^fantasy/$', views.fantasy),
+    url(r'^index/$', views.index),
+    url(r'^players/$', views.players, name="players"),
+    url(r'^fantasy/$', views.fantasy, name="fantasy"),
+    url(r'', include('findgames.urls')),
 ]

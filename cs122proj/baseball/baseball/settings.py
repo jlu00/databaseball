@@ -75,11 +75,20 @@ WSGI_APPLICATION = 'baseball.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+
 DATABASES = {
     'default': {
+    	'ENGINE': 'django.db.backends.sqlite3',
+    	'NAME': os.path.join(PROJECT_DIR, 'regular_season_games.db')},
+    'findgames': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'NAME': os.path.join(PROJECT_DIR, 'regular_season_games.db'),
+    },
+    'all_players': {
+    	'ENGINE': 'django.db.backends.sqlite3',
+    	'NAME': os.path.join(PROJECT_DIR, 'all_players.db'),
+}
 }
 
 
@@ -87,7 +96,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
+	{
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {

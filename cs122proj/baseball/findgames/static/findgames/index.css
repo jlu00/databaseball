@@ -1,0 +1,29 @@
+body {
+  font-family: "Times New Roman", sans-serif;
+  background: url('images/baseball.jpg');
+  background-size: 100%;
+  background-repeat: repeat-y;
+  color: white;
+}
+
+h1 {
+  font-size: 60pt;
+
+}
+a {
+ color: white;
+ font-size: 25pt;
+ text-align: center;
+ display: inline-block;
+ padding: 0px 20px;
+ text-decoration: none;
+}
+
+a:hover {
+  background-color: skyblue;
+}
+
+p {
+  line-height: 5px;
+
+}
