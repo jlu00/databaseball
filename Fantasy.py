@@ -36,6 +36,7 @@ Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
             The constant normalizes FIP to ERA so the two can be compared
             and is usually around 3.10
              '''}
+
 import operator
 import Classes
 import search_code_generator
@@ -117,33 +118,55 @@ def create_team(prefs_pos, prefs_pitch, params):
         #add all the pitchers to the list
     db.close()
     for i in players:
-        a = compute_power_index(i)
+        a = compute_power_index(i, prefs_pos, prefs_pitch)
         i.incr_power_index(a)
 
-    team = select_top_pos(pos)
+    team = select_top_pos(players)
+    return team
 
 
 def grab_players(pref, players, pitcher, cursor):
+    pref = convert_pref(pref, pitcher)
     if pitcher:
-        query = """SELECT bios.name AND bios.span AND bios.positions AND stats_pitcher.? FROM bios
-             JOIN stats_pitcher ON bios.player_id = stats_pitcher.player_id ORDER BY stats_pitcher.? DESC LIMIT 80;"""
+        query = """SELECT bios.name, bios.span, bios.positions, ? FROM bios
+             JOIN stats_pitcher ON bios.player_id = stats_pitcher.player_id ORDER BY ? DESC LIMIT 80;"""
     else:
-        query = """SELECT bios.name AND bios.span AND bios.positions AND stats_nonpitcher.? FROM bios
-             JOIN stats_nonpitcher ON bios.player_id = stats_nonpitcher.player_id ORDER BY stats_nonpitcher.? DESC LIMIT 80;"""
+        query = """SELECT bios.name, bios.span, bios.positions, ? FROM bios
+             JOIN stats_nonpitcher ON bios.player_id = stats_nonpitcher.player_id ORDER BY ? DESC LIMIT 80;"""
     params = [pref, pref]
     r = cursor.execute(query, params)
     results_pos = r.fetchall()
+    rank = 0
     for j in results_pos:
         name = j[0].split()
-        new_player = Classes.Players(name[0], name[1], j[2])
+        pos = j[2]
+        first_pos = j[2]
+        if len(pos.split('|')) > 1:
+            first_pos = pos.split('|')[0]
+            other_pos = pos.split('|')[1]
+        if first_pos == 'Outfielder':
+            first_pos = 'Centerfielder'
+        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner':
+            continue
+        print(pref, j[3])
+        new_player = Classes.Players(name[0], name[1], first_pos)
         if new_player not in players:
-            new_played.add_years(j[1])
+            new_player.add_years(j[1])
             new_player.add_stats(pref, j[3])
+            new_player.add_rank(pref, rank)
             players += [new_player]
         else:
             a = players.index(new_player)
             players[a].add_stats(pref, j[3])
+            players[a].add_rank(pref, rank)
+        rank += 1
     return players
+
+def convert_pref(pref, pitcher):
+    if pitcher:
+        return 'stats_pitcher.' + pref
+    else:
+        return 'stats_nonpitcher.' + pref
 
 def apply_params(players, params):
     '''
@@ -166,11 +189,11 @@ def apply_params(players, params):
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
-    for i in player.rankings:
+    for i in player.ranks:
         if i in prefs_pos:
-            power_index += (100 - player.rankings[i]) * (49 - i ** 2)
+            power_index += (100 - player.ranks[i] ** 2)
         else:
-            power_index += (100 - player.rankings[i]) * (49 - i ** 2)
+            power_index += (100 - player.ranks[i] ** 2)
     return power_index
 
 def select_top_pos(pos):

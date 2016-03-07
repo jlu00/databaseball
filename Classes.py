@@ -39,31 +39,36 @@ class Players:
 class Teams:
 
     def __init__(self):
-        self.roster = {'C': [], '1B': [], '2B': [], '3B': [], 'SS': [], 'LF': [], 'CF': [], 'RF': [], 'P': []}
+        self.roster = {'Catcher': [], 'First Baseman': [], 'Second Baseman': 
+        [], 'Designated Hitter': [], 'Third Baseman': [], 'Shortstop': [], 'Leftfielder': [], 'Centerfielder': [], 'Rightfielder': [], 'Pitcher': []}
         self.pos_filled = 0
         self.team_size = 0
         self.max_size = 25
         self.pitchers_needed = 8
         self.team_war = 0
         self.team_stats = {}
+        self.total_pos = 10
 
     def add_player(self, player):
         '''
         player is a Player object
         '''
         if self.team_size < self.max_size:
-            if player.position != 'P':
-                if (self.pitchers_needed - len(self.roster['P'])) < (self.max_size - self.team_size):
+            if player.position != 'Pitcher':
+                if (self.pitchers_needed - len(self.roster['Pitcher'])) < (self.max_size - self.team_size):
                     if not self.roster[player.position]:
                         self.pos_filled += 1
-                    self.roster[player.position] += [player]
-                    self.team_size += 1
-                    self.team_war += player.war
+                    if len(self.roster[player.position]) == 2 and self.pos_filled < self.total_pos:
+                        pass
+                    else:
+                        self.roster[player.position] += [player]
+                        self.team_size += 1
+                        self.team_war += player.war
             else:
-                if not self.roster['P']:
+                if not self.roster['Pitcher']:
                     self.pos_filled += 1
-                if len(self.roster['P']) < self.pitchers_needed:
-                    self.roster['P'] += [player]
+                if len(self.roster['Pitcher']) < self.pitchers_needed:
+                    self.roster['Pitcher'] += [player]
                     self.team_size += 1
 
     def add_stat(self, statname, value):
