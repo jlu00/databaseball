@@ -3,10 +3,11 @@
 
 class Players:
 
-    def __init__(self, namefirst, namelast, position):
+    def __init__(self, namefirst, namelast, position, player_id):
         self.firstname = namefirst
         self.lastname = namelast
         self.position = position
+        self.player_id = player_id
         self.years_played = None
         self.stats = {}
         self.ranks = {}
@@ -53,24 +54,45 @@ class Teams:
         '''
         player is a Player object
         '''
-        if self.team_size < self.max_size:
-            if player.position != 'Pitcher':
-                if (self.pitchers_needed - len(self.roster['Pitcher'])) < (self.max_size - self.team_size):
-                    if not self.roster[player.position]:
-                        self.pos_filled += 1
-                    if len(self.roster[player.position]) == 2 and self.pos_filled < self.total_pos:
-                        pass
-                    else:
+        if player.position != 'Pitcher':
+            if self.team_size < self.max_size:
+                if len(self.roster[player.position]) == 0:
+                    self.roster[player.position] += [player]
+                    self.team_size += 1
+                    self.pos_filled += 1
+                else:
+                    if self.is_safe_to_add(player):
                         self.roster[player.position] += [player]
                         self.team_size += 1
-                        self.team_war += player.war
+                    else:
+                        self.look_for_player_to_replace(player, len(self.roster[player.position]) == 2)
             else:
-                if not self.roster['Pitcher']:
-                    self.pos_filled += 1
-                if len(self.roster['Pitcher']) < self.pitchers_needed:
-                    self.roster['Pitcher'] += [player]
-                    self.team_size += 1
+                self.look_for_player_to_replace(player, len(self.roster[player.position]) == 2)
+        else:
+            if not self.roster['Pitcher']:
+                self.pos_filled += 1
+            if len(self.roster['Pitcher']) < self.pitchers_needed:
+                self.roster['Pitcher'] += [player]
+                self.team_size += 1
+            
 
+    def is_safe_to_add(self, player):
+        return self.total_pos - self.pos_filled != self.max_size - self.team_size and len(self.roster[player.position]) < 2
+
+    def look_for_player_to_replace(self, player, stay_within_pos):
+        if not stay_within_pos:
+            for position in self.roster:
+                if len(self.roster[position]) > 1:
+                    for dude in self.roster[position]:
+                        if player.power_index > dude.power_index:
+                            self.roster[position].remove(dude)
+                            self.roster[player.position].append(player)
+                            pass
+        else:
+            for dude in self.roster[player.position]:
+                if player.power_index > dude.power_index:
+                    self.roster[player.position].remove(dude)
+                    self.roster[player.position].append(player)
     def add_stat(self, statname, value):
         self.team_stats[statname] = value
 
@@ -81,14 +103,3 @@ class Teams:
             for j in self.roster[i]:
                 str_var += j.firstname + ' ' + j.lastname + ' \n'
         return str_var
-
-class PlayerContainer:
-
-    def __init__(self):
-        self.num_players = 0
-        self.roster = {'C': [], '1B': [], '2B': [], '3B': [], 'SS': [], 'LF': [], 'CF': [], 'RF': [], 'P': []}
-
-    def add_player(self, player):
-        self.roster[player.position] += [player]
-        self.num_players += 1
-
