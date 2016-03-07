@@ -80,10 +80,10 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASES = {
     'default': {
     	'ENGINE': 'django.db.backends.sqlite3',
-    	'NAME': os.path.join(PROJECT_DIR, 'regular_season_games.db')},
+    	'NAME': os.path.join(PROJECT_DIR, 'all_games.db')},
     'findgames': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_DIR, 'regular_season_games.db'),
+        'NAME': os.path.join(PROJECT_DIR, 'all_games.db'),
     },
     'all_players': {
     	'ENGINE': 'django.db.backends.sqlite3',
@@ -129,3 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR, "static")
+	]
