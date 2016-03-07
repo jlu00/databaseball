@@ -87,26 +87,31 @@ def create_team(prefs_pos, prefs_pitch, params):
         players = grab_players(i, players, True, c)
 
     db.close()
+    players = apply_params(players, params)
     for i in players:
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
+
 
     team = select_top_pos(players)
     return team
 
 
 def grab_players(pref, players, pitcher, cursor):
-    pref = convert_pref(pref, pitcher)
+    new_pref = convert_pref(pref, pitcher)
     if pitcher:
-        query = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id FROM bios
-             JOIN stats_pitcher ON bios.player_id = stats_pitcher.player_id ORDER BY """ + pref + """ DESC LIMIT 80;"""
+        query = """SELECT bios.name, bios.span, bios.positions, """ + new_pref + """, bios.player_id FROM bios
+             JOIN pitcher ON bios.player_id = pitcher.player_id WHERE(bios.years_played > 2 AND """ + pref + """ != '') ORDER BY """ + pref + """ DESC LIMIT 80;"""
     else:
-        query = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id FROM bios
-             JOIN stats_nonpitcher ON bios.player_id = stats_nonpitcher.player_id WHERE bios.positions != 'Pitcher' ORDER BY """ + pref + """ DESC LIMIT 80;"""
+        query = """SELECT bios.name, bios.span, bios.positions, """ + new_pref + """, bios.player_id FROM bios
+             JOIN nonpitcher ON bios.player_id = nonpitcher.player_id WHERE (bios.positions != 'Pitcher' AND bios.years_played > 2 AND  """ + pref + """ != '') ORDER BY """ + pref + """ DESC LIMIT 80;"""
     r = cursor.execute(query)
     results_pos = r.fetchall()
     rank = 0
     for j in results_pos:
+        if 'name' in j:
+            continue
+        print(j[0])
         name = j[0].split()
         pos = j[2]
         first_pos = j[2]
@@ -119,7 +124,8 @@ def grab_players(pref, players, pitcher, cursor):
             continue
         new_player = Classes.Players(name[0], name[1], first_pos, j[4])
         if new_player.player_id not in players:
-            new_player.add_years(j[1])
+            years = j[1].split('-')
+            new_player.add_years(years)
             new_player.add_stats(pref, j[3])
             new_player.add_rank(pref, rank)
             players[new_player.player_id] = new_player
@@ -127,15 +133,13 @@ def grab_players(pref, players, pitcher, cursor):
             players[new_player.player_id].add_stats(pref, j[3])
             players[new_player.player_id].add_rank(pref, rank)
         rank += 1
-    if not pitcher:
-        print(players)
     return players
 
 def convert_pref(pref, pitcher):
     if pitcher:
-        return 'stats_pitcher.' + pref
+        return 'pitcher.' + pref
     else:
-        return 'stats_nonpitcher.' + pref
+        return 'nonpitcher.' + pref
 
 def apply_params(players, params):
     '''
@@ -144,39 +148,37 @@ def apply_params(players, params):
     'Playoffs': True
     'All Star': False
     '''
-
-    if params['years'] or params['Playoffs'] or params['All Star']:
+    new_players = {}
+    if len(params['years']) > 0:
         for i in players:
+            print(int(players[i].years_played[0]), int(players[i].years_played[1]))
             if params['years']:
-                player_stays = ((i.years_played[0] > params['years'][0] and 
-                    i.years_played[0] < params['years'][1]) or (i.years_played[1] 
-                    > params['years'][0] and i.years_played[1] < params['years'][1]))
-                if not player_stays: 
-                    players.remove(i)
-            if params['playoffs']:
+                player_stays = ((int(players[i].years_played[0]) > params['years'][0] and 
+                    int(players[i].years_played[0]) < params['years'][1]) or (int(players[i].years_played[1]) 
+                    > params['years'][0] and int(players[i].years_played[1]) < params['years'][1]))
+                if  player_stays: 
+                    new_players[i] = players[i]
+            if params['Playoffs']:
                 pass
+    return new_players
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.ranks:
         if i in prefs_pos:
-            power_index += (100 - player.ranks[i])
+            power_index += (100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i)) ** 2
         else:
-            power_index += (100 - player.ranks[i])
+            power_index += (100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i)) ** 2
     return power_index
 
-def select_top_pos(pos):
+def select_top_pos(players):
     '''
     returns a dictionary 'roster' of the top players
     '''
 
     team = Classes.Teams()
-    x = 0
-    loop = 0
-    print(len(pos))
-    for i in pos:
-        print(pos[i])
-        team.add_player(pos[i])
+    for i in players:
+        team.add_player(players[i])
     return team
 
 
@@ -194,15 +196,18 @@ def calculate_team_stat(team, stat):
             if stat in player.stats:
                 rv += player.stats[stat]
                 counter += 1
-    return rv / counter
+    if counter != 0:
+        return rv / counter
+    else:
+        return None
 
 def calculate_pergame_runs(team):
     '''
     '''
     runs = 0
     for position in team.roster:
-        if position != 'P':
-            for player in position:
+        if position != 'Pitcher':
+            for player in team.roster[position]:
                 runs += player.war
     return runs * 10 / 162
 
@@ -212,8 +217,9 @@ def go(prefs_pos, prefs_pitch, params):
     '''
     team = create_team(prefs_pos, prefs_pitch, params)
     team.add_stat('Win Percentage', compute_wins(team.team_war))
-    team.add_stat('Team Batting Average', calculate_team_stat(team, 'BA'))
-    team.add_stat('Team OBP', calculate_team_stat(team, 'OBP'))
-    team.add_stat('Team ERA', calculate_team_stat(team, 'ERA'))
-    team.add_stat('Runs per Game', calculate_per_game_runs(team))
+    team.add_stat('Team Batting Average', calculate_team_stat(team, 'AVGs'))
+    team.add_stat('Team OBP', calculate_team_stat(team, 'OBPs'))
+    team.add_stat('Team ERA', calculate_team_stat(team, 'ERAs'))
+    team.add_stat('Runs per Game', calculate_pergame_runs(team))
+    team.add_stat('Team Slugging', calculate_team_stat(team, 'SLGs'))
     return team

@@ -55,44 +55,37 @@ class Teams:
         player is a Player object
         '''
         if player.position != 'Pitcher':
-            if self.team_size < self.max_size:
-                if len(self.roster[player.position]) == 0:
-                    self.roster[player.position] += [player]
-                    self.team_size += 1
-                    self.pos_filled += 1
-                else:
-                    if self.is_safe_to_add(player):
-                        self.roster[player.position] += [player]
-                        self.team_size += 1
-                    else:
-                        self.look_for_player_to_replace(player, len(self.roster[player.position]) == 2)
-            else:
-                self.look_for_player_to_replace(player, len(self.roster[player.position]) == 2)
-        else:
-            if not self.roster['Pitcher']:
+            if len(self.roster[player.position]) == 0:
+                self.roster[player.position] += [player]
+                self.team_size += 1
                 self.pos_filled += 1
-            if len(self.roster['Pitcher']) < self.pitchers_needed:
+            elif len(self.roster[player.position]) < 2:
+                self.roster[player.position] += [player]
+                self.team_size += 1
+            else:
+                self.look_for_player_to_replace(player)
+        else:
+            if len(self.roster['Pitcher']) == 0:
                 self.roster['Pitcher'] += [player]
                 self.team_size += 1
+                self.pos_filled += 1
+            elif len(self.roster['Pitcher']) < self.pitchers_needed:
+                self.roster['Pitcher'] += [player]
+                self.team_size += 1
+            else:
+                self.look_for_player_to_replace(player)
             
 
     def is_safe_to_add(self, player):
-        return self.total_pos - self.pos_filled != self.max_size - self.team_size and len(self.roster[player.position]) < 2
+        return (self.total_pos - self.pos_filled != self.max_size - self.team_size) and (len(self.roster[player.position]) < 2)
 
-    def look_for_player_to_replace(self, player, stay_within_pos):
-        if not stay_within_pos:
-            for position in self.roster:
-                if len(self.roster[position]) > 1:
-                    for dude in self.roster[position]:
-                        if player.power_index > dude.power_index:
-                            self.roster[position].remove(dude)
-                            self.roster[player.position].append(player)
-                            pass
-        else:
-            for dude in self.roster[player.position]:
-                if player.power_index > dude.power_index:
-                    self.roster[player.position].remove(dude)
-                    self.roster[player.position].append(player)
+    def look_for_player_to_replace(self, player):
+        for dude in self.roster[player.position]:
+            if player.power_index > dude.power_index:
+                self.roster[player.position].remove(dude)
+                self.roster[player.position].append(player)
+                break
+
     def add_stat(self, statname, value):
         self.team_stats[statname] = value
 
