@@ -67,7 +67,7 @@ def create_team(prefs_pos, prefs_pitch, params):
         # print(len(players))
 
     db.close()
-    players = apply_params(players, params)
+    # players = apply_params(players, params)
     for i in players:
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
@@ -81,6 +81,7 @@ def grab_players(pref, players, pitcher, cursor, params):
     query = construct_query(new_pref, pitcher, params)
     # print(query)
     r = cursor.execute(query)
+    print(query)
     results_pos = r.fetchall()
     rank = 0
     for j in results_pos:
@@ -143,6 +144,8 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
+        if params['years']:
+            where_statement += "AND (employment.years like " + str(params['years'][0]) + " OR employment.years like " + str(params['years'][1]) + ") "
 
             
 
@@ -168,6 +171,8 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND nonpitcher.OBPs < .55 "
         elif pref == "nonpitcher.SLGs":
             where_statement += "AND nonpitcher.SLGs < .8"
+        if params['years']:
+            where_statement += "AND (employment.years like " + str(params['years'][0]) + " OR employment.years like " + str(params['years'][1]) + ") "
     query = select_statement + from_statement + on_statement + where_statement + order_by_statement
     return query
 
