@@ -34,7 +34,7 @@ class Players:
         self.power_index += num
 
     def __repr__(self):
-        str_var = '{} {} -- {}: {}'.format(self.firstname, self.lastname, self.position, self.power_index)
+        str_var = '{} {}'.format(self.firstname, self.lastname)
         return str_var
 
 class Teams:
@@ -57,20 +57,24 @@ class Teams:
         if player.position != 'Pitcher':
             if len(self.roster[player.position]) == 0:
                 self.roster[player.position] += [player]
+                self.team_war += player.war
                 self.team_size += 1
                 self.pos_filled += 1
             elif len(self.roster[player.position]) < 2:
                 self.roster[player.position] += [player]
+                self.team_war += player.war
                 self.team_size += 1
             else:
                 self.look_for_player_to_replace(player)
         else:
             if len(self.roster['Pitcher']) == 0:
                 self.roster['Pitcher'] += [player]
+                self.team_war += player.war
                 self.team_size += 1
                 self.pos_filled += 1
             elif len(self.roster['Pitcher']) < self.pitchers_needed:
                 self.roster['Pitcher'] += [player]
+                self.team_war += player.war
                 self.team_size += 1
             else:
                 self.look_for_player_to_replace(player)
@@ -83,7 +87,9 @@ class Teams:
         for dude in self.roster[player.position]:
             if player.power_index > dude.power_index:
                 self.roster[player.position].remove(dude)
+                self.team_war -= dude.war
                 self.roster[player.position].append(player)
+                self.team_war += player.war
                 break
 
     def add_stat(self, statname, value):
@@ -92,7 +98,7 @@ class Teams:
     def __repr__(self):
         str_var = ''
         for i in self.roster:
-            str_var += i + ': '
+            str_var +='\n' + i + ': \n'
             for j in self.roster[i]:
-                str_var += j.firstname + ' ' + j.lastname + ' \n'
+                str_var += '    ' + str(j) + ' \n'
         return str_var
