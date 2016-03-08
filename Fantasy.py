@@ -81,10 +81,12 @@ def create_team(prefs_pos, prefs_pitch, params):
     c = db.cursor()
     players = {}
     for i in prefs_pos:
-        players = grab_players(i, players, False, c)
+        players = grab_players(i, players, False, c, params)
+        print(len(players))
 
     for i in prefs_pitch:
-        players = grab_players(i, players, True, c)
+        players = grab_players(i, players, True, c, params)
+        print(len(players))
 
     db.close()
     players = apply_params(players, params)
@@ -97,21 +99,16 @@ def create_team(prefs_pos, prefs_pitch, params):
     return team
 
 
-def grab_players(pref, players, pitcher, cursor):
+def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
-    if pitcher:
-        query = """SELECT bios.name, bios.span, bios.positions, """ + new_pref + """, bios.player_id FROM bios
-             JOIN pitcher ON bios.player_id = pitcher.player_id WHERE(bios.years_played > 2 AND """ + pref + """ != '') ORDER BY """ + pref + """ DESC LIMIT 80;"""
-    else:
-        query = """SELECT bios.name, bios.span, bios.positions, """ + new_pref + """, bios.player_id FROM bios
-             JOIN nonpitcher ON bios.player_id = nonpitcher.player_id WHERE (bios.positions != 'Pitcher' AND bios.years_played > 2 AND  """ + pref + """ != '') ORDER BY """ + pref + """ DESC LIMIT 80;"""
+    query = construct_query(new_pref, pitcher, params)
+    print(query)
     r = cursor.execute(query)
     results_pos = r.fetchall()
     rank = 0
     for j in results_pos:
         if 'name' in j:
             continue
-        print(j[0])
         name = j[0].split()
         pos = j[2]
         first_pos = j[2]
@@ -141,6 +138,49 @@ def convert_pref(pref, pitcher):
     else:
         return 'nonpitcher.' + pref
 
+def construct_query(pref, pitcher, params):
+    '''
+    Structure of Params:
+    {'date': (1975, 2015), 'Playoffs': True,
+    'Name': 'Bob', 'Team': 'Kansas City Royals'}
+    '''
+    if pitcher:
+        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id """ 
+        from_statement = "FROM bios JOIN pitcher "
+        on_statement = 'ON bios.player_id = pitcher.player_id '
+        where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
+        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+        if params['Team']:
+            from_statement += 'JOIN employment '
+            on_statement = 'ON (bios.player_id = pitcher.player_id AND bios.player_id = employment.player_id) '
+            where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
+        if params['Playoffs']:
+            where_statement += "AND bios.Playoffs != '' "
+        if params['World Series']:
+            where_statement += "AND bios.World_Series != '' "
+        if params['Name']:
+            where_statement += "AND bios.name like '%" + params['Name'] + "%' "
+            
+
+    else:
+        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id """ 
+        from_statement = "FROM bios JOIN nonpitcher "
+        on_statement = 'ON bios.player_id = nonpitcher.player_id '
+        where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
+        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+        if params['Team']:
+            from_statement += 'JOIN employment '
+            on_statement = 'ON (bios.player_id = nonpitcher.player_id AND bios.player_id = employment.player_id) '
+            where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
+        if params['Playoffs']:
+            where_statement += "AND bios.Playoffs != '' "
+        if params['World Series']:
+            where_statement += "AND bios.World_Series != '' "
+        if params['Name']:
+            where_statement += "AND bios.name like '%" + params['Name'] + "%' "
+    query = select_statement + from_statement + on_statement + where_statement + order_by_statement
+    return query
+
 def apply_params(players, params):
     '''
     Sample Params:
@@ -151,7 +191,6 @@ def apply_params(players, params):
     new_players = {}
     if len(params['years']) > 0:
         for i in players:
-            print(int(players[i].years_played[0]), int(players[i].years_played[1]))
             if params['years']:
                 player_stays = ((int(players[i].years_played[0]) > params['years'][0] and 
                     int(players[i].years_played[0]) < params['years'][1]) or (int(players[i].years_played[1]) 
@@ -166,9 +205,9 @@ def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.ranks:
         if i in prefs_pos:
-            power_index += (100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i)) ** 2
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) ** (1 / (prefs_pos.index(i)+ 1))
         else:
-            power_index += (100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i)) ** 2
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) ** (1 / (prefs_pitch.index(i) + 1))
     return power_index
 
 def select_top_pos(players):
