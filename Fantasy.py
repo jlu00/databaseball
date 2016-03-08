@@ -37,38 +37,16 @@ Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
             and is usually around 3.10
              '''}
 
+# CALCULATION_TYPE_DICT = {'IPs': 'Average', GS}
+
 import operator
 import Classes
 import search_code_generator
 import sqlite3
 
-database_filename = 'all_players.db'
+DATABASE_FILENAME = 'all_players.db'
 
 
-
-def compute_team_win_percentage(team):
-    '''
-    Computes the expected win percentage for a team of players created by the user
-    Based on wins above replacement which is then converted into pythagorean wins
-    '''
-    WARs = {}
-    for i in teams:
-        WARS[i] = 0
-        for j in teams[i]:
-            years = compute_years_played(i)
-            WARS[i] += grab_stat(j, ["WAR"], [years])
-
-def compute_wins(WAR):
-    '''
-    According to baseballreference.com, a zero-WAR team would be expected
-    to win 32 percent of its games
-    '''
-    zero_win_constant = .320
-    games = 162
-    total_wins = zero_win_constant * games + WAR
-    win_percentage = total_wins / games
-    return win_percentage
-            
 def create_team(prefs_pos, prefs_pitch, params):
 
     '''
@@ -77,23 +55,22 @@ def create_team(prefs_pos, prefs_pitch, params):
     Sample params:
     {'date': (1980, 2015), 'playoffs': True, 'all_star': True, 'current_player': False}
     '''
-    db = sqlite3.connect(database_filename)
+    db = sqlite3.connect(DATABASE_FILENAME)
     c = db.cursor()
     players = {}
     for i in prefs_pos:
         players = grab_players(i, players, False, c, params)
-        print(len(players))
+        # print(len(players))
 
     for i in prefs_pitch:
         players = grab_players(i, players, True, c, params)
-        print(len(players))
+        # print(len(players))
 
     db.close()
     players = apply_params(players, params)
     for i in players:
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
-
 
     team = select_top_pos(players)
     return team
@@ -102,7 +79,7 @@ def create_team(prefs_pos, prefs_pitch, params):
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
     query = construct_query(new_pref, pitcher, params)
-    print(query)
+    # print(query)
     r = cursor.execute(query)
     results_pos = r.fetchall()
     rank = 0
@@ -125,6 +102,7 @@ def grab_players(pref, players, pitcher, cursor, params):
             new_player.add_years(years)
             new_player.add_stats(pref, j[3])
             new_player.add_rank(pref, rank)
+            new_player.add_war(j[5])
             players[new_player.player_id] = new_player
         else:
             players[new_player.player_id].add_stats(pref, j[3])
@@ -132,11 +110,13 @@ def grab_players(pref, players, pitcher, cursor, params):
         rank += 1
     return players
 
+
 def convert_pref(pref, pitcher):
     if pitcher:
         return 'pitcher.' + pref
     else:
         return 'nonpitcher.' + pref
+
 
 def construct_query(pref, pitcher, params):
     '''
@@ -145,11 +125,14 @@ def construct_query(pref, pitcher, params):
     'Name': 'Bob', 'Team': 'Kansas City Royals'}
     '''
     if pitcher:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id """ 
+        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, pitcher.WARs_pitcher """ 
         from_statement = "FROM bios JOIN pitcher "
         on_statement = 'ON bios.player_id = pitcher.player_id '
-        where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
-        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+        where_statement = "WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND " + pref + " != '' "
+        if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
+            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 80;"
+        else:
+            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
         if params['Team']:
             from_statement += 'JOIN employment '
             on_statement = 'ON (bios.player_id = pitcher.player_id AND bios.player_id = employment.player_id) '
@@ -160,10 +143,11 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
+
             
 
     else:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id """ 
+        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, nonpitcher.WARs_nonpitcher """ 
         from_statement = "FROM bios JOIN nonpitcher "
         on_statement = 'ON bios.player_id = nonpitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
@@ -178,15 +162,24 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
+        if pref == 'nonpitcher.AVGs':
+            where_statement += "AND nonpitcher.AVGs < .4 "
+        elif pref == 'nonpitcher.OBPs':
+            where_statement += "AND nonpitcher.OBPs < .55 "
+        elif pref == "nonpitcher.SLGs":
+            where_statement += "AND nonpitcher.SLGs < .8"
     query = select_statement + from_statement + on_statement + where_statement + order_by_statement
     return query
+
 
 def apply_params(players, params):
     '''
     Sample Params:
-    'Years': (1988, 2000)
-    'Playoffs': True
-    'All Star': False
+    '{Years': (1988, 2000),
+    'Playoffs': True,
+    'World Series': True,
+    'Name': 'Tom',
+    'Team': 'Chicago Cubs'}
     '''
     new_players = {}
     if len(params['years']) > 0:
@@ -201,6 +194,7 @@ def apply_params(players, params):
                 pass
     return new_players
 
+
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.ranks:
@@ -209,6 +203,7 @@ def compute_power_index(player, prefs_pos, prefs_pitch):
         else:
             power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) ** (1 / (prefs_pitch.index(i) + 1))
     return power_index
+
 
 def select_top_pos(players):
     '''
@@ -221,11 +216,11 @@ def select_top_pos(players):
     return team
 
 
-
 def compare_teams(teams, stats):
     for i in stats:
         for j in teams:
             calculate_team_stat(j, i)
+
 
 def calculate_team_stat(team, stat):
     rv = 0
@@ -236,9 +231,10 @@ def calculate_team_stat(team, stat):
                 rv += player.stats[stat]
                 counter += 1
     if counter != 0:
-        return rv / counter
+        return round(rv / counter,3)
     else:
         return None
+
 
 def calculate_pergame_runs(team):
     '''
@@ -248,17 +244,42 @@ def calculate_pergame_runs(team):
         if position != 'Pitcher':
             for player in team.roster[position]:
                 runs += player.war
-    return runs * 10 / 162
+    runs = runs * 10 / 162
+    return round(runs, 2)
 
+
+def compute_wins(WAR):
+    '''
+    According to baseballreference.com, a zero-WAR team would be expected
+    to win 32 percent of its games
+    '''
+    zero_win_constant = .320
+    games = 162
+    total_wins = zero_win_constant * games + WAR
+    win_rate = total_wins / games
+    games_won = win_rate * games
+    win_percentage = win_rate * 100
+    print("In a hypothetical 162-game season, this team would have a " + str(round(win_percentage, 2)) + " win percentage and win " + str(round(games_won,0)) + " games.")
+    return win_percentage
+
+            
 
 def go(prefs_pos, prefs_pitch, params):
     '''
     '''
     team = create_team(prefs_pos, prefs_pitch, params)
     team.add_stat('Win Percentage', compute_wins(team.team_war))
-    team.add_stat('Team Batting Average', calculate_team_stat(team, 'AVGs'))
-    team.add_stat('Team OBP', calculate_team_stat(team, 'OBPs'))
-    team.add_stat('Team ERA', calculate_team_stat(team, 'ERAs'))
     team.add_stat('Runs per Game', calculate_pergame_runs(team))
-    team.add_stat('Team Slugging', calculate_team_stat(team, 'SLGs'))
-    return team
+
+    for pref in prefs_pos:
+        if 'WARs' not in pref:
+            stat = calculate_team_stat(team, pref)
+            team.add_stat(pref, stat)
+    for pref in prefs_pitch:
+        if 'WARs' not in pref:
+            stat = calculate_team_stat(team, pref)
+            team.add_stat(pref, stat)
+
+    print(team)
+    
+    print(team.team_stats)
