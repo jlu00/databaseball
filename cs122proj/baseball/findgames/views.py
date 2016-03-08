@@ -7,7 +7,10 @@ import os
 from findgames import forms
 import traceback
 import sys
+from findgames import playerteamobjects as Classes
 import sqlite3
+import operator
+
 
 COLUMNS = dict(
         game_date='Date',
@@ -31,7 +34,7 @@ STAT_COLS = dict(
 		AVGs = "Batting Averages",
 		OBPs = "On Base Percentage",
 		SLGs = "Slugging Percentage",
-		WARS_nonpitcher = "Wins Above Replacement",
+		WARs_nonpitcher = "Wins Above Replacement",
 		WRCs = "Weighted Runs Created",
 
 )
@@ -95,7 +98,6 @@ def players(request):
 		form1 = forms.PlayerForm(request.GET)
 		if form1.is_valid():
 			args = {}
-			print(form1.cleaned_data)
 			for key in form1.cleaned_data:
 				args[key] = (form1.cleaned_data[key]).title()
 			res = compare_players(args)
@@ -131,31 +133,40 @@ def players(request):
 def fantasy(request):
 	context = {}
 	res = None
+	roster = None
 	form = forms.FantasyForm(request.GET or None)
 	if request.method == "GET":
 		if form.is_valid():
 			args = {}
+			prefs_pos = []
+			prefs_pitch = []
+			params = {}
 			for key in form.cleaned_data:
 				args[key] = form.cleaned_data[key] 
-			res = find_games(args)
+			
+			for i in range(1, 4):
+				s = 'stat' + str(i)
+				if s in args and args[s]:
+					prefs_pos.append(args[s])
+			for i in range(4, 9):
+				s = 'stat' + str(i)
+				if s in args and args[s]:
+					prefs_pitch.append(args[s])
+				
+			res = go(prefs_pos, prefs_pitch, params)
+			roster = res.roster
 			
 	else:
 		form = forms.FantasyForm()
 	
-	if res is None:
+	if roster is None:
 		context['result'] = None
 	else:
-		columns, result = res
-		
-		if result and isinstance(result[0], str):
-			result = [(r,) for r in result]
-		
-		context['result'] = result
-		context['num_results'] = len(result)
-		context['columns'] = [COLUMN_NAMES.GET(col, col) for col in columns]
+		result = roster
+		context['result'] = roster
 	
 	context['form'] = form
-	return render(request, 'findgames/fantasy.html', {'form': form})
+	return render(request, 'findgames/fantasy.html', context)
             
 def find_games(args_from_ui):
 	if not args_from_ui:
@@ -289,8 +300,8 @@ def compare_players(args_from_ui):
         return("There were no results found.", [])
 
 def create_player_query(args_from_ui):
-    sql_query = "SELECT bios.name, stats_nonpitcher.AVGs, stats_nonpitcher.OBPs, stats_nonpitcher.SLGs, stats_nonpitcher.WARS_nonpitcher, stats_nonpitcher.WRCs "
-    sql_query += "FROM bios JOIN stats_nonpitcher ON bios.player_id = stats_nonpitcher.player_id "
+    sql_query = "SELECT bios.name, nonpitcher.AVGs, nonpitcher.OBPs, nonpitcher.SLGs, nonpitcher.WARS_nonpitcher, nonpitcher.WRCs "
+    sql_query += "FROM bios JOIN nonpitcher ON bios.player_id = nonpitcher.player_id "
     sql_query += "WHERE bios.name = ? OR bios.name = ?" 
     
     args = create_player_arg(args_from_ui)
@@ -302,4 +313,180 @@ def create_player_arg(args_from_ui):
     for key in args_from_ui:
         args_list.append(args_from_ui[key])
     return args_list
+
+def compute_team_win_percentage(team):
+    '''
+    Computes the expected win percentage for a team of players created by the user
+    Based on wins above replacement which is then converted into pythagorean wins
+    '''
+    WARs = {}
+    for i in teams:
+        WARS[i] = 0
+        for j in teams[i]:
+            years = compute_years_played(i)
+            WARS[i] += grab_stat(j, ["WAR"], [years])
+
+def compute_wins(WAR):
+    '''
+    According to baseballreference.com, a zero-WAR team would be expected
+    to win 32 percent of its games
+    '''
+    zero_win_constant = .320
+    games = 162
+    total_wins = zero_win_constant * games + WAR
+    win_percentage = total_wins / games
+    return win_percentage
+            
+def create_team(prefs_pos, prefs_pitch, params):
+
+    '''
+    Sample prefs:
+    ['wOBA', 'OBP']
+    Sample params:
+    {'date': (1980, 2015), 'playoffs': True, 'all_star': True, 'current_player': False}
+    '''
+    db = sqlite3.connect('all_players.db')
+    c = db.cursor()
+    players = {}
+    for i in prefs_pos:
+        players = grab_players(i, players, False, c)
+
+    for i in prefs_pitch:
+        players = grab_players(i, players, True, c)
+
+    db.close()
+    players = apply_params(players, params)
+    for i in players:
+        a = compute_power_index(players[i], prefs_pos, prefs_pitch)
+        players[i].incr_power_index(a)
+
+
+    team = select_top_pos(players)
+    return team
+
+
+def grab_players(pref, players, pitcher, cursor):
+	print('WORKING')
+	new_pref = convert_pref(pref, pitcher)
+	if pitcher:
+		query = """SELECT bios.name, bios.span, bios.positions, """ + new_pref + """, bios.player_id FROM bios
+			JOIN pitcher ON bios.player_id = pitcher.player_id WHERE(bios.years_played > 2 AND """ + pref + """ != '') ORDER BY """ + pref + """ DESC LIMIT 80;"""
+	else:
+		query = """SELECT bios.name, bios.span, bios.positions, """ + new_pref + """, bios.player_id FROM bios
+             JOIN nonpitcher ON bios.player_id = nonpitcher.player_id WHERE (bios.positions != 'Pitcher' AND bios.years_played > 2 AND  """ + pref + """ != '') ORDER BY """ + pref + """ DESC LIMIT 80;"""
+    r = cursor.execute(query)
+    results_pos = r.fetchall()
+    rank = 0
+    for j in results_pos:
+        if 'name' in j:
+            continue
+        name = j[0].split()
+        pos = j[2]
+        first_pos = j[2]
+        if len(pos.split('|')) > 1:
+            first_pos = pos.split('|')[0]
+            other_pos = pos.split('|')[1]
+        if first_pos == 'Outfielder':
+            first_pos = 'Centerfielder'
+        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner':
+            continue
+        new_player = Classes.Players(name[0], name[1], first_pos, j[4])
+        if new_player.player_id not in players:
+            years = j[1].split('-')
+            new_player.add_years(years)
+            new_player.add_stats(pref, j[3])
+            new_player.add_rank(pref, rank)
+            players[new_player.player_id] = new_player
+        else:
+            players[new_player.player_id].add_stats(pref, j[3])
+            players[new_player.player_id].add_rank(pref, rank)
+        rank += 1
+    return players
+
+def convert_pref(pref, pitcher):
+    if pitcher:
+        return 'pitcher.' + pref
+    else:
+        return 'nonpitcher.' + pref
+
+def apply_params(players, params):
+    '''
+    Sample Params:
+    'Years': (1988, 2000)
+    'Playoffs': True
+    'All Star': False
+    '''
+    new_players = {}
+    if 'years' in params:
+    	if len(params['years']) > 0:
+    		for i in players:
+    			if params['years']:
+    				player_stays = ((int(players[i].years_played[0]) > params['years'][0] and 
+    					int(players[i].years_played[0]) < params['years'][1]) or (int(players[i].years_played[1]) 
+    						> params['years'][0] and int(players[i].years_played[1]) < params['years'][1]))
+    				if  player_stays: 
+    					new_players[i] = players[i]
+    			if params['Playoffs']:
+    				pass
+    return new_players
+
+def compute_power_index(player, prefs_pos, prefs_pitch):
+    power_index = 0
+    for i in player.ranks:
+        if i in prefs_pos:
+            power_index += (100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i)) ** 2
+        else:
+            power_index += (100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i)) ** 2
+    return power_index
+
+def select_top_pos(players):
+    '''
+    returns a dictionary 'roster' of the top players
+    '''
+
+    team = Classes.Teams()
+    for i in players:
+        team.add_player(players[i])
+    return team
+
+def compare_teams(teams, stats):
+    for i in stats:
+        for j in teams:
+            calculate_team_stat(j, i)
+
+def calculate_team_stat(team, stat):
+    rv = 0
+    counter = 0
+    for position in team.roster:
+        for player in team.roster[position]:
+            if stat in player.stats:
+                rv += player.stats[stat]
+                counter += 1
+    if counter != 0:
+        return rv / counter
+    else:
+        return None
+
+def calculate_pergame_runs(team):
+    '''
+    '''
+    runs = 0
+    for position in team.roster:
+        if position != 'Pitcher':
+            for player in team.roster[position]:
+                runs += player.war
+    return runs * 10 / 162
+
+
+def go(prefs_pos, prefs_pitch, params):
+    '''
+    '''
+    team = create_team(prefs_pos, prefs_pitch, params)
+    #team.add_stat('Win Percentage', compute_wins(team.team_war))
+    #team.add_stat('Team Batting Average', calculate_team_stat(team, 'AVGs'))
+    #team.add_stat('Team OBP', calculate_team_stat(team, 'OBPs'))
+    #team.add_stat('Team ERA', calculate_team_stat(team, 'ERAs'))
+    #team.add_stat('Runs per Game', calculate_pergame_runs(team))
+    #team.add_stat('Team Slugging', calculate_team_stat(team, 'SLGs'))
+    return team
 
