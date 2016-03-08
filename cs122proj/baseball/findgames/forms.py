@@ -5,13 +5,13 @@ PLAYER_STATS = [('WARS_nonpitcher', 'Wins Above Replacement'), ('OBPs', 'On Base
 			('AVGs', 'Batting Average'), ('SLGs', 'Slugging percentages'),
 			('UBR_WRC_Years', 'Runs created by base running'), ('UBRs', 'Base Running ability'),
 			('WRCs', 'Weighted runs created'), ('WPA', 'Win probability added'),
-			('Clutchs', 'Clutch hitting ability') 
+			('Clutchs', 'Clutch hitting ability'), ('', '') 
 			]
 			
 PITCHER_STATS = [('WARS_pitcher', 'Wins Above Replacement'), ('ERA', 'Earned Run Average'),
 				('IPs', 'Innings pitched'), ('GSs', 'Games Started'), ('FIPs', 'Fielding Independent Pitching'),
 				('E_Fs', 'ERA-FIP Spreads'), ('K_Pers', 'Strike outs per 9 innings'), 
-				('BB_Pers', 'Walks per 9 innings')]
+				('BB_Pers', 'Walks per 9 innings'), ('', '')]
 
 
 class FindGameForm(forms.Form):
@@ -55,14 +55,14 @@ def clean(self, value):
 
 
 class FantasyForm(forms.Form):
-	stat1 = forms.ChoiceField(label="Rank 1", choices=PLAYER_STATS, required=True)
-	stat2 = forms.ChoiceField(label="Rank 2", choices=PLAYER_STATS, required=True)
-	stat3 = forms.ChoiceField(label="Rank 3", choices=PLAYER_STATS, required=True)
-	stat4 = forms.ChoiceField(label="Rank 4", choices=PLAYER_STATS, required=True)
+	stat1 = forms.ChoiceField(label="Rank 1", choices=PLAYER_STATS, required=True, help_text="Player Stat 1")
+	stat2 = forms.ChoiceField(label="Rank 2", choices=PLAYER_STATS, required=False)
+	stat3 = forms.ChoiceField(label="Rank 3", choices=PLAYER_STATS, required=False)
+	stat4 = forms.ChoiceField(label="Rank 4", choices=PLAYER_STATS, required=False)
 	stat5 = forms.ChoiceField(label="Rank 1", choices=PITCHER_STATS, required=True)
-	stat6 = forms.ChoiceField(label="Rank 2", choices=PITCHER_STATS, required=True)
-	stat7 = forms.ChoiceField(label="Rank 3", choices=PITCHER_STATS, required=True)
-	stat8 = forms.ChoiceField(label="Rank 4", choices=PITCHER_STATS, required=True)
+	stat6 = forms.ChoiceField(label="Rank 2", choices=PITCHER_STATS, required=False)
+	stat7 = forms.ChoiceField(label="Rank 3", choices=PITCHER_STATS, required=False)
+	stat8 = forms.ChoiceField(label="Rank 4", choices=PITCHER_STATS, required=False)
 
 class PlayerForm(forms.Form):
 	player1 = forms.CharField(label="Player 1", required=True, help_text="e.g. Lorenzo Cain") 

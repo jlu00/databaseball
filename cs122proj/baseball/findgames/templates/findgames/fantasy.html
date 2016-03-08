@@ -38,21 +38,9 @@
             {% if result != None %}
             <div class="results">
                 <table class="courses">
-                    <tr>
-                        {% for col in columns %}
-                        <th>{{ col }}</th>
-                        {% endfor %}
-                    </tr>
-                    {% for entry in result %}
-                    <tr>
-                        {% for col in entry %}
-                        <td>{{ col }}</td>
-                        {% endfor %}
-                    </tr>
-                    {% endfor %}
+                    {{ result }}
                 </table>
             </div>
-            <p class="num_results">Results: {{ num_results }}</p>
             {% endif %}
         </div>
 <br/>
