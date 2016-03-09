@@ -37,22 +37,30 @@
         <div class="frame">
             {% if result != None %}
             <div class="results">
-                <table class="courses">
-                    <tr>
-                        {% for col in columns %}
-                        <th>{{ col }}</th>
-                        {% endfor %}
-                    </tr>
-                    {% for entry in result %}
-                    <tr>
-                        {% for col in entry %}
-                        <td>{{ col }}</td>
-                        {% endfor %}
-                    </tr>
-                    {% endfor %}
+                <table class="courses" border="2">
+                  <tr>
+                  <div>
+                  {{ result.as_p }}
+                  {% for field in roster_results %}
+                    <br/>
+                    {% if forloop.counter0|divisibleby:'2' %}
+                    <strong>{{ field }}</strong>
+                    {% else %}
+                    {{ field }}
+                    <br/>
+                    {% endif %}
+                  {% endfor %}
+                  <br/>
+                  {% for s, num in stats %}
+                      {{ s }} : {{ num }}
+                      <br/>
+                  {% endfor %}
+                  </div>
+                  <tr/>
                 </table>
             </div>
-            <p class="num_results">Results: {{ num_results }}</p>
+            {% else %}
+            <p> No fantasy team could be created. Try some different params! </p>
             {% endif %}
         </div>
 <br/>

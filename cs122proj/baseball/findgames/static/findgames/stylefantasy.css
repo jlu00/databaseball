@@ -11,23 +11,20 @@ placeholder{
 
 input {
   position:relative;
-  padding:6px 15px;
+  padding:3px 5px;
   left:-8px;
   border:2px solid #207cca;
   background-color:white;
   color:#207cca;
-  margin 0 5px;
+  margin 0 20px;
   line-height: 2em;
   
-table {
-  position:relative;
-  padding:6px 15px;
-  left:-8px;
-  border:2px solid #207cca;
-  background-color: "white";
-  color:#207cca;
-  margin 0 5px;
-  line-height: 2em;
+#box {
+
+  border:5px black;
+
+
+}
 
 a {
  color: white;

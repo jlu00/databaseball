@@ -8,11 +8,12 @@
 
   </head>
   <body>
-    <div align="center">
+    {% load staticfiles %}
+    <div align="center" >
+      <img src="{% static "findgames/images/yankees.jpg" %}" alt="My image"/>
       <h1>Find a game with any stat.</h1>
       <h5> <em> Enter in as few or as many fields as you want. </em> </h5>
       <a href="{% url 'index' %}">Back to Home</a>
-      {% load staticfiles %}
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
       <br/>

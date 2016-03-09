@@ -34,7 +34,7 @@ class Players:
         self.power_index += num
 
     def __repr__(self):
-        str_var = '{} {} -- {}: {}'.format(self.firstname, self.lastname, self.position, self.power_index)
+        str_var = '{} {}'.format(self.firstname, self.lastname)
         return str_var
 
 class Teams:
@@ -55,51 +55,50 @@ class Teams:
         player is a Player object
         '''
         if player.position != 'Pitcher':
-            if self.team_size < self.max_size:
-                if len(self.roster[player.position]) == 0:
-                    self.roster[player.position] += [player]
-                    self.team_size += 1
-                    self.pos_filled += 1
-                else:
-                    if self.is_safe_to_add(player):
-                        self.roster[player.position] += [player]
-                        self.team_size += 1
-                    else:
-                        self.look_for_player_to_replace(player, len(self.roster[player.position]) == 2)
-            else:
-                self.look_for_player_to_replace(player, len(self.roster[player.position]) == 2)
-        else:
-            if not self.roster['Pitcher']:
-                self.pos_filled += 1
-            if len(self.roster['Pitcher']) < self.pitchers_needed:
-                self.roster['Pitcher'] += [player]
+            if len(self.roster[player.position]) == 0:
+                self.roster[player.position] += [player]
+                self.team_war += player.war
                 self.team_size += 1
+                self.pos_filled += 1
+            elif len(self.roster[player.position]) < 2:
+                self.roster[player.position] += [player]
+                self.team_war += player.war
+                self.team_size += 1
+            else:
+                self.look_for_player_to_replace(player)
+        else:
+            if len(self.roster['Pitcher']) == 0:
+                self.roster['Pitcher'] += [player]
+                self.team_war += player.war
+                self.team_size += 1
+                self.pos_filled += 1
+            elif len(self.roster['Pitcher']) < self.pitchers_needed:
+                self.roster['Pitcher'] += [player]
+                self.team_war += player.war
+                self.team_size += 1
+            else:
+                self.look_for_player_to_replace(player)
             
 
     def is_safe_to_add(self, player):
-        return self.total_pos - self.pos_filled != self.max_size - self.team_size and len(self.roster[player.position]) < 2
+        return (self.total_pos - self.pos_filled != self.max_size - self.team_size) and (len(self.roster[player.position]) < 2)
 
-    def look_for_player_to_replace(self, player, stay_within_pos):
-        if not stay_within_pos:
-            for position in self.roster:
-                if len(self.roster[position]) > 1:
-                    for dude in self.roster[position]:
-                        if player.power_index > dude.power_index:
-                            self.roster[position].remove(dude)
-                            self.roster[player.position].append(player)
-                            pass
-        else:
-            for dude in self.roster[player.position]:
-                if player.power_index > dude.power_index:
-                    self.roster[player.position].remove(dude)
-                    self.roster[player.position].append(player)
+    def look_for_player_to_replace(self, player):
+        for dude in self.roster[player.position]:
+            if player.power_index > dude.power_index:
+                self.roster[player.position].remove(dude)
+                self.team_war -= dude.war
+                self.roster[player.position].append(player)
+                self.team_war += player.war
+                break
+
     def add_stat(self, statname, value):
         self.team_stats[statname] = value
 
     def __repr__(self):
         str_var = ''
         for i in self.roster:
-            str_var += i + ': '
+            str_var +='\n' + i + ': \n'
             for j in self.roster[i]:
-                str_var += j.firstname + ' ' + j.lastname + ' \n'
+                str_var += '    ' + str(j) + ' \n'
         return str_var
