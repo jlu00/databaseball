@@ -4,7 +4,6 @@
     <br/>
     <title>Search</title>
        {% load staticfiles %}
-       {% load template_extras %}
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/stylefantasy.css' %}" />
   </head>
   <body>
@@ -42,13 +41,18 @@
                   <tr>
                   <div>
                   {{ result.as_p }}
-                  {% for pos in roster_results %}
-                    {{ roster_results|lookup:item.pos }}
+                  {% for field in roster_results %}
+                    <br/>
+                    {% if forloop.counter0|divisibleby:'2' %}
+                    <strong>{{ field }}</strong>
+                    {% else %}
+                    {{ field }}
+                    <br/>
+                    {% endif %}
                   {% endfor %}
                   <br/>
-                  {% for s in stats %}
-                      {{ s }}
-                      {{ stats.s }}
+                  {% for s, num in stats %}
+                      {{ s }} : {{ num }}
                       <br/>
                   {% endfor %}
                   </div>

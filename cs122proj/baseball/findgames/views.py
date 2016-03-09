@@ -171,11 +171,17 @@ def fantasy(request):
                     prefs_pitch.append(args[s])
 
             res = go(prefs_pos, prefs_pitch, params)
-            roster_results = {}
+            roster_results = []
             for pos in res.roster:
-                for player in res.roster[pos]:
-                    roster_results[pos] = player
-            print(roster_results)
+                if not res.roster[pos]:
+                    players = ""
+                    players += "No Designated Hitter matched your query.   "
+                else:
+                    players = ""
+                    roster_results.append(pos)
+                    for player in res.roster[pos]:
+                        players += str(player) + ", "
+                roster_results.append(players[:-2])
     else:
 
         form = forms.FantasyForm()
@@ -186,6 +192,7 @@ def fantasy(request):
         context['result'] = res
         context['roster_results'] = roster_results
         context['stats'] = res.team_stats
+        context['length'] = len(roster_results)
     context['form'] = form
 
     return render(request, 'findgames/fantasy.html', context)
