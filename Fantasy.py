@@ -4,12 +4,6 @@
 
 '''
 Issues to work out:
-Writing all of the code to compare the teams
-How exactly to handle roster construction; specifically:
-How many pitchers should I have?
-How to handle the fact that for every other position you just need 1,
-but for pitchers you need X > 1
-Still need to get all the SQL coding done
 
 '''
 
@@ -47,7 +41,7 @@ import sqlite3
 DATABASE_FILENAME = 'all_players.db'
 
 
-def create_team(prefs_pos, prefs_pitch, params):
+def create_team(prefs_pos, prefs_pitch, params, team):
 
     '''
     Sample prefs:
@@ -60,11 +54,9 @@ def create_team(prefs_pos, prefs_pitch, params):
     players = {}
     for i in prefs_pos:
         players = grab_players(i, players, False, c, params)
-        # print(len(players))
 
     for i in prefs_pitch:
         players = grab_players(i, players, True, c, params)
-        # print(len(players))
 
     db.close()
     # players = apply_params(players, params)
@@ -72,17 +64,47 @@ def create_team(prefs_pos, prefs_pitch, params):
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
 
-    team = select_top_pos(players)
+    team = select_top_pos(players, team)
+    if team.team_size < team.max_size:
+        new_params = params
+        if params['years']:
+            new_params['years'] = ((params['years'][0] - 5), (params['years'][1] + 5))
+            print("We had to relax the years parameter to " + str(new_params['years']) + " in an effort to complete the team")
+        if params['Name']:
+            print('We had to relax the name parameter in an effort to complete the team')
+            new_params['Name'] = params['Name'][:-1]
+        else:
+            if params['Playoffs']:
+                print('Unfortunately, we had to remove the Playoffs parameter in an effort to complete the team')
+                new_params['Playoffs'] = False
+            if params['World Series']:
+                print('Unfortunately, we had to remove the World Series parameter in an effort to complete the team')
+            else:
+                for position in team.roster:
+                    team = fill_out_team(players, team, position)
+                    print(team.team_size)
+                return team
+        return create_team(prefs_pos, prefs_pitch, new_params, team)
     return team
 
+def fill_out_team(players, team, position):
+    if len(team.roster[position]) < 2 and position != 'Pitcher':
+        for player in players:
+            if players[player].position == position and len(team.roster[position]) == 0:
+                team.roster[position] += [players[player]]
+                return team
+            elif players[player].position == position and team.roster[position][0].player_id != players[player].player_id:
+                team.roster[position] += [players[player]]
+                return team
+            else:
+                continue
+    return team
 
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
     query = construct_query(new_pref, pitcher, params)
-    print(query)
     r = cursor.execute(query)
     results_pos = r.fetchall()
-    print(len(results_pos))
     rank = 0
     for j in results_pos:
         if 'name' in j:
@@ -95,7 +117,7 @@ def grab_players(pref, players, pitcher, cursor, params):
             other_pos = pos.split('|')[1]
         if first_pos == 'Outfielder':
             first_pos = 'Centerfielder'
-        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner':
+        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner' or first_pos == 'Designated Hitter':
             continue
         new_player = Classes.Players(name[0], name[1], first_pos, j[4])
         if new_player.player_id not in players:
@@ -209,12 +231,11 @@ def compute_power_index(player, prefs_pos, prefs_pitch):
     return power_index
 
 
-def select_top_pos(players):
+def select_top_pos(players, team):
     '''
     returns a dictionary 'roster' of the top players
     '''
 
-    team = Classes.Teams()
     for i in players:
         team.add_player(players[i])
     return team
@@ -271,7 +292,8 @@ def compute_wins(WAR):
 def go(prefs_pos, prefs_pitch, params):
     '''
     '''
-    team = create_team(prefs_pos, prefs_pitch, params)
+    team = Classes.Teams()
+    team = create_team(prefs_pos, prefs_pitch, params, team)
     team.add_stat('Win Percentage', compute_wins(team.team_war))
     team.add_stat('Runs per Game', calculate_pergame_runs(team))
 
