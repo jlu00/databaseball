@@ -41,49 +41,56 @@ class Teams:
 
     def __init__(self):
         self.roster = {'Catcher': [], 'First Baseman': [], 'Second Baseman': 
-        [], 'Designated Hitter': [], 'Third Baseman': [], 'Shortstop': [], 'Leftfielder': [], 'Centerfielder': [], 'Rightfielder': [], 'Pitcher': []}
+        [], 'Third Baseman': [], 'Shortstop': [], 'Leftfielder': [], 'Centerfielder': [], 'Rightfielder': [], 'Pitcher': []}
         self.pos_filled = 0
         self.team_size = 0
-        self.max_size = 25
+        self.max_size = 24
         self.pitchers_needed = 8
         self.team_war = 0
         self.team_stats = {}
-        self.total_pos = 10
+        self.total_pos = 9
 
     def add_player(self, player):
         '''
         player is a Player object
         '''
-        if player.position != 'Pitcher':
-            if len(self.roster[player.position]) == 0:
-                self.roster[player.position] += [player]
-                self.team_war += player.war
-                self.team_size += 1
-                self.pos_filled += 1
-            elif len(self.roster[player.position]) < 2:
-                self.roster[player.position] += [player]
-                self.team_war += player.war
-                self.team_size += 1
+        if self.team_size < self.max_size:
+            if player.position != 'Pitcher':
+                if len(self.roster[player.position]) == 0:
+                    self.roster[player.position] += [player]
+                    self.team_war += player.war
+                    self.team_size += 1
+                    self.pos_filled += 1
+                elif len(self.roster[player.position]) < 2:
+                    if self.roster[player.position][0].player_id != player.player_id:
+                        self.roster[player.position] += [player]
+                        self.team_war += player.war
+                        self.team_size += 1
+                else:
+                    self.look_for_player_to_replace(player)
             else:
-                self.look_for_player_to_replace(player)
+                if len(self.roster['Pitcher']) == 0:
+                    self.roster['Pitcher'] += [player]
+                    self.team_war += player.war
+                    self.team_size += 1
+                    self.pos_filled += 1
+                elif len(self.roster['Pitcher']) < self.pitchers_needed:
+                    if self.player_not_added(player):
+                        self.roster['Pitcher'] += [player]
+                        self.team_war += player.war
+                        self.team_size += 1
+                    else:
+                        return None
+                else:
+                    self.look_for_player_to_replace(player)
         else:
-            if len(self.roster['Pitcher']) == 0:
-                self.roster['Pitcher'] += [player]
-                self.team_war += player.war
-                self.team_size += 1
-                self.pos_filled += 1
-            elif len(self.roster['Pitcher']) < self.pitchers_needed:
-                self.roster['Pitcher'] += [player]
-                self.team_war += player.war
-                self.team_size += 1
-            else:
-                self.look_for_player_to_replace(player)
+            self.look_for_player_to_replace(player)
             
 
-    def is_safe_to_add(self, player):
-        return (self.total_pos - self.pos_filled != self.max_size - self.team_size) and (len(self.roster[player.position]) < 2)
-
     def look_for_player_to_replace(self, player):
+        for dude in self.roster[player.position]:
+            if dude.player_id == player.player_id:
+                return None
         for dude in self.roster[player.position]:
             if player.power_index > dude.power_index:
                 self.roster[player.position].remove(dude)
@@ -91,6 +98,12 @@ class Teams:
                 self.roster[player.position].append(player)
                 self.team_war += player.war
                 break
+
+    def player_not_added(self, player):
+        for person in self.roster[player.position]:
+            if person.player_id == player.player_id:
+                return False
+        return True
 
     def add_stat(self, statname, value):
         self.team_stats[statname] = value
