@@ -1,11 +1,6 @@
 #jessbritommy
 
-#Functions to get SQL Code
-
-'''
-Issues to work out:
-
-'''
+#Generates a fantasy team
 
 Stat_defs = {'ERAs': '''Earned runs allowed (per 9 innings); derived by taking
             the number of earned runs allowed, normalizing to per game by multiplying
@@ -40,7 +35,7 @@ Stat_defs = {'ERAs': '''Earned runs allowed (per 9 innings); derived by taking
             the pitcher has been than a replacement level minor leaguer''',
             'WARs_nonpitcher': '''Wins above replacement by a position player: take offensive,
             baserunning, and fielding runs created by a pitcher and converts them into total runs
-            created above a replacement player. Converts this into a win total'''
+            created above a replacement player. Converts this into a win total''',
             'Clutchs': '''Measures how much better or worse a player's performance in high stress
             environments is than his overall performance'''}
 
@@ -72,7 +67,7 @@ def create_team(prefs_pos, prefs_pitch, params, team):
         players = grab_players(i, players, True, c, params)
 
     db.close()
-    # players = apply_params(players, params)
+
     for i in players:
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
@@ -204,43 +199,20 @@ def construct_query(pref, pitcher, params):
         elif pref == 'nonpitcher.OBPs':
             where_statement += "AND nonpitcher.OBPs < .55 "
         elif pref == "nonpitcher.SLGs":
-            where_statement += "AND nonpitcher.SLGs < .8"
+            where_statement += "AND nonpitcher.SLGs < .8 "
         if params['years']:
             where_statement += "AND (nonpitcher.years like '%" + str(params['years'][0]) + "%' OR nonpitcher.years like '%" + str(params['years'][1]) + "%') "
     query = select_statement + from_statement + on_statement + where_statement + order_by_statement
     return query
 
 
-def apply_params(players, params):
-    '''
-    Sample Params:
-    '{Years': (1988, 2000),
-    'Playoffs': True,
-    'World Series': True,
-    'Name': 'Tom',
-    'Team': 'Chicago Cubs'}
-    '''
-    new_players = {}
-    if len(params['years']) > 0:
-        for i in players:
-            if params['years']:
-                player_stays = ((int(players[i].years_played[0]) > params['years'][0] and 
-                    int(players[i].years_played[0]) < params['years'][1]) or (int(players[i].years_played[1]) 
-                    > params['years'][0] and int(players[i].years_played[1]) < params['years'][1]))
-                if  player_stays: 
-                    new_players[i] = players[i]
-            if params['Playoffs']:
-                pass
-    return new_players
-
-
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.ranks:
         if i in prefs_pos:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) ** (1 / (prefs_pos.index(i)+ 1))
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) * 10
         else:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) ** (1 / (prefs_pitch.index(i) + 1))
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) * 10
     return power_index
 
 
@@ -248,7 +220,6 @@ def select_top_pos(players, team):
     '''
     returns a dictionary 'roster' of the top players
     '''
-
     for i in players:
         team.add_player(players[i])
     return team
@@ -265,7 +236,7 @@ def calculate_team_stat(team, stat):
     counter = 0
     for position in team.roster:
         for player in team.roster[position]:
-            if stat in player.stats:
+            if stat in player.stats and type(player.stats[stat]) != str:
                 rv += player.stats[stat]
                 counter += 1
     if counter != 0:
@@ -277,12 +248,21 @@ def calculate_team_stat(team, stat):
 def calculate_pergame_runs(team):
     '''
     '''
+    AVG_R_PER_PA = .11
+    AVG_AB_PER_YR = 600
+    player_ctr = 0
+    wrc_ctr = 0
     runs = 0
     for position in team.roster:
         if position != 'Pitcher':
             for player in team.roster[position]:
-                runs += player.war
-    runs = runs * 10 / 162
+                player_ctr += 1
+                if 'WRCs' in player.stats:
+                    # print(player.stats['WRCs'])
+                    wrc_ctr += 1
+                    runs += player.stats['WRCs'] * AVG_R_PER_PA * AVG_AB_PER_YR / 100
+    # print(player_ctr, wrc_ctr)
+    runs = runs / 162 * player_ctr / wrc_ctr
     return round(runs, 2)
 
 
@@ -297,7 +277,11 @@ def compute_wins(WAR):
     win_rate = total_wins / games
     games_won = win_rate * games
     win_percentage = win_rate * 100
-    print("In a hypothetical 162-game season, this team would have a " + str(round(win_percentage, 2)) + " win percentage and win " + str(round(games_won,0)) + " games.")
+    if games_won > 130:
+        games_won = 130
+        win_percentage = 13000/162
+        print("This team would likely be the best team of all time")
+    print("In a hypothetical 162-game season, this team would have a " + str(round(win_percentage, 2)) + " win percentage and win " + str(int(games_won)) + " games.")
     return win_percentage
 
             
@@ -308,7 +292,9 @@ def go(prefs_pos, prefs_pitch, params):
     team = Classes.Teams()
     team = create_team(prefs_pos, prefs_pitch, params, team)
     team.add_stat('Win Percentage', compute_wins(team.team_war))
-    team.add_stat('Runs per Game', calculate_pergame_runs(team))
+    if 'WRCs' in prefs_pos:
+        team.add_stat('Runs per Game', calculate_pergame_runs(team))
+
 
     for pref in prefs_pos:
         if 'WARs' not in pref:
@@ -318,5 +304,5 @@ def go(prefs_pos, prefs_pitch, params):
         if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
             team.add_stat(pref, stat)
-
+    print(team.team_stats)
     return team
