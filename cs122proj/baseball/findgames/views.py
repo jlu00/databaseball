@@ -364,7 +364,7 @@ def create_player_arg(args_from_ui):
 DATABASE_FILENAME = 'all_players.db'
 
 
-def create_team(prefs_pos, prefs_pitch, params):
+def create_team(prefs_pos, prefs_pitch, params, team):
 
     '''
     Sample prefs:
@@ -377,21 +377,47 @@ def create_team(prefs_pos, prefs_pitch, params):
     players = {}
     for i in prefs_pos:
         players = grab_players(i, players, False, c, params)
-        # print(len(players))
 
     for i in prefs_pitch:
         players = grab_players(i, players, True, c, params)
-        # print(len(players))
 
     db.close()
-    # players = apply_params(players, params)
+
     for i in players:
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
 
-    team = select_top_pos(players)
+    team = select_top_pos(players, team)
+    if team.team_size < team.max_size:
+        new_params = params
+        if params['years']:
+            new_params['years'] = ((params['years'][0] - 5), (params['years'][1] + 5))
+        if params['Name']:
+            new_params['Name'] = params['Name'][:-1]
+        else:
+            if params['Playoffs']:
+                new_params['Playoffs'] = False
+            if params['World_Series']:
+                new_params['World_Series'] = False
+            else:
+                for position in team.roster:
+                    team = fill_out_team(players, team, position)
+                return team
+        return create_team(prefs_pos, prefs_pitch, new_params, team)
     return team
 
+def fill_out_team(players, team, position):
+    if len(team.roster[position]) < 2 and position != 'Pitcher':
+        for player in players:
+            if players[player].position == position and len(team.roster[position]) == 0:
+                team.roster[position] += [players[player]]
+                return team
+            elif players[player].position == position and team.roster[position][0].player_id != players[player].player_id:
+                team.roster[position] += [players[player]]
+                return team
+            else:
+                continue
+    return team
 
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
@@ -410,7 +436,7 @@ def grab_players(pref, players, pitcher, cursor, params):
             other_pos = pos.split('|')[1]
         if first_pos == 'Outfielder':
             first_pos = 'Centerfielder'
-        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner':
+        if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner' or first_pos == 'Designated Hitter':
             continue
         new_player = Classes.Players(name[0], name[1], first_pos, j[4])
         if new_player.player_id not in players:
@@ -484,52 +510,27 @@ def construct_query(pref, pitcher, params):
         elif pref == 'nonpitcher.OBPs':
             where_statement += "AND nonpitcher.OBPs < .55 "
         elif pref == "nonpitcher.SLGs":
-            where_statement += "AND nonpitcher.SLGs < .8"
+            where_statement += "AND nonpitcher.SLGs < .8 "
         if params['years']:
             where_statement += "AND (nonpitcher.years like '%" + str(params['years'][0]) + "%' OR nonpitcher.years like '%" + str(params['years'][1]) + "%') "
     query = select_statement + from_statement + on_statement + where_statement + order_by_statement
     return query
 
 
-def apply_params(players, params):
-    '''
-    Sample Params:
-    '{Years': (1988, 2000),
-    'Playoffs': True,
-    'World_Series': True,
-    'Name': 'Tom',
-    'Team': 'Chicago Cubs'}
-    '''
-    new_players = {}
-    if len(params['years']) > 0:
-        for i in players:
-            if params['years']:
-                player_stays = ((int(players[i].years_played[0]) > params['years'][0] and 
-                    int(players[i].years_played[0]) < params['years'][1]) or (int(players[i].years_played[1]) 
-                    > params['years'][0] and int(players[i].years_played[1]) < params['years'][1]))
-                if  player_stays: 
-                    new_players[i] = players[i]
-            if params['Playoffs']:
-                pass
-    return new_players
-
-
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.ranks:
         if i in prefs_pos:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) ** (1 / (prefs_pos.index(i)+ 1))
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) * 10
         else:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) ** (1 / (prefs_pitch.index(i) + 1))
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) * 10
     return power_index
 
 
-def select_top_pos(players):
+def select_top_pos(players, team):
     '''
     returns a dictionary 'roster' of the top players
     '''
-
-    team = Classes.Teams()
     for i in players:
         team.add_player(players[i])
     return team
@@ -546,7 +547,7 @@ def calculate_team_stat(team, stat):
     counter = 0
     for position in team.roster:
         for player in team.roster[position]:
-            if stat in player.stats:
+            if stat in player.stats and type(player.stats[stat]) != str:
                 rv += player.stats[stat]
                 counter += 1
     if counter != 0:
@@ -558,12 +559,20 @@ def calculate_team_stat(team, stat):
 def calculate_pergame_runs(team):
     '''
     '''
+    AVG_R_PER_PA = .11
+    AVG_AB_PER_YR = 600
+    player_ctr = 0
+    wrc_ctr = 0
     runs = 0
     for position in team.roster:
         if position != 'Pitcher':
             for player in team.roster[position]:
-                runs += player.war
-    runs = runs * 10 / 162
+                player_ctr += 1
+                if 'WRCs' in player.stats:
+                    # print(player.stats['WRCs'])
+                    wrc_ctr += 1
+                    runs += player.stats['WRCs'] * AVG_R_PER_PA * AVG_AB_PER_YR / 100
+    runs = runs / 162 * player_ctr / wrc_ctr
     return round(runs, 2)
 
 
@@ -578,6 +587,9 @@ def compute_wins(WAR):
     win_rate = total_wins / games
     games_won = win_rate * games
     win_percentage = win_rate * 100
+    if games_won > 130:
+        games_won = 130
+        win_percentage = 13000/162
     return win_percentage
 
             
@@ -585,9 +597,12 @@ def compute_wins(WAR):
 def go(prefs_pos, prefs_pitch, params):
     '''
     '''
-    team = create_team(prefs_pos, prefs_pitch, params)
+    team = Classes.Teams()
+    team = create_team(prefs_pos, prefs_pitch, params, team)
     team.add_stat('Win Percentage', compute_wins(team.team_war))
-    team.add_stat('Runs per Game', calculate_pergame_runs(team))
+    if 'WRCs' in prefs_pos:
+        team.add_stat('Runs per Game', calculate_pergame_runs(team))
+
 
     for pref in prefs_pos:
         if 'WARs' not in pref:
@@ -597,7 +612,6 @@ def go(prefs_pos, prefs_pitch, params):
         if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
             team.add_stat(pref, stat)
-
     return team
 
 def playergraph(request):

@@ -13,6 +13,14 @@ img {
  position: relative;
 }
 
+.roster {
+  background-color:white !important;
+  width: 25%;
+  margin: 0 auto;
+  border-style: double;
+  border-width: 1px;
+}
+
 placeholder{
   text-align: "center";
 }
