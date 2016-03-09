@@ -79,10 +79,10 @@ def create_team(prefs_pos, prefs_pitch, params):
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
     query = construct_query(new_pref, pitcher, params)
-    # print(query)
-    r = cursor.execute(query)
     print(query)
+    r = cursor.execute(query)
     results_pos = r.fetchall()
+    print(len(results_pos))
     rank = 0
     for j in results_pos:
         if 'name' in j:
@@ -145,9 +145,8 @@ def construct_query(pref, pitcher, params):
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
         if params['years']:
-            where_statement += "AND (employment.years like " + str(params['years'][0]) + " OR employment.years like " + str(params['years'][1]) + ") "
-
-            
+            where_statement += "AND (pitcher.Pitcher_Years like '%" + str(params['years'][0]) + "%' OR pitcher.Pitcher_Years like '%" + str(params['years'][1]) + "%') "
+          
 
     else:
         select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, nonpitcher.WARs_nonpitcher """ 
@@ -172,7 +171,7 @@ def construct_query(pref, pitcher, params):
         elif pref == "nonpitcher.SLGs":
             where_statement += "AND nonpitcher.SLGs < .8"
         if params['years']:
-            where_statement += "AND (employment.years like " + str(params['years'][0]) + " OR employment.years like " + str(params['years'][1]) + ") "
+            where_statement += "AND (nonpitcher.years like '%" + str(params['years'][0]) + "%' OR nonpitcher.years like '%" + str(params['years'][1]) + "%') "
     query = select_statement + from_statement + on_statement + where_statement + order_by_statement
     return query
 
