@@ -7,29 +7,42 @@ Issues to work out:
 
 '''
 
-Stat_defs = {'ERA': '''Earned runs allowed (per 9 innings); derived by taking
+Stat_defs = {'ERAs': '''Earned runs allowed (per 9 innings); derived by taking
             the number of earned runs allowed, normalizing to per game by multiplying
             by 9, and then dividing by number of innings pitched''',
-            'BA': '''Batting average: calculated by taking total number of 
+            'AVGs': '''Batting average: calculated by taking total number of 
             hits divided by total number of plate appearances''',
-            'OBP': '''On Base Percentage: total times reaching base divided by
+            'OBPs': '''On Base Percentage: total times reaching base divided by
             total plate appearances ''',
-            'wOBA': '''Weighted on Base Average: a formula meant to calculate the
-            overall offensive impact of a player. Formula:
-            (0.690×uBB + 0.722×HBP + 0.888×1B + 1.271×2B + 1.616×3B +
-            2.101×HR) / (AB + BB – IBB + SF + HBP) (HBP = Hit by pitch
-            uBB = unintentional Base on Balls, AB = At Bats
-            IBB = Intentional Bases on Balls, SF = Sacrifice Fly''',
-            'WRC+': '''Weighted Runs Created--kind of like wOBA in which
+            'WRCs': '''Weighted Runs Created--kind of like wOBA in which
             it attempts to quantify runs created, except that this
             stat normalizes the league average to 100''',
-            'FIP': '''Fielding Independent Pitching: estimates a pitcher's
+            'FIPs': '''Fielding Independent Pitching: estimates a pitcher's
             abilities normalized for the defense playing behind him
             Takes into account home runs, walks, strikeouts, and hit by pitch
             Formula: ((13*HR)+(3*(BB+HBP))-(2*K))/IP + constant
             The constant normalizes FIP to ERA so the two can be compared
-            and is usually around 3.10
-             '''}
+            and is usually around 3.10''',
+            'SLGs': '''Slugging Percentage--derived by dividing the total number
+            of bases gained (e.g. a double is 2 bases) by the total number of PAs;
+            a decent proxy for power hitting ability''',
+            'GSs': '''Games Started--the number of games a pitcher has started in his career''',
+            'IPs': '''Innings Pitched--the number of innings a pitcher has thrown in his career''',
+            'K_Pers': '''Strikeouts per 9 innings--a way to measure team-independent pitching ability''',
+            'BB_Pers': '''Walks per 9 innings--a way to measure control and overall pitching ability''',
+            'E_Fs': '''ERA to FIP spread--a way to measure how good or bad the team behind a pitcher
+            was at fielding''',
+            'UBRs': '''Measures baserunning ability--an average baserunner has an UBR of zero''',
+            'WPAs': '''Measures win probability added--basically like WRC but weighted for the importance
+            of each at bat in terms of how it changed its team's win probability''',
+            'WARs_pitcher': '''Wins above replacement by a pitcher--derived using FIP 
+            adjusted for park and innings pitched to create an estimate of how many runs better
+            the pitcher has been than a replacement level minor leaguer''',
+            'WARs_nonpitcher': '''Wins above replacement by a position player: take offensive,
+            baserunning, and fielding runs created by a pitcher and converts them into total runs
+            created above a replacement player. Converts this into a win total'''
+            'Clutchs': '''Measures how much better or worse a player's performance in high stress
+            environments is than his overall performance'''}
 
 # CALCULATION_TYPE_DICT = {'IPs': 'Average', GS}
 
