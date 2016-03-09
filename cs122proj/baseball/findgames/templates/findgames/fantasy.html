@@ -4,6 +4,7 @@
     <br/>
     <title>Search</title>
        {% load staticfiles %}
+       {% load template_extras %}
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/stylefantasy.css' %}" />
   </head>
   <body>
@@ -37,10 +38,25 @@
         <div class="frame">
             {% if result != None %}
             <div class="results">
-                <table class="courses">
-                    {{ result }}
+                <table class="courses" border="2">
+                  <tr>
+                  <div>
+                  {{ result.as_p }}
+                  {% for pos in roster_results %}
+                    {{ roster_results|lookup:item.pos }}
+                  {% endfor %}
+                  <br/>
+                  {% for s in stats %}
+                      {{ s }}
+                      {{ stats.s }}
+                      <br/>
+                  {% endfor %}
+                  </div>
+                  <tr/>
                 </table>
             </div>
+            {% else %}
+            <p> No fantasy team could be created. Try some different params! </p>
             {% endif %}
         </div>
 <br/>

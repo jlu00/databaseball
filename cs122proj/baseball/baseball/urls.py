@@ -22,8 +22,11 @@ urlpatterns = [
     url(r'^findgames$', views.findgames, name="findgames"),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/$', views.index),
-    url(r'^players/$', views.players, name="players"),
+    url(r'^players$', views.players, name="players"),
     url(r'^fantasy/$', views.fantasy, name="fantasy"),
+    url(r'^playergraph/$', views.playergraph, name="playergraph"),
+    url(r'^players$', views.playergraph, name="playergraph"),
+    url(r'', views.index, name="index"),
     url(r'', include('findgames.urls')),
 ]
 

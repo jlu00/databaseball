@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 	'findgames.apps.FindgamesConfig',
+    'findgames.templatetags.template_extras',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,8 +64,11 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
+                'django.contrib.messages.context_processors.messages'],
+            'libraries': { # Adding this section should work around the issue.
+            'staticfiles' : 'django.templatetags.template_extras',
+            'i18n' : 'django.templatetags.i18n',
+        },
         },
     },
 ]

@@ -280,6 +280,4 @@ def go(prefs_pos, prefs_pitch, params):
             stat = calculate_team_stat(team, pref)
             team.add_stat(pref, stat)
 
-    print(team)
-    
-    print(team.team_stats)
+    return team
