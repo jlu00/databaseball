@@ -7,6 +7,8 @@
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
   </head>
+  <body>
+    <img src="{% static "findgames/images/cubplayers.jpg" %}" alt="My image"/>
     <div align="center">
       <h1 style="color:black" class="boxed" >Compare any two players.</h1>
       <h3> <em> Choose across leagues, teams and eras. </em> </h3>
@@ -55,7 +57,7 @@
                     {% for entry in result %}
                     <tr>
                         {% for col in entry %}
-                        <td align="center">{{ col }}</td>
+                        <td align="center">{{ col|floatformat:3 }}</td>
                         {% endfor %}
                     </tr>
                     {% endfor %}

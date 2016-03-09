@@ -9,10 +9,10 @@
   </head>
   <body>
     {% load staticfiles %}
-    <div align="center" >
-      <img src="{% static "findgames/images/yankees.jpg" %}" alt="My image"/>
-      <h1>Find a game with any stat.</h1>
-      <h5> <em> Enter in as few or as many fields as you want. </em> </h5>
+    <div align="center" class='image' position="relative">
+      <img src="{% static "findgames/images/yankeesstad.jpg" %}" alt="My image"/>
+      <h1 position="absolute"><span>Find a game with any stat.</span></h1>
+      <h5> <em> Enter in as few or as many fields as you want.</em> </h5>
       <a href="{% url 'index' %}">Back to Home</a>
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
@@ -22,7 +22,15 @@
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
                 <table class="form">
-                {{ form.as_table }}
+                {% for field in form %}
+                {% if forloop.counter == 1 or forloop.counter == 2 %}
+                {{ field.label_tag }} {{ field }}
+                {% else %}
+                <br/>
+                <br/>
+                {{ field.label_tag }} {{ field }} 
+                {% endif %}
+                {% endfor %}
                 </table>
                 <br/>
                 <br/>

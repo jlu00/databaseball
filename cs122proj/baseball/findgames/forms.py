@@ -53,15 +53,20 @@ def clean(self, value):
         
 
 class FantasyForm(forms.Form):
-    #player1 = forms.CharField(label="Player 1", required=True, help_text="e.g. Lorenzo Cain")
-    stat1 = forms.ChoiceField(label="Rank 1", choices=PLAYER_STATS, required=True, help_text="Player Stat 1")
-    stat2 = forms.ChoiceField(label="Rank 2", choices=PLAYER_STATS, required=False)
-    stat3 = forms.ChoiceField(label="Rank 3", choices=PLAYER_STATS, required=False)
-    stat4 = forms.ChoiceField(label="Rank 4", choices=PLAYER_STATS, required=False)
-    stat5 = forms.ChoiceField(label="Rank 1", choices=PITCHER_STATS, required=True)
-    stat6 = forms.ChoiceField(label="Rank 2", choices=PITCHER_STATS, required=False)
-    stat7 = forms.ChoiceField(label="Rank 3", choices=PITCHER_STATS, required=False)
-    stat8 = forms.ChoiceField(label="Rank 4", choices=PITCHER_STATS, required=False)
+    stat1 = forms.ChoiceField(label="Player Stat Rank 1", choices=PLAYER_STATS, required=True, help_text="Player Stat 1")
+    stat2 = forms.ChoiceField(label="Player Stat Rank 2", choices=PLAYER_STATS, required=False)
+    stat3 = forms.ChoiceField(label="Player Stat Rank 3", choices=PLAYER_STATS, required=False)
+    stat4 = forms.ChoiceField(label="Player Stat Rank 4", choices=PLAYER_STATS, required=False)
+    stat5 = forms.ChoiceField(label="Pitcher Stat Rank 1", choices=PITCHER_STATS, required=True)
+    stat6 = forms.ChoiceField(label="Pitcher Stat Rank 2", choices=PITCHER_STATS, required=False)
+    stat7 = forms.ChoiceField(label="Pitcher Stat Rank 3", choices=PITCHER_STATS, required=False)
+    stat8 = forms.ChoiceField(label="Pitcher Stat Rank 4", choices=PITCHER_STATS, required=False)
+    teamname = forms.CharField(label="Fantasy Team Name: ", required=False, help_text="e.g. The Y-Anne Kees")
+    years = forms.CharField(label="Year Range:    ", required=False, help_text="e.g. (1980, 2014)")
+    Name = forms.CharField(label="Name of Player:    ", required=False, help_text="e.g. Matt or Tom")
+    Team = forms.CharField(label="Name of Team: ", required=False, help_text="e.g. Chicago Cubs")
+    Playoffs = forms.BooleanField(required=False)
+    World_Series = forms.BooleanField(required=False)
 
 
 class PlayerForm(forms.Form):

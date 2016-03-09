@@ -17,6 +17,7 @@ import numpy as np
 import io
 from PIL import Image
 import urllib, base64
+from ast import literal_eval
 
 
 COLUMNS = dict(
@@ -62,6 +63,8 @@ STAT_INPUTS = ['hits_low', 'hits_high', 'runs_low', 'runs_high', 'hrs_low', 'hrs
 
 OPERATIONS_DICT = {'team1': '=', 'team2': '=', 'winner': '=', 'stats_low': ">=", 'stats_high': "<="} 
 
+PARAMS = ['Name', "World_Series", "Playoffs", "years", "Team"]
+
 DATABASE_FILENAME = 'all_players.db'
 
 def index(request):
@@ -95,7 +98,7 @@ def findgames(request):
         context['result'] = result
         context['num_results'] = len(result)
         context['columns'] = [COLUMNS.get(col, col) for col in columns]
-    
+    print(result)
     context['form'] = form
     
     return render(request, 'findgames/findgames.html', context)
@@ -147,6 +150,8 @@ def players(request):
     context['form2'] = form2
     return render(request, 'findgames/players.html', context)
 
+{'Name': 'Tom', 'Playoffs': True, 'stat1': 'WARs_nonpitcher', 'years': '(1950, 2013)', 'Team': 'Chicago Cubs', 'World_Series': True, 'stat2': '', 'stat5': 'IPs', 'stat7': '', 'stat3': '', 'stat4': '', 'stat6': '', 'stat8': '', 'teamname': 'Yankees'}
+
 def fantasy(request):
     context = {}
     res = None
@@ -157,7 +162,17 @@ def fantasy(request):
             args = {}
             prefs_pos = []
             prefs_pitch = []
-            params = {'years': (1900, 2015), 'Playoffs': False, 'World Series': False, 'Name': None, 'Team': None}
+            params = {}
+            
+            for p in PARAMS:
+                try: 
+                    input_param = form.cleaned_data[p]
+                    if p == 'years' and input_param:
+                        input_param = literal_eval(input_param)
+                    params[p] = input_param
+                except KeyError:
+                    continue
+
             for key in form.cleaned_data:
                 args[key] = form.cleaned_data[key] 
             
@@ -174,8 +189,9 @@ def fantasy(request):
             roster_results = []
             for pos in res.roster:
                 if not res.roster[pos]:
+                    roster_results.append(pos)
                     players = ""
-                    players += "No Designated Hitter matched your query.   "
+                    players += "No player matched your query.   "
                 else:
                     players = ""
                     roster_results.append(pos)
@@ -188,11 +204,12 @@ def fantasy(request):
     
     if res is None:
         context['result'] = None
+        context['FantTeamName'] = ""
     else:
         context['result'] = res
         context['roster_results'] = roster_results
         context['stats'] = res.team_stats
-        context['length'] = len(roster_results)
+        context['FantTeamName'] = form.cleaned_data['teamname']
     context['form'] = form
 
     return render(request, 'findgames/fantasy.html', context)
@@ -344,6 +361,9 @@ def create_player_arg(args_from_ui):
     return args_list
 
 
+DATABASE_FILENAME = 'all_players.db'
+
+
 def create_team(prefs_pos, prefs_pitch, params):
 
     '''
@@ -364,7 +384,7 @@ def create_team(prefs_pos, prefs_pitch, params):
         # print(len(players))
 
     db.close()
-    players = apply_params(players, params)
+    # players = apply_params(players, params)
     for i in players:
         a = compute_power_index(players[i], prefs_pos, prefs_pitch)
         players[i].incr_power_index(a)
@@ -376,7 +396,6 @@ def create_team(prefs_pos, prefs_pitch, params):
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
     query = construct_query(new_pref, pitcher, params)
-    # print(query)
     r = cursor.execute(query)
     results_pos = r.fetchall()
     rank = 0
@@ -436,12 +455,13 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
         if params['Playoffs']:
             where_statement += "AND bios.Playoffs != '' "
-        if params['World Series']:
+        if params['World_Series']:
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
-
-            
+        if params['years']:
+            where_statement += "AND (pitcher.Pitcher_Years like '%" + str(params['years'][0]) + "%' OR pitcher.Pitcher_Years like '%" + str(params['years'][1]) + "%') "
+          
 
     else:
         select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, nonpitcher.WARs_nonpitcher """ 
@@ -455,7 +475,7 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
         if params['Playoffs']:
             where_statement += "AND bios.Playoffs != '' "
-        if params['World Series']:
+        if params['World_Series']:
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
@@ -465,6 +485,8 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND nonpitcher.OBPs < .55 "
         elif pref == "nonpitcher.SLGs":
             where_statement += "AND nonpitcher.SLGs < .8"
+        if params['years']:
+            where_statement += "AND (nonpitcher.years like '%" + str(params['years'][0]) + "%' OR nonpitcher.years like '%" + str(params['years'][1]) + "%') "
     query = select_statement + from_statement + on_statement + where_statement + order_by_statement
     return query
 
@@ -474,7 +496,7 @@ def apply_params(players, params):
     Sample Params:
     '{Years': (1988, 2000),
     'Playoffs': True,
-    'World Series': True,
+    'World_Series': True,
     'Name': 'Tom',
     'Team': 'Chicago Cubs'}
     '''
@@ -577,6 +599,7 @@ def go(prefs_pos, prefs_pitch, params):
             team.add_stat(pref, stat)
 
     return team
+
 
 def playergraph(request):
     plt.figure(figsize=(5, 5))
