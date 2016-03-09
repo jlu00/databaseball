@@ -600,7 +600,6 @@ def go(prefs_pos, prefs_pitch, params):
 
     return team
 
-
 def playergraph(request):
     plt.figure(figsize=(5, 5))
     labels = []

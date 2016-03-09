@@ -7,21 +7,21 @@
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/stylefantasy.css' %}" />
   </head>
   <body>
-    <img src="{% static "findgames/images/georgebrett.jpg" %}" alt="My image"/>
     <div align="center">
-      <h1 style="color:black">Create a fantasy team with players from any era.</h1>
-      <a href="{% url 'index' %}">Back to Home</a>
-      <br/>
-      <br/>
-      <h3 style="color:black">Choose and rank your top five stats to create a fantasy team
-      	and see how it does.</h3>
+      <font size="5"><h1 style="color:black">Create a fantasy team with players from any era.</h1></font>
+      <font size="2"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
+      	and see how it does.</h1></font>
+        <br/>
+        <a href="{% url 'index' %}">Back to Home</a>
+        <br/>
+        <br/>
     </div>
 <div class="frame" align="center">
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
                 
                 {% for field in form %}
-                	{% if forloop.counter <= 4 %}
+                  {% if forloop.counter <= 4 %}
                   {{ field.label }}: {{ field }}
                     {% endif %}
                   {% if forloop.counter == 5 %}
@@ -36,7 +36,7 @@
                   {{ field.label }}:  {{ field }} {{ field.help_text }}
                   {% endif %}
                 {% endfor %}
-           
+
                 <br/>
                 <br/>
                 <br/>
@@ -53,16 +53,16 @@
                 <table class="courses" border="2">
                   <tr>
                   {% if FantTeamName %}
-                  <h2> The {{ FantTeamName }} </h2>
+                  <h2> The {{ FantTeamName }} Team </h2>
                   {% else %}
                   <h2> Your custom fantasy team. </h2>
                   {% endif %}
                   {% for field in roster_results %}
                     <br/>
                     {% if forloop.counter0|divisibleby:'2' %}
-                    <strong>{{ field }}</strong>
+                   <a href="google.com"> <strong>{{ field }}</strong> </a>
                     {% else %}
-                    {{ field }}
+                   {{ field }}
                     <br/>
                     {% endif %}
                   {% endfor %}

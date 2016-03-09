@@ -1,5 +1,10 @@
 body {
   font-family: "Times New Roman", sans-serif;
+  background: url('images/number07.png');
+  background-size: 100%;
+  #background-repeat: repeat-y;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 img {
  width: 100%;

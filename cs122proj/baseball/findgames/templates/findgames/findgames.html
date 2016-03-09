@@ -10,9 +10,9 @@
   <body>
     {% load staticfiles %}
     <div align="center" class='image' position="relative">
-      <img src="{% static "findgames/images/yankeesstad.jpg" %}" alt="My image"/>
-      <h1 position="absolute"><span>Find a game with any stat.</span></h1>
-      <h5> <em> Enter in as few or as many fields as you want.</em> </h5>
+      
+      <font size="5"><h1 position="absolute"><span>Find a game with any stat.</span></h1></font>
+      <font size="2"><h1> <em> Enter in as few or as many fields as you want.</em> </h1></font>
       <a href="{% url 'index' %}">Back to Home</a>
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
@@ -22,15 +22,7 @@
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
                 <table class="form">
-                {% for field in form %}
-                {% if forloop.counter == 1 or forloop.counter == 2 %}
-                {{ field.label_tag }} {{ field }}
-                {% else %}
-                <br/>
-                <br/>
-                {{ field.label_tag }} {{ field }} 
-                {% endif %}
-                {% endfor %}
+                <div class="fields"> {{ form.as_table }} </div>
                 </table>
                 <br/>
                 <br/>
@@ -41,33 +33,27 @@
     <div class="frame">
             {% if result != None %}
             <div class="results">
-                <table class="games">
-                    <tr>
+                <table class="games" align="center">
+                  <div align="center"> <h3 class="num_results">Total Games: {{ num_results }}</h3> </div>
+                    <font size="4.5">
                       {% for res in result %}
+                      <div class="boxresult" align="center">
                       <br/>
                       <div align="center"> {{ res|slice:"0:1"|join:"" }} </div>
                       <div align="center"> {{ res|slice:"1:2"|join:"" }} @ {{ res|slice:"2:3"|join:"" }} in {{ res|slice:"3:4"|join:"" }} </div>
                       <div align="center"> {{ columns|slice:"4:5"|join:"" }}: {{ res|slice:"4:5"|join:"" }} ||  {{ columns|slice:"5:6"|join:"" }}: {{ res|slice:"5:6"|join:"" }}   </div>
                       <div align="center"> {{ columns|slice:"8:9"|join:"" }}: {{ res|slice:"8:9"|join:"" }} ||  {{ columns|slice:"9:10"|join:"" }}: {{ res|slice:"9:10"|join:"" }}  </div>
                       <div align="center">{{ columns|slice:"6:7"|join:"" }}: {{ res|slice:"6:7"|join:"" }} ||  {{ columns|slice:"7:8"|join:"" }}: {{ res|slice:"7:8"|join:"" }}  </div>
-                      <div align="center"> <strong> {{ columns|slice:"10:11"|join:"" }}: {{ res|slice:"10:11"|join:"" }} </strong> </div>
-                      <p align="center">---------------------------------- </p>
+                      <div align="center" class="winner"> <strong> {{ columns|slice:"10:11"|join:"" }}: {{ res|slice:"10:11"|join:"" }} </strong> </div> 
                       <br/>
+                      </div>
+                      <br/>
+                      <br/>
+                   
                       {% endfor %}
-                        {% for col in columns %}
-                        <th>{{ col }}</th>
-                        {% endfor %}
-                    </tr>
-                    {% for entry in result %}
-                    <tr>
-                        {% for col in entry %}
-                        <td align="center">{{ col }}</td>
-                        {% endfor %}
-                    </tr>
-                    {% endfor %}
+                       </font>
                 </table>
             </div>
-            <p class="num_results">Total Games: {{ num_results }}</p>
             {% endif %}
         </div>
     	
