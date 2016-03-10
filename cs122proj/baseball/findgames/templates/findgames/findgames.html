@@ -22,9 +22,11 @@
      <div class="frame" align="center">
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
+                <font size="4.5">
                 <table class="form">
-                <div class="fields"> {{ form.as_table }} </div>
+                <div class="fields"> {{ form }} </div>
                 </table>
+              </font>
                 <br/>
                 <br/>
                 <input type="submit" value="Search" />
@@ -42,7 +44,8 @@
                       <div class="boxresults" align="center">
                       <br/>
                       <div align="center"> {{ res|slice:"0:1"|join:"" }} </div>
-                      <div align="center"> {{ res|slice:"1:2"|join:"" }} @ {{ res|slice:"2:3"|join:"" }} in {{ res|slice:"3:4"|join:"" }} </div>
+                      <br/>
+                      <div align="center"> <strong> {{ res|slice:"1:2"|join:"" }} @ {{ res|slice:"2:3"|join:"" }} in {{ res|slice:"3:4"|join:"" }} </strong> </div>
                       <div align="center"> {{ columns|slice:"4:5"|join:"" }}: {{ res|slice:"4:5"|join:"" }} ||  {{ columns|slice:"5:6"|join:"" }}: {{ res|slice:"5:6"|join:"" }}   </div>
                       <div align="center"> {{ columns|slice:"8:9"|join:"" }}: {{ res|slice:"8:9"|join:"" }} ||  {{ columns|slice:"9:10"|join:"" }}: {{ res|slice:"9:10"|join:"" }}  </div>
                       <div align="center">{{ columns|slice:"6:7"|join:"" }}: {{ res|slice:"6:7"|join:"" }} ||  {{ columns|slice:"7:8"|join:"" }}: {{ res|slice:"7:8"|join:"" }}  </div>

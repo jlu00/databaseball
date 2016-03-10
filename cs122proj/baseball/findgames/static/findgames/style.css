@@ -37,7 +37,7 @@ img {
 
 .boxresults {
   background-color:white !important;
-  width: 25%;
+  width: 30%;
   margin: 0 auto;
   border-style: double;
   border-width: 1px;
@@ -46,7 +46,7 @@ img {
 
 .boxresultslarge {
   background-color:white !important;
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
   border-style: double;
   border-width: 1px;
@@ -97,7 +97,6 @@ h1 {
  width: 100%; 
 
 }
-
 
 h1 span { 
  color: white; 
