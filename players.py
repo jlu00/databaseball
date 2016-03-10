@@ -18,31 +18,25 @@ import queue
 import json
 import sys
 import csv
-from datetime import datetime
 
 
-start=datetime.now().time()
-
-
+#functions that make the csv files for each table from the dictionary of all data
 def make_player_employment_csv_file(data_dict, filename):
     '''
     Makes a csv file for the player_employment table info from a dictionary
     '''
-    print("start csv",datetime.now().time())
     strfilename = "%s.csv" % (filename)
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
         indexwriter.writerow(["player_id","teams","years"])
         for player_id in data_dict.keys():
             indexwriter.writerow([player_id, data_dict[player_id]["teams"], data_dict[player_id]["years"]])
-    print("finish csv",datetime.now().time())
 
 def make_player_bio_csv_file(data_dict, filename):
     '''
     Makes a csv file for the player_bio table info from a dictionary
     '''
     strfilename = "%s_bios.csv" % (filename)
-    print("start bio csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
         indexwriter.writerow(["player_id","positions","name","Playoffs","Playoffs_Won","World_Series","World_Series_Won","years_played","span"])
@@ -50,14 +44,12 @@ def make_player_bio_csv_file(data_dict, filename):
             indexwriter.writerow([player_id, data_dict[player_id]["positions"], data_dict[player_id]["name"],data_dict[player_id]["Playoffs"],
 data_dict[player_id]["Playoffs_Won"], data_dict[player_id]["World_Series"], data_dict[player_id]["World_Series_Won"], data_dict[player_id]["years_played"],
 data_dict[player_id]["span"]])
-    print("finish bio csv",datetime.now().time())
 
 def make_player_stats_nonpitcher_csv_file(data_dict, filename):
     '''
     Makes a csv file for the player_stats_nonpitcher table info from a dictionary
     '''
     strfilename = "%s_stats_nonpitcher.csv" % (filename)
-    print("start stats nonpitcher csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
         indexwriter.writerow(["player_id","years","WARS_nonpitcher", "AVGs", "OBPs", "SLGs", "UBR_WRC_Years", "UBRs", "WRCs", "WPA_Years", "WPAs", "Clutchs"])
@@ -66,7 +58,6 @@ def make_player_stats_nonpitcher_csv_file(data_dict, filename):
 data_dict[player_id]["AVGs"],data_dict[player_id]["OBPs"], data_dict[player_id]["SLGs"], data_dict[player_id]["UBR_WRC_Years"], 
 data_dict[player_id]["UBRs"],data_dict[player_id]["WRCs"], data_dict[player_id]["WPA_Years"], 
 data_dict[player_id]["WPAs"],data_dict[player_id]["Clutchs"]])
-    print("finish stats nonpitcher csv",datetime.now().time())
 
 def make_player_stats_pitcher_csv_file(data_dict, filename):
     '''
@@ -88,7 +79,6 @@ def make_player_full_csv_file(data_dict, filename):
     Makes a csv file for the player from a dictionary
     '''
     strfilename = "%s_player_full.csv" % (filename)
-    print("start full csv",datetime.now().time())
     with open(strfilename, 'w') as csvfile:
         indexwriter = csv.writer(csvfile)
         indexwriter.writerow(["player_id","teams","years","positions","name","Playoffs","Playoffs_Won","World_Series","World_Series_Won","years_played",
@@ -103,9 +93,8 @@ data_dict[player_id]["UBRs"],data_dict[player_id]["WRCs"], data_dict[player_id][
 data_dict[player_id]["WPAs"],data_dict[player_id]["Clutchs"], data_dict[player_id]["Pitcher_Years"], data_dict[player_id]["WARs_pitcher"],
 data_dict[player_id]["ERAs"],data_dict[player_id]["IPs"], data_dict[player_id]["GSs"], data_dict[player_id]["FIPs"], 
 data_dict[player_id]["E_Fs"],data_dict[player_id]["K_Pers"], data_dict[player_id]["BB_Pers"]])
-    print("finish stats full csv",datetime.now().time())
 
-
+#functions that scrape data from baseball-reference
 def make_br_player_dict():
     '''
     Crawls through the players part of baseball-reference and makes a dictionary where the keys are
@@ -117,7 +106,6 @@ def make_br_player_dict():
     player_urls = []
     starting_url = "http://www.baseball-reference.com/players/"
     parent_url = "http://www.baseball-reference.com"
-    #request = util.get_request(starting_url)
     request = requests.get(starting_url)
     if request:
         text = request.text
@@ -131,6 +119,11 @@ def make_br_player_dict():
 
 
 def make_br_alpha_player_dict(letter):
+    '''
+    Crawls through the players part of baseball-reference and makes a dictionary for players whose last 
+    names start with letter, where the keys are the player_id for each player, which map to the teams each 
+    player played for and the corresponding year for each team
+    '''
     master_player_dict = {}
     player_urls = []
     letter_url = "%s%s/" % ("http://www.baseball-reference.com/players/",letter)
@@ -138,15 +131,17 @@ def make_br_alpha_player_dict(letter):
     master_player_urls = get_master_player_urls(parent_url)
     player_urls = get_alpha_player_urls(letter_url)
     master_player_dict = create_players(master_player_dict, player_urls, parent_url, master_player_urls)
-    print("alpha dictionary:",len(master_player_dict))
 
     return master_player_dict
 
 
 def get_alpha_player_urls(letter_url):
+    '''
+    Gets a master list of player urls from the letter_url, which it passes down to
+    create_players so that the player can be assigned the correct id_number
+    '''
     player_urls = []
     abs_letter_url = letter_url
-    #letter_request = util.get_request(abs_letter_url)
     letter_request = requests.get(abs_letter_url)
     if letter_request:
         letter_text = letter_request.text
@@ -164,7 +159,6 @@ def get_master_player_urls(parent_url):
     '''
     master_player_urls = []
     lookup_url = "%s/players/" % (parent_url)
-    #request = util.get_request(lookup_url)
     request = requests.get(lookup_url)
     if request:
         text = request.text
@@ -173,14 +167,12 @@ def get_master_player_urls(parent_url):
 
         for letter_url in letter_urls:
             abs_letter_url = "%s%s" % (parent_url, letter_url)
-            #letter_request = util.get_request(abs_letter_url)
             letter_request = requests.get(abs_letter_url)
             if letter_request:
                 letter_text = letter_request.text
                 letter_soup = bs4.BeautifulSoup(letter_text, parse_only=bs4.SoupStrainer("pre"))
                 master_player_urls += [a.attrs.get("href") for a in letter_soup.select("a")] #makes list of player urls
 
-    print("master urls:",len(master_player_urls))
     return master_player_urls
 
 def get_player_urls(letter_urls, parent_url):
@@ -191,7 +183,6 @@ def get_player_urls(letter_urls, parent_url):
     '''
     for letter_url in letter_urls:
         abs_letter_url = "%s%s" % (parent_url,letter_url)
-        #letter_request = util.get_request(abs_letter_url)
         letter_request = requests.get(abs_letter_url)
         if letter_request:
             letter_text = letter_request.text
@@ -199,7 +190,6 @@ def get_player_urls(letter_urls, parent_url):
             player_urls = [a.attrs.get("href") for a in letter_soup.select("a")] #makes list of player urls
             player_names = [a.text for a in letter_soup.select("a")] #makes a list of player names unencoded
 
-    print(letter_url, len(player_urls))
     return player_urls, player_names
 
 
@@ -215,7 +205,6 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
  "Pitcher_Years" : "", "AVGs" : "", "OBPs" : "", "SLGs" : "", "Playoffs" : "", "Playoffs_Won" : "", "World_Series": "", "World_Series_Won" : "",
 "UBR_WRC_Years" : "", "UBRs" : "", "WRCs" : "", "WPA_Years" : "", "WPAs" : "", "Clutchs" : ""}
         abs_player_url = "%s%s" % (parent_url,player_url)       
-        #player_request = util.get_request(abs_player_url)
         player_request = requests.get(abs_player_url)
         if player_request:
             player_text = player_request.text
@@ -243,19 +232,14 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                 teams = player_batting_info[1]
                 years_played = player_batting_info[2]
                 year_span = player_batting_info[3]
-
                 avgs = player_batting_info[4]
                 obps = player_batting_info[5]
                 slgs = player_batting_info[6]
-
                 player_dict["AVGs"] = avgs
                 player_dict["OBPs"] = obps
                 player_dict["SLGs"] = slgs
-
                 wars_nonpitcher = get_player_info_from_player_value_batters(player_text)
                 player_dict["WARs_nonpitcher"] = wars_nonpitcher
-
-                #print(player_name, year_span[4:])
                 fangraph_stats = get_player_stats_from_fangraphs(player_name,year_span[4:])
                 if fangraph_stats:
                     adv_years = fangraph_stats[0]
@@ -264,21 +248,17 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                     wpa_years = fangraph_stats[3]
                     wpa_wpas = fangraph_stats[4]
                     wpa_clutchs = fangraph_stats[5]
-
                     player_dict["UBR_WRC_Years"] = adv_years
                     player_dict["UBRs"] = adv_ubrs
                     player_dict["WRCs"] = adv_wrcs
                     player_dict["WPA_Years"] = wpa_years
                     player_dict["WPAs"] = wpa_wpas
                     player_dict["Clutchs"] = wpa_clutchs
-                
-
             elif player_pitching_info:
                 years = player_pitching_info[0]
                 teams = player_pitching_info[1]
                 years_played = player_pitching_info[2]
                 year_span = player_pitching_info[3]
-
             #check all pitcher stats even if they have batting info             
             if "Pitcher" in positions:
                 eras = player_pitching_info[4]
@@ -289,7 +269,6 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
                 k_pers = player_pitching_info[9]
                 bb_pers = player_pitching_info[10]
                 wars_pitcher = get_player_info_from_player_value_pitchers(player_text)
-            
                 player_dict["ERAs"] = eras
                 player_dict["IPs"] = ips
                 player_dict["GSs"] = gss
@@ -305,44 +284,31 @@ def create_players(master_player_dict, player_urls, parent_url, master_player_ur
             player_dict["teams"] = teams
             player_dict["name"] = player_name
             player_dict["positions"] = positions 
-
             player_dict["span"] = year_span
             player_dict["years_played"] = years_played
-
 
             #collect postseason information, if available
             player_postseason_batting_info = get_player_info_from_postseason_batting(player_text)
             player_postseason_pitching_info = get_player_info_from_postseason_pitching(player_text)
-
             if player_postseason_batting_info:
                 playoffs = player_postseason_batting_info[0]
                 playoffs_won = player_postseason_batting_info[1]
                 worldseries = player_postseason_batting_info[2]
                 worldseries_won = player_postseason_batting_info[3]
-
                 player_dict["Playoffs"] = playoffs
                 player_dict["Playoffs_Won"] =playoffs_won
                 player_dict["World_Series"] = worldseries
-                player_dict["World_Series_Won"] = worldseries_won
-
-                
-
+                player_dict["World_Series_Won"] = worldseries_won     
             elif player_postseason_pitching_info:
                 playoffs = player_postseason_pitching_info[0]
                 playoffs_won = player_postseason_pitching_info[1]
                 worldseries = player_postseason_pitching_info[2]
                 worldseries_won = player_postseason_pitching_info[3]
-
                 player_dict["Playoffs"] = playoffs
                 player_dict["Playoffs_Won"] =playoffs_won
                 player_dict["World_Series"] = worldseries
                 player_dict["World_Series_Won"] = worldseries_won
 
-
-
-
-            print("id number:", id_number, " name ", player_name)
-            #print("player dict:", player_dict)
             master_player_dict[id_number] = player_dict
 
     return master_player_dict
@@ -428,7 +394,6 @@ def get_player_info_from_standard_pitching(player_text):
             teams = "|".join([teams, team])
             years = "|".join([years, year])
             player_stats = get_player_pitching_stats(row)
-
             ERAs = "|".join([ERAs,player_stats[0]])
             IPs = "|".join([IPs,player_stats[1]])
             GSs = "|".join([GSs,player_stats[2]])
@@ -436,8 +401,7 @@ def get_player_info_from_standard_pitching(player_text):
             E_Fs = "|".join([E_Fs,player_stats[4]])
             K_Pers = "|".join([K_Pers,player_stats[5]])
             BB_Pers = "|".join([BB_Pers,player_stats[6]])
-
-                    
+               
     years_total_td = player_soup.find("tfoot").find("tr",{"class":"stat_total"}).find("td")
     years_total = ""
     if years_total_td:
@@ -532,12 +496,11 @@ def get_player_batting_stats(row):
 def get_player_stats_from_fangraphs(player_name, year_first):
     '''
     navigate to fangraphs to get more player stats
-        '''
+    '''
     fangraph_stats = []
     fangraph_starting_url = "%s=%s" % ("http://www.fangraphs.com/players.aspx?lastname", player_name)
     if fangraph_starting_url:
         fangraph_request = requests.get(fangraph_starting_url)
-        #fangraph_request = util.get_request(fangraph_starting_url)
         if fangraph_request:
             fangraph_text = fangraph_request.text
             fangraph_soup = bs4.BeautifulSoup(fangraph_text, parse_only=bs4.SoupStrainer("div", id="PlayerSearch1_panSearch"))
@@ -562,7 +525,6 @@ def get_player_stats_from_fangraphs(player_name, year_first):
                         href += "B"
                     fangraph_player_url = "%s%s" % ("http://www.fangraphs.com/",href)
                     if fangraph_player_url:
-                        #fangraph_player_request = util.get_request(fangraph_player_url)
                         fangraph_player_request = requests.get(fangraph_player_url)
                         if fangraph_player_request:
                             fangraph_player_text = fangraph_player_request.text
@@ -585,7 +547,6 @@ def get_player_info_from_fangraphs(fangraph_player_text):
     url_form = url_soup.find("form").get("action")
     if url_form[-1:] == "P":
         url_bat = "%s%sB" % ("http://www.fangraphs.com",url_form[1:])
-        #fangraph_player_request = util.get_request(url_bat)
         fangraph_player_request = requests.get(url_bat)
         if fangraph_player_request:
             fangraph_player_text = fangraph_player_request.text
@@ -614,8 +575,7 @@ def get_player_info_from_fangraphs(fangraph_player_text):
                                 wrc = wrc_ck.text.replace(u'\xa0', u'') #remove nonbreaking spaces in fangraph tables
                             years = "|".join([years,year])
                             ubrs = "|".join([ubrs,ubr])
-                            wrcs = "|".join([wrcs,wrc])
-            
+                            wrcs = "|".join([wrcs,wrc])      
 
     fangraph_w_soup = bs4.BeautifulSoup(fangraph_player_text, parse_only=bs4.SoupStrainer("div", id="SeasonStats1_dgSeason5"))
     w_table = fangraph_w_soup.find("table")
@@ -639,19 +599,12 @@ def get_player_info_from_fangraphs(fangraph_player_text):
                                 wpa = wpa_ck.text.replace(u'\xa0', u'')
                             if clutch_ck:
                                 clutch = clutch_ck.text.replace(u'\xa0', u'')
-            
                             w_years = "|".join([w_years, w_year])
                             wpas = "|".join([wpas, wpa])
                             clutchs = "|".join([clutchs,clutch])
 
     
     return years[1:], ubrs[1:], wrcs[1:], w_years[1:], wpas[1:], clutchs[1:]
-            
-
-                
-
-
-
 
 def get_player_info_from_main_player_page(player_text):
     '''
@@ -782,8 +735,7 @@ def get_player_info_from_postseason_pitching(player_text):
 
 
 
-#alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"]
-alphabet = ["a"]
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"]
 for letter in alphabet:
     dict_response = make_br_alpha_player_dict(letter)
     str_file = "letter_" + letter
@@ -794,5 +746,3 @@ for letter in alphabet:
     make_player_full_csv_file(dict_response, str_file)          
 
         
-end=datetime.now().time()
-print(start," __  ", end)
