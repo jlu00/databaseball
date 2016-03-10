@@ -295,7 +295,7 @@ def calculate_leage_average(stat, cursor, pitcher):
         query = "SELECT SUM(nonpitcher." + stat + ") / COUNT(nonpitcher." + stat + ") FROM nonpitcher JOIN bios ON bios.player_id = nonpitcher.player_id WHERE (bios.years_played > 2 AND nonpitcher." + stat + " != '');"
     r = cursor.execute(query)
     for i in r.fetchall():
-        results = round(i[0], 2)
+        results = round(i[0], 3)
     print(results)
     return results
 def go(prefs_pos, prefs_pitch, params):
