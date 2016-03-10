@@ -7,11 +7,11 @@
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
   </head>
-  <body>
-    <img src="{% static "findgames/images/cubplayers.jpg" %}" alt="My image"/>
+  <body class="playerbackground">
+    <div class="formarea">
     <div align="center">
-      <h1 style="color:black" class="boxed" >Compare any two players.</h1>
-      <h3> <em> Choose across leagues, teams and eras. </em> </h3>
+      <font size="5"><h1 style="color:black" class="boxed" >Compare any two players.</h1></font>
+      <font size="2"><h1> <em> Choose across leagues, teams and eras. </em> </h1></font>
       <a href="{% url 'index' %}">Back to Home</a>
       <br/>
       <br/>
@@ -33,7 +33,7 @@
         
         <h3 align="center"> Pitcher Comparison </h3>
         
-    <div class="frame" align="center">
+    <div align="center">
             <form method="get" name="PitcherForm">
                 {% csrf_token %}
                 {% for field in form2 %}
@@ -44,10 +44,13 @@
                 
             </form>
         </div>
-    	
-    <div class="frame">
+  </div>
+    	<br/>
+      <br/>
+      <br/>
+    <div>
             {% if result != None %}
-            <div class="results">
+            <div class="boxresultslarge">
                 <table class="players">
                     <tr>
                         {% for col in columns %}
@@ -57,7 +60,11 @@
                     {% for entry in result %}
                     <tr>
                         {% for col in entry %}
+                        {% if forloop.counter == 1 or forloop.counter == 7%}
+                        <td align="center"> {{ col }} </td>
+                          {% else %}
                         <td align="center">{{ col|floatformat:3 }}</td>
+                        {% endif %}
                         {% endfor %}
                     </tr>
                     {% endfor %}

@@ -4,9 +4,10 @@
     <br/>
     <title>Search</title>
        {% load staticfiles %}
-      <link rel="stylesheet" type="text/css"  href="{% static 'findgames/stylefantasy.css' %}" />
+      <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
   </head>
-  <body>
+  <body class="fantasyback">
+    <div class="formarea" >
     <div align="center">
       <font size="5"><h1 style="color:black">Create a fantasy team with players from any era.</h1></font>
       <font size="2"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
@@ -44,12 +45,14 @@
                 <br/>
             </form>
         </div>
-
-
+      </div>
+        <br/>
+        <br/>
+        <br/>
         <div class="frame">
             {% if result != None %}
             <div class="results">
-            <div class="roster" align="center">
+            <div class="boxresults" align="center">
                 <table class="courses" border="2">
                   <tr class="roster">
                   <font size="4.5">

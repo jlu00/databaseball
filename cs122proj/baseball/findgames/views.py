@@ -150,7 +150,7 @@ def players(request):
     context['form2'] = form2
     return render(request, 'findgames/players.html', context)
 
-{'Name': 'Tom', 'Playoffs': True, 'stat1': 'WARs_nonpitcher', 'years': '(1950, 2013)', 'Team': 'Chicago Cubs', 'World_Series': True, 'stat2': '', 'stat5': 'IPs', 'stat7': '', 'stat3': '', 'stat4': '', 'stat6': '', 'stat8': '', 'teamname': 'Yankees'}
+
 
 def fantasy(request):
     context = {}
