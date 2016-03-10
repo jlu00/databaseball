@@ -4,63 +4,86 @@
     <br/>
     <title>Search</title>
        {% load staticfiles %}
-      <link rel="stylesheet" type="text/css"  href="{% static 'findgames/stylefantasy.css' %}" />
+      <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
   </head>
-  <body>
+  <body class="fantasyback">
+    <div class="formarea" >
     <div align="center">
-      <h1 style="color:black">Create a fantasy team with players from any era.</h1>
-      <a href="{% url 'index' %}">Back to Home</a>
-      <br/>
-      <br/>
-      <h3 style="color:black">Choose and rank your top five stats to create a fantasy team
-      	and see how it does.</h3>
+      <font size="5"><h1 style="color:black">Create a fantasy team with players from any era.</h1></font>
+      <font size="2"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
+      	and see how it does.</h1></font>
+        <br/>
+        <a href="{% url 'index' %}">Back to Home</a>
+        <br/>
+        <br/>
     </div>
-    <div align="center">
-<div class="frame">
+<div class="frame" align="center">
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
                 
                 {% for field in form %}
-                	{{ field.label_tag }}
-                	{{ field }} 
-                	<br/>
+                  {% if forloop.counter <= 4 %}
+                  {{ field.label }}: {{ field }}
+                    {% endif %}
+                  {% if forloop.counter == 5 %}
+                  <br/>
+                  {% endif %}
+                  {% if forloop.counter >= 5 and forloop.counter <= 8 %}
+                    {{ field.label }} {{ field }}
+                  {% endif %}
+                  <br/>
+                  <br/>
+                  {% if forloop.counter >= 9 %}
+                  {{ field.label }}:  {{ field }} {{ field.help_text }}
+                  {% endif %}
                 {% endfor %}
-           
+
                 <br/>
                 <br/>
                 <br/>
                 <input type="submit" value="Create" />
+                <br/>
             </form>
         </div>
-
-
+      </div>
+        <br/>
+        <br/>
+        <br/>
         <div class="frame">
             {% if result != None %}
             <div class="results">
+            <div class="boxresults" align="center">
                 <table class="courses" border="2">
-                  <tr>
-                  <div>
-                  {{ result.as_p }}
+                  <tr class="roster">
+                  <font size="4.5">
+                  {% if FantTeamName %}
+                  <h2> The {{ FantTeamName }} Team </h2>
+                  {% else %}
+                  <h2> Your custom fantasy team. </h2>
+                  {% endif %}
                   {% for field in roster_results %}
                     <br/>
                     {% if forloop.counter0|divisibleby:'2' %}
-                    <strong>{{ field }}</strong>
+                   <a href="google.com"> <strong>{{ field }}</strong> </a>
                     {% else %}
-                    {{ field }}
+                   {{ field }}
                     <br/>
                     {% endif %}
                   {% endfor %}
                   <br/>
-                  {% for s, num in stats %}
-                      {{ s }} : {{ num }}
-                      <br/>
+                </font>
+            </div>
+                  {% for s, num in stats.items %}
+                    {% if num != None %}
+                      {{ s }}: {{ num|floatformat:3 }}
+                         <br/>
+                    {% endif %}
                   {% endfor %}
-                  </div>
                   <tr/>
                 </table>
             </div>
             {% else %}
-            <p> No fantasy team could be created. Try some different params! </p>
+            <p> No fantasy team was created. Try some different params! </p>
             {% endif %}
         </div>
 <br/>

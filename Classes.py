@@ -19,10 +19,12 @@ class Players:
         '''
         stats should be a list of tuples in the form
         '''
-        self.stats[stat] = value
+        if type(value) != str:
+            self.stats[stat] = value
 
     def add_war(self, war):
-        self.war += war
+        if type(war) != str:
+            self.war += war
 
     def add_years(self, years):
         self.years_played = years

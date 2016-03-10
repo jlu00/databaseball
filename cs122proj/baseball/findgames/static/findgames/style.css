@@ -1,20 +1,69 @@
 body {
   font-family: "Times New Roman", sans-serif;
-  background-color:white;
-  #background: url('images/jbt.jpg');
-  #background-size: 100%;
-  #background-repeat: repeat-y;
+  background: url('images/stadium.jpg');
+  background-size: 100%;
+  background-repeat: repeat-y;
   margin: 0 !important;
   padding: 0 !important;
+
 }
+
+img {
+  width: 70% !important;
+  overflow: hidden !important;
+
+}
+
+.playerbackground {
+  background: url('images/cubplayers.jpg') !important;
+  width: 100% !important;
+  background-size: 100% !important;
+
+}
+
+.fantasyback {
+  background: url('images/imageedit_5_6202330194.jpg') !important;
+  width: 100%  !important;
+  background-size: 100% !important;
+}
+
 img {
  width: 100%;
- margin: -20px;
+ height: 60%;
+ margin: -30px 0px 15px 0px;
+ position: relative;
 
 }
 
-placeholder{
-  text-align: "center";
+.boxresults {
+  background-color:white !important;
+  width: 25%;
+  margin: 0 auto;
+  border-style: double;
+  border-width: 1px;
+  opacity: .9;
+}
+
+.boxresultslarge {
+  background-color:white !important;
+  width: 40%;
+  margin: 0 auto;
+  border-style: double;
+  border-width: 1px;
+  opacity: .9;
+} 
+
+.fields {
+  font-color:blue !important;
+}
+
+.formarea {
+  background-color:white !important;
+  width: 50%;
+  margin: 0 auto;
+  border-style: double;
+  border-width: 1px;
+  opacity: .9;
 }
 
 input {
@@ -39,4 +88,30 @@ a {
 
 tr {
  border-bottom: 1px solid black;
+}
+
+h1 {
+ position: absolute; 
+ top: 200px; 
+ left: 0; 
+ width: 100%; 
+
+}
+
+
+h1 span { 
+ color: white; 
+ font: bold 50px/80px Helvetica, Sans-Serif; 
+ letter-spacing: -1px;  
+ background: rgb(0, 0, 0); /* fallback color */
+ background: rgba(0, 0, 0, 0.7);
+ padding: 10px; 
+}
+
+.results {
+  background-color:blue;
+}
+
+.winner {
+  background-color:blue;
 }

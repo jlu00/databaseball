@@ -7,9 +7,11 @@
       <link rel="stylesheet" type="text/css"  href="{% static 'findgames/style.css' %}" />
       <br/>
   </head>
+  <body class="playerbackground">
+    <div class="formarea">
     <div align="center">
-      <h1 style="color:black" class="boxed" >Compare any two players.</h1>
-      <h3> <em> Choose across leagues, teams and eras. </em> </h3>
+      <font size="5"><h1 style="color:black" class="boxed" >Compare any two players.</h1></font>
+      <font size="2"><h1> <em> Choose across leagues, teams and eras. </em> </h1></font>
       <a href="{% url 'index' %}">Back to Home</a>
       <br/>
       <br/>
@@ -22,6 +24,9 @@
                 {{ field.label_tag }} {{ field }}
                 {% endfor %}
                  <input type="submit" value="Compare" />
+                 {% if message != None %}
+              {{ message }}
+              {% endif %}
                 <br/>
                
             </form>
@@ -31,7 +36,7 @@
         
         <h3 align="center"> Pitcher Comparison </h3>
         
-    <div class="frame" align="center">
+    <div align="center">
             <form method="get" name="PitcherForm">
                 {% csrf_token %}
                 {% for field in form2 %}
@@ -42,10 +47,15 @@
                 
             </form>
         </div>
-    	
-    <div class="frame">
+  </div>
+    	<br/>
+      <br/>
+      <br/>
+    <div>
+
+            
             {% if result != None %}
-            <div class="results">
+            <div class="boxresultslarge">
                 <table class="players">
                     <tr>
                         {% for col in columns %}
@@ -55,14 +65,30 @@
                     {% for entry in result %}
                     <tr>
                         {% for col in entry %}
-                        <td align="center">{{ col }}</td>
+                        {% if forloop.counter == 1 or forloop.counter == 7%}
+                        <td align="center"> <font size="3"> {{ col }} </font> </td> 
+                          {% else %}
+                        <td align="center"> <font size="3">  {{ col|floatformat:3 }} </font> </td>
+                        {% endif %}
                         {% endfor %}
                     </tr>
                     {% endfor %}
                 </table>
-              {% if graph != None %}
-              {{ graph }}
-              {% endif %}
+                <br/>
+                <br/>
+                {% if graph1 != None %}
+                <div align="center"> <img src="data:image/png;base64,{{ graph0|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph1|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph2|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph3|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph4|safe }}"/></div>
+                <br/>
+                {% endif %}
+
             </div>
             {% endif %}
         </div>
