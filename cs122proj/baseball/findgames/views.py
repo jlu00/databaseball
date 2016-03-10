@@ -35,7 +35,7 @@ COLUMNS = dict(
         
 )
 
-STAT_COLS = dict(
+PLAYER_COLS = dict(
         player1 = 'player 1',
         player2 = 'player 2',
         name = 'Name',
@@ -44,6 +44,18 @@ STAT_COLS = dict(
         SLGs = "Slugging Percentage",
         WARs_nonpitcher = "Wins Above Replacement",
         WRCs = "Weighted Runs Created",
+
+)
+
+PITCHER_COLS = dict(
+        player1 = 'player 1',
+        player2 = 'player 2',
+        name = 'Name',
+        WARS_pitcher = "Wins Above Replacement",
+        ERAs = "Earned Run Average",
+        FIPs = "Fielding Independent Pitching",
+        K_Pers = "Strike out rate",
+        BB_Pers = "Walk rate",
 
 )
 
@@ -58,6 +70,11 @@ GAME_DETAIL_ORDER = {'date_start': 1, 'date_end': 2, 'team1': 3, 'team2': 4,
 TEAM_ORDER = ['team1', 'team2', 'winner']
 
 TEAM_STATS = ['hits', 'runs', 'hrs']
+
+PLAYER_STATS = ['nonpitcher.AVGs', 'nonpitcher.OBPs', 'nonpitcher.SLGs', 'nonpitcher.WARs_nonpitcher', 'nonpitcher.WRCs']
+
+PITCHER_STATS = ['pitcher.WARs_pitcher', 'pitcher.ERAs', 'pitcher.FIPs', 'pitcher.K_Pers', 'pitcher.BB_Pers'] 
+
 
 STAT_INPUTS = ['hits_low', 'hits_high', 'runs_low', 'runs_high', 'hrs_low', 'hrs_high']
 
@@ -98,7 +115,6 @@ def findgames(request):
         context['result'] = result
         context['num_results'] = len(result)
         context['columns'] = [COLUMNS.get(col, col) for col in columns]
-    print(result)
     context['form'] = form
     
     return render(request, 'findgames/findgames.html', context)
@@ -108,41 +124,42 @@ def players(request):
     res = None
     context['message'] = None
     if request.method == "GET":
-        form1 = forms.PlayerForm(request.GET)
-        if form1.is_valid():
+        form = forms.PlayerForm(request.GET)
+        if form.is_valid():
             args = {}
-            for key in form1.cleaned_data:
-                args[key] = (form1.cleaned_data[key]).title()
-            res = compare_players(args)
+            for key in form.cleaned_data:
+                try:
+                    args[key] = (form.cleaned_data[key]).title()
+                except AttributeError:
+                    continue
+
+            if form.cleaned_data['pitcher']:
+                table = "pitcher"
+                stat_type = PITCHER_STATS
+                column_dict = PITCHER_COLS
+            else:
+                table = "nonpitcher"
+                stat_type = PLAYER_STATS
+                column_dict = PLAYER_COLS
+
+            res = compare_players(args, stat_type, table)
     else:
-        form1 = forms.PlayerForm()
-    if request.method == "GET" and not form1.is_valid():
-        form2 = forms.PitcherForm(request.GET)
-        form1 = forms.PlayerForm()
-        if form2.is_valid():
-            args = {}
-            for key in form2.cleaned_data:
-                key = key.title()
-                args[key] = form2.cleaned_data[key]
-            res = compare_players(args)
-    else:
-        form2 = forms.PitcherForm()
-    
+        form = forms.PlayerForm()
     if res is None:
         context['result'] = None
-        contexst['message'] = None
+        context['message'] = None
     else:
         columns, result = res
 
-        if len(result) == 1:
-            context['message'] = "Cannot compare player to himself!"
+        if len(result) <= 1:
+            context['message'] = "Could not find any matches. Did you try to compare a player to himself?"
         else:
             context['message'] = None
             if result and isinstance(result[0], str):
                 result = [(r,) for r in result]
 
             context['result'] = result
-            cols = [STAT_COLS.get(col, col) for col in columns]
+            cols = [column_dict.get(col, col) for col in columns]
             context['columns'] = cols
 
             players = (result[0][0], result[1][0])
@@ -159,8 +176,7 @@ def players(request):
             context['graph4'] = playergraph(data_tuples[4], players, cols[5])
         
 
-    context['form1'] = form1
-    context['form2'] = form2
+    context['form'] = form
     return render(request, 'findgames/players.html', context)
 
 def fantasy(request):
@@ -241,7 +257,7 @@ def find_games(args_from_ui):
     else:
         return('There were no results found.', [])
 
-def format_results(results, c):
+def format_results(results, c): #Function taken from PA 3 
     results_list = []
     for i in results:
         if list(i) not in results_list:
@@ -250,14 +266,14 @@ def format_results(results, c):
     header = clean_header(s)
     return header, results_list
 
-def get_header(cursor):
+def get_header(cursor): #Function taken from PA 3
     desc = cursor.description
     header = ()
     for i in desc:
         header = header + (clean_header(i[0]),)
     return list(header)
 
-def clean_header(s):
+def clean_header(s): #Function taken from PA 3
     for i in range(len(s)):
         if s[i] == ".":
             s = s[i+1:]
@@ -338,13 +354,13 @@ def add_stats(args_from_ui):
             args.append(int(args_from_ui[s]))
     return args
 
-def compare_players(args_from_ui):
+def compare_players(args_from_ui, stat_types, table):
     if not args_from_ui:
         return ([], [])
 
     db = sqlite3.connect('all_players.db')
     c = db.cursor()
-    sql_query, args = create_player_query(args_from_ui)
+    sql_query, args = create_player_query(args_from_ui, stat_types, table)
     if not args:
         return ([], [])
     r = c.execute(sql_query, args)
@@ -354,11 +370,14 @@ def compare_players(args_from_ui):
     if results:
         return format_results(results, c)
     else:
-        return("There were no results found.", [])
+        return([], [])
 
-def create_player_query(args_from_ui):
-    sql_query = "SELECT bios.name, nonpitcher.AVGs, nonpitcher.OBPs, nonpitcher.SLGs, nonpitcher.WARS_nonpitcher, nonpitcher.WRCs "
-    sql_query += "FROM bios JOIN nonpitcher ON bios.player_id = nonpitcher.player_id "
+def create_player_query(args_from_ui, stat_types, table):
+    sql_query = "SELECT bios.name, "
+
+    sql_query += ", ".join(stat_types)
+
+    sql_query += " FROM bios JOIN " + table + " ON bios.player_id = " + table + ".player_id "
     sql_query += "WHERE bios.name = ? OR bios.name = ?" 
     
     args = create_player_arg(args_from_ui)
@@ -370,7 +389,6 @@ def create_player_arg(args_from_ui):
     for key in args_from_ui:
         args_list.append(args_from_ui[key])
     return args_list
-
 
 DATABASE_FILENAME = 'all_players.db'
 
@@ -403,16 +421,20 @@ def create_team(prefs_pos, prefs_pitch, params, team):
         new_params = params
         if params['years']:
             new_params['years'] = ((params['years'][0] - 5), (params['years'][1] + 5))
+            print("We had to relax the years parameter to " + str(new_params['years']) + " in an effort to complete the team")
         if params['Name']:
+            print('We had to relax the name parameter in an effort to complete the team')
             new_params['Name'] = params['Name'][:-1]
         else:
             if params['Playoffs']:
+                print('Unfortunately, we had to remove the Playoffs parameter in an effort to complete the team')
                 new_params['Playoffs'] = False
             if params['World_Series']:
-                new_params['World_Series'] = False
+                print('Unfortunately, we had to remove the World Series parameter in an effort to complete the team')
             else:
                 for position in team.roster:
                     team = fill_out_team(players, team, position)
+                    print(team.team_size)
                 return team
         return create_team(prefs_pos, prefs_pitch, new_params, team)
     return team
@@ -483,9 +505,9 @@ def construct_query(pref, pitcher, params):
         on_statement = 'ON bios.player_id = pitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND " + pref + " != '' "
         if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
-            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 80;"
+            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 90;"
         else:
-            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
         if params['Team']:
             from_statement += 'JOIN employment '
             on_statement = 'ON (bios.player_id = pitcher.player_id AND bios.player_id = employment.player_id) '
@@ -505,7 +527,7 @@ def construct_query(pref, pitcher, params):
         from_statement = "FROM bios JOIN nonpitcher "
         on_statement = 'ON bios.player_id = nonpitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
-        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
         if params['Team']:
             from_statement += 'JOIN employment '
             on_statement = 'ON (bios.player_id = nonpitcher.player_id AND bios.player_id = employment.player_id) '
@@ -583,6 +605,7 @@ def calculate_pergame_runs(team):
                     # print(player.stats['WRCs'])
                     wrc_ctr += 1
                     runs += player.stats['WRCs'] * AVG_R_PER_PA * AVG_AB_PER_YR / 100
+    # print(player_ctr, wrc_ctr)
     runs = runs / 162 * player_ctr / wrc_ctr
     return round(runs, 2)
 
@@ -601,6 +624,8 @@ def compute_wins(WAR):
     if games_won > 130:
         games_won = 130
         win_percentage = 13000/162
+        print("This team would likely be the best team of all time")
+    print("In a hypothetical 162-game season, this team would have a " + str(round(win_percentage, 2)) + " win percentage and win " + str(int(games_won)) + " games.")
     return win_percentage
 
             
@@ -623,13 +648,14 @@ def go(prefs_pos, prefs_pitch, params):
         if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
             team.add_stat(pref, stat)
+    print(team.team_stats)
     return team
 
 
-def playergraph(data, players, labels):
+def playergraph(data, players, labels): #Inspired by code from Gustav 
     im = io.BytesIO()
-    plt.figure(figsize=(6, 6))
-    pos = np.arange(2)
+    plt.figure(figsize=(6, 5))
+    pos = (-.5, .5)
     xpos = np.linspace(0, round(max(data) + max(data)*.2, 2), 5)
 
     if data[0] > data[1]:
@@ -642,7 +668,7 @@ def playergraph(data, players, labels):
     plt.xticks(xpos, xpos)
     plt.title(labels)
     plt.ylim(-2, 2)
-    plt.tight_layout()
+    plt.tight_layout(pad=0)
 
 
     plt.show()

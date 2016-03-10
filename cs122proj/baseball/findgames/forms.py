@@ -10,8 +10,8 @@ PLAYER_STATS = [('WARs_nonpitcher', 'Wins Above Replacement'), ('OBPs', 'On Base
             
 PITCHER_STATS = [('WARs_pitcher', 'Wins Above Replacement'), ('ERAs', 'Earned Run Average'),
                 ('IPs', 'Innings pitched'), ('GSs', 'Games Started'), ('FIPs', 'Fielding Independent Pitching'),
-                ('E_Fs', 'ERA-FIP Spreads'), ('K_Pers', 'Strike outs per 9 innings'), 
-                ('BB_Pers', 'Walks per 9 innings'), ('', '')]
+                ('E_Fs', 'ERA-FIP Spreads'), ('K_Pers', 'Strike out rate'), 
+                ('BB_Pers', 'Walk rate'), ('', '')]
 
 
 class FindGameForm(forms.Form):
@@ -61,7 +61,7 @@ class FantasyForm(forms.Form):
     stat6 = forms.ChoiceField(label="Pitcher Stat Rank 2", choices=PITCHER_STATS, required=False)
     stat7 = forms.ChoiceField(label="Pitcher Stat Rank 3", choices=PITCHER_STATS, required=False)
     stat8 = forms.ChoiceField(label="Pitcher Stat Rank 4", choices=PITCHER_STATS, required=False)
-    teamname = forms.CharField(label="Fantasy Team Name: ", required=False, help_text="e.g. The Y-Anne Kees")
+    teamname = forms.CharField(label="Your Fantasy Team Name: ", required=False, help_text="e.g. Y'Anne'Kees")
     years = forms.CharField(label="Year Range:    ", required=False, help_text="e.g. (1980, 2014)")
     Name = forms.CharField(label="Name of Player:    ", required=False, help_text="e.g. Matt or Tom")
     Team = forms.CharField(label="Name of Team: ", required=False, help_text="e.g. Chicago Cubs")
@@ -72,8 +72,5 @@ class FantasyForm(forms.Form):
 class PlayerForm(forms.Form):
     player1 = forms.CharField(label="Player 1", required=True, help_text="e.g. Lorenzo Cain") 
     player2 = forms.CharField(label="Player 2", required=True, help_text="e.g. Babe Ruth")
-
-class PitcherForm(forms.Form):
-    pitcher1 = forms.CharField(label="Pitcher 1", required=True, help_text="e.g. Kevin Brown")
-    pitcher2 = forms.CharField(label="Pitcher 2", required=True, help_text="e.g. Jake Arrieta")
+    pitcher = forms.BooleanField(required=False)
     

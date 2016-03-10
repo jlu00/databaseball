@@ -22,7 +22,7 @@ class Players:
         self.stats[stat] = value
 
     def add_war(self, war):
-        if type(war) == int:
+        if type(war) == float:
             self.war += war
 
     def add_years(self, years):
