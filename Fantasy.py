@@ -161,9 +161,9 @@ def construct_query(pref, pitcher, params):
         on_statement = 'ON bios.player_id = pitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND " + pref + " != '' "
         if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
-            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 80;"
+            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 90;"
         else:
-            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
         if params['Team']:
             from_statement += 'JOIN employment '
             on_statement = 'ON (bios.player_id = pitcher.player_id AND bios.player_id = employment.player_id) '
@@ -183,7 +183,7 @@ def construct_query(pref, pitcher, params):
         from_statement = "FROM bios JOIN nonpitcher "
         on_statement = 'ON bios.player_id = nonpitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
-        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 80;"
+        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
         if params['Team']:
             from_statement += 'JOIN employment '
             on_statement = 'ON (bios.player_id = nonpitcher.player_id AND bios.player_id = employment.player_id) '
