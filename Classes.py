@@ -113,7 +113,7 @@ class Teams:
     def __repr__(self):
         str_var = ''
         for i in self.roster:
-            str_var +='\n' + i + ': \n'
+            str_var += " " +  str(i) + ': '
             for j in self.roster[i]:
-                str_var += '    ' + str(j) + ' \n'
+                str_var += ' ' + str(j) + ','
         return str_var
