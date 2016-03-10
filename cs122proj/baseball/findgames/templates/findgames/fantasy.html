@@ -75,7 +75,7 @@
             </div>
                   {% for s, num in stats.items %}
                     {% if num != None %}
-                      {{ s }}: {{ num }}
+                      {{ s }}: {{ num|floatformat:3 }}
                          <br/>
                     {% endif %}
                   {% endfor %}

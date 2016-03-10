@@ -8,6 +8,12 @@ body {
 
 }
 
+img {
+  width: 70% !important;
+  overflow: hidden !important;
+
+}
+
 .playerbackground {
   background: url('images/cubplayers.jpg') !important;
   width: 100% !important;

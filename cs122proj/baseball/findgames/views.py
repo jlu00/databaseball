@@ -106,6 +106,7 @@ def findgames(request):
 def players(request):
     context = {}
     res = None
+    context['message'] = None
     if request.method == "GET":
         form1 = forms.PlayerForm(request.GET)
         if form1.is_valid():
@@ -129,28 +130,38 @@ def players(request):
     
     if res is None:
         context['result'] = None
+        contexst['message'] = None
     else:
         columns, result = res
+
+        if len(result) == 1:
+            context['message'] = "Cannot compare player to himself!"
+        else:
+            context['message'] = None
+            if result and isinstance(result[0], str):
+                result = [(r,) for r in result]
+
+            context['result'] = result
+            cols = [STAT_COLS.get(col, col) for col in columns]
+            context['columns'] = cols
+
+            players = (result[0][0], result[1][0])
+            data_tuples = []
         
-        if result and isinstance(result[0], str):
-            result = [(r,) for r in result]
-
-        context['result'] = result
-        context['columns'] = [STAT_COLS.get(col, col) for col in columns]
-    
-    #context['player1']
-    #{{ player1 }}  <img src="{% url 'playergraph' %}?">
-
-        context['graph'] = playergraph(result)
+            for r in range(1, len(result[0])):
+                data_tuples.append((round(result[0][r], 3), round(result[1][r], 3)))
 
 
-    #create image here and save it to a byte string 
-    #put in context {{ imagedata|safe }}
+            context['graph0'] = playergraph(data_tuples[0], players, cols[1])
+            context['graph1'] = playergraph(data_tuples[1], players, cols[2])
+            context['graph2'] = playergraph(data_tuples[2], players, cols[3])
+            context['graph3'] = playergraph(data_tuples[3], players, cols[4])
+            context['graph4'] = playergraph(data_tuples[4], players, cols[5])
+        
+
     context['form1'] = form1
     context['form2'] = form2
     return render(request, 'findgames/players.html', context)
-
-
 
 def fantasy(request):
     context = {}
@@ -614,37 +625,31 @@ def go(prefs_pos, prefs_pitch, params):
             team.add_stat(pref, stat)
     return team
 
-def playergraph(request):
-    plt.figure(figsize=(5, 5))
-    labels = []
-    for res in request:
-        labels.append(res[0])
 
-    plt.title(labels[0] + "vs." + labels[1])
-
-    data1 = request[0]
-    data1 = data1[1:]
-    data2 = request[1]
-    data2 = data2[1:]
-
-    xlabels = ["Batting Averages", "On Base Percentage", "Slugging Percentage", "Wins Above Replacement", "Weighted Runs Created"]
-
-    X = np.arange(len(xlabels))
-
-    plt.bar(X + 0.00, data1, color = 'b', width = 0.25)
-    plt.bar(X + 0.25, data2, color = 'g', width = 0.25)
-
-    
+def playergraph(data, players, labels):
     im = io.BytesIO()
-    plt.savefig(im, format='png')
+    plt.figure(figsize=(6, 6))
+    pos = np.arange(2)
+    xpos = np.linspace(0, round(max(data) + max(data)*.2, 2), 5)
+
+    if data[0] > data[1]:
+        colors = ("#00b34d", '#ff3232')
+    else:
+        colors = ('#ff3232', '#00b34d')
+
+    plt.barh(pos, data, color=colors, align="center")
+    plt.yticks(pos, (players))
+    plt.xticks(xpos, xpos)
+    plt.title(labels)
+    plt.ylim(-2, 2)
+    plt.tight_layout()
+
+
+    plt.show()
+    
+    plt.savefig(im, format='png', transparent=True)
+    plt.close()
     im.seek(0)
-    imagedata = Image.open(im)
-    im.close()
-    print(imagedata)
+    imagedata = base64.b64encode(im.getvalue())
 
-    return imagedata
-
-
-
-def somepage(request):
-     return render(request, "findgames/players.html", {'form':form,'graph':reverse('playergraph')})
+    return base64.b64encode(im.getvalue())

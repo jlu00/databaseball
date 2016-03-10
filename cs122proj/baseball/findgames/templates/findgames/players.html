@@ -24,6 +24,9 @@
                 {{ field.label_tag }} {{ field }}
                 {% endfor %}
                  <input type="submit" value="Compare" />
+                 {% if message != None %}
+              {{ message }}
+              {% endif %}
                 <br/>
                
             </form>
@@ -49,6 +52,8 @@
       <br/>
       <br/>
     <div>
+
+            
             {% if result != None %}
             <div class="boxresultslarge">
                 <table class="players">
@@ -61,17 +66,29 @@
                     <tr>
                         {% for col in entry %}
                         {% if forloop.counter == 1 or forloop.counter == 7%}
-                        <td align="center"> {{ col }} </td>
+                        <td align="center"> <font size="3"> {{ col }} </font> </td> 
                           {% else %}
-                        <td align="center">{{ col|floatformat:3 }}</td>
+                        <td align="center"> <font size="3">  {{ col|floatformat:3 }} </font> </td>
                         {% endif %}
                         {% endfor %}
                     </tr>
                     {% endfor %}
                 </table>
-              {% if graph != None %}
-              {{ graph }}
-              {% endif %}
+                <br/>
+                <br/>
+                {% if graph1 != None %}
+                <div align="center"> <img src="data:image/png;base64,{{ graph0|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph1|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph2|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph3|safe }}"/></div>
+                <br/>
+                <div align="center"> <img src="data:image/png;base64,{{ graph4|safe }}"/></div>
+                <br/>
+                {% endif %}
+
             </div>
             {% endif %}
         </div>
