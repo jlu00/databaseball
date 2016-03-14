@@ -1,3 +1,7 @@
+<!-- The purpose of this file is to create an HTML/Django view to compare players.
+
+Created by Jessica Lu.
+ -->
 <!DOCTYPE html5>
 <html>
   <head>
@@ -39,14 +43,11 @@
         </div>
          <br/>
           <br/>
-  
   </div>
     	<br/>
       <br/>
       <br/>
     <div>
-
-            
             {% if result != None %}
             <div class="boxresultslarge">
                 <table class="players">
@@ -68,29 +69,18 @@
                     {% endfor %}
                     </font>
                 </table>
-
                 <br/>
                 <br/>
-                {% if graph1 != None %}
+                {% if graphs != None %}
                 <br/>
-                <div align="center"> <img src="data:image/png;base64,{{ graph0|safe }}"/></div>
-                <br/>
-                <br/>
-                <div align="center"> <img src="data:image/png;base64,{{ graph1|safe }}"/></div>
+                {% for g in graphs %}
+                <div align="center"> <img src="data:image/png;base64,{{ g|safe }}"/></div>
                 <br/>
                 <br/>
-                <div align="center"> <img src="data:image/png;base64,{{ graph2|safe }}"/></div>
-                <br/>
-                <br/>
-                <div align="center"> <img src="data:image/png;base64,{{ graph3|safe }}"/></div>
-                <br/>
-                <br/>
-                <div align="center"> <img src="data:image/png;base64,{{ graph4|safe }}"/></div>
-                <br/>
+                {% endfor %}
                 {% endif %}
             </div>
             {% endif %}
         </div>
-    	
   </body>
 </html>

@@ -1,0 +1,84 @@
+<!-- The purpose of this file is to describe the various stats.
+
+Created by Jessica Lu.
+ -->
+
+<!DOCTYPE html5>
+<html>
+  <head>
+    <br/>
+    <title>Search</title>
+
+  </head>
+  {% load staticfiles %}
+  <body>
+  <a href="{% url 'fantasy' %}">Back to Fantasy</a>
+  <h1> Player Stats </h1>
+  <strong>Wins above replacement by a position player (WARs_nonpitcher): </strong> take offensive, baserunning, and fielding runs created by a pitcher and converts them into total runs created above a replacement player. Converts this into a win total
+  <br/>
+  <br/>
+  <strong>On Base Percentage (OBPs):</strong> total times reaching base divided by
+            total plate appearances
+  <br/>
+  <br/>
+  <strong>Batting average (AVGs):</strong> calculated by taking total number of 
+            hits divided by total number of plate appearances
+  <br/>
+  <br/>
+  <strong>Slugging Percentage (SLGs):</strong> derived by dividing the total number
+            of bases gained (e.g. a double is 2 bases) by the total number of PAs;
+            a decent proxy for power hitting ability
+  <br/>
+  <br/>
+  <strong>Base running ability (UBRs):</strong> Measures baserunning ability. An average baserunner has an UBR of zero
+  <br/>
+  <br/>
+  <strong>Weighted Runs Created (WRCs):</strong> Attempts to quantify runs created, except that this stat normalizes the league average to 100
+  <br/>
+  <br/>
+  <strong>Win Probability Added (WPAs):</strong> basically like WRC but weighted for the importance of each at bat in terms of how it changed its team's win probability
+  <br/>
+  <br/>
+  <strong>Clutch hitting ability (clutchs):</strong> Measures how much better or worse a player's performance in high stress environments is than his overall performance
+  <br/>
+  <br/>
+  <h1> Pitcher Stats </h1>
+  <strong>Wins above replacement by a pitcher (WARs_pitcher):</strong> derived using FIP adjusted for park and innings pitched to create an estimate of how many runs better the pitcher has been than a replacement level minor leaguer
+  <br/>
+  <br/>
+  <strong>Earned runs allowed per 9 innings (ERAs):</strong> derived by taking
+            the number of earned runs allowed, normalizing to per game by multiplying
+            by 9, and then dividing by number of innings pitched
+  <br/>
+  <br/>
+  <strong>Innings Pitched (IPs):</strong> the number of innings a pitcher has thrown in his career
+  <br/>
+  <br/>
+  <strong>Games Started (GSs):</strong> the number of games a pitcher has started in his career
+  <br/>
+  <br/>
+  <strong>Fielding Independent Pitching (FIPs):</strong> estimates a pitcher's
+            abilities normalized for the defense playing behind him
+            Takes into account home runs, walks, strikeouts, and hit by pitch
+            Formula: ((13*HR)+(3*(BB+HBP))-(2*K))/IP + constant
+            The constant normalizes FIP to ERA so the two can be compared
+            and is usually around 3.10
+  <br/>
+  <br/>
+  <strong>ERA to FIP spread (E_Fs):</strong> a way to measure how good or bad the team behind a pitcher
+            was at fielding
+  <br/>
+  <br/>
+  <strong>Strikeouts per 9 innings percentage (KK_Pers):</strong> a way to measure team-independent pitching ability
+  <br/>
+  <br/>
+  <strong>Walks per 9 innings rate (BB_Pers):</strong> a way to measure control and overall pitching ability
+  
+
+  
+  
+  
+  
+
+  </body>
+</html>

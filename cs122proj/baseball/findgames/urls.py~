@@ -8,7 +8,8 @@ urlpatterns = [
 	url(r'^index/$', views.index, name="index"),
 	url(r'^players$', views.players, name="players"),
 	url(r'^fantasy/$', views.fantasy, name="fantasy"),
-   	url(r'^stats$', views.stats, name="stats"),
+    url(r'^playergraph/$', views.playergraph, name="playergraph"),
+    url(r'^players$', views.playergraph, name="playergraph"),
 	url(r'', views.index, name="index"),
 ]
 
