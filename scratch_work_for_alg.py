@@ -3,8 +3,33 @@
 QUERY_CONSTRUCTORS = {'Pitcher': {'select_default': """SELECT bios.name, bios.span, bios.positions,
  bios.player_id, pitcher.WARs_pitcher, """,
                                    'from_default': "FROM bios JOIN pitcher ",
-                                   'on_default' = 'ON bios.player_id = pitcher.player_id ',
-                                   'where_default' = "WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND ? != '' "}
+                                   'on_default': 'ON (bios.player_id = pitcher.player_id',
+                                   'where_default': ") WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND ? != '' ",
+                                    'order_by_base': ') ORDER BY ? '
+                                    'order_by_asc': 'ASC LIMIT 90;'
+                                    'order_by_desc': 'DESC LIMIT 90;'
+                                    'from_team': 'JOIN employment ',
+                                    'on_team': ' AND bios.player_id = employment.player_id',
+                                    'where_team': 'AND employment.team like ? '
+                                    'where_playoffs': "AND bios.Playoffs != '' ",
+                                    'where_WS': "AND bios.World_Series != '' "
+                                    'where_name': "AND bios.name like ? "
+                                    'where_years': "AND (pitcher.Pitcher_Years like ? OR pitcher.Pitcher_Years like ? "},
+                        'NonPitcher': {'select_default': """SELECT bios.name, bios.span, bios.positions,
+ bios.player_id, nonpitcher.WARs_nonpitcher, """,
+                                   'from_default': "FROM bios JOIN nonpitcher ",
+                                   'on_default': 'ON (bios.player_id = nonpitcher.player_id',
+                                   'where_default': ") WHERE (bios.years_played > 2 AND nonpitcher.SLGs < .8 AND nonpitcher.AVGs < .42 AND nonpitcher.OBPs < .5 AND ? != '' ",
+                                    'order_by_base': ') ORDER BY ? '
+                                    'order_by_asc': 'ASC LIMIT 90;'
+                                    'order_by_desc': 'DESC LIMIT 90;'
+                                    'from_team': 'JOIN employment ',
+                                    'on_team': ' AND bios.player_id = employment.player_id',
+                                    'where_team': 'AND employment.team like ? '
+                                    'where_playoffs': "AND bios.Playoffs != '' ",
+                                    'where_WS': "AND bios.World_Series != '' "
+                                    'where_name': "AND bios.name like ? "
+                                    'where_years': "AND (nonpitcher.years like ? OR nonpitcher.years like ? "}}
 
 def construct_query(pref, pitcher, params):
     '''
@@ -13,52 +38,41 @@ def construct_query(pref, pitcher, params):
     'Name': 'Bob', 'Team': 'Kansas City Royals'}
     '''
     if pitcher:
-        select_statement = QUERY_CONSTRUCTORS['Pitcher']['select_default'] + pref + " "
-        from_statement = QUERY_CONSTRUCTORS['Pitcher']['from_default']
-        on_statement = QUERY_CONSTRUCTORS['Pitcher']['on_default']
-        where_statement = QUERY_CONSTRUCTORS['Pitcher']['where_default']
-        params = [pref]
-        if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
-            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 90;"
-        else:
-            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
-        if params['Team']:
-            from_statement += 'JOIN employment '
-            on_statement = 'ON (bios.player_id = pitcher.player_id AND bios.player_id = employment.player_id) '
-            where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
-        if params['Playoffs']:
-            where_statement += "AND bios.Playoffs != '' "
-        if params['World_Series']:
-            where_statement += "AND bios.World_Series != '' "
-        if params['Name']:
-            where_statement += "AND bios.name like '%" + params['Name'] + "%' "
-        if params['years']:
-            where_statement += "AND (pitcher.Pitcher_Years like '%" + str(params['years'][0]) + "%' OR pitcher.Pitcher_Years like '%" + str(params['years'][1]) + "%') "
-          
-
+        pos = 'Pitcher'
     else:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, nonpitcher.WARs_nonpitcher """ 
-        from_statement = "FROM bios JOIN nonpitcher "
-        on_statement = 'ON bios.player_id = nonpitcher.player_id '
-        where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
-        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
-        if params['Team']:
-            from_statement += 'JOIN employment '
-            on_statement = 'ON (bios.player_id = nonpitcher.player_id AND bios.player_id = employment.player_id) '
-            where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
-        if params['Playoffs']:
-            where_statement += "AND bios.Playoffs != '' "
-        if params['World_Series']:
-            where_statement += "AND bios.World_Series != '' "
-        if params['Name']:
-            where_statement += "AND bios.name like '%" + params['Name'] + "%' "
-        if pref == 'nonpitcher.AVGs':
-            where_statement += "AND nonpitcher.AVGs < .4 "
-        elif pref == 'nonpitcher.OBPs':
-            where_statement += "AND nonpitcher.OBPs < .55 "
-        elif pref == "nonpitcher.SLGs":
-            where_statement += "AND nonpitcher.SLGs < .8 "
-        if params['years']:
-            where_statement += "AND (nonpitcher.years like '%" + str(params['years'][0]) + "%' OR nonpitcher.years like '%" + str(params['years'][1]) + "%') "
-    query = select_statement + from_statement + on_statement + where_statement + order_by_statement
-    return query
+        pos = 'NonPitcher'
+        
+    search_params = []
+    select_statement = QUERY_CONSTRUCTORS[pos]['select_default'] + pref + " "
+    from_statement = QUERY_CONSTRUCTORS[pos]['from_default']
+    on_statement = QUERY_CONSTRUCTORS[pos]['on_default']
+    where_statement = QUERY_CONSTRUCTORS[pos]['where_default']
+    search_params += [pref]
+    order_by_statement = QUERY_CONSTRUCTORS[pos]['order_by_base']
+    search_params += [pref]
+
+    if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
+        order_by_statement += QUERY_CONSTRUCTORS[pos]['order_by_asc']
+    else:
+        order_by_statement += QUERY_CONSTRUCTORS[pos]['order_by_desc']
+
+    if params['Team']:
+        from_statement += QUERY_CONSTRUCTORS[pos]['from_team']
+        on_statement = QUERY_CONSTRUCTORS[pos]['on_team']
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_team']
+        search_params += ["'%" + params['Team'] + "%'"]
+
+    if params['Playoffs']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_playoffs']
+
+    if params['World_Series']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_WS']
+
+    if params['Name']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_WS']
+        search_params += ["'%" + params['Name'] + "%'"]
+
+    if params['years']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_years']
+        search_params += ["'%" + params['years'][0] + "%'"]
+        search_params += ["'%" + params['years'][1] + "%'"]

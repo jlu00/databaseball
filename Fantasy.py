@@ -39,6 +39,37 @@ Stat_defs = {'ERAs': '''Earned runs allowed (per 9 innings); derived by taking
             'Clutchs': '''Measures how much better or worse a player's performance in high stress
             environments is than his overall performance'''}
 
+QUERY_CONSTRUCTORS = {'Pitcher': {'select_default': """SELECT bios.name, bios.span, bios.positions,
+ bios.player_id, pitcher.WARs_pitcher, """,
+                                   'from_default': "FROM bios JOIN pitcher ",
+                                   'on_default': 'ON (bios.player_id = pitcher.player_id',
+                                   'where_default': ") WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND ? != '' ",
+                                    'order_by_base': ') ORDER BY ',
+                                    'order_by_asc': 'ASC LIMIT 90;',
+                                    'order_by_desc': 'DESC LIMIT 90;',
+                                    'from_team': 'JOIN employment ',
+                                    'on_team': ' AND bios.player_id = employment.player_id',
+                                    'where_team': 'AND employment.team like ? ',
+                                    'where_playoffs': "AND bios.Playoffs != '' ",
+                                    'where_WS': "AND bios.World_Series != '' ",
+                                    'where_name': "AND bios.name like ? ",
+                                    'where_years': "AND (pitcher.Pitcher_Years like ? OR pitcher.Pitcher_Years like ?)"},
+                        'NonPitcher': {'select_default': """SELECT bios.name, bios.span, bios.positions,
+ bios.player_id, nonpitcher.WARs_nonpitcher, """,
+                                   'from_default': "FROM bios JOIN nonpitcher ",
+                                   'on_default': 'ON (bios.player_id = nonpitcher.player_id',
+                                   'where_default': ") WHERE (bios.years_played > 2 AND nonpitcher.SLGs < .8 AND nonpitcher.AVGs < .42 AND nonpitcher.OBPs < .5 AND ? != '' ",
+                                    'order_by_base': ') ORDER BY ',
+                                    'order_by_asc': 'ASC LIMIT 90;',
+                                    'order_by_desc': 'DESC LIMIT 90;',
+                                    'from_team': 'JOIN employment ',
+                                    'on_team': ' AND bios.player_id = employment.player_id',
+                                    'where_team': 'AND employment.team like ? ',
+                                    'where_playoffs': "AND bios.Playoffs != '' ",
+                                    'where_WS': "AND bios.World_Series != '' ",
+                                    'where_name': "AND bios.name like ? ",
+                                    'where_years': "AND (nonpitcher.years like ? OR nonpitcher.years like ?)"}}
+
 # CALCULATION_TYPE_DICT = {'IPs': 'Average', GS}
 
 import operator
@@ -61,18 +92,18 @@ def create_team(prefs_pos, prefs_pitch, params, team):
     c = db.cursor()
     players = {}
     average_stats = {}
-    for i in prefs_pos:
-        players = grab_players(i, players, False, c, params)
-        average_stats[i] = calculate_league_average(i, c, False)
+    for pref in prefs_pos:
+        players = grab_players(pref, players, False, c, params)
+        average_stats[pref] = calculate_league_average(pref, c, False)
 
-    for i in prefs_pitch:
-        players = grab_players(i, players, True, c, params)
-        average_stats[i] = calculate_league_average(i, c, True)
+    for pref in prefs_pitch:
+        players = grab_players(pref, players, True, c, params)
+        average_stats[pref] = calculate_league_average(pref, c, True)
     db.close()
 
-    for i in players:
-        a = compute_power_index(players[i], prefs_pos, prefs_pitch)
-        players[i].incr_power_index(a)
+    for key in players:
+        power_index = compute_power_index(players[key], prefs_pos, prefs_pitch)
+        players[key].incr_power_index(power_index)
 
     team = select_top_pos(players, team)
     if team.team_size < team.max_size:
@@ -108,16 +139,24 @@ def fill_out_team(players, team, position):
 
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
-    query = construct_query(new_pref, pitcher, params)
-    r = cursor.execute(query)
+    query, search_params = construct_query(new_pref, pitcher, params)
+    if not pitcher:
+        print(query, search_params)
+    if len(search_params) > 0:
+        print('USING PARAMS')
+        r = cursor.execute(query, search_params)
+    else:
+        print('NOT USING')
+        r = cursor.execute(query)
     results_pos = r.fetchall()
+    print('LENGTH OF RESULTS', len(results_pos))
     rank = 0
-    for j in results_pos:
-        if 'name' in j:
+    for res in results_pos:
+        if 'name' in res:
             continue
-        name = j[0].split()
-        pos = j[2]
-        first_pos = j[2]
+        name = res[0].split()
+        pos = res[2]
+        first_pos = res[2]
         if len(pos.split('|')) > 1:
             first_pos = pos.split('|')[0]
             other_pos = pos.split('|')[1]
@@ -125,16 +164,16 @@ def grab_players(pref, players, pitcher, cursor, params):
             first_pos = 'Centerfielder'
         if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner' or first_pos == 'Designated Hitter':
             continue
-        new_player = Classes.Players(name[0], name[1], first_pos, j[3])
+        new_player = Classes.Players(name[0], name[1], first_pos, res[3])
         if new_player.player_id not in players:
-            years = j[1].split('-')
+            years = res[1].split('-')
             new_player.add_years(years)
-            new_player.add_stats(pref, j[5])
+            new_player.add_stats(pref, res[5])
             new_player.add_rank(pref, rank)
-            new_player.add_war(j[4])
+            new_player.add_war(res[4])
             players[new_player.player_id] = new_player
         else:
-            players[new_player.player_id].add_stats(pref, j[5])
+            players[new_player.player_id].add_stats(pref, res[5])
             players[new_player.player_id].add_rank(pref, rank)
         rank += 1
     return players
@@ -154,63 +193,79 @@ def construct_query(pref, pitcher, params):
     'Name': 'Bob', 'Team': 'Kansas City Royals'}
     '''
     if pitcher:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, bios.player_id, pitcher.WARs_pitcher, """ + pref + " "
-        from_statement = "FROM bios JOIN pitcher "
-        on_statement = 'ON bios.player_id = pitcher.player_id '
-        where_statement = "WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND " + pref + " != '' "
-        if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
-            order_by_statement = ") ORDER BY " + pref + " ASC LIMIT 90;"
-        else:
-            order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
-        if params['Team']:
-            from_statement += 'JOIN employment '
-            on_statement = 'ON (bios.player_id = pitcher.player_id AND bios.player_id = employment.player_id) '
-            where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
-        if params['Playoffs']:
-            where_statement += "AND bios.Playoffs != '' "
-        if params['World_Series']:
-            where_statement += "AND bios.World_Series != '' "
-        if params['Name']:
-            where_statement += "AND bios.name like '%" + params['Name'] + "%' "
-        if params['years']:
-            where_statement += "AND (pitcher.Pitcher_Years like '%" + str(params['years'][0]) + "%' OR pitcher.Pitcher_Years like '%" + str(params['years'][1]) + "%') "
-          
-
+        pos = 'Pitcher'
     else:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, bios.player_id, nonpitcher.WARs_nonpitcher, """ + pref + " " 
-        from_statement = "FROM bios JOIN nonpitcher "
-        on_statement = 'ON bios.player_id = nonpitcher.player_id '
-        where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
-        order_by_statement = ") ORDER BY " + pref + " DESC LIMIT 90;"
-        if params['Team']:
-            from_statement += 'JOIN employment '
-            on_statement = 'ON (bios.player_id = nonpitcher.player_id AND bios.player_id = employment.player_id) '
-            where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
-        if params['Playoffs']:
-            where_statement += "AND bios.Playoffs != '' "
-        if params['World_Series']:
-            where_statement += "AND bios.World_Series != '' "
-        if params['Name']:
-            where_statement += "AND bios.name like '%" + params['Name'] + "%' "
-        if pref == 'nonpitcher.AVGs':
-            where_statement += "AND nonpitcher.AVGs < .4 "
-        elif pref == 'nonpitcher.OBPs':
-            where_statement += "AND nonpitcher.OBPs < .55 "
-        elif pref == "nonpitcher.SLGs":
-            where_statement += "AND nonpitcher.SLGs < .8 "
-        if params['years']:
-            where_statement += "AND (nonpitcher.years like '%" + str(params['years'][0]) + "%' OR nonpitcher.years like '%" + str(params['years'][1]) + "%') "
-    query = select_statement + from_statement + on_statement + where_statement + order_by_statement
-    return query
+        pos = 'NonPitcher'
+        
+    search_params = {}
+    select_statement = QUERY_CONSTRUCTORS[pos]['select_default'] + pref + " "
+    from_statement = QUERY_CONSTRUCTORS[pos]['from_default']
+    on_statement = QUERY_CONSTRUCTORS[pos]['on_default']
+    where_statement = QUERY_CONSTRUCTORS[pos]['where_default']
+    search_params['where'] = [pref]
+    order_by_statement = QUERY_CONSTRUCTORS[pos]['order_by_base'] + pref + " "
+    # search_params['order_by'] = [pref]
 
+    if pref == "pitcher.ERAs" or pref == "pitcher.FIPs":
+        order_by_statement += QUERY_CONSTRUCTORS[pos]['order_by_asc']
+    else:
+        order_by_statement += QUERY_CONSTRUCTORS[pos]['order_by_desc']
+
+    if params['Team']:
+        from_statement += QUERY_CONSTRUCTORS[pos]['from_team']
+        on_statement = QUERY_CONSTRUCTORS[pos]['on_team']
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_team']
+        if 'where' in search_params:
+            search_params['where'] += ["%" + params['Team'] + "%"]
+        else:
+            search_params['where'] = ["%" + params['Team'] + "%"]
+
+    if params['Playoffs']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_playoffs']
+
+    if params['World_Series']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_WS']
+
+    if params['Name']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_WS']
+        if 'where' in search_params:
+            search_params['where'] += ["%" + params['Name'] + "%"]
+        else:
+            search_params['where'] = ["%" + params['Name'] + "%"]
+
+    if params['years']:
+        where_statement += QUERY_CONSTRUCTORS[pos]['where_years']
+        if 'where' in search_params:
+            search_params['where'] += ["%" + str(params['years'][0]) + "%"]
+        else:
+            search_params['where'] = ["%" + str(params['years'][0]) + "%"]
+        search_params['where'] += ["%" + str(params['years'][1]) + "%"]
+
+    query = select_statement + from_statement + on_statement + where_statement + order_by_statement
+    search_params = order_params(search_params)
+    return query, search_params
+
+def order_params(search_params):
+    final_params = []
+    if 'select' in search_params:
+        for param in search_params['select']:
+            final_params += [param]
+    if 'where' in search_params:
+        for param in search_params['where']:
+            final_params += [param]
+    if 'order_by' in search_params:
+        for param in search_params['order_by']:
+            final_params += [param]
+
+    return final_params
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
-    for i in player.ranks:
-        if i in prefs_pos:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) * len(player.ranks) ** 6
+    for rank in player.ranks:
+        if rank in prefs_pos:
+            power_index += ((100 - player.ranks[rank]) * (len(prefs_pos) - prefs_pos.index(rank))) * len(player.ranks) ** 6
         else:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) * len(player.ranks) ** 6
+            power_index += ((100 - player.ranks[rank]) * (len(prefs_pitch) - prefs_pitch.index(rank))) * len(player.ranks) ** 6
     return power_index
 
 
@@ -218,15 +273,9 @@ def select_top_pos(players, team):
     '''
     returns a dictionary 'roster' of the top players
     '''
-    for i in players:
-        team.add_player(players[i])
+    for key in players:
+        team.add_player(players[key])
     return team
-
-
-def compare_teams(teams, stats):
-    for i in stats:
-        for j in teams:
-            calculate_team_stat(j, i)
 
 
 def calculate_team_stat(team, stat):
@@ -285,8 +334,8 @@ def calculate_league_average(stat, cursor, pitcher):
     else:
         query = "SELECT SUM(nonpitcher." + stat + ") / COUNT(nonpitcher." + stat + ") FROM nonpitcher JOIN bios ON bios.player_id = nonpitcher.player_id WHERE (bios.years_played > 2 AND nonpitcher." + stat + " != '');"
     r = cursor.execute(query)
-    for i in r.fetchall():
-        results = i[0]
+    for num in r.fetchall():
+        results = num[0]
 
     return results
 def go(prefs_pos, prefs_pitch, params):
