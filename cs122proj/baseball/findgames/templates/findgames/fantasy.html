@@ -1,3 +1,7 @@
+<!-- The purpose of this file is to create an HTML/Django view to create Fantasy Teams.
+
+Created by Jessica Lu.
+ -->
 <!DOCTYPE html5>
 <html>
   <head>
@@ -9,9 +13,11 @@
   <body class="fantasyback">
     <div class="formarea" >
     <div align="center">
-      <font size="5"><h1 style="color:black">Create a fantasy team with players from any era.</h1></font>
-      <font size="2"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
+      <font size="4"><h1 style="color:black">Create a fantasy team with players from any era.</h1></font>
+      <font size="1.5"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
       	and see how it does in a 162-game season.</h1></font>
+        _______________________________________________________
+        <h4> <a href="{% url 'stats' %}">Learn more about each stat</a> </h4>
         <br/>
         <a href="{% url 'index' %}">Back to Home</a>
         <br/>
@@ -19,8 +25,7 @@
     </div>
 <div class="frame" align="center">
             <form method="get" name="FindGamesForm">
-                {% csrf_token %}
-                
+                {% csrf_token %}        
                 {% for field in form %}
                   {% if forloop.counter <= 4 %}
                   <font size="4.5">  {{ field.label }}: </font> {{ field }} 
@@ -73,17 +78,17 @@
                   <br/>
                 </font>
             </div>
+            <font size="5">
+              <h3>Average Player Stats </h3>
                   {% for s, num in stats.items %}
                     {% if num != None %}
                       {{ s }}: {{ num|floatformat:3 }}
                          <br/>
                     {% endif %}
                   {% endfor %}
-                  <tr/>
+                  </font>
                 </table>
             </div>
-            {% else %}
-            <p> No fantasy team was created. Try some different params! </p>
             {% endif %}
         </div>
 <br/>

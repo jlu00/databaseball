@@ -1,3 +1,11 @@
+#The purpose of this file is to create forms that go into the views to prompt
+#user input. There are three main types of forms:
+#
+#FindGameForm: contains all the parameters to let users search for specific games.
+#FantasyForm: contains all the parameters to let users create their own fantasy teams.
+#PlayerForm: contains all the parameters to let users compare two players.
+#
+#Created by Jessica Lu
 from django import forms
 
 
@@ -12,6 +20,7 @@ PITCHER_STATS = [('WARs_pitcher', 'Wins Above Replacement'), ('ERAs', 'Earned Ru
                 ('IPs', 'Innings pitched'), ('GSs', 'Games Started'), ('FIPs', 'Fielding Independent Pitching'),
                 ('E_Fs', 'ERA-FIP Spreads'), ('K_Pers', 'Strike out rate'), 
                 ('BB_Pers', 'Walk rate'), ('', '')]
+
 
 
 class FindGameForm(forms.Form):
@@ -34,14 +43,19 @@ class FindGameForm(forms.Form):
                                  required=False)
     runs_high = forms.CharField(label='Max number of runs',
                                  required=False)
+    
+
     hits_low = forms.CharField(label='Min number of hits',
                                  required=False)
     hits_high = forms.CharField(label='Max number of hits',
                                  required=False)
+
     hrs_low = forms.CharField(label='Min number of home runs',
                                  required=False)
     hrs_high = forms.CharField(label='Max number of home runs',
                                  required=False)
+    Apply_Box_Score_Items_to_Home_only = forms.BooleanField(required=False)
+    Apply_Box_Score_Items_to_Away_only = forms.BooleanField(required=False)
                                  
 def clean(self, value):
     date_start = self.cleaned_data.get("data_start")

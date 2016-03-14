@@ -1,3 +1,5 @@
+The purpose of this file is to stylize the views of the Django with CSS.
+
 body {
   font-family: "Times New Roman", sans-serif;
   background: url('images/stadium.jpg');
@@ -14,11 +16,23 @@ img {
 
 }
 
+.findgameback {
+  background: url('images/stadium.jpg') !important;
+  width: 100% !important;
+  background-size: 100% !important;
+
+}
+
 .playerbackground {
   background: url('images/cubplayers.jpg') !important;
   width: 100% !important;
   background-size: 100% !important;
 
+}
+
+h3 {
+  background-color:white;
+  width: 15%;
 }
 
 .fantasyback {
@@ -59,7 +73,7 @@ img {
 
 .formarea {
   background-color:white !important;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   border-style: double;
   border-width: 1px;
@@ -86,9 +100,6 @@ a {
  text-decoration: none;
 }
 
-tr {
- border-bottom: 1px solid black;
-}
 
 h1 {
  position: absolute; 
