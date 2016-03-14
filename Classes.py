@@ -36,7 +36,7 @@ class Players:
         self.power_index += num
 
     def __repr__(self):
-        str_var = '{} {}'.format(self.firstname, self.lastname)
+        str_var = '{} {} -- ({}, {})'.format(self.firstname, self.lastname, self.years_played[0], self.years_played[1])
         return str_var
 
 class Teams:

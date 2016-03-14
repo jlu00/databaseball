@@ -63,11 +63,11 @@ def create_team(prefs_pos, prefs_pitch, params, team):
     average_stats = {}
     for i in prefs_pos:
         players = grab_players(i, players, False, c, params)
-        average_stats[i] = calculate_leage_average(i, c, False)
+        average_stats[i] = calculate_league_average(i, c, False)
 
     for i in prefs_pitch:
         players = grab_players(i, players, True, c, params)
-        average_stats[i] = calculate_leage_average(i, c, True)
+        average_stats[i] = calculate_league_average(i, c, True)
     db.close()
 
     for i in players:
@@ -87,9 +87,9 @@ def create_team(prefs_pos, prefs_pitch, params, team):
             if params['Playoffs']:
                 # print('Unfortunately, we had to remove the Playoffs parameter in an effort to complete the team')
                 new_params['Playoffs'] = False
-            if params['World Series']:
-                new_params['World Series'] = False
-                # print('Unfortunately, we had to remove the World Series parameter in an effort to complete the team')
+            if params['World_Series']:
+                new_params['World_Series'] = False
+                # print('Unfortunately, we had to remove the World_Series parameter in an effort to complete the team')
             else:
                 for position in team.roster:
                     team = fill_out_team(players, team, position)
@@ -173,7 +173,7 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
         if params['Playoffs']:
             where_statement += "AND bios.Playoffs != '' "
-        if params['World Series']:
+        if params['World_Series']:
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
@@ -193,7 +193,7 @@ def construct_query(pref, pitcher, params):
             where_statement += "AND employment.teams like '%" + params['Team'] + "%' "
         if params['Playoffs']:
             where_statement += "AND bios.Playoffs != '' "
-        if params['World Series']:
+        if params['World_Series']:
             where_statement += "AND bios.World_Series != '' "
         if params['Name']:
             where_statement += "AND bios.name like '%" + params['Name'] + "%' "
@@ -283,11 +283,9 @@ def compute_wins(WAR):
     if games_won > 130:
         games_won = 130
         win_percentage = 13000/162
-        # print("This team would likely be the best team of all time")
-    # print("In a hypothetical 162-game season, this team would have a " + str(round(win_percentage, 2)) + " win percentage and win " + str(int(games_won)) + " games.")
     return win_percentage, games_won
 
-def calculate_leage_average(stat, cursor, pitcher):
+def calculate_league_average(stat, cursor, pitcher):
     results = []
     if pitcher:
         query = "SELECT SUM(pitcher." + stat + ") / COUNT(pitcher." + stat + ") FROM pitcher JOIN bios ON bios.player_id = pitcher.player_id WHERE (bios.years_played > 2 AND pitcher." + stat + " != '');"
@@ -295,19 +293,19 @@ def calculate_leage_average(stat, cursor, pitcher):
         query = "SELECT SUM(nonpitcher." + stat + ") / COUNT(nonpitcher." + stat + ") FROM nonpitcher JOIN bios ON bios.player_id = nonpitcher.player_id WHERE (bios.years_played > 2 AND nonpitcher." + stat + " != '');"
     r = cursor.execute(query)
     for i in r.fetchall():
-        results = round(i[0], 3)
-    print(results)
+        results = i[0]
+    # print(results)
     return results
 def go(prefs_pos, prefs_pitch, params):
     '''
     '''
     team = Classes.Teams()
-    team, average_stats = create_team(prefs_pos, prefs_pitch, params, team)
-    win_percentage, wins = compute_wins(team.team_war)
+    return_dict = {}
+    return_dict['team'], return_dict['average_stats'] = create_team(prefs_pos, prefs_pitch, params, team)
+    return_dict['win_percentage'], return_dict['games_won'] = compute_wins(team.team_war)
     if 'WRCs' in prefs_pos:
         team.add_stat('Runs per Game', calculate_pergame_runs(team))
-
-
+        return_dict['runs_per'] = calculate_pergame_runs(team)
     for pref in prefs_pos:
         if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
@@ -316,14 +314,4 @@ def go(prefs_pos, prefs_pitch, params):
         if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
             team.add_stat(pref, stat)
-    print(team.team_stats)
-    return_object = ["Here is the roster for the team that was created based on your parameters: "]
-    return_object += [team.__repr__()]
-    return_object += ["In a hypothetical 162-game season, your team would win " + str(wins) + " games at a " + str(win_percentage) + " win percentage. "]
-    if wins == 130:
-        return_object += ["This would likely be the best team of all time. "]
-    return_object += ["Here are some cumulative team stats for your team: "]
-    for i in team.team_stats:
-        if type(team.team_stats[i]) == float:
-            return_object += ["Compared to a league average of " + str(average_stats[i]) + ", your team's team " + i + " would be " + str(team.team_stats[i]) + "."]
-    return return_object
+    return return_dict
