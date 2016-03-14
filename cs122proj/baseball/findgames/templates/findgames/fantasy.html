@@ -11,7 +11,7 @@
     <div align="center">
       <font size="5"><h1 style="color:black">Create a fantasy team with players from any era.</h1></font>
       <font size="2"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
-      	and see how it does.</h1></font>
+      	and see how it does in a 162-game season.</h1></font>
         <br/>
         <a href="{% url 'index' %}">Back to Home</a>
         <br/>
@@ -23,18 +23,18 @@
                 
                 {% for field in form %}
                   {% if forloop.counter <= 4 %}
-                  {{ field.label }}: {{ field }}
+                  <font size="4.5">  {{ field.label }}: </font> {{ field }} 
                     {% endif %}
                   {% if forloop.counter == 5 %}
                   <br/>
                   {% endif %}
                   {% if forloop.counter >= 5 and forloop.counter <= 8 %}
-                    {{ field.label }} {{ field }}
+                   <font size="4.5">  {{ field.label }} </font> {{ field }}
                   {% endif %}
                   <br/>
                   <br/>
                   {% if forloop.counter >= 9 %}
-                  {{ field.label }}:  {{ field }} {{ field.help_text }}
+                   <font size="4.5"> {{ field.label }}: {{ field }} {{ field.help_text }} </font>
                   {% endif %}
                 {% endfor %}
 
@@ -55,7 +55,7 @@
             <div class="boxresults" align="center">
                 <table class="courses" border="2">
                   <tr class="roster">
-                  <font size="4.5">
+                  <font size="5">
                   {% if FantTeamName %}
                   <h2> The {{ FantTeamName }} Team </h2>
                   {% else %}

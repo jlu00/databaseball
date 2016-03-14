@@ -15,15 +15,21 @@
       <a href="{% url 'index' %}">Back to Home</a>
       <br/>
       <br/>
+      <br/>
+      <br/>
     </div>
    <div class="frame" align="center">
-    <h3 align="center"> Player Comparison </h3>
             <form method="get" name="PlayerForm">
                 {% csrf_token %}
-                {% for field in form1 %}
-                {{ field.label_tag }} {{ field }}
+                {% for field in form %}
+                <font size="4.5"> {{ field.label_tag }} </font> {{ field }}
                 {% endfor %}
+                <br/>
+                <br/>
+                <br/>
                  <input type="submit" value="Compare" />
+                 <br/>
+                 <br/>
                  {% if message != None %}
               {{ message }}
               {% endif %}
@@ -33,20 +39,7 @@
         </div>
          <br/>
           <br/>
-        
-        <h3 align="center"> Pitcher Comparison </h3>
-        
-    <div align="center">
-            <form method="get" name="PitcherForm">
-                {% csrf_token %}
-                {% for field in form2 %}
-                {{ field.label_tag }} {{ field }}
-                {% endfor %}
-                <input type="submit" value="Compare" />
-                <br/>
-                
-            </form>
-        </div>
+  
   </div>
     	<br/>
       <br/>
@@ -59,36 +52,42 @@
                 <table class="players">
                     <tr>
                         {% for col in columns %}
-                        <th>{{ col }}</th>
+                       <font size="5"> <th>{{ col }}</th> </font>
                         {% endfor %}
                     </tr>
                     {% for entry in result %}
                     <tr>
                         {% for col in entry %}
                         {% if forloop.counter == 1 or forloop.counter == 7%}
-                        <td align="center"> <font size="3"> {{ col }} </font> </td> 
+                        <td align="center"> <font size="4.7"> {{ col }} </font> </td> 
                           {% else %}
-                        <td align="center"> <font size="3">  {{ col|floatformat:3 }} </font> </td>
+                        <td align="center"> <font size="4.7">  {{ col|floatformat:3 }} </font> </td>
                         {% endif %}
                         {% endfor %}
                     </tr>
                     {% endfor %}
+                    </font>
                 </table>
+
                 <br/>
                 <br/>
                 {% if graph1 != None %}
+                <br/>
                 <div align="center"> <img src="data:image/png;base64,{{ graph0|safe }}"/></div>
+                <br/>
                 <br/>
                 <div align="center"> <img src="data:image/png;base64,{{ graph1|safe }}"/></div>
                 <br/>
+                <br/>
                 <div align="center"> <img src="data:image/png;base64,{{ graph2|safe }}"/></div>
                 <br/>
+                <br/>
                 <div align="center"> <img src="data:image/png;base64,{{ graph3|safe }}"/></div>
+                <br/>
                 <br/>
                 <div align="center"> <img src="data:image/png;base64,{{ graph4|safe }}"/></div>
                 <br/>
                 {% endif %}
-
             </div>
             {% endif %}
         </div>
