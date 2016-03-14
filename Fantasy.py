@@ -114,10 +114,14 @@ def fill_out_team(players, team, position):
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
     query = construct_query(new_pref, pitcher, params)
+    print(query)
     r = cursor.execute(query)
     results_pos = r.fetchall()
     rank = 0
     for j in results_pos:
+        if rank < 10:
+            print(pref)
+            print(j)
         if 'name' in j:
             continue
         name = j[0].split()
@@ -130,16 +134,16 @@ def grab_players(pref, players, pitcher, cursor, params):
             first_pos = 'Centerfielder'
         if first_pos == 'Pinch Hitter' or first_pos == 'Pinch Runner' or first_pos == 'Designated Hitter':
             continue
-        new_player = Classes.Players(name[0], name[1], first_pos, j[4])
+        new_player = Classes.Players(name[0], name[1], first_pos, j[3])
         if new_player.player_id not in players:
             years = j[1].split('-')
             new_player.add_years(years)
-            new_player.add_stats(pref, j[3])
+            new_player.add_stats(pref, j[5])
             new_player.add_rank(pref, rank)
-            new_player.add_war(j[5])
+            new_player.add_war(j[4])
             players[new_player.player_id] = new_player
         else:
-            players[new_player.player_id].add_stats(pref, j[3])
+            players[new_player.player_id].add_stats(pref, j[5])
             players[new_player.player_id].add_rank(pref, rank)
         rank += 1
     return players
@@ -159,7 +163,7 @@ def construct_query(pref, pitcher, params):
     'Name': 'Bob', 'Team': 'Kansas City Royals'}
     '''
     if pitcher:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, pitcher.WARs_pitcher """ 
+        select_statement = """SELECT bios.name, bios.span, bios.positions, bios.player_id, pitcher.WARs_pitcher, """ + pref + " "
         from_statement = "FROM bios JOIN pitcher "
         on_statement = 'ON bios.player_id = pitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND " + pref + " != '' "
@@ -182,7 +186,7 @@ def construct_query(pref, pitcher, params):
           
 
     else:
-        select_statement = """SELECT bios.name, bios.span, bios.positions, """ + pref + """, bios.player_id, nonpitcher.WARs_nonpitcher """ 
+        select_statement = """SELECT bios.name, bios.span, bios.positions, bios.player_id, nonpitcher.WARs_nonpitcher, """ + pref + " " 
         from_statement = "FROM bios JOIN nonpitcher "
         on_statement = 'ON bios.player_id = nonpitcher.player_id '
         where_statement = "WHERE (bios.years_played > 2 AND " + pref + " != '' "
@@ -294,7 +298,7 @@ def calculate_league_average(stat, cursor, pitcher):
     r = cursor.execute(query)
     for i in r.fetchall():
         results = i[0]
-    # print(results)
+
     return results
 def go(prefs_pos, prefs_pitch, params):
     '''
@@ -313,5 +317,7 @@ def go(prefs_pos, prefs_pitch, params):
     for pref in prefs_pitch:
         if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
+            if pref == 'BB_Pers' or pref == 'K_Pers':
+                stat = str(stat) + '%'
             team.add_stat(pref, stat)
     return return_dict
