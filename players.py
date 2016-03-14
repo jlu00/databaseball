@@ -5,19 +5,6 @@ import queue
 import json
 import sys
 import csv
-from datetime import datetime
-
-
-start=datetime.now().time()
-
-
-import requests
-import bs4
-import re
-import queue
-import json
-import sys
-import csv
 
 
 #functions that make the csv files for each table from the dictionary of all data
@@ -493,6 +480,9 @@ def get_player_batting_stats(row):
     
     return AVG,OBP,SLG
 
+
+
+#gets stats form fangraphs 
 def get_player_stats_from_fangraphs(player_name, year_first):
     '''
     navigate to fangraphs to get more player stats
@@ -743,6 +733,4 @@ for letter in alphabet:
     make_player_bio_csv_file(dict_response, str_file)
     make_player_stats_nonpitcher_csv_file(dict_response, str_file)
     make_player_stats_pitcher_csv_file(dict_response, str_file)
-    make_player_full_csv_file(dict_response, str_file)          
-
-        
+    make_player_full_csv_file(dict_response, str_file)              
