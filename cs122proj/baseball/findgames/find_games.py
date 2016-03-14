@@ -20,13 +20,9 @@ GAME_COLS = dict(
 )
 
 GAME_DATABASE = "all_games.db"
-
 TEAM_ORDER = ['team1', 'team2', 'winner']
-
 TEAM_STATS = ['hits', 'runs', 'hrs']
-
 STAT_INPUTS = ['hits_low', 'hits_high', 'runs_low', 'runs_high', 'hrs_low', 'hrs_high']
-
 OPERATIONS_DICT = {'team1': '=', 'team2': '=', 'winner': '=', 'stats_low': ">=", 'stats_high': "<="} 
 
 def find_games(args_from_ui): #Code inspired from PA 3
@@ -105,22 +101,22 @@ def get_stat_boundaries(args_from_ui, stat):
     where = []
     stat_low = stat + "_low"
     stat_high = stat + "_high"
-    
     if stat_low in args_from_ui:
         if args_from_ui['Apply_Box_Score_Items_to_Away_only']:
             where.append("team1_" + stat + OPERATIONS_DICT['stats_low'] + '?')
         elif args_from_ui['Apply_Box_Score_Items_to_Home_only']:
             where.append("team2_" + stat + OPERATIONS_DICT['stats_low'] + '?')
         else:
-            where.append("(team1_" + stat + "+" + "team2_" + stat + ")" + OPERATIONS_DICT['stats_low'] + '?')
+            where.append("(team1_" + stat + "+" + "team2_" + stat + ")" + 
+                OPERATIONS_DICT['stats_low'] + '?')
     if stat_high in args_from_ui:
         if args_from_ui['Apply_Box_Score_Items_to_Home_only']:
             where.append("team2_" + stat + OPERATIONS_DICT['stats_high'] + '?')
         elif args_from_ui['Apply_Box_Score_Items_to_Away_only']:
             where.append("team1_" + stat + OPERATIONS_DICT['stats_low'] + '?')
         else:
-            where.append("(team1_" + stat + "+" + "team2_" + stat + ")" + OPERATIONS_DICT['stats_high'] + '?')
-    
+            where.append("(team1_" + stat + "+" + "team2_" + stat + ")" + 
+                OPERATIONS_DICT['stats_high'] + '?')
     return where
 
 def create_db_arg(args_from_ui):
@@ -130,7 +126,6 @@ def create_db_arg(args_from_ui):
     db_arg += add_stats(args_from_ui)
     return db_arg
 
-
 def create_date_range(args_from_ui):
     args = []
     if "date_start" in args_from_ui:
@@ -138,7 +133,6 @@ def create_date_range(args_from_ui):
     if "date_end" in args_from_ui:
         args.append(args_from_ui["date_end"])
     return args
-
 
 def add_teams(args_from_ui):
     args = []

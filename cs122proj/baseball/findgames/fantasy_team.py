@@ -50,7 +50,6 @@ def get_roster(res):
     return roster_results
 
 def create_team(prefs_pos, prefs_pitch, params, team):
-
     '''
     Sample prefs:
     ['wOBA', 'OBP']

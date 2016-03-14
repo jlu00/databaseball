@@ -5,6 +5,7 @@
 import os
 import sqlite3
 from findgames import find_games
+from findgames import fantasy_team
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
@@ -35,21 +36,26 @@ PITCHER_COLS = dict(
 
 )
 
+PLAYER_DICT = {'Wins Above Replacement': 'WARs_nonpitcher', 'On Base Percentage': 'OBPs',
+                'Batting Averages': 'AVGs', 'Slugging Percentage': 'SLGs', 'Runs created by base running': 'UBR_WRC_Years',
+                "Base Running ability": "UBRs", "Weighted Runs Created": "WRCs", "Win Probability Added": "WPAs",
+                "Clutch Hitting Ability": "Clutchs"}
+
+            
+PITCHER_STATS = [('WARs_pitcher', 'Wins Above Replacement'), ('ERAs', 'Earned Run Average'),
+                ('IPs', 'Innings pitched'), ('GSs', 'Games Started'), ('FIPs', 'Fielding Independent Pitching'),
+                ('E_Fs', 'ERA-FIP Spreads'), ('K_Pers', 'Strike out rate'), 
+                ('BB_Pers', 'Walk rate'), ('', '')]
 
 GAME_DATABASE = 'all_players.db'
-
 PLAYER_STATS = ['nonpitcher.AVGs', 'nonpitcher.OBPs', 'nonpitcher.SLGs', 'nonpitcher.WARs_nonpitcher', 'nonpitcher.WRCs']
-
 PITCHER_STATS = ['pitcher.WARs_pitcher', 'pitcher.ERAs', 'pitcher.FIPs', 'pitcher.K_Pers', 'pitcher.BB_Pers']
-
 
 def compare_players(args_from_ui, pitcher): #Modified code from PA 3
     if not args_from_ui:
         return ([], [])
-
     db = sqlite3.connect(GAME_DATABASE)
-    c = db.cursor()
-              
+    c = db.cursor() 
     if pitcher:
         table = "pitcher"
         stat_type = PITCHER_STATS
@@ -58,7 +64,6 @@ def compare_players(args_from_ui, pitcher): #Modified code from PA 3
         table = "nonpitcher"
         stat_type = PLAYER_STATS
         column_dict = PLAYER_COLS
-
     sql_query, args = create_player_query(args_from_ui, stat_type, table)
     if not args:
         return ([], [])
@@ -75,9 +80,7 @@ def create_player_query(args_from_ui, stat_types, table):
     sql_query += ", ".join(stat_types)
     sql_query += " FROM bios JOIN " + table + " ON bios.player_id = " + table + ".player_id "
     sql_query += "WHERE bios.name LIKE ? OR bios.name LIKE ? LIMIT 2" 
-    
     args = create_player_arg(args_from_ui)
-
     return sql_query, args
 
 def create_player_arg(args_from_ui):
@@ -94,36 +97,32 @@ def create_graphs(result, cols, pitcher):
     data_tuples = []
     for r in range(1, len(result[0])):
         data_tuples.append((round(result[0][r], 3), round(result[1][r], 3)))
-
     for stat in range(len(data_tuples)):
         graph_objects.append(playergraph(data_tuples[stat], players, cols[stat + 1], c, pitcher))
-
+        
     return graph_objects
 
 def playergraph(data, players, labels, cursor, pitcher): #Inspired by code from Gustav 
     im = io.BytesIO()
-    plt.figure(figsize=(6, 5))
+    plt.figure(figsize=(5, 5))
     pos = (-.5, .5)
     xpos = np.linspace(0, round(max(data) + max(data)*.2, 2), 5)
-
     if data[0] > data[1]:
         colors = ("#00b34d", '#ff3232')
     else:
         colors = ('#ff3232', '#00b34d')
 
-    #average = fantasy_team.calculate_league_average(stat, cursor, pitcher)
+    print(PLAYER_DICT, "hello")
+    
+    avg = fantasy_team.calculate_league_average(PLAYER_DICT[labels], cursor, pitcher)
 
-    print(labels)
-
+    plt.axvline(avg)
     plt.barh(pos, data, color=colors, align="center")
     plt.yticks(pos, (players))
     plt.xticks(xpos, xpos)
     plt.title(labels)
     plt.ylim(-2, 2)
     plt.tight_layout(pad=0)
-
-    #average = calculate_league_average()
-
 
     plt.show()
     
