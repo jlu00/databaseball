@@ -79,21 +79,16 @@ def create_team(prefs_pos, prefs_pitch, params, team):
         new_params = params
         if params['years']:
             new_params['years'] = ((params['years'][0] - 5), (params['years'][1] + 5))
-            # print("We had to relax the years parameter to " + str(new_params['years']) + " in an effort to complete the team")
         if params['Name']:
-            # print('We had to relax the name parameter in an effort to complete the team')
             new_params['Name'] = params['Name'][:-1]
         else:
             if params['Playoffs']:
-                # print('Unfortunately, we had to remove the Playoffs parameter in an effort to complete the team')
                 new_params['Playoffs'] = False
             if params['World_Series']:
                 new_params['World_Series'] = False
-                # print('Unfortunately, we had to remove the World_Series parameter in an effort to complete the team')
             else:
                 for position in team.roster:
                     team = fill_out_team(players, team, position)
-                    print(team.team_size)
                 return team, average_stats
         return create_team(prefs_pos, prefs_pitch, new_params, team)
     return team, average_stats
@@ -114,14 +109,10 @@ def fill_out_team(players, team, position):
 def grab_players(pref, players, pitcher, cursor, params):
     new_pref = convert_pref(pref, pitcher)
     query = construct_query(new_pref, pitcher, params)
-    print(query)
     r = cursor.execute(query)
     results_pos = r.fetchall()
     rank = 0
     for j in results_pos:
-        if rank < 10:
-            print(pref)
-            print(j)
         if 'name' in j:
             continue
         name = j[0].split()
@@ -217,9 +208,9 @@ def compute_power_index(player, prefs_pos, prefs_pitch):
     power_index = 0
     for i in player.ranks:
         if i in prefs_pos:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) * 10
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pos) - prefs_pos.index(i))) * len(player.ranks) ** 6
         else:
-            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) * 10
+            power_index += ((100 - player.ranks[i]) * (len(prefs_pitch) - prefs_pitch.index(i))) * len(player.ranks) ** 6
     return power_index
 
 
@@ -265,10 +256,8 @@ def calculate_pergame_runs(team):
             for player in team.roster[position]:
                 player_ctr += 1
                 if 'WRCs' in player.stats:
-                    # print(player.stats['WRCs'])
                     wrc_ctr += 1
                     runs += player.stats['WRCs'] * AVG_R_PER_PA * AVG_AB_PER_YR / 100
-    # print(player_ctr, wrc_ctr)
     runs = runs / 162 * player_ctr / wrc_ctr
     return round(runs, 2)
 
