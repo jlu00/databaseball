@@ -3,7 +3,7 @@
 #Functions to get SQL Code
 
 import operator
-import Players
+import Classes
 import search_code_generator
 
 def compile_sample_players():
@@ -28,7 +28,7 @@ def compute_team_win_percentage(teams):
             years = compute_years_played(i)
             WARS[i] += grab_stat(j, ["WAR"], [years])
             
-def create_team(prefs_pos, prefs_pitch, params):
+def create_team(prefs_pos, prefs_pitch, params, database_filename):
 
     '''
     Sample prefs:
@@ -36,45 +36,10 @@ def create_team(prefs_pos, prefs_pitch, params):
     Sample params:
     {'date': (1980, 2015), 'playoffs': True, 'all_star': True, 'current_player': False}
     '''
-
-
-    top_pos_list = grab_top_pos(prefs_pos, params)
-
-    top_pitch_list = grab_top_pos(prefs_pitch, params)
-
-
-def grab_top_pos(stats, time_period):
-    '''
-    returns the 50 historical leaders for a certain statistic
-    '''
-    pos_dict = {}
-    for i in stats:
-        #generate SQL query
-        #stats_list = 
-        for j in stats_list:
-            if j not in rv:
-                rv[j] = 0
-            rv[j] += 1
-
-    top_14_pos = select_top_pos(pos_dict)
-
-    return top_14_pos
-
-def grab_top_pitch(stats, params):
-    '''
-    returns the 50 historical leaders for a certain statistic
-    '''
-
-    rv = {}
-    count = 0
-    for i in stats:
-        count += 1
-        #generate SQL query
-        for j in stats_list:
-            if j not in rv:
-                rv[j] = 0
-            rv[j] += 50 - count
-    return rv
+    db = sqlite3.connect(database_filename)
+    team = Players.Teams()
+    possible_players = Players.PlayerContainer()
+    for i in prefs_pos:
 
 def select_top_pos(sorted_pos):
     '''

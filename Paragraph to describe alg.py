@@ -19,3 +19,11 @@ DESC = """The function took in your parameters as you ranked them as well as
         purposes of team stats and win total calculations to use a team with 
         inexactly generated parameters than to have an incomplete team, as this
         would render most stats meaningless."""
+
+def write_team_desc(team):
+
+desc = "In a hypothetical 162-game season, your team constructed based on " + prefs_pos + prefs_pitch
+desc += " would win " + games + " games with a " + win_percentage + " win percentage. "
+for i in (team.team_stats):
+        desc += " The team's team " + i + " would be " + team.team_stats[i] + " compared to a league average of" + averages[i] + ". "
+return desc
