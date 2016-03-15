@@ -17,7 +17,7 @@ Created by Jessica Lu.
       <font size="1.5"><h1 style="color:black">Choose and rank your top stats to create a fantasy team
       	and see how it does in a 162-game season.</h1></font>
         _______________________________________________________
-        <h4> <a href="{% url 'stats' %}">Learn more about each stat</a> </h4>
+        <h4> <a href="{% url 'stats' %}">Learn more about each stat and our algorithm.</a> </h4>
         <br/>
         <a href="{% url 'index' %}">Back to Home</a>
         <br/>
@@ -25,25 +25,13 @@ Created by Jessica Lu.
     </div>
 <div class="frame" align="center">
             <form method="get" name="FindGamesForm">
-                {% csrf_token %}        
-                {% for field in form %}
-                  {% if forloop.counter <= 4 %}
-                  <font size="4.5">  {{ field.label }}: </font> {{ field }} 
-                    {% endif %}
-                  {% if forloop.counter == 5 %}
-                  <br/>
-                  {% endif %}
-                  {% if forloop.counter >= 5 and forloop.counter <= 8 %}
-                   <font size="4.5">  {{ field.label }} </font> {{ field }}
-                  {% endif %}
-                  <br/>
-                  <br/>
-                  {% if forloop.counter >= 9 %}
-                   <font size="4.5"> {{ field.label }}: {{ field }} {{ field.help_text }} </font>
-                  {% endif %}
-                {% endfor %}
-
+                {% csrf_token %} 
                 <br/>
+                {% for field in form %}
+                {{ field.label }} {{ field }} {{ field.help_text }}
+                <br/>
+                <br/>
+                {% endfor %}
                 <br/>
                 <br/>
                 <input type="submit" value="Create" />
@@ -57,7 +45,7 @@ Created by Jessica Lu.
         <div class="frame">
             {% if result != None %}
             <div class="results">
-            <div class="boxresults" align="center">
+            <div class="boxresultslarge" align="center">
                 <table class="courses" border="2">
                   <tr class="roster">
                   <font size="5">
@@ -66,6 +54,10 @@ Created by Jessica Lu.
                   {% else %}
                   <h2> Your custom fantasy team. </h2>
                   {% endif %}
+                   <font size="5">
+              {{ team_desc }}
+                         <br/>
+                  </font>
                   {% for field in roster_results %}
                     <br/>
                     {% if forloop.counter0|divisibleby:'2' %}
@@ -78,15 +70,6 @@ Created by Jessica Lu.
                   <br/>
                 </font>
             </div>
-            <font size="5">
-              <h3>Average Player Stats </h3>
-                  {% for s, num in stats.items %}
-                    {% if num != None %}
-                      {{ s }}: {{ num|floatformat:3 }}
-                         <br/>
-                    {% endif %}
-                  {% endfor %}
-                  </font>
                 </table>
             </div>
             {% endif %}

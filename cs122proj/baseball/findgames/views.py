@@ -1,6 +1,6 @@
 #The purpose of this file is to generate the views from user input.
 #
-#Created by Jessica Lu & Thomas Dunn.
+#Created by Jessica Lu.
 
 from django.shortcuts import render_to_response, render, redirect
 from django.http import HttpResponse
@@ -12,13 +12,11 @@ from findgames import find_games
 from findgames import compareplayers
 from findgames import fantasy_team
 import sys
-
 import sqlite3
 import operator
 
 
 def index(request):
-    #baseball news?
     return render(request, 'findgames/index.html', {})
 
 def stats(request):
@@ -27,6 +25,7 @@ def stats(request):
 def findgames(request):
     context = {}
     res = None
+    context['message'] = None
     form = forms.FindGameForm(request.GET or None)
     if request.method == "GET":
         form = forms.FindGameForm(request.GET) #modified from Django tutorial
@@ -37,12 +36,12 @@ def findgames(request):
             res = find_games.find_games(args) #conducts the SQL search query
         else:
             form = forms.FindGameForm()
-            context['message'] = "Check your parameters!"
     else:
         form = forms.FindGameForm()
     
-    if res is None:
+    if not res:
         context['result'] = None
+        context['message'] = "No results. Search again?"
     else:
         columns, result = res
         context['result'] = result
@@ -50,7 +49,6 @@ def findgames(request):
         context['num_results'] = len(result)
         context['columns'] = columns
     context['form'] = form
-    
     return render(request, 'findgames/findgames.html', context)
         
 def players(request):
@@ -106,6 +104,7 @@ def fantasy(request):
     else:
         context['result'] = res
         context['roster_results'] = roster_results
+        context['team_desc'] = res['team_desc']
         context['stats'] = res['team'].team_stats
         context['FantTeamName'] = form.cleaned_data['teamname']
     context['form'] = form

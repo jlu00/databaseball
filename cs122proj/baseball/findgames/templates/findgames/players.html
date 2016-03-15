@@ -69,10 +69,11 @@ Created by Jessica Lu.
                     {% endfor %}
                     </font>
                 </table>
+              </br>
+                <h4 align="center">The blue line represents the league average.</h4>
                 <br/>
                 <br/>
                 {% if graphs != None %}
-                <br/>
                 {% for g in graphs %}
                 <div align="center"> <img src="data:image/png;base64,{{ g|safe }}"/></div>
                 <br/>

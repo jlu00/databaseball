@@ -7,7 +7,8 @@
 #
 #Created by Jessica Lu
 from django import forms
-
+from django.core.exceptions import ValidationError
+from django.utils.translation import ugettext_lazy as _
 
 PLAYER_STATS = [('WARs_nonpitcher', 'Wins Above Replacement'), ('OBPs', 'On Base Percentage'), 
             ('AVGs', 'Batting Average'), ('SLGs', 'Slugging percentages'),
@@ -21,15 +22,13 @@ PITCHER_STATS = [('WARs_pitcher', 'Wins Above Replacement'), ('ERAs', 'Earned Ru
                 ('E_Fs', 'ERA-FIP Spreads'), ('K_Pers', 'Strike out rate'), 
                 ('BB_Pers', 'Walk rate'), ('', '')]
 
-
-
 class FindGameForm(forms.Form):
     date_start = forms.CharField(label='Date start',
-                                 help_text='e.g. 2010-11-09',
+                                 help_text='e.g. 2010-11-24',
                                  required=False)
     date_end = forms.CharField(label='Date end',
-                                 help_text='e.g. 2012-12-09',
-                                 required=False)
+                                 help_text='e.g. 2012-12-31',
+                                 required=False, initial="")
     team1 = forms.CharField(label='Away Team',
                                  help_text='e.g. New York Yankees',
                                  required=False)
@@ -44,7 +43,6 @@ class FindGameForm(forms.Form):
     runs_high = forms.CharField(label='Max number of runs',
                                  required=False)
     
-
     hits_low = forms.CharField(label='Min number of hits',
                                  required=False)
     hits_high = forms.CharField(label='Max number of hits',
@@ -56,18 +54,9 @@ class FindGameForm(forms.Form):
                                  required=False)
     Apply_Box_Score_Items_to_Home_only = forms.BooleanField(required=False)
     Apply_Box_Score_Items_to_Away_only = forms.BooleanField(required=False)
-                                 
-def clean(self, value):
-    date_start = self.cleaned_data.get("data_start")
-    date_end = self.cleaned_data.get("data_end")
-    if end_date < start_date:
-        raise forms.ValidationError(_("Date end must be after date start."))
-    
-    return date_end
-        
-
+  
 class FantasyForm(forms.Form):
-    stat1 = forms.ChoiceField(label="Player Stat Rank 1", choices=PLAYER_STATS, required=True, help_text="Player Stat 1")
+    stat1 = forms.ChoiceField(label="Player Stat Rank 1", choices=PLAYER_STATS, required=True)
     stat2 = forms.ChoiceField(label="Player Stat Rank 2", choices=PLAYER_STATS, required=False)
     stat3 = forms.ChoiceField(label="Player Stat Rank 3", choices=PLAYER_STATS, required=False)
     stat4 = forms.ChoiceField(label="Player Stat Rank 4", choices=PLAYER_STATS, required=False)

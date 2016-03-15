@@ -25,9 +25,13 @@ Created by Jessica Lu.
             <form method="get" name="FindGamesForm">
                 {% csrf_token %}
                 <font size="4.5">
+                {% if message != None %}
+                {{ message }}
+                {% endif %}
                 <table class="form">
-                <div class="fields"> {{ form.as_table }} </div>
+                <div class="fields"> {{ form }} </div>
                 </table>
+
               </font>
                 <br/>
                 <br/>
@@ -39,18 +43,19 @@ Created by Jessica Lu.
             {% if result != None %}
             <div class="results">
                 <table class="games" align="center">
-                  <div align="center"> <h3 class="num_results" >Total Games: {{ num_results }}</h3> </div>
+                  <div align="center"> <h3 class="num_results" >Total Games: {{ num_results }} </br>
+                  Missing stats are due to lack of information from record keepers. </h3> </div>
                     <font size="4.5">
                       {% for res in result %}
                       <div class="boxresults" align="center">
                       <br/>
-                      <div align="center"> {{ res|slice:"0:1"|join:"" }} </div>
+                      <div align="center"> {{ res.0 }} </div>
                       <br/>
-                      <div align="center"> <strong> {{ res|slice:"1:2"|join:"" }} @ {{ res|slice:"2:3"|join:"" }} in {{ res|slice:"3:4"|join:"" }} </strong> </div>
-                      <div align="center"> {{ columns|slice:"4:5"|join:"" }}: {{ res|slice:"4:5"|join:"" }} ||  {{ columns|slice:"5:6"|join:"" }}: {{ res|slice:"5:6"|join:"" }}   </div>
-                      <div align="center"> {{ columns|slice:"8:9"|join:"" }}: {{ res|slice:"8:9"|join:"" }} ||  {{ columns|slice:"9:10"|join:"" }}: {{ res|slice:"9:10"|join:"" }}  </div>
-                      <div align="center">{{ columns|slice:"6:7"|join:"" }}: {{ res|slice:"6:7"|join:"" }} ||  {{ columns|slice:"7:8"|join:"" }}: {{ res|slice:"7:8"|join:"" }}  </div>
-                      <div align="center" class="winner"> <strong> {{ columns|slice:"10:11"|join:"" }}: {{ res|slice:"10:11"|join:"" }} </strong> </div> 
+                      <div align="center"> <strong> {{ res.1 }} @ {{ res.2 }} in {{ res.3 }} </strong> </div>
+                      <div align="center"> {{ columns.4 }}: {{ res.4 }} ||  {{ columns.5 }}: {{ res.5 }}   </div>
+                      <div align="center"> {{ columns.8 }}: {{ res.8 }} ||  {{ columns.9 }}: {{ res.9 }}  </div>
+                      <div align="center">{{ columns.6 }}: {{ res.6 }} ||  {{ columns.7 }}: {{ res.7 }}  </div>
+                      <div align="center" class="winner"> <strong> {{ columns.10 }}: {{ res.10 }} </strong> </div> 
                       <br/>
                       </div>
                       <br/>

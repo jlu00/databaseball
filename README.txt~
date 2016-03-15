@@ -1,0 +1,85 @@
+README.txt
+#CS 122 Winter 2016: Final Project: Databaseball
+#Team JBT: Thomas Dunn, Jessica Lu and Brianna Pinder
+
+INSTRUCTIONS FOR RUNNING: 
+Retrieve all files from the jessbritommy git repository
+Go to the directory jessbritommy
+Go to the directory “cs122proj”
+Go to the directory “baseball”
+In your terminal prompt, write “python3 manage.py runserver” and point your web browser to 127.0.0.1:8000. This will direct you to the home page.
+Click on “Find Games,” “Fantasy,” or “Players” to access the different views, and “Back to Home” to go back to the main page. 
+Type in your user inputs and click the button to submit and scroll down to see results.
+
+NOTES ON READING OUR CODE:
+The file that first handles all the user inputs is ‘views.py’ located at jessbritommy/cs122proj/baseball/findgames. There are three main functions: findgames, players and fantasy, which take in the user inputs as a request GET object and call our other files, find_games.py, compareplayers.py and fantasy_team.py in order to conduct queries, manipulate stats, create teams or generate graphs. What gets returned is put into a ‘context’ dictionary, which itself is then returned, along with the original request, and then formatted via the templates (fantasy.html, findgames.html, players.html).
+
+When code is taken from somewhere else or modified, a comment has been made. Otherwise all code is original or heavily modified.
+
+How to use our website:
+All input fields are clearly labeled and most input fields have an example of how to type in your inputs and will let you know when no search results were found, so testing out different queries is straightforward. On ‘Find Games’ all that is required is that you put in at least one parameter. In Fantasy, you must rank at least 1 stat for players and 1 stat for pitchers, but everything else is option, and you can double rank stats if you wish. On Players, you must put in two players you wish to compare, and the query can usually handle if you put in a unique last name (e.g. Jeter or Zobrist). If inputs do not make sense (e.g. date end is sooner than date start or there is no player with a name similar to what you typed in) then there will be no results to show. It is probably easiest to access the different views from the home page but you can also type /fantasy or /players or /findgames afterward. 
+
+RELEVANT FILES:
+Legend:
+*  indicates this code was used for the data collection part of our project
+> indicates this code was used as part of our original algorithms to generate information
+& indicates this code was used to deploy our web app onto Django
+
+players.py -- scrapes relevent data about all major league players from baseball-reference.com and fangraphs.com *
+
+games.py -- scrapes relevent data about all major league baseball games from text files from retrosheet.org *
+
+parkcode.txt -- file that contains the full park names for each park code that’s in the games text files, taken from http://www.retrosheet.org/parkcode.txt*
+
+CurrentNames.csv -- file that contains the current full names for all the team abbreviations (even the historic ones) in the games text files, taken from http://www.retrosheet.org/CurrentNames.csv *
+
+TeamCodes.csv -- file that contains all the historic full names for abbreviations in the game text files, created from http://www.retrosheet.org/CurrentNames.csv*
+
+merge_player_csvs.py -- combines the csv files for each letter into four separate csv files, one for each table in the player database *
+
+convert_pitcher_and_nonpitcher.py -- converts the certain statistics from the pitcher and nonpitcher csv files into the forms they need to be in for the fantasy team creation and the player comparisons *
+
+Within the Baseball directory: 
+all_players.db: Sqlite database of all baseball players. 3 tables: bios, pitcher stats and nonpitcher stats. *
+
+all_games.db: Sqlite database of all baseball games. 1 table: games. *
+
+manage.py: run 'python3 manage.py runserver" to begin the server. &
+
+Under the cs122proj/baseball/findgames directory:
+Note: the ‘app’ is called findgames because originally our project centered around just finding games. We added the fantasy and player functionality later, under the same app, so their files are still within the larger “findgames” app directory.
+
+admin.py: runs the admin of the Django page &
+compareplayers.py: Runs the compare players SQL query and generates graph. >
+
+fantasy_team.py--creates the fantasy team based on user preferences and assigns statistics to the team based on averages of the players’ statistics. Calculates a win total based on WAR and runs per game based on WRCs. >
+
+find_games: Runs the SQL query to find games. >
+
+forms.py: Creates the forms models for user input &
+
+playerteamobjects.py--Contains the Player and Team classes. Team class contains a method to decide whether a player is suitable to add to a given team. >
+
+urls.py: Holds the list of urls and where to direct to &
+
+views.py: Takes in requests from users to generate output--carries main function of site &>
+
+Under the cs122proj/baseball/findgames/templates/findgames directory:
+fantasy.html: the template for the Fantasy Team page &
+
+findgames.html: the template for the Find Games page &
+
+index.html: the template for the Home page &
+
+players.html: the template for the Players page &
+
+stats.html: the template for the Stats page &
+
+Under the cs122proj/baseball/findgames/static/findgames directory:
+images: a folder containing all our background images. &
+
+index.css: the CSS file for the index/home page &
+
+style.css: the main CSS file. &
+
+README.txt: this file
