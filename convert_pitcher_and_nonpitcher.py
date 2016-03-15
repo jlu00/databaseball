@@ -1,8 +1,10 @@
+#Written by Brianna Pinder
+
 import csv
 
 def do_conversion_pitcher():
     '''
-    Convets certain pitcher statistics to the form they need to be in
+    Converts certain pitcher statistics to the form they need to be in
     '''
     with open("all_stats_pitcher.csv") as f:
         reader = csv.reader(f)

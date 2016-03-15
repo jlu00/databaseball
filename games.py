@@ -1,5 +1,10 @@
+#Brianna Pinder
+
 import os
 import csv
+
+#data scraped from text files from retrosheet.org
+#game files can be found on http://www.retrosheet.org/gamelogs/index.html
 
 def create_park_dict():
     '''
