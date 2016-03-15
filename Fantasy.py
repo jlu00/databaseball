@@ -43,7 +43,8 @@ QUERY_CONSTRUCTORS = {'Pitcher': {'select_default': """SELECT bios.name, bios.sp
  bios.player_id, pitcher.WARs_pitcher, """,
                                    'from_default': "FROM bios JOIN pitcher",
                                    'on_default': ' ON (bios.player_id = pitcher.player_id',
-                                   'where_default': ") WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND ? != '' ",
+                                   'where_default_1': ") WHERE (bios.years_played > 2 AND pitcher.IPs > 200 AND ",
+                                    'where_default_2': " != '' ",
                                     'order_by_base': ') ORDER BY ',
                                     'order_by_asc': 'ASC LIMIT 90;',
                                     'order_by_desc': 'DESC LIMIT 90;',
@@ -58,7 +59,8 @@ QUERY_CONSTRUCTORS = {'Pitcher': {'select_default': """SELECT bios.name, bios.sp
  bios.player_id, nonpitcher.WARs_nonpitcher, """,
                                    'from_default': "FROM bios JOIN nonpitcher",
                                    'on_default': ' ON (bios.player_id = nonpitcher.player_id',
-                                   'where_default': ") WHERE (bios.years_played > 2 AND nonpitcher.SLGs < .8 AND nonpitcher.AVGs < .42 AND nonpitcher.OBPs < .5 AND ? != '' ",
+                                   'where_default_1': ") WHERE (bios.years_played > 2 AND nonpitcher.SLGs < .8 AND nonpitcher.AVGs < .42 AND nonpitcher.OBPs < .5 AND ",
+                                    'where_default_2': " != '' ",
                                     'order_by_base': ') ORDER BY ',
                                     'order_by_asc': 'ASC LIMIT 90;',
                                     'order_by_desc': 'DESC LIMIT 90;',
@@ -83,10 +85,14 @@ DATABASE_FILENAME = 'all_players.db'
 def create_team(prefs_pos, prefs_pitch, params, team):
 
     '''
-    Sample prefs:
-    ['wOBA', 'OBP']
-    Sample params:
-    {'date': (1980, 2015), 'playoffs': True, 'all_star': True, 'current_player': False}
+    Inputs:
+    prefs_pos: stats from user for position players, ordered by preference
+    prefs_pitch: stats from user for pitchers, ordered by preference
+    params: limiting parameters (teams, years, names, whether a player played
+        in the playoffs, whether a player played in the world series)
+    team: a Teams object created by the go function
+    Outputs: A team filled with player objects, and a dictionary of average_stats
+    for each stat that the player input
     '''
     db = sqlite3.connect(DATABASE_FILENAME)
     c = db.cursor()
@@ -125,6 +131,15 @@ def create_team(prefs_pos, prefs_pitch, params, team):
     return team, average_stats
 
 def fill_out_team(players, team, position):
+    '''
+    Inputs:
+    players: the list of player objects that have been created from SQL searches
+    team: the team object
+    position: the position that we are trying to fill in
+    Outputs:
+    team with more players filled into the position the function tried to fill in
+    if any were found
+    '''
     if len(team.roster[position]) < 2 and position != 'Pitcher':
         for player in players:
             if players[player].position == position and len(team.roster[position]) == 0:
@@ -138,6 +153,16 @@ def fill_out_team(players, team, position):
     return team
 
 def grab_players(pref, players, pitcher, cursor, params):
+    '''
+    Inputs:
+    pref: the preference upon which the players will be ranked
+    players: a list of players that have been pulled from previous searches
+    pitcher: whether or not the preference we are dealing with is from prefs_pitch
+    params: limiting parameters (teams, years, names, whether a player played
+        in the playoffs, whether a player played in the world series)
+    Outputs: a list of players with any new players added and stats for pref 
+    added
+    '''
     new_pref = convert_pref(pref, pitcher)
     query, search_params = construct_query(new_pref, pitcher, params)
     if len(search_params) > 0:
@@ -175,6 +200,13 @@ def grab_players(pref, players, pitcher, cursor, params):
 
 
 def convert_pref(pref, pitcher):
+    '''
+    Inputs:
+    pref: the preference being selected for
+    pitcher: whether or not the pref is from prefs_pitch
+    Outputs:
+    pref converted to be usable in a SQL query
+    '''
     if pitcher:
         return 'pitcher.' + pref
     else:
@@ -183,9 +215,14 @@ def convert_pref(pref, pitcher):
 
 def construct_query(pref, pitcher, params):
     '''
-    Structure of Params:
-    {'date': (1975, 2015), 'Playoffs': True,
-    'Name': 'Bob', 'Team': 'Kansas City Royals'}
+    Inputs:
+    pref: preference being selected
+    pitcher: whether or not pref is from prefs_pitch
+    params: limiting parameters (teams, years, names, whether a player played
+        in the playoffs, whether a player played in the world series)
+    Outputs:
+    a SQL query along with search_params, a list of parameterized terms,
+    if any are needed
     '''
     if pitcher:
         pos = 'Pitcher'
@@ -196,8 +233,7 @@ def construct_query(pref, pitcher, params):
     select_statement = QUERY_CONSTRUCTORS[pos]['select_default'] + pref + " "
     from_statement = QUERY_CONSTRUCTORS[pos]['from_default']
     on_statement = QUERY_CONSTRUCTORS[pos]['on_default']
-    where_statement = QUERY_CONSTRUCTORS[pos]['where_default']
-    search_params['where'] = [pref]
+    where_statement = QUERY_CONSTRUCTORS[pos]['where_default_1'] + pref + QUERY_CONSTRUCTORS[pos]['where_default_2']
     order_by_statement = QUERY_CONSTRUCTORS[pos]['order_by_base'] + pref + " "
     # search_params['order_by'] = [pref]
 
@@ -241,6 +277,14 @@ def construct_query(pref, pitcher, params):
     return query, search_params
 
 def order_params(search_params):
+    '''
+    Inputs:
+    search_params: a dictionary with parameters listed for 
+    'where', 'select', and 'order_by'
+    Outputs:
+    final_params, an ordered list of the params in the correct order
+    to be used in a SQL query
+    '''
     final_params = []
     if 'select' in search_params:
         for param in search_params['select']:
@@ -255,6 +299,18 @@ def order_params(search_params):
     return final_params
 
 def compute_power_index(player, prefs_pos, prefs_pitch):
+    '''
+    Inputs:
+    player: a player object
+    prefs_pos: the position player preferences
+    prefs_pitch: the pitcher preferences
+    Outputs:
+    power_index, a number based on the rank the player has in each statistic,
+    multiplied by the number of statistics he has to the 6th power--I wanted
+    to give extra weight to players who appeared in the top 90 list multiple times
+    or else a player who was #1` in one category and didn't appear in any others could
+    beat out a person who was 70 in all categories listed
+    '''
     power_index = 0
     for rank in player.ranks:
         if rank in prefs_pos:
@@ -266,14 +322,28 @@ def compute_power_index(player, prefs_pos, prefs_pitch):
 
 def select_top_pos(players, team):
     '''
-    returns a dictionary 'roster' of the top players
+    Inputs:
+    players: list of Players objects
+    team: Teams object
+    Calls the add_player function for team
+    Outputs: 
+    team filled in with the best possible players
     '''
+
     for key in players:
         team.add_player(players[key])
     return team
 
 
 def calculate_team_stat(team, stat):
+    '''
+    Inputs:
+    team: Teams object
+    stat: stat for which we are calculating the average
+    Outputs:
+    returns the average for the team on a certain stat
+    for all players who have that stat
+    '''
     rv = 0
     counter = 0
     for position in team.roster:
@@ -289,6 +359,11 @@ def calculate_team_stat(team, stat):
 
 def calculate_pergame_runs(team):
     '''
+    Inputs:
+    team: a Teams object with players already filled in
+    Outputs: a pergame run total based on a formula I derived using
+    the definition of WRC and the average runs per PA for an average hitter
+    (i.e. one with a WRC of 100)
     '''
     AVG_R_PER_PA = .11
     AVG_AB_PER_YR = 600
@@ -300,16 +375,26 @@ def calculate_pergame_runs(team):
             for player in team.roster[position]:
                 player_ctr += 1
                 if 'WRCs' in player.stats:
+                    print('WRCs')
                     wrc_ctr += 1
                     runs += player.stats['WRCs'] * AVG_R_PER_PA * AVG_AB_PER_YR / 100
+    print(runs)
     runs = runs / 162 * player_ctr / wrc_ctr
     return round(runs, 2)
 
 
 def compute_wins(WAR):
     '''
-    According to baseballreference.com, a zero-WAR team would be expected
-    to win 32 percent of its games
+    Inputs:
+    WAR: a team's WAR total
+    Outputs: a win percentage and hypothetical win total for a 162-game season
+    calculated using a formula that applies a baseline win percentage to a 0-win
+    team
+    In the case of a team that won over 130 games, I capped their win total at that 
+    because anything higher than that would be extremely unrealistic 
+    The reason that sometimes the formula shows teams as winning that many games 
+    is there has never been a team even close to as good as some of the teams you
+    can create using our algorithm, so the team WAR totals get a little unrealistic
     '''
     zero_win_constant = .320
     games = 162
@@ -323,6 +408,15 @@ def compute_wins(WAR):
     return win_percentage, games_won
 
 def calculate_league_average(stat, cursor, pitcher):
+    '''
+    Inputs:
+    stat: the stat for which the league average is being calculated
+    cursor: a sqlite3 cursor object
+    pitcher: whether or not the stat is a pitcher statistic
+    Outputs:
+    Average league stat
+
+    '''
     results = []
     if pitcher:
         query = "SELECT SUM(pitcher." + stat + ") / COUNT(pitcher." + stat + ") FROM pitcher JOIN bios ON bios.player_id = pitcher.player_id WHERE (bios.years_played > 2 AND pitcher." + stat + " != '');"
@@ -335,6 +429,14 @@ def calculate_league_average(stat, cursor, pitcher):
     return results
 def go(prefs_pos, prefs_pitch, params):
     '''
+    Inputs:
+    prefs_pos: position preferences input by user
+    prefs_pitch: pitcher preferences input by user
+    params: limiting parameters (teams, years, names, whether a player played
+        in the playoffs, whether a player played in the world series)
+    Outputs:
+    a dictionary with entries including the team object, the average stats for
+    all stats queried, and win percentage and games won for the team
     '''
     team = Classes.Teams()
     return_dict = {}
@@ -344,7 +446,7 @@ def go(prefs_pos, prefs_pitch, params):
         team.add_stat('Runs per Game', calculate_pergame_runs(team))
         return_dict['runs_per'] = calculate_pergame_runs(team)
     for pref in prefs_pos:
-        if 'WARs' not in pref:
+       if 'WARs' not in pref:
             stat = calculate_team_stat(team, pref)
             team.add_stat(pref, stat)
     for pref in prefs_pitch:
